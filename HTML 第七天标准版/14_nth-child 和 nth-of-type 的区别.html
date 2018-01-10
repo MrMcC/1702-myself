@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+/*
+	nth-child 和 nth-of-type 的区别
+ */
+/*
+	li:nth-child(2)
+		是选择 父元素标签内的第二个元素
+		这个元素必须是 li，
+		如果不是 li 则不会生效
+ */
+	.ul1 li:nth-child(2){
+		background: red;
+	}
+/*
+	li:nth-of-type(2)
+		是选择父元素的第二个 li 元素
+		(只是选择对应类型的第 2 个元素)
+ */
+	/*.ul1 :nth-of-type(2){
+		background: blue;
+	}*/
+/*
+	如果平时需要去使用 nth 伪类选择器
+	推荐大家多去使用 nth-of-type 来完成
+ */
+/*
+:nth-child(n)
+	选择其父元素的第n个子元素，
+	如果第n子元素与冒号前的标签名不一致时，
+	则不产生效果
+	如果冒号前方没有指定标签名，则直接选择其父元素的第 N 个元素
+:nth-last-child(n)
+	选择其父元素的倒数第n个子元素，
+	如果倒数第n子元素与冒号前的标签名不一致时，
+	则不产生效果
+
+:nth-of-type(n)
+	选择其父元素的子集的各个类型的第n个元素，
+	如果冒号前指定了类型，
+	则表示该类型的第n个元素产生效果
+
+:nth-last-of-type(n)
+	选择其父元素的子集的的
+	各个类型的倒数第n个元素，
+	如果冒号前指定了类型，
+	则表示该类型的倒数第n个元素产生效果
+ */
+	</style>
+</head>
+<body>
+	<ul class="ul1">
+		<p>我是对比项</p>
+		<p>我是对比项</p>
+		<li>我是列表项1</li>
+		<li>我是列表项2</li>
+	</ul>
+</body>
+</html>

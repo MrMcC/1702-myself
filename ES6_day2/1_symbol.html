@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<script>
+//    let s1 = Symbol("s1"); //每调用一次一个新symbol(唯一性)
+//    let s2 = Symbol("s2"); //括号里添加描述符,仅仅是对它的描述
+//    console.log(s1 == s2)  //false
+//    console.log(typeof s1)  //symbol
+    //======================
+    var obj = {
+        [{}] : "李四",
+        [["abc"]] : "哈哈哈",
+        [Symbol("1")] : "我是symbol属性的值1",
+        [Symbol("2")] : "我是symbol属性的值2"
+
+    }
+//    console.log(obj);
+//    for(var pro in obj){ //for in无法遍历出属性名是symbol类型的属性
+//        console.log(pro, typeof pro)
+//    }
+//==========================================================================
+    var ss = Object.getOwnPropertySymbols(obj)  //返回一个数组,存储所有symbol类型属性名
+    console.log(ss)
+    ss.forEach(function (ele,index) {
+        console.log(ele,index)
+    });
+
+
+
+//    console.log(obj[])
+</script>
+</body>
+</html>
+<!--symbol基本类型  =>symbol类型数据
+    在es6之前属性名只能是字符串类型的数据
+    在es6中symbol类型的数据也可以作为属性名,只能通过动态计算去添加-->

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>元素节点之间的关系</title>
+</head>
+<body>
+<!--<img src="" alt="">-->
+<div id="box">
+    <p>a</p>
+    <p>
+        <a href="">百度一下</a>
+    </p>
+</div>
+<script>
+    var box = document.getElementById("box");
+    //获取所有的元素节点
+    console.log(box.children)
+    //获取所有的子元素节点的数量
+    console.log(box.childElementCount)
+    console.log(box.parentElement); //与box.parentNode完全一样
+    //获取到第一个子元素
+    console.log(box.firstElementChild)
+    //获取最后一个子元素
+    console.log(box.lastElementChild)
+    //下一个兄弟元素
+    console.log(box.nextElementSibling);
+    //上一个兄弟元素
+    console.log(box.previousElementSibling);
+</script>
+</body>
+</html>

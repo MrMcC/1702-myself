@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+//    function foo(a,b,c=10) {
+//        console.log(a,b,c)
+//    }
+//    foo(1,2)
+//    foo(1,2,3)
+//    foo(undefined,2,undefined) //传undefined相当于没传,输出undefined 2 10
+
+//============================
+//"use strict"
+//    function foo(a,b) {
+//        a= 100;
+//        console.log(a == arguments[0]);
+//        console.log((b == arguments[1]));
+//        console.log(arguments[0]); //严格模式下还是10
+    }
+//    foo(10,20)
+//=================================
+
+//    function foo(a=1,b) { //只要有一个用了严格模式,那么所有都得严格模式下运行
+//        a= 100;
+//        console.log(a == arguments[0]);
+//        console.log((b == arguments[1]));
+//        console.log(arguments[0]); //严格模式下还是10
+//    }
+//    foo(10,20)
+    //================================
+
+//    function foo(a,b=a+10) {
+//        console.log(a,b)
+//    }
+//    foo(100)
+//    foo(100,10) //赋值了就不用默认值
+    //=================================
+//    function foo(a=b,b) {//在形参2出现之前b还不能用,暂存死区
+//        console.log(a,b)
+//    }
+//    foo(undefined,10)  //b未定义
+    //=================================
+//    let value = 1;
+//    function getValue() {
+//        value++;
+//        return value;
+//    }
+//    function foo(a,b=getValue()) {  //foo调用时这个getValue再调用,动态绑定
+//        console.log(a,b)
+//    }
+//    foo(10)
+//    foo(11)
+
+
+</script>
+</body>
+</html>
+<!--非严格模式下arguments永远与形参的值保持一致
+    在严格模式下arguments永远是保持的形参的最初的值
+    es6永远运行在严格模式下
+    默认值也可以是表达式,表达式可以出现前面的形参
+    默认值中的方法或者表达式,是在函数执行的时候才调用-->

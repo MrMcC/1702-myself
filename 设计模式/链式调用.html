@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var p = {
+				foo1(){
+					console.log("foo1")
+					return this;
+				},
+				foo2(){
+					console.log("foo2")
+					return this;
+				},
+				foo3(){
+					console.log("foo3")
+					return this;
+				}
+			}
+			p.foo1().foo2().foo3() //调用p.foo1()的返回值再调用foo2(),以此类推
+			//如果p.foo1()的返回值还是p那么就可以这么写
+		</script>
+	</body>
+</html>

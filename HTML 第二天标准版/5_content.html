@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	/*
+	盒模型之 content （内容）
+
+		html 中，万物皆是盒模型
+
+		content
+			width 	宽度
+			height 	高度
+
+		======================
+		背景
+			背景的填充范围是整个盒模型的内部
+
+			边框以内（包括边框）
+
+		background-color
+				设置背景颜色
+		background-image: url("路径")
+				设置背景图片
+
+		注意：
+			图片不要自己修改后缀名
+			是否显示后缀名
+
+			detail.jpg.jpg
+
+
+	 */
+	div{
+		width: 1300px;
+		height: 700px;
+		/*background-color: red;*/
+		/*background-image: url("img/detail.jpg");*/
+/*设置背景图片的重复方式
+	属性
+		repeat	  水平和竖直全部平铺
+				  默认值
+		repeat-x  水平方向平铺
+		repeat-y  竖直方向平铺
+		no-repeat 不进行平铺
+*/
+		/*background-repeat: no-repeat;*/
+/*
+设置背景图片的定位
+	数值的书写：
+		英文单词
+			top 	顶部
+			right 	右侧
+			bottom 	底部
+			left 	左侧
+			center 	居中
+		距离
+			px -> 像素
+		百分比
+
+	注意：
+		当我们的数值只设置一个时，
+		另外一个数值默认会设置成居中(center)
+
+ */
+		/*background-position: center;*/
+
+/*
+	复合写法
+		没有固定写法，看个人兴趣
+
+		颜色 -> 图片 -> 重复方式 -> 定位
+		颜色 -> 图片 -> 定位 -> 重复方式
+ */
+		background:
+			red
+			url("img/detail.jpg")
+			no-repeat
+			center;
+	}
+	</style>
+</head>
+<body>
+	<div></div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript" charset="utf-8">
+    /*
+     逻辑运算符
+     * 
+     * 		10 < num < 100 			X
+     * 		10 < num 和 num <100 	√
+     * 	作用：
+     * 		将多个判断条件并列判断
+     * 	分类：
+     * 		1.逻辑与	(&&)
+     * 			运算符两边表达式同时为真
+     * 			才为真
+     * 			
+     * 			真 && 假 		假
+     * 			假 && 真			假
+     * 			假 && 假			假
+     * 			真 && 真			真
+     * 				(一假即假)
+     * 		2.逻辑或	(||)
+     * 			运算符两边表达式只要有一个为真
+     * 			就为真
+     * 
+     * 			真 || 假			真
+     * 			假 || 真			真
+     * 			假 || 假			假
+     * 			真 || 真			真
+     * 				(一真即真)
+     * 
+     * 		3.逻辑非	(!)
+     * 			将表达式的结果 取反
+     * 				!true  -> false
+     * 				!false -> true
+     * 
+     * 注意：
+     * 		短路现象
+     * 			逻辑与中，其中左侧为假，则直接为假
+     * 			逻辑或中，其中左侧为真，则直接为真
+     * 		逻辑非
+     * 			不能连用
+     * */
+//  	var a = 5;
+//  	var b = 10;
+//  	var c = "5";
+//  	if(a < b && a == c){		//真 && 真 -> 真
+//  		console.log("成立");
+//  	}
+//  	else{
+//  		console.log("不成立");
+//  	}
+//  	if(a < b || a > c){		//真 || 假 -> 真
+//  		console.log("成立");
+//  	}
+//  	else{
+//  		console.log("不成立");
+//  	}
+//  	if(!(a > b)){			// ! 假    -> 真
+//  		console.log("成立");
+//  	}
+//  	else{
+//  		console.log("不成立");
+//  	}
+
+	if((true) || (false && true && false)){
+	    alert("成立");
+	}
+	if((true && false && true )|| (true)){
+	    alert("成立");
+	}
+</script>
+</html>
+
+
+
+
+

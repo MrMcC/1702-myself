@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="btn">按钮</button>
+<script>
+    var btn = document.getElementById("btn");
+    /*
+     作者：李振超    2017年3月28日 11:15
+     参数1：事件的类型 ,坚决不要加on click  dblclick mouseover
+     参数2：事件处理程序(监听器)
+     参数3：事件处理的阶段。 true代表捕获阶段处理。 false表示冒泡阶段
+     
+     可以对同一个事件类型添加多个处理程序
+     */
+    /*btn.addEventListener("click", function (){
+        console.log("我被点击了2")
+    }, false)*/
+    
+    function foo(){
+        console.log("我被点击了1")
+    }
+    btn.addEventListener("click", foo , false)
+    function foo(){
+        console.log("abc");
+    }
+//    foo = 3;
+    //移除事件处理程序的时候，必须和添加的是同一个程序
+    btn.removeEventListener("click", foo)
+    //54 如果让你先拿，如果保证一定能赢。 每次1-4
+    
+</script>
+</body>
+</html>

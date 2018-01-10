@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="ajax4.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<script type="text/javascript">
+			ajax.get("./ajax5的text.json",function(result){
+				var arr = JSON.parse(result);
+				for (var i = 0;i < arr.length;i++) {
+					var div = document.createElement("div");
+					div.innerHTML = arr[i].name + " " + arr[i].age;
+					document.body.appendChild(div)
+				}
+			})
+		</script>
+	</body>
+</html>

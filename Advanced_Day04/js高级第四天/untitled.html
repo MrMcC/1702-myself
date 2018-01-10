@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button>按钮</button>
+	<script>
+		// var i = 10;
+		// document.querySelector("button").onclick = function(){
+		// 	i = 1;  //都是全局的因为没在函数内var i=1会将10替换,每次点击都初始化i= 1;
+		// 	i++;
+		// 	foo();
+		// }
+		// function foo(){
+		// 	i++;
+		// 	console.log(i)
+		// }
+		
+
+		// var i = 10;
+		// document.querySelector("button").onclick = function(){
+		// 	i++;//提升
+		// 	foo();
+		// }
+		// function foo(){
+		// 	i++;
+		// 	console.log(i);
+		// }
+
+
+		// var i = 10;
+		// document.querySelector("button").onclick = function(){
+		// 	var i = 1;
+		// 	i++;
+		// 	foo(); //只是有个地址,只是用下这个外面的这个函数,实质这个函数还是在外面
+		// }
+		// function foo(){
+		// 	 i++;  //再点击是++这个i
+		// 	console.log(i);
+		// }
+
+		// var p = {
+		// 	name : "李四",
+		// 	foo : function(a,b){
+		// 		console.log(this.name,a,b);
+		// 	}
+		// }
+		// var p1 = {
+		// 	name : "张三"
+		// }
+		// p.foo.apply(p1,[10,20])
+		// p.foo(3,4)
+
+		// function foo(){
+		// 	a = 10;
+		// 	return function (){
+		// 		a++;
+		// 		return a;
+		// 	}
+		// }
+		// a = 20;
+		// var fun = foo();
+		// a = 30;
+		// var r = fun();
+		// a = 40;
+		// console.log(r);
+
+		// var name = "aaaa";
+		// var p = {
+		// 	name : "李四",
+		// 	foo : function(){
+		// 		console.log(this.name);
+		// 	}
+		// }
+		// var p1 = {
+		// 	name : "张三"
+		// }
+		// p.foo.apply(undefined);//undefined的name值找不到,迷人找window的所以是aaaa
+
+		// function foo(){
+		// 	var a = 10;
+		// 	return function(){
+		// 		a++;
+		// 		return a;
+		// 	}
+		// }
+		// a = 20;
+		// var fun = foo();
+		// a = 30;
+		// var r = fun();
+		// a = 40;
+		// console.log(r);
+
+		// function foo1(){
+		// 	var i = 10;
+		// 	return i;
+		// }
+		// function foo2(){
+		// 	var i = 20;
+		// 	return foo1;
+		// }
+		// console.log(foo2()())
+	</script>
+</body>
+</html>

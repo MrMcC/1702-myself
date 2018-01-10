@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			
+//			for (var i = 1; i < 1000; i++) {
+//				function p(tao){
+//					if(tao - parseInt(tao / 5)  - 1 == 6){
+//						return;
+//					}
+//					return p(tao - parseInt(tao / 5)  - 1)
+//				}
+//			}
+			
+			
+			var temp;
+			a:for(var i = 0; ; i++){
+				temp = i;
+				for(var y = 0; y < 5; y++){
+					if (temp%5 == 1) {
+						temp = (temp - 1)*4/5;
+						if (temp != 1 && y == 4 ) { //每个循环都判断下
+						    console.log(i);
+						    break a;
+						}
+					}
+					else{
+						break;
+					}
+				}
+			}
+
+			
+	for(i=1;i<=10000;i++){
+		var sum=i*5+1;   //第五个猴子拿之前剩余桃子数
+		if(sum%4==0){    //因为第四个猴子拿走了一份所以可以被四整除
+			sum=(sum/4)*5+1;//第四个猴子拿之前剩余桃子数
+			if(sum%4==0){
+				sum=(sum/4)*5+1;
+				if(sum%4==0){
+					sum=(sum/4)*5+1;
+					if(sum%4==0){
+						sum=(sum/4)*5+1;
+						console.log(sum);
+						break;
+					}
+				}
+			}
+		}
+	}
+
+	for(i=1;i<=10000;i++){
+		var sum = i*5+1;
+		if(sum%4==0){    
+			var sum1=(sum/4)*5+1;
+			if(sum1%4==0){
+				var sum2=(sum1/4)*5+1;
+				if(sum2%4==0){
+					var sum3=(sum2/4)*5+1;
+					if(sum3%4==0){
+						var sum4=(sum3/4)*5+1;
+						console.log(sum4);
+						break;
+					}
+				}
+			}	
+		}
+	}
+for(var tao = 0; tao < 10000; tao++){
+	var a=parseInt(tao /5);
+	if(tao % 5 == 1 && a != 0){
+		var b =tao - a - 1;
+		a = parseInt(b / 5)
+		if(b % 5 == 1 && a != 0){
+			b =b - a - 1;
+			a = parseInt(b / 5)
+			if(b % 5 == 1 && a != 0){
+				b =b - a - 1;
+				a = parseInt(b / 5)
+				if(b % 5 == 1 && a != 0){
+					b =b - a - 1;
+					a = parseInt(b / 5)
+					if(b % 5 == 1 && a != 0){
+						b =b - a - 1;
+						console.log(tao)
+						break;
+					}
+				}
+			}
+		}
+	}
+}
+		</script>
+	</body>
+</html>
+<!--
+	五个猴子分桃子
+	第一个猴子把桃子平均分5份,多了一个,丢入海中,拿走了一个份
+	第二个猴子把剩下桃子平均分5份,又多了一个,丢入海中,拿走了一份
+	第三个,四个,五个猴子都是这样做的
+	问海滩上原来有多少桃子
+-->
+<!--tao % 5 == 1--> 
+<!--var a=parseInt(tao /5);-->
+<!--a != 0;-->
+<!--for(var tao = 0; tao < 10000; tao++){
+	var a=parseInt(tao /5);
+	if(tao % 5 == 1 && a != 0){  //桃子比5大并且除以5余1
+		var b =tao - a - 1;      //总数减一份再减1,
+		a = parseInt(b / 5)      //
+		if(b % 5 == 1 && a != 0){
+			b = b - a - 1;
+			a = parseInt(b / 5)
+			if(b % 5 == 1 && a != 0){
+				b =b - a - 1;
+				a = parseInt(b / 5)
+				if(b % 5 == 1 && a != 0){
+					b =b - a - 1;
+					a = parseInt(b / 5)
+					if(b % 5 == 1 && a != 0){
+						b =b - a - 1;
+						console.log(tao)
+						return ;
+					}
+				}
+			}
+		}
+	}
+}-->
+
+
+	<!--
+	for(i=1;i<=10000;i++){
+		var sum=i*5+1;
+		if(sum%4==0){
+			sum=(sum/4)*5+1;
+			if(sum%4==0){
+				sum=(sum/4)*5+1;
+				if(sum%4==0){
+					sum=(sum/4)*5+1;
+					if(sum%4==0){
+						sum=(sum/4)*5+1;
+						console.log(sum);
+						break;
+					}
+				}
+			}
+		}
+	}
+	-->

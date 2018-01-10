@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;padding: 0;
+			}
+			div{
+				width: 50px;height: 50px;
+				background-color: pink;
+				margin-left: 200px;
+				/*transform: translateX(100px);*/
+				/*向对于最初位置往x方向平移*/
+				/*transform: translateY();*/
+				/*transform: translate(100px 200px);*/
+				/*左100px下200px*/
+				/*顺时针绕z轴旋转60度,默认绕几何中心转*/
+				transform: rotateZ(60deg);
+				/*参考旋转中心*/
+				transform-origin: 25px 25px;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<script type="text/javascript">
+			var div = document.querySelector("div")
+//			//在5s钟之内向右移动1000px
+//			var duration = 3000; //预设时间
+//			var dis = 1000;      //要完成的位移
+//			var startTime = new Date();//起始时间
+//			requestAnimationFrame(function step(){
+//				var date = new Date();
+//				var delta = date - startTime;
+//				//时间百分比
+//				var p = delta / duration ;
+//				//时间等于1,路程刚好走完
+//				var p = p >= 1 ? 1 : p;
+//				div.style.transform = `translateX(${dis * p}px)`
+//				if(p < 1){
+//					requestAnimationFrame(step)
+//				}
+//			})
+			
+			//时间归一化,简单写法
+			var tim = 2000;
+			var lu = 100;
+			var chui = 400;
+			var startTime = new Date();
+			var p;         //省的每次都var有个p
+			var opc = 1;
+			var isLoop = true //判断是否循环
+			requestAnimationFrame(function step(){
+				p = Math.min(1,(new Date() - startTime) / tim)
+			    //匀速
+//				div.style.transform = `translateX(${p * lu}px)`
+				//匀加速 下面就得改成p*p*lu
+//				div.style.transform = `translateX(${p * p * lu}px)`
+				//匀减速 下面就得改成(2-p)*p*lu
+//				div.style.transform = `translateX(${(2-p) * p * lu}px)`
+				//淡入
+//				div.style.opacity = opc * p;
+				//淡出
+//				div.style.opacity = opc * (1-p);
+				//平抛
+//				div.style.transform = `translate(${p*lu}px,${p*p*chui}px)`
+				//sin
+//				div.style.transform = `translate(${p*lu}px,${-200 *Math.sin(4 *2*Math.PI*p)}px)`
+				
+				//圆周运动
+//				var tx = lu * Math.sin(2 * Math.PI * p)
+//				var ty = lu - lu * Math.cos(2 * Math.PI * p)
+//				div.style.transform = `translate(${-tx}px,${ty}px)`
+
+				//默认选转
+//				div.style.transform = `rotateZ(${360 * p}deg)`
+				if(p == 1){
+					if(isLoop){
+						startTime = new Date();
+//						requestAnimationFrame(step)
+					}else{
+						return;
+					}
+				}
+				requestAnimationFrame(step)
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//			function Farmer(gongzi){
+//				this.gongzi = gongzi
+//			}
+//			function Attendant(gongzi){
+//				this.gongzi = gongzi
+//			}
+//			function Teacher(kechou){
+//				this.kechou = kechou;
+//			}
+//			function Scientist(nian){
+//				this.nian = nian;
+//			}
+//			Teacher.prototype = new Farmer(1000)
+//			Scientist.prototype = new Farmer(1000)
+//			var farmer = new Farmer(1000)
+//			console.log("农民的工资为:"+farmer.gongzi)
+//			var attendant = new Attendant(1000)
+//			console.log("服务生的工资为:"+attendant.gongzi)
+//			
+//			var teacher = new Teacher(5000)
+//			console.log("老师的工资为:"+ (teacher.gongzi+teacher.kechou))
+//			var scientist = new Scientist(10000)
+//			console.log("科学家的工资为:"+(scientist.nian+scientist.gongzi))
+			
+			
+			function Farmer(baseSalary){
+				this.baseSalary = baseSalary
+			}
+			Farmer.prototype.showMoney = function(){
+				return "我的工资是:" + this.baseSalary
+			}
+			var farmer = new Farmer(1000)	
+			console.log(farmer.showMoney())
+			
+			function Teacher(baseSalary,classFees){
+				Farmer.call(this,baseSalary)
+				this.classFees = classFees;
+			}
+			Teacher.prototype = new Farmer()
+			Teacher.prototype.constructor = Teacher;
+			Teacher.prototype.showMoney = function(){
+				return "我的工资是:" + (this.baseSalary + this.classFees);
+			}
+			var teacher = new Teacher(2000,1000)
+			console.log(teacher.showMoney())
+		</script>
+	</body>
+</html>
+<!--
+1、有农民(farmer),教师(teacher),科学家(scientist),服务生(attendant) 
+   a: 其中农民,服务生只有基本工资.  
+   b: 教师除基本工资外,还有课酬(元/天)  
+   c: 科学家除基本工资外,还有年终奖 
+   D: 使用原型继承的方式完成时上面的功能。
+-->

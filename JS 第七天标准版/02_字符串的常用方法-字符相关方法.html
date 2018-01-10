@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var s = "abcd你好";
+    //由于js没有字符型，所以返回仍然是字符串类型的。
+    var c = s.charAt(0);
+    console.log(typeof c);
+    /*
+    for(var i = 0; i < s.length; i++){
+        console.log(s.charAt(i));
+    }
+    //for...of也可以用来遍历字符串的字符
+    for(var c of s){
+        console.log(c)
+    }*/
+    console.log(s[0])  //可以体会charAt
+    var n = s.charCodeAt(4)
+    console.log(n)
+
+    //根据字符编码，得到对应的字符。
+    console.log(String.fromCharCode(97, 98, 20320))
+
+</script>
+</body>
+</html>
+<!--
+字符在内存里面是怎么存放的：
+ a：97
+ ASCii码
+    只能支持128个字符
+    a  97
+    b  98
+ iso8859-1
+   256个字符
+gbk、gb2312
+   2个字节
+   65535
+
+unicode：统一码 万国统一码
+
+utf-8：对unicode的具体的实现
+-->

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div id="menu">
+        <a href="#" id="exp">
+            <img src="./images/experiment.png">
+        </a>
+        <a href="#" id="know">
+            <img src="./images/know.png">
+        </a>
+        <a href="#" id="shop">
+            <img src="./images/shop.png">
+        </a>
+    </div>
+    <div id="share">
+        <a href="#" style="opacity: 0.4">
+            <img src="./images/share.png" alt="">
+        </a>
+        <ul id="content" style="display: none">
+            <li>
+                <span class="cont-span" id="cont-spanid1">Facebook</span>
+            </li>
+            <li>
+                <span class="cont-span" id="cont-spanid2">Tweet</span>
+            </li>
+        </ul>
+    </div>
+</body>
+<script>
+    var share = document.getElementById('share')
+    var content = document.getElementById('content')
+    share.onmouseenter = function () {
+      content.style.display = 'inline-block'
+    }
+    share.onmouseleave = function () {
+      content.style.display = 'none'
+    }
+</script>
+</html>

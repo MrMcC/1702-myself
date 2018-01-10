@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    var p1 = {
+        name : "李四",
+        girls : ["a","b"],
+        say(){
+            return this.name + " " +this.girls
+        }
+    }
+    var p2 = {};
+    Object.assign(p2,p1); //把p1混入到p2中
+
+    p1.girls.push("c");//girls对象只拷贝了地址值
+    console.log(p2.girls)
+    console.log(p2.say())
+
+</script>
+</body>
+</html>

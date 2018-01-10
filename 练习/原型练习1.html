@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--<style type="text/css">
+			div{
+				width: 100px;height: 100px;
+				background: red;
+				border-radius: 50px;
+			}
+		</style>-->
+	</head>
+	<body>
+		<!--<div></div>-->
+		<script type="text/javascript">
+//			function Person(){
+////				this.name = "小明";
+//			}
+//			Person.prototype.age = 20;
+//			var p1 = new Person();
+//			var p2 = new Person();
+//			p1.__proto__.age = 30;
+//			console.log(p1.age)
+//			console.log(p2.age)
+//			console.log(p1.__proto__ == Person.prototype)
+//			Person.prototype.age = 20;
+//			var p1 = new Person()
+//			p1.age = 50;
+//			var p2 = new Person()
+//			console.log(p1.age)
+//			console.log(p2.age)
+//			console.log(p1.__proto__.constructor)
+//			Person.prototype = {
+//				constructor : Person,
+//				name : "赵四",
+//				age : 20
+//			}
+//			var p = new Person();
+//			console.log(p.name)
+//			var a = new Object()
+//			console.log(a.__proto__.constructor == Object)
+//			function Person(){
+//				this.name = "小明";
+//			}
+//			Person.prototype.age = 20;
+//			var p1 = new Person();
+//			console.log("age" in p1)
+////			console.log(p1.hasOwnProperty("age"));
+//			console.log(getLocation(p1,"age"));
+//			function getLocation(Object,valueName){
+//				if(!(valueName in Object)){
+//					return "未定义";
+//				}else if(Object.hasOwnProperty()){
+//					return "在当前对象上"
+//				}else{
+//					return "在原型上"
+//				}
+//			}
+			
+			
+			
+//			function Person(name,age){
+//				this.name = name;
+//				this.age = age;
+//				if(!Person.prototype.speak){
+//					Person.prototype.speak = function(){    //要加if?之前会把之后覆盖?
+//						console.log(this.name)
+//					}
+//				}
+//			}
+//			var p = new Person("小明",20);
+//			var p1 = new Person("赵四",30);
+//			var p = new Person("小明",30);
+//			var p = new Person("赵四",20);
+//			console.log(p.speak == p1.speak)
+
+//			function Person(option){
+//				this.name = option.name;
+//				this.age = option.age;
+//			}
+//			Person.prototype = {
+//				constructor : Person,
+//				speak : function(){
+//					console.log(this.name)
+//				},
+//				eat : function(){
+//					console.log("饭")
+//				}
+//			}
+//			var p = new Person({name:"小明",age:20});
+//			console.log(p.age)
+//			p.speak()
+
+
+
+//function Person(option){
+//      this._init(option);                                    //???不懂
+//  }
+//  Person.prototype = {
+//      _init : function (option){
+//          this.name = option.name;
+//          this.sex = option.sex;
+//          this.age = option.age;
+//          this.a = option.a;
+//      },
+//      
+//constructor: Person,
+//      sayName: function (){
+//          console.log(this.name)
+//      },
+//      eat: function (){
+//
+//      },
+//      foo: function (){
+//
+//      },
+//      f : function (){
+//      
+//      }
+//  }
+//  var p1 = new Person({
+//      name: "李四"
+//      , age: 20,
+//      sex: "男"
+//  });
+//  console.log(p1.age)
+//  p1.sayName();
+
+//	function Father (name,age) {
+//		this.name = name;
+//		this.age = age;
+//	}
+//	//如果这样直接调用，那么father中的this只的是 window。 因为其实这样调用的： window.father("李四", 20)
+//	// name 和age 属性就添加到了window属性上
+//	Father("李四", 20);
+//	alert("name:" + window.name + "\nage:" + window.age);  //可以正确的输出
+//
+//	//使用call方法调用，则可以改变this的指向
+//	function Son (name, age, sex) {
+//		this.sex = sex;
+//    	//调用Father方法(看成普通方法)，第一个参数传入一个对象this，则this(Son类型的对象)就成为了Father中的this
+//		Father.call(this);
+//	}
+//	var son = new Son("张三", 30, "男");
+//	alert("name:" + son.name + "\nage:" + son.age + "\nsex:" + son.sex);
+//	alert(son instanceof Father); //false
+//	//定义父类型的构造函数
+//	function Father (name,age) {
+//		// 属性放在构造函数内部
+//		this.name = name;
+//		this.age = age;
+//		// 方法定义在原型中
+//		if((typeof Father.prototype.eat) != "function"){
+//			Father.prototype.eat = function () {
+//				alert(this.name + " 在吃东西");
+//			}
+//		}  
+//	}
+//	// 定义子类类型的构造函数
+//	function Son(name, age, sex){
+//    	//借调父类型的构造函数，相当于把父类型中的属性添加到了未来的子类型的对象中
+////		Father.call(this, name, age);
+//		this.sex = sex;
+//	}
+//	//修改子类型的原型为父类型的对象。这样就可以继承父类型中的方法了。
+//	Son.prototype = new Father(	"王五",100,"公");
+//	var son1 = new Son("志玲", 30, "女");
+//	var son2 = new Son("赵四",20,"男");
+//	console.log(son1.name);
+//	console.log(son1.sex);
+//	console.log(son1.age);
+//	console.log(son2.name);
+//	console.log(son2.sex);
+//	console.log(son2.age);	
+//	son1.eat();
+
+
+	//在构造方法内部封装属性
+	function Person(name, age) {
+	    this.name = name;
+	    this.age = age;
+	}
+	//在原型对象内封装方法
+	Person.prototype = {
+      	eat : function (food) {
+			alert(this.name + "爱吃" + food);
+		},
+ 		play : function (playName) {
+			alert(this.name + "爱玩" + playName);
+		}     
+	}
+
+    
+	var p1 = new Person("李四", 20);
+	var p2 = new Person("张三", 30);
+	p1.eat("苹果");
+	p2.eat("香蕉");
+	p1.play("志玲");
+	p2.play("凤姐");
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			li{
+				float: left;
+				list-style: none;
+				width: 100px;
+				height: 30px;
+				background: pink;
+				text-align: center;
+			}
+			
+			div {
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>
+				fvnxkl
+				<div>
+					<p>看萨克森大</p>
+					<p>看萨克森大</p>
+					<p>看萨克森大</p>
+					<p>看萨克森大</p>
+				</div>
+			</li>
+			<li>
+				<span>fvnxkl</span>
+				<div>
+					<p>看萨克森大</p>
+					<p>看萨克森大</p>
+					<p>看萨克森大</p>
+					<p>看萨克森大</p>
+				</div>
+			</li>
+			<li>
+				fvnxkl
+				<div>
+					<p>看萨克森大</p>
+					<p>看萨克森大</p>
+					<p>看萨克森大</p>
+					<p>看萨克森大</p>
+				</div>
+			</li>
+			<li>
+				fvnxkl
+				<div>
+					<p>看萨克森大</p>
+					<p>看萨克森大</p>
+					<p>看萨克森大</p>
+					<p>看萨克森大</p>
+				</div>
+			</li>
+		</ul>
+		<script type="text/javascript">
+			var lis = document.getElementsByTagName("li")
+			for(let i=0; i < lis.length; i++){
+				lis[i].onmouseenter = function(){
+					this.lastElementChild.style.display = "block";
+				}
+				lis[i].onmouseleave = function(){
+					this.lastElementChild.style.display = "none";
+				}
+			}
+		</script>
+	</body>
+</html>

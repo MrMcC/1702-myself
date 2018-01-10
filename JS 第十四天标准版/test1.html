@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var chars = [];
+    for(var i = 0; i < 10; i++){
+        chars.push(i);
+    }
+    for(var i = 97; i <= "z".charCodeAt(0); i++){
+        var c = String.fromCharCode(i);   // 97 -> a
+        chars.push(c);
+        chars.push(c.toUpperCase())
+    }
+    console.log(chars)
+</script>
+</body>
+</html>

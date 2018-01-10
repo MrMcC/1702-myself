@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 200px;
+				height: 200px;
+				background-color: pink;
+				/*margin-left: 200px;*/
+				/*transform: translateX(200px);*/
+				/*改变量,原来基础上正右跑*/
+				/*transform: (100px,100px);*/
+				/*x方向100,y方向100*/
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			
+		</div>
+		<script type="text/javascript">
+			var duration = 4000;//动画周期 时间
+			var distance = 800; //距离
+			var startTime = new Date();
+			//requestAnimation
+			setTimeout(function step(){
+				var currentTime = new Date();
+				var time = (currentTime - startTime) / duration ;
+				if(time >=1){
+					time = 1;//让他停止
+				}
+				box.style.transform = "translateX("+distance * time+"px)";
+				//时间的进度,>=4000时走完
+				if(time < 1){
+					setTimeout(step,20);
+				}
+			},20)
+			//会丢帧
+		</script>
+	</body>
+</html>
+<!--
+	在规定的时间走完规定的路程
+	把位移看成时间的函数
+	s = f(t)//保证1s走100像素,那10秒就能达到规定像素
+-->

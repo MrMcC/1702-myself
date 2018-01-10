@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+/*		div{
+			width: 50px;
+			height: 50px;
+			background: url(img/nav_bg.png) no-repeat;
+		}
+		div:hover{
+			background-position: 0px -50px;
+		}*/
+		div{
+			width: 50px;
+			height: 50px;
+			background:url(img/nav_bg.png) no-repeat -204px -50px;
+		}
+		div:hover{
+			background-position: -204px 0px;
+		}
+		/*挪动的是背景图片*/
+		/*我们在设置页面的导航条的时候，经常会遇到一个效果，就是当我们的鼠标放在我们的导航条上的时候，我们的默认背景图片去改变颜色
+		基础的改变方法是使用 hover ，但是会产生一个问题，hover 并不会立马被加载，而是当我们的鼠标划过的时候，才开始加载，在网速差的情况下，我们的背景都会显示为空白的
+		这时候我们就可以使用另外一个特性，就是我们的 background-position
+		将我们的默认状态图片和滑动状态图片合并成一张图片，在滑动的是去更改定位位置，我们称这种技术为图片翻转技术，演化到最后就是我们的 CSS sprite
+		其次就是，既然使用了定位，对位置坐标的要求就非常精准，这会一定程度上影响我们的开发进程，另外一个问题就是会极大的降低代码的可拓展性和可维护性。
+		是否使用这种技术主要是取决于网站的流量
+		它能进行合并的只能是用于背景的图片，如果使用 img 时也去使用这种技术，会降低我们的页面的可读性
+		对于横向和纵向平铺的图片，也不能去使用 CSS sprite
+		好处不止是解决了图片空白的问题，还减少了服务器压力，大型网站基本都采用了这种方式去进行页面设置*/
+	</style>
+
+</head>
+<body>
+	<div></div>
+</body>
+</html>

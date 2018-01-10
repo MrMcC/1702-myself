@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		输入年份<input type="" name="" id="isRun" value="" />
+		<button id="btn">按钮</button>
+		<script type="text/javascript">
+			btn.onclick = function(){
+				var year = +isRun.value;
+				if(year % 4 ==0 && year % 100 != 0 || year % 400 == 0){
+					alert("是闰年")
+				}else{
+					alert("不是闰年")
+				}
+			}
+
+		</script>
+	</body>
+</html>
+<!--一个文本框,一个按钮,输入年份,弹出是否是闰年 
+能被4整除且不能被100整除,或能被400整除-->

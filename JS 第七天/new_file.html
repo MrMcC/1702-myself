@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function add () {
+    			var sum = 0;
+    			for (var i = 0; i < arguments.length; i++) {
+      		sum += arguments[i];
+    			}
+    		return sum;
+		}
+		alert(add(2, 3));
+		alert(add(5, 6, 10));
+//		
+//		//计算一个数的阶乘
+		function jc(num){
+			if(num == 1){
+				return 1;
+			}
+			return jc(num - 1) * num;
+		}
+  		//计算1+2+...+100的值
+  		function sum(num){
+  			if(num==100){
+  				return 100;
+  			}
+  			return num + sum(num+1);
+  		}
+  		console.log(sum(1));
+  		//一共64个格子,第一个格子摆一个,以后每个是前面的2倍
+  		function gezi(num){
+  			if(num == 64){
+  				return sum(64);
+  			}
+  			return num + gezi(2 * num);
+  		}
+//		console.log(gezi(1));
+  		function sum(per){
+  			if(per == 1){  //必须写个值终止
+  				return 1;
+  			}
+  			return sum(per-1) * 2;
+  		}
+  		console.log(sum(64));
+  		
+  		//定义一个参数判断是今年的第几天
+  		var a = prompt("阿斯达");
+  		var b = prompt("自行车");
+  		var c = prompt("请问");
+  		function 
+</script>
+</html>

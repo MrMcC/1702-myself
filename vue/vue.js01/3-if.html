@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.js"></script>
+    <style>
+        .div1{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <!--缩写@click=""-->
+        <button v-on:click="changeBol()">切换显示隐藏</button>
+        <!--v-show=""有更高的渲染成本(不管条件是否成立,都会渲染),display: none dom性能差-->
+        <!--v-if=""有更高的切换消耗(dom操作) 操作css-->
+        <!-- 如果需要频繁切换的需求场景v-show比较合适,反之v-if 较好。-->
+        <div v-if="bol" class="div1">div1</div>
+    </div>
+</body>
+<script>
+    //  初始化,类似于ng-moudle
+    var vm = new Vue({
+        //选择器,类似于ng-app,指定vue的作用范围
+        el:"#app",
+        //初始化数据
+        data: {
+            //数据默认都会挂在vm实例下,调用的时候直接vm.xx或this.xx就可以
+            bol: true
+        },
+        //方法
+        methods: {
+            changeBol : function () {
+                this.bol = !this.bol
+            }
+        }
+    })
+</script>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>history对象</title>
+</head>
+<body>
+<a href="a.html">点击a标签</a>
+<button id="btn1">历史列表中url数量</button>
+<button id="btn2">先前</button>
+<button id="btn3">go</button>
+<script type="text/javascript">
+    btn1.onclick = function urlCount () {
+        alert("历史列表中url数量：" + history.length);
+    }
+    btn2.onclick= function (){
+        history.forward();
+    }
+    btn3.onclick = function (){
+        history.go(0)
+    }
+    
+</script>
+</body>
+</html>

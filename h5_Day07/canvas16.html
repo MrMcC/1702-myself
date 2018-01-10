@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        canvas{
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+<canvas id="canvas" width="640" height="640"></canvas>
+<script>
+    //绘制棋盘,监听鼠标点击事件
+    // 把落下的每个棋子存起来: 用二维数组 存储的是棋子的类型 0 没有 1 白色 2 黑
+    (function () {
+        var whiteChess = new Image();
+        whiteChess.src = "./img/兔子1.png";
+        var blackChess = new Image();
+        blackChess.src = "./img/兔子.png";
+        //定义变量交替落棋 1白棋 2黑棋
+        var whoChess = 1;
+        var currentChess;
+        var chesses = [];
+        for (var i = 0; i < 15; i++){
+            chesses.push([]);
+            var row = chesses[i];
+            for (var j = 0; j < 15; j++){
+                row.push(0)
+            }
+        }
+
+
+        var canvas = document.querySelector("#canvas");
+        if(!canvas.getContext) return;
+        var ctx = canvas.getContext("2d");
+        drawBoard(); //绘制棋盘
+        //绘制棋盘
+        function drawBoard() {
+            ctx.beginPath();
+            ctx.fillStyle = "lightgray";
+            ctx.fillRect(0,0,640,640);
+            ctx.stroke();
+            for (var i= 0; i< 14; i++){
+                for (var j= 0; j < 14; j++){
+                    ctx.beginPath();
+                    ctx.strokeStyle = "gray";
+                    ctx.strokeRect(40 + 40 * j,40 + 40 * i,40,40)
+                    ctx.stroke();
+                }
+            }
+        }
+        //绘制棋子
+        function drawChess(x,y) {
+            if(whoChess == 1){
+                currentChess = whiteChess;
+            }else{
+                currentChess = blackChess;
+            }
+            x = Math.round((x - 40) / 40) * 40 + 40;
+            y = Math.round((y - 40) / 40) * 40 + 40;
+            ctx.drawImage(currentChess,x-10,y-10,20,20);
+            chesses[(x-40)/40][(y-40)/40]
+
+            whoChess = whoChess == 1 ? 2 : 1 ;
+        }
+        canvas.onclick = function (e) {
+            var x = e.offsetX;
+            var y = e.offsetY;
+            drawChess(x,y);
+        }
+
+    })()
+
+</script>
+</body>
+</html>

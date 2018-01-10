@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 100px;
+				height: 100px;
+				background: pink;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<script type="text/javascript">
+			var duration = 4000;//动画周期 时间 毫秒值
+			var distance = 800; //距离
+			var startTime = new Date();
+			var p;
+			requestAnimationFrame(function step(){
+				p = Math.min(1,(new Date() - startTime) / duration);
+				box.style.transform = "translateX(" + distance * p + "px)";
+//				if(p < 1){
+//					requestAnimationFrame(step)
+//				}
+				p < 1 && requestAnimationFrame(step)
+			})
+		</script>
+	</body>
+</html>

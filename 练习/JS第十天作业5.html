@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;padding: 0;
+			}
+			body{
+				background-color: #000000;
+			}
+			#box{
+				width: 100px;height: 100px;background-color: white;position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<script type="text/javascript">
+			var box = document.getElementById("box");
+			var speed = 20;
+			document.body.onkeydown = function(event){
+				var code = event.keyCode;
+//				console.log(event)
+				var left = box.offsetLeft;
+				var top = box.offsetTop;
+				switch(code){
+					case 37:
+						left -= speed;
+						break;
+					case 38:
+						top -= speed;
+						break;
+					case 39:
+						left += speed;
+						break;
+					case 40:
+						top += speed;
+						break;
+				}
+				box.style.left = left+"px"
+				box.style.top = top+ "px"
+			}
+			
+		</script>
+	</body>
+</html>
+<!--屏幕内移动的小方块-->

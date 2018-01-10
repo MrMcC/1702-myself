@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--小明语文,数学,英语成绩,求平均分和总分-->
+		输入语文成绩:<input type="" name="yuwen" id="yuwen" value="" />
+		输入数学成绩:<input type="" name="shuxue" id="shuxue" value="" />
+		输入英语成绩:<input type="" name="yingyu" id="yingyu" value="" /><br />
+		<input type="button" name="btn" id="btn" value="按钮" />
+		<script type="text/javascript">
+			btn.onclick = function(){
+				var sum = parseInt(yuwen.value) + parseInt(shuxue.value) + parseInt(yingyu.value)
+				alert( "总成绩为:" + sum);
+				var arr = sum / 3
+				alert("平均成绩为:" + arr);
+			}
+		</script>
+	</body>
+</html>

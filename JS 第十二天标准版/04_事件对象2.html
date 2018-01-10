@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="box">
+    <button id="btn">按钮</button>
+</div>
+<script>
+    box.onclick = function (){
+        console.log("我是div也受到了点击事件")
+    }
+    btn.addEventListener("click", function (event){
+        console.log("button的第二个点击事件")
+    })
+    btn.onclick = function (event){
+        console.log("我点击了按钮")
+        //阻止事件进一步传播
+          event.stopPropagation();
+        //立即阻止事件的进一步传播，同级别的也收不到了。
+//      event.stopImmediatePropagation();
+    }
+//  btn.addEventListener("click", function (event){
+//      console.log("button的第二2222个点击事件")
+//  })
+    
+   
+</script>
+</body>
+</html>
+<!--
+事件对象的重要属性和方法：
+    1. event.target   事件发生区域的最内层的dom对象
+    2. event.currentTarget    事件注册在哪个dom对象身上就是哪个dom对象
+    3. event.preventDefault()   阻止事件的默认行为
+    4. event.stopPropagation()  阻止事件进一步传播(冒泡或捕获)
+-->

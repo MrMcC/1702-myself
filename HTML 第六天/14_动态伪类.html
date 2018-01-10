@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		/*动态伪类
+			伪选择器
+			    伪元素
+			    伪类
+			       伪类
+			       动态伪类
+		*/
+		/*动态伪类*/
+		a{
+			font-size: 150px;
+		}
+		/*未被访问的链接 默认指的a标签*/
+		a:link{
+			background: red;
+		}
+		/*访问过的链接  默认指的a标签*/
+		a:visited{
+			background: blue;
+		}
+		/*鼠标悬停在对应内容之上 不光使用在a标签*/
+		a:hover{
+			background: green;
+		}
+		/*当鼠标点击时触发的内容（按住） 不光使用在a标签*/
+		a:active{
+			background: yellow;
+		}
+		/*顺序问题
+		        书写的过程中需要注意，
+		        visited 需要放在link 之后
+		        hover   需要放在link和visited之后
+		        acctive 需要放在hover之后
+		        （link->visited->hover->active)*/
+		/*拓展
+		     当内容获取焦点时触发*/
+		div:focus{
+			background: purple;
+		}
+	</style>
+</head>
+<body>
+	<a href="###">我是一个男人</a>
+</body>
+</html>

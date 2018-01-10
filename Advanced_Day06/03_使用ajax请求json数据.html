@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<p id="p"></p>
+<body>
+<script>
+    var p = document.getElementById("p");
+    //步骤1：
+    var xhr = window.XMLHttpRequest
+        ? new XMLHttpRequest()
+        : new ActiveXObject("Microsoft.XMLHTTP");
+    
+    //步骤2： 调用open方法
+    xhr.open("GET", "./data1.json", true);
+    //步骤3： 监听状态
+    xhr.onreadystatechange = function (){
+        if(xhr.readyState == 4){
+            if(xhr.status == 200){
+                //xhr.responseText 是字符串类型的
+                var obj = JSON.parse(xhr.responseText);  //把json数据解析成js数据
+//                console.log(xhr.responseText)
+                p.innerHTML = "姓名：" + obj.name  + "<br> 年龄 :"  + obj.age
+            }else{
+                //响应异常时候的处理代码
+            }
+        }
+    }
+    //步骤4：发送请求
+    xhr.send(null);
+</script>
+</body>
+</html>
+<!--
+使用ajax去请求json数据
+json是目前互联网上面传输数据的一种事实的标准
+json一共两种数据：
+    json数组  （就是我们以前见到的js数组）
+    
+    json对象 (js对象)
+
+
+["abc", "a"]    json
+{
+    "name" : "李四",
+    "age" : 20
+}
+------
+{
+    "status" : "ok",
+    "result" : [
+        {
+            "name" : "李四",
+            "age" : 20
+        },{
+            "name" : "战三",
+            "age" : 30
+        }
+    ]
+}
+
+
+注意：
+json跨平台的纯文本数据！！
+1. json数组，可以存储json对象，也可以存储字符串
+2. json对象中的字符串不管是键还是值，都必须加双引号。
+3. json对象中的键值对中的值，不能是函数
+4. json数据的文件中，不要添加任何的注释
+-->

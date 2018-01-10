@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;padding: 0;
+        }
+        #tabWrap button.active{
+            background-color: #dcb357;
+        }
+        #tabWrap div{
+            width: 100px;
+            height: 100px;
+            background-color: #00c0a5;
+            display: none;
+        }
+        #tabWrap div.active{
+            display: block;
+        }
+    </style>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+    <div id="tabWrap">
+        <button ng-repeat="item in tabs" ng-class="
+        {true: 'active',false: ''}[$index==activeIndex]" ng-click="changeIndex($index)">
+            {{item.btn}}
+        </button>
+        <div ng-repeat="item in tabs" ng-class="
+        {true: 'active',false: ''}[$index==activeIndex]">
+            {{item.content}}
+        </div>
+    </div>
+
+</body>
+<script src="./js/angular.min.js"></script>
+<script>
+    var myApp = angular.module("myApp",[]);
+
+    myApp.controller('myCtrl',['$scope',function ($scope) {
+
+        $scope.tabs = [
+            {btn:"按钮1",content:"买菜",id:1},
+            {btn:"按钮2",content:"学习ng",id:2},
+            {btn:"按钮3",content:"打游戏",id:3},
+        ];
+        $scope.activeIndex = 0;
+        $scope.changeIndex = function (index) {
+            $scope.activeIndex = index;
+        }
+    }])
+</script>
+</html>

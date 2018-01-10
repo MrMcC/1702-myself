@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选项卡</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        ul {
+            margin: 0 auto;
+            list-style: none;
+            width: 800px;
+            height: 500px;
+            position: relative;
+            
+        }
+        
+        li {
+            float: left;
+            width: 200px;
+        }
+        
+        li p {
+            width: 100%;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            background-color: gray;
+        }
+        
+        li div {
+            left: 0;
+            width: 800px;
+            height: 400px;
+            position: absolute;
+            border: 1px solid #000;
+            box-sizing: border-box;
+            display: none;
+        }
+        
+        li:nth-child(1) div {
+            display: block;
+        }
+        
+        li:nth-child(1) p {
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <ul>
+        <li>
+            <p>话费</p>
+            <div>话费内容</div>
+        </li>
+        <li>
+            <p>机票</p>
+            <div>机票内容</div>
+        </li>
+        <li>
+            <p>酒店</p>
+            <div>酒店内容</div>
+        </li>
+        <li>
+            <p>游戏</p>
+            <div>游戏内容</div>
+        </li>
+    </ul>
+</div>
+<script>
+    //找到所有的li
+    var ps = document.querySelectorAll("li");
+    var lastLi;  //记录鼠标所在的最后一个li
+    for (var i = 0; i < ps.length; i++){
+        // li的onmouseover事件
+        ps[i].onmouseover = function (){
+//            this.nextElementSibling.style.display = "block";
+            this.lastElementChild.style.display = "block";
+            this.firstElementChild.style.backgroundColor = "pink";
+            lastLi = this;
+        }
+        ps[i].onmouseout = function (){
+//            this.nextElementSibling.style.display = "none";
+            this.lastElementChild.style.display = "none";
+            this.firstElementChild.style.backgroundColor = "gray";
+        }
+        document.querySelector("ul").onmouseleave = function (){
+            lastLi.lastElementChild.style.display = "block";
+            lastLi.firstElementChild.style.backgroundColor = "pink";
+        }
+        
+        /*document.querySelector("ul").onmouseenter = function (){
+         lastLi.lastElementChild.style.display = "none";
+         lastLi.firstElementChild.style.backgroundColor = "gray";
+         }*/
+        /*document.querySelector("ul").addEventListener("mouseenter",function (){
+            lastLi.lastElementChild.style.display = "none";
+            lastLi.firstElementChild.style.backgroundColor = "gray";
+        }, false)*/
+    }
+</script>
+</body>
+</html>

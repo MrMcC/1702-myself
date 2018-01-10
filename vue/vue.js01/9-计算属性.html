@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.js"></script>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div id="app">
+        <p>原始的信息{{message}}</p>
+        <!--相当于访问属性,-->
+        <p>翻转的信息{{reverseMessage}}</p>
+    </div>
+</body>
+<script>
+    var vm = new Vue({
+        el:"#app",
+        data: {
+            message:"Hello Vue"
+        },
+        methods: {
+//            reverseMessage: function () {
+//                return this.message.split("").reverse().join("")
+//            }
+        },
+        //计算属性
+        computed: {
+            reverseMessage: function () {
+                return this.message.split("").reverse().join("")
+            }
+        }
+    })
+
+</script>
+</html>

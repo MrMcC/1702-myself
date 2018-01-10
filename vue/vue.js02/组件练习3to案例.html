@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.js"></script>
+
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="newTodoText" @keyup.enter="addNewTodo" placeholder="Add a todo">
+        <ul>
+            <todo-item v-for="(todo, index) in todos" :title="todo" @remove="removeFn(todo)"></todo-item>
+        </ul>
+    </div>
+</body>
+<script>
+    Vue.component('todo-item',{
+        //再把子组件数据传回给父组件,remove自定义方法
+        template: `<li>
+                       {{title}}
+                       <button @click="$emit('remove')">删除</button>
+                    </li>`,
+        //先获取父组件数据
+        props: ['title']
+    })
+    new Vue({
+        el: "#app",
+        data:{
+            newTodoText: "",
+            todos: []
+        },
+        methods:{
+            addNewTodo(){
+                this.todos.push(this.newTodoText)
+                this.newTodoText = ""
+            },
+            removeFn(todo){
+                this.todos.splice(this.todos.indexOf(todo),1)
+            }
+        }
+    })
+</script>
+</html>

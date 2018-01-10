@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        canvas{
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+<canvas id="canvas" width="600" height="600"></canvas>
+<script>
+    class Snake{
+        constructor(ctx){
+            this.ctx = ctx;
+            this.w = 60;
+            this.h = 60;
+            this.moveSpeed = 3;
+            this.moveDirection = "right";
+            this.bodys = [
+                [120,0],
+                [60,0],
+                [0,0]
+            ];
+            this._init();
+        }
+        _init(){
+            document.addEventListener("keydown",()=>{
+                switch (e.keyCode){
+                    case 37:  //left
+                        if(this.moveDirection == "right") return;
+                        this.moveDirection = "left";
+                        break;
+                    case 38:  //up
+                        if(this.moveDirection == "down") return;
+                        this.moveDirection = "up";
+                        break;
+                    case 39:  //right
+                        if(this.moveDirection == "left") return;
+                        this.moveDirection = "right";
+                        break;
+                    case 40:  //down
+                        if(this.moveDirection == "up") return;
+                        this.moveDirection = "down";
+                        break;
+                }
+            })
+        }
+        drawGrid(){
+            var ctx = this.ctx;
+            for (let i = 0; i < 11; i++){
+                ctx.beginPath();
+                ctx.moveTo(0,60*i);
+                ctx.lineTo(600,60*i);
+                ctx.stroke();
+                ctx.beginPath();
+                ctx.moveTo(60*i,0);
+                ctx.lineTo(60*i,600);
+                ctx.stroke();
+            }
+        }
+        move(){
+            this.putInFood();
+            var fn;
+            setTimeout(fn = ()=> {
+
+                this.bodys.pop();
+                //更改this.bodys数组
+                switch (this.moveDirection){
+                    case "right" :
+                        var firstBody = this.bodys[0]  //拿到蛇头
+                        var newFirstBody = [firstBody[0] + 60,firstBody[1]];
+                        this.bodys.unshift(newFirstBody);
+                        break;
+                    case "down" :
+                        break;
+                    case "left" :
+                        break;
+                    case "up" :
+                        break;
+                }
+                this.draw() //绘制蛇的身体
+                setTimeout(fn,3000/this.moveSpeed)
+            },3000/this.moveSpeed)
+
+        }
+
+        draw(){
+
+            var ctx = this.ctx;
+            ctx.clearRect(0,0,600,600);
+            this.drawGrid();
+            let bodys = this.bodys;
+            for(let i = 0; i< bodys.length;i++){
+                let body = bodys[i];
+                ctx.save();
+                ctx.fillStyle = "pink";
+                ctx.fillRect(body[0],body[1],this.w,this.h);
+                ctx.restore();
+                ctx.save();
+                ctx.strokeRect(body[0],body[1],this.w,this.h);
+                ctx.restore();
+            }
+        }
+
+        putInFood(){
+            while (true){
+                var x = randomInt(0,9) * 60;
+                var y = randomInt(0,9) * 60;
+                var flag = false;
+                for (let i =0; i < this.bodys.length; i++){
+                    let body = this.bodys[i];
+                    if(x == body[0] && y == body[1]){
+                        flag = true;
+                        break;
+                    }
+                }
+                if(!flag){
+                    ctx.save();
+                    ctx.fillStyle = "green";
+                    ctx.fillRect(x,y,60,60);
+                    ctx.restore();
+                    ctx.save();
+                    ctx.strokeRect(x,y,60,60);
+                    ctx.restore();
+                    break;
+                }
+            }
+
+
+        }
+
+    }
+
+    var canvas = document.querySelector("canvas");
+    var ctx = canvas.getContext("2d");
+
+    var snake = new Snake(ctx);
+    snake.drawGrid();
+    snake.move();
+    function randomInt(from,to) {
+        return parseInt()
+    }
+</script>
+</body>
+</html>

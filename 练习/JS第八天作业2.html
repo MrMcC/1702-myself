@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+	<body>
+		<button id="btn">关闭</button>
+		<p id="p"></p>
+		<script type="text/javascript">
+			var mins = +prompt("输入一个分钟数")
+			var intervalId;
+			function daojishi(min){
+				var p = document.getElementById("p")
+				intervalId = setInterval(function(){
+					if(min < 0){
+						clearInterval(intervalId);
+						alert("计时结束")
+					}
+					else{
+						p.innerHTML = min--;	
+					}
+ 
+				},1000)
+			}
+			daojishi(mins);
+			btn.onclick =function(){
+				clearInterval(intervalId)
+			}
+		</script>
+	</body>
+</html>
+<!--
+	输入一个分钟数，开始倒计时。倒计时结束，弹出"计时结束!"
+	,中间可以点击按钮停止倒计时。
+-->

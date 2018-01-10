@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function Father(name){
+				this.name = name;
+			}
+			Father.prototype.speak = function (){
+				console.log("我是福类型中的方法")
+			}
+			Father.prototype.toString = function(){
+				return a;
+			}
+			
+			
+			function Son(age){
+				this.age = age;
+			}
+//			Son.prototype.eat = function (){
+//				console.log("我是子类型中的方法")
+//			}
+			Son.prototype.toString = function(){
+				return a;
+			}			
+			Son.prototype = new Father("李四")
+			
+			var son1 = new Son(20);
+			console.log(son1.age);
+			son1.eat();
+			
+			console.log(son1 instanceof Son)
+			console.log(son1 instanceof Father)
+			console.log(son1 instanceof Object)
+			console.log(son1.toString())
+			
+			function foo(){  //当成一个对象
+				
+			}
+			foo.eat = function (){  //静态方法
+				alert("abc")
+			}
+			var f = new foo();//创建出来的对象无法访问静态方法
+			f.eat();//false
+		</script>
+	</body>
+</html>

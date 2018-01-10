@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.js"></script>
+    <style>
+        button.active{
+            background-color: #dcb357;
+        }
+        .div1{
+            width: 100px;
+            height: 100px;
+            background-color: #118855;
+            color: #fff;
+            display: none;
+        }
+        .div1.active{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div>
+            <button v-for="(item,index) in tabs"  :class="{active:activeIndex==index}" @click="changeDiv(index)">{{item.btn}}</button>
+            <div class="div1" v-for="(item,index) in tabs" :class="{active:activeIndex==index}">{{item.content}}</div>
+        </div>
+
+    </div>
+</body>
+<script>
+
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            tabs : [
+                {btn:"按钮1",content:"买菜",id:1},
+                {btn:"按钮2",content:"学习ng",id:2},
+                {btn:"按钮3",content:"打游戏",id:3},
+            ],
+            activeIndex : 0
+        },
+        methods:{
+            changeDiv: function (index) {
+                this.activeIndex = index;
+            }
+        }
+    })
+</script>
+</html>

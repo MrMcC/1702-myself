@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				border-radius: 50%;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+	<script type="text/javascript">
+		/*
+		 在页面中随机生成50个小球,大小随机(直径30-100),位置随机的小球
+		 * 
+		 * */
+		//先创建第一个小球
+		function creatqiu(){
+			var div = document.createElement("div");
+			
+			var wh = randomInt(10,150)
+			div.style.width = wh+"px";
+			div.style.height=wh+"px";
+			div.style.backgroundColor = "rgb("+randomInt(0,255)+","+randomInt(0,255)+","+randomInt(0,255)+")";
+			div.style.left = randomInt(0,900)+"px";
+			div.style.top = randomInt(0,500)+"px";
+			return div;
+		}
+		
+		//直接找到body
+//		document.body.appendChild(div);
+
+		for(var i= 0;i<50;i++){
+			var div = creatqiu();
+			document.body.appendChild(div);
+		}
+		
+		//随机函数
+		function randomInt(from,to){
+			return parseInt(Math.random()*(to-from+1)+from);
+		}
+	</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.son_1{
+			width: 200px;
+			height: 200px;
+			background: red;
+
+/*
+	绝对定位
+
+	激活属性：
+		top 	距离 顶部 位移
+		right 	距离 右侧 位移
+		bottom 	距离 底部 位移
+		left 	距离 左侧 位移
+		z-index
+
+	特性：
+		1：绝对定位会使元素脱离文档流
+		2：提升层级 1 级
+		3：如果元素没有宽度，则设置了绝对定位的
+		   元素，会由内容去撑开宽度
+		4：绝对定位会使原本不支持宽高的元素
+		   从新支持宽高
+
+	位移参考：
+		绝对定位元素的位移是参考于
+		离它最近的，设置了定位的父级
+		直至找到 HTML 的根元素
+
+			设置了定位
+				相对定位
+				绝对定位
+				固定定位
+ */
+			position: absolute;
+
+			top: 100px;
+			left: 100px;
+		}
+		.son_2{
+			width: 400px;
+			height: 400px;
+			background: green;
+		}
+		span{
+			width: 300px;
+			height: 300px;
+			background: blue;
+
+			position: absolute;
+		}
+		.father{
+			width: 600px;
+			height: 600px;
+			background: blue;
+
+			margin-left: 300px;
+			margin-top: 300px;
+
+			position: relative;
+		}
+	</style>
+</head>
+<body>
+	<div class="father">
+		<div class="son_1">son_1</div>
+	</div>
+
+
+	<!-- <span>asd</span> -->
+
+
+
+
+
+
+	<!-- <div class="son_2">
+		1234567890开始0987654321李先生李先生李先生李先生李先生李先生李先生李先李先生李先生李先生李先生李先生李先生李先生李先李先生李先生李先生李先生李先生李先生李先生李先李先生李先生李先生李先生李先生李先生李先生李先李先生李先生李先生李先生李先生李先生李先生李先李先生李先生李先生李先生李先生李先生李先生李先李先生李先生李先生李先生李先生李先生李先生李先李先生李先生李先生李先生李先生李先生李先生李先李先生李先生李先生李先生李先生李先生李先生李先李先生李先生李先生李先生李先生李先生李先生李先李先生李先生李先生李先生李先生李先生李先生李先李先生李先生李先生李先生李先生李先生李先生李先
+	</div> -->
+</body>
+</html>

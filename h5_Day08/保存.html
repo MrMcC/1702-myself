@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="color">
+<select>
+    <option value="./img/timg.jpeg">图片1</option>
+    <option value="./img/timg2.jpeg">图片2</option>
+</select>
+<br>
+<img src="" alt="">
+<script>
+    var inputColor = document.querySelector("input");
+    var imgSelect = document.querySelector("select");
+    var img = document.querySelector("img");
+
+    showStyle();
+    inputColor.onchange = saveSetting;
+    imgSelect.onchange = saveSetting;
+    function saveSetting() {
+        var storage = window.localStorage;
+        storage.setItem("bc",inputColor.value);
+        storage.setItem("imgSrc",imgSelect.value);
+        showStyle();
+    }
+    function showStyle() {
+        var bc = window.localStorage.getItem("bc");
+        var imgSrc = window.localStorage.getItem("imgSrc");
+        document.body.style.backgroundColor = bc;
+        img.src = imgSrc;
+        inputColor.value = bc;
+        imgSelect.value = imgSrc;
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+/*
+	通过伪类增加内容
+ */
+	div{
+		font-size: 150px;
+	}
+	/*在当前标签 后面 增加内容*/
+	div:after{
+		 content: "辣眼睛";
+	}
+	/*在当前标签 之前 增加内容*/
+	div:before{
+		content: "舞蹈不行";
+	}
+	</style>
+</head>
+<body>
+	<div>李先生</div>
+</body>
+</html>

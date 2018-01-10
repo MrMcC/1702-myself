@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="libs/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+//				var $all = $("div").find("p")    //查找某个元素
+//				console.log($all)
+//				var $alls = $("ul").children()   //所有儿子元素
+//				console.log($alls)
+				
+//				$("ul").find("#p1")
+				console.log($("div + "))   //下一个任意兄弟
+//				console.log($("div + li"))  //下一个是兄弟的li
+//				console.log($("div").next())
+//				console.log($("div").next("li"))
+				
+				console.log($("div ~"))
+				console.log($("div ~*"))
+				console.log($("div ~ul"))
+				console.log($("div").nextAll("ul"))
+				
+				console.log($("ul").prev("div"))
+				console.log($("ul").prevAll("div"))
+				console.log($("#p1").siblings("p"))
+			})
+		</script>
+	</head>
+	<body>
+		<div>
+    			<p>
+        			<a href="http://www.baidu.com">百度一下</a>
+   			</p>
+		</div>
+		<h1></h1>
+		<ul>
+    			<p id="p1"></p>
+    			<li>你好</li>
+    			<li><a href="#">网址 1</a></li>
+    			<li id="li1">网址 2</li>
+    			<p>abcddd</p>
+    			<li>网址 3
+       		 	<p>afdasljfladsjflsa</p>
+    			</li>
+    			<li><a href="#">网址 4</a></li>
+		</ul>
+	</body>
+</html>

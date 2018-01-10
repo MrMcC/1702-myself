@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="libs/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				console.log($("div:first"))
+				console.log($("div:last"))
+				console.log($("div:not(#box2)"))
+				console.log($("div:even"))
+				console.log($("div:odd"))
+				console.log($("div:eq(1)"))
+				console.log($("div:gt(1)"))
+				console.log($("div:lt(3)"))
+				console.log($(":header"))  //获取所有h表签
+				
+				console.log($(":focus"))   //获取表单焦点
+				$(":focus").val("哈哈哈")
+			})
+			
+		</script>
+	</head>
+	<body>
+		<ul>
+			<a href="">百度一下</a>
+			<div id="box1">我是div1</div>
+			<li>123</li>
+			<li>456</li>
+			<h1></h1>
+			<h2></h2>
+			<div id="box3"></div>
+			<div id="box4"></div>
+			<li>789</li>
+			<div id="box2">我是div2</div>
+			<p>我是p</p>
+			输入<input type="text" name="" id="" value="" autofocus/>
+		</ul>
+	</body>
+</html>

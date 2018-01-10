@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var info = prompt("请输入四位数字");
+			if(info.length == 4 && isNaN(+info) == false && parseInt(+info) == +info){
+				alert("ok");
+			}else{
+				alert("输入的不是4位数");
+			}
+		</script>
+	</body>
+</html>
+<!--弹出输入框,如果输入的是四位数字就ok,否则"输入不正确"-->

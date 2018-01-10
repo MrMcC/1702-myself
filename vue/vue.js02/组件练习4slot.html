@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <page>
+            <page-header v-if="active"></page-header>
+            <login-header v-if="!active"></login-header>
+        </page>
+    </div>
+</body>
+<script>
+    Vue.component('page-header',{
+        template: `<header>我是未登录header</header>`
+    })
+    Vue.component('login-header',{
+        template: `<header>我是已登录header</header>`
+    })
+    Vue.component('page',{
+        template:`
+            <div>
+                <slot>如果没有内容我就显示</slot>
+                <main>我是主题</main>
+            </div>`
+    })
+
+    new Vue({
+        el: '#app',
+        data:{
+            active: false
+        }
+    })
+</script>
+</html>

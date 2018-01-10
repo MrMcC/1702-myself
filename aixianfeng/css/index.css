@@ -1,0 +1,212 @@
+html{
+    font-size: 10px;
+}
+.container{
+    /*等同于html,body width:100%,height:100%,container  width:100,height:100*/
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f8f8f8;
+    /*设置固定定位的高度,就不会遮挡*/
+    padding-top: 4.5rem;
+    z-index: 15;
+    padding-bottom: 5rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+}
+header{
+    /*固定定位相对于页面,脱离了container,因此上面要设padding或margin才不会遮挡*/
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 4.5rem;
+    background-color: #ffd600;
+    z-index: 2;
+}
+.header-content{
+    /*趁开,同时左右设置一样来居中*/
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 6rem;
+    right: 6rem;
+    /*让里面的span居中,div里面套个div等块时候,用上面居中,内联和内联块可以直接用它居中*/
+    text-align: center;
+    line-height: 4.5rem;
+
+}
+.header-content>span{
+    /*line-height: 4.5rem;*/
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+.header-content>span:after{
+    content: "▼";
+}
+.search{
+    position: absolute;
+    right: 1rem;
+    width: 6rem;
+    height: 4rem;
+    background-image: url("../images/serach.png");
+    background-repeat: no-repeat;
+    /*如果用px 第一个代表左右,第二个是上下,如果只设置一个属性right等,第二个就默认center*/
+    background-position: right 0.6rem;
+    /*默认两个值,左右auto 上下auto 只设置一个值,另一个自动auto*/
+    -webkit-background-size: auto 2.4rem;
+    background-size: auto 2.4rem;
+    text-align: right;
+    line-height: 7rem;
+    cursor: pointer;
+    color: #222;
+    font-size: 1.3rem;
+}
+nav{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 5rem;
+    background-color: #fff;
+    z-index: 15;
+}
+nav>a{
+    float: left;
+    /*display: block;*/
+    width: 25%;
+    height: 5rem;
+    text-align: center;
+    color: #777;
+}
+nav>a>span{
+    display: block;
+    /*float: left;*/
+    width: 100%;
+    height: 2rem;
+    padding: 0.5rem 0;
+    -webkit-background-size: auto 2rem;
+    background-size: auto 2rem;
+    background-repeat: no-repeat;
+    /*左右,上下*/
+    background-position: center 0.5rem;
+}
+
+nav>.home>span{
+    background-image: url("../images/home.png");
+}
+nav>.market>span{
+    background-image: url("../images/market.png");
+}
+nav>.shopCar>span{
+    background-image: url("../images/shopCar.png");
+}
+nav>.mine>span{
+    background-image: url("../images/mine.png");
+}
+
+nav>.home.active>span{
+    background-image: url("../images/home-active.png");
+}
+nav>.market.active>span{
+    background-image: url("../images/market-active.png");
+}
+nav>.shopCar.active>span{
+    background-image: url("../images/shopCar-active.png");
+}
+nav>.mine.active>span{
+    background-image: url("../images/mine-active.png");
+}
+/*添加商品时的位置*/
+nav>var{
+    position: absolute;
+    right: 30%;
+    bottom: 3rem;
+    line-height: 2rem;
+    text-align: center;
+    z-index: 999;
+    color: white;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: red;
+    /*动画执行的时间得比删除动画时间短*/
+    -webkit-transition: all 0.2s cubic-bezier(0.21,-0.62, 0.48, 1.56);
+    transition: all 0.2s cubic-bezier(0.21,-0.62, 0.48, 1.56);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.shop{
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+}
+
+@-webkit-keyframes navs{
+    /*20%, 40%, 60%, 80%, 0%, 100%{
+        -webkit-animation-timing-function:cubic-bezier(.215,.61,.355,1);
+        animation-timing-function:cubic-bezier(.215,.61,.355,1);
+    }*/
+    0%{
+        -webkit-background-size: auto .6rem;
+        background-size: auto .6rem;
+    }
+    20%{
+        -webkit-background-size: auto 2.2rem;
+        background-size: auto 2.2rem;
+    }
+    40%{
+        -webkit-background-size: auto 1.8rem;
+        background-size: auto 1.8rem;
+    }
+    60%{
+        -webkit-background-size: auto 2.06rem;
+        background-size: auto 2.06rem;
+    }
+    80%{
+        -webkit-background-size: auto 1.94rem;
+        background-size: auto 1.94rem;
+    }
+    100%{
+        -webkit-background-size: auto 2rem;
+        background-size: auto 2rem;
+    }
+}
+@keyframes navs{
+    /*20%, 40%, 60%, 80%, 0%, 100%{
+        -webkit-animation-timing-function:cubic-bezier(.215,.61,.355,1);
+        animation-timing-function:cubic-bezier(.215,.61,.355,1);
+    }*/
+    0%{
+        -webkit-background-size: auto .6rem;
+        background-size: auto .6rem;
+    }
+    20%{
+        -webkit-background-size: auto 2.2rem;
+        background-size: auto 2.2rem;
+    }
+    40%{
+        -webkit-background-size: auto 1.8rem;
+        background-size: auto 1.8rem;
+    }
+    60%{
+        -webkit-background-size: auto 2.06rem;
+        background-size: auto 2.06rem;
+    }
+    80%{
+        -webkit-background-size: auto 1.94rem;
+        background-size: auto 1.94rem;
+    }
+    100%{
+        -webkit-background-size: auto 2rem;
+        background-size: auto 2rem;
+    }
+}
+nav>a.active>span{
+    -webkit-animation: navs 1s;
+    animation: navs 1s;
+}
+main{
+    height:100%;
+}

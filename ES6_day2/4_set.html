@@ -1,0 +1,55 @@
+s<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<script>
+//    var set = new Set();
+//    set.add("a");
+//    set.add("a");
+//    set.add("5");
+//    set.add(5);
+//    set.add(NaN);
+//    set.add(NaN);         //添加一个NaN
+//    set.set(+0);
+//    set.set(-0);          //添加一个0
+//
+//    set.add({});
+//    console.log(set.size)//获取set集合的长度
+//    console.log(set)  //插入顺序与输出顺序一致,(有序)
+
+
+//    var arr =[1,2,5,5,9,1];
+//    var set = new Set(arr); //创建时传入一个数组,可以把数组中的元素存入到集合中
+//    console.log(set)  //去重,
+//    console.log(set[0]) //无法通过下标获取
+
+//遍历
+//    set.forEach(function (value) {
+//        console.log(value)
+//    });
+//    for(var value of set){
+//        console.log(value)
+//    };
+//查找删除,清空
+//    set.has(5) //判断5是否存在 返回true,false
+//    set.delete(5) //删除指定元素5
+//    set.clear() ; //清空所有元素
+
+//把set集合塞到数组里
+    var set = new Set([20,40,60]);
+    set.add("abc")
+    set.add("abcd");
+    console.log(set)
+
+//    var arr = [];
+//    arr.push(...set);
+//    console.log(arr)
+//    var arr1 = new Array(...set)
+//    console.log(arr1)
+</script>
+</body>
+</html>
+<!--set存储的数据是有序的,里面的元素不允许重复-->

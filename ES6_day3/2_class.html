@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    var p2 = new class{     //匿名类
+        constructor(age){
+            this.age = age;
+        }
+        speak(){
+            console.log(this.age)
+        }
+    }(30)
+    p2.speak()
+
+
+    //静态方法
+//    class Person{
+//        constructor(age){
+//            this.age = age;
+//        }
+//        static run(){  //静态方法
+//            console.log("跑"+this.age) //this指class类,静态的访问不了类
+//        }
+//    }
+//    var p1 = new Person(30)
+////    console.log(p1.age)
+//    Person.run();
+//    p1.run();   //没办法通过对象访问静态的方法
+
+</script>
+</body>
+</html>

@@ -1,0 +1,355 @@
+/*清除默认样式*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-weight: inherit;
+    font-style: normal;
+    vertical-align: baseline;
+    background: transparent;
+    border: 0;
+    outline: 0;
+}
+
+/* HTML5 RESETS FOR OLDER BROWSERS */
+article, aside, figure, figure img, hgroup, footer, header, nav, section {
+    display: block;
+}
+
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after,
+q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+input, select { vertical-align: middle; }
+a img { border: 0; }
+:focus { outline: 0; }
+a:hover, a:active { outline: none; }
+a{text-decoration: none;color :#34AC98;}
+p{margin: 0;padding: 0}
+/*清除完毕*/
+
+body{
+    width: 1080px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 50px 48px 0;
+    font-family: ff-tisa-web-pro, Georgia, sans-serif;
+}
+
+#wrap{
+    width: 1080px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    /*background-color: pink;*/
+}
+#wrap::after{    /*????*/
+    content: "";
+    clear: both;
+    display: block;
+}
+/*导航栏布局媒体监测*/
+header{
+    width: 160px;
+    position: relative;
+    float: left;
+    /*background-color: green;*/
+}
+header>h1{
+    width: 120px;height: 120px;
+    background: url("../img/h1.png") no-repeat 0 0;
+    text-indent: -999px;
+    margin-bottom: 30px;
+    transition: all 0.2s ease;
+}
+header:hover h1{
+    opacity: 0.8;
+}
+nav{
+    width: 160px;
+    position: absolute;
+    left: 0;
+    top: 158px;
+}
+header ul{
+    width: 100%;
+    /*flex-flow: column wrap;*/
+    /*justify-content: space-around;*/
+}
+header li{
+    /*width: 160px;*/
+    /*height: 32px;*/
+    margin-bottom: 18px;
+}
+header li:last-child{
+    margin-bottom: 0;
+}
+header a{
+    display: block;
+    height: 32px;
+    line-height: 32px;
+    padding: 4px 0 0 44px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    transition: all 0.2s ease;
+}
+header li:hover a{
+    background-position: 8px 0;
+    color: indianred;
+}
+#t-taste{
+    background-image: url("../img/t-taste.png");
+}
+#t-blog{
+    background-image: url("../img/t-blog.png");
+}
+#t-list{
+    background-image: url("../img/t-list.png");
+}
+#t-contribute{
+    background-image: url("../img/t-contribute.png");
+}
+#t-about{
+    background-image: url("../img/t-about.png");
+}
+
+/*内容布局*/
+#content{
+    /*background-color: dodgerblue;*/
+    width: 896px;
+    float: right;
+    position: relative;
+}
+#featured{
+    width: 100%;
+    height: 560px;
+    position: relative;
+}
+#featured #slides{
+    width: 100%;
+    height: 546px;
+    overflow: hidden;
+    position: relative;
+}
+#slides img{
+    position: absolute;
+}
+
+#featured #nav{
+    width: 896px;
+    height: 85px;
+    position: absolute;
+    top: 445px;left: 0;
+    background-color: #EFF8F7;
+}
+#nav li{
+    width: 224px;
+    height: 100%;
+    float: left;
+}
+#nav a{
+    color: #60BEAE;
+    display: block;
+    width: 191px;height: 60px;
+    padding: 25px 12px 0 20px;
+    border-right: 1px solid #D3EDE9;
+    text-shadow: 0 1px 0 #FFF;
+    box-shadow: 1px 0 0 #FAFDFC;
+}
+#nav h3{
+    font-size: 1.125em;
+}
+#nav p{
+    font-size: 0.75em;
+    font-style: italic;
+}
+
+/*实时通讯*/
+#newsletter{
+    clear: both;
+    width: 100%;
+    min-height: 48px;
+    margin-bottom: 29px;
+    border-top: 1px dashed #E5E5E5;
+    border-bottom: 1px dashed #E5E5E5;
+    background: url("../img/newsletter.png") no-repeat 20px 5px ;
+    background-size: 32px auto ;
+    background-color: white;
+    line-height: 1em;
+}
+#newsletter p{
+    width: 49%;
+    float: left;
+    padding: 7px 24px 10px 66px;
+    font-size: .75em;
+    font-style: italic;
+}
+#newsletter form{
+    float: left;
+    margin-top: 11px;
+}
+#newsletter form fieldset{
+    display: inline-block;
+}
+#newsletter label{
+    display: none;
+}
+#newsletter #email{
+    width: 260px;
+}
+#newsletter #submit{
+    margin-left: 10px;
+}
+
+/*最近的*/
+#recent{
+    width: 100%;
+    clear: both; /*啥用*/
+    margin-bottom: 18px;
+    overflow: hidden; /*啥用*/
+}
+#recent article{
+    width: 206px;
+    /*height: 334px;*/
+    float: left;
+    margin: 0 24px 25px 0;
+    /*background-color: yellowgreen;*/
+}
+#recent article:last-child{
+    margin: 0;
+}
+#recent img{
+    width: 185px;
+    padding: 9px;
+    border: 1px solid #E5E5E5;
+    box-shadow: 1px 1px 3px #F5F5F5;
+}
+#recent h1{
+    margin: 10px 0 10px;
+    line-height: 1.3em;
+}
+#recent p{
+    font-size: 0.875em;
+    line-height: 1.45em;
+}
+#recent p:nth-of-type(2){
+    margin-top: 10px;
+    color: #AAA;
+}
+
+/*侧边栏*/
+aside{
+    position: absolute;
+    top: 452px;
+    left: 0;
+    width: 160px;
+    /*background-color: yellowgreen;*/
+}
+aside section.twitter{
+    padding-right: 20px;
+    margin-bottom: 32px;
+
+}
+aside h1{
+    margin: 0 0 9px;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    font-size: 0.75em;
+    border-bottom: 1px dashed #E5E5E5;
+}
+aside p{
+    margin-bottom: 15px;
+    line-height: 1.75em;
+    font-size: 0.6825em;
+    font-style: italic;
+    overflow: hidden;   /*??*/
+
+}
+.twitter a{
+    display: block;
+    width: 120px;
+    height: 24px;
+    padding: 4px 0 0 18px;
+    background: no-repeat 6px 6px;
+    background-image: url("../img/icon-twitter.png" );
+    border: 1px solid #E5E5E5;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px #F5F5F5;
+    transition: all 0.2s ease;
+}
+.twitter a:hover{
+    background-color: #D3EDE9;
+}
+.facebook{
+    margin-bottom: 32px;
+    padding-right: 20px;
+}
+.facebook a{
+    display: block;
+    width: 110px;
+    height: 24px;
+    padding: 4px 0 0 28px;
+    background: no-repeat 6px 6px;
+    background-image: url("../img/icon-facebook.png" );
+    border: 1px solid #E5E5E5;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px #F5F5F5;
+    transition: all 0.2s ease;
+}
+.facebook a:hover{
+    background-color: #D3EDE9;
+}
+
+/*页脚*/
+footer{
+    clear: both; /*??*/
+    position: relative;
+    min-height: 70px;
+    padding-top: 20px;
+    border-top: 2px solid #E5E5E5;
+    color: #AAA;
+    /*background-color: #01be00;*/
+}
+footer p{
+    line-height: 1.5em;
+    font-size: .75em;
+}
+footer>div{
+    position: absolute;
+    right: 0;
+    top:20px;
+}
+footer li{
+    display: inline-block;
+    float: left;
+    margin-left: 5px;
+}
+footer div ul a{
+    display: block;
+    width: 32px;
+    height: 32px;
+    text-indent: -999em;
+    opacity: 0.4;
+    transition: opacity .3s ease;
+}
+footer div ul a:hover{
+    opacity: 1;
+}
+footer ul li:nth-child(1) a{
+    background: url("../img/footer-twitter.png" ) no-repeat 50% 1px;
+}
+footer ul li:nth-child(2) a{
+    background: url("../img/footer-facebook.png" ) no-repeat 50% 1px;
+}
+footer ul li:nth-child(3) a{
+    background: url("../img/footer-rss.png" ) no-repeat 50% 1px;
+}

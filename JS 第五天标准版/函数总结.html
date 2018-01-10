@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	<script type="text/javascript">
+//	var a = function add(num1,num2){
+//		var sum = num1 + num2;
+//		console.log(sum);//先打印的,所以注销掉return也能打印出sum
+//		return sum;
+//	}
+//	add(4,5);
+//	console.log(a); //只是相当于把这个函数的地址赋给变量a,打印出来的是整个地址(这个函数)
+//	console.log(sum);//无法打印出来,sum在函数内部,作用域不同
+//	console.log(add(4,5));//无法打印出来,因为你已经把地址赋给变量了这个函数名add已经不起作用了,
+//	console.log(a()); //你已经把地址赋给变量了,相当于通过变量调用这个函数,但是你是空括号,所以返回undefined
+//	console.log(a(4,5)); //正常调用这个赋了变量的函数
+//	console.log(add); //报错
+	
+	
+//	var a = function (num1,num2){
+//		var sum = num1 + num2;
+//		console.log(sum);//先打印的,所以注销掉return也能打印出sum
+//		return sum;
+//	}
+////	console.log(a); //相当于打印地址
+////	console.log(a(4,5)); //正常通过变量调用
+//
+	function add(num1,num2){
+		var sum = num1 + num2;
+		console.log(sum);//先打印的,所以注销掉return也能打印出sum
+		return sum;
+	}
+	console.log(add(4,5)); //通过函数名调用
+	console.log(add()); //空的调用在函数内会显示NaN,因为有返回值,所以外面的这个也是NaN
+	
+//	var a = function add(num1,num2){
+//		var sum = num1 + num2;
+//		console.log(sum);//先打印的,所以注销掉return也能打印出sum
+//		return;
+//	}
+//	console.log(a); //打印地址
+//	console.log(a(4,5)); //虽然你正确的调用了,但是你的return 没有返回值,所以undefined
+//	console.log(add(4,5)); //还是not a define报错
+
+	
+//	var a = function add(num1,num2){
+//		var sum = num1 + num2;
+//		console.log(sum);//先打印的,所以注销掉return也能打印出sum
+////		return sum;
+//	}
+//	console.log(a);
+//	console.log(a(4,5)); //里边的能打印出来9,这个打印的是未定义,因为我没有返回值
+//	console.log(add(4,5));//报错		
+
+//	var a = function add(num1,num2){
+//		var sum = num1 + num2;
+//		console.log(sum);//NaN
+////		return sum;
+//	}
+//	console.log(a()); //undefiend (空调用有返回值返回nan 无返回值显示undefined)
+
+	function foo(x){
+		alert(x);
+		for (var i = 0;i<arguments.length;i++) {
+			alert(arguments[i]);
+		}
+	}
+//	foo(10,20,30); //我可以不写返回值,调用时但是需要在内部完成我要打印的值,在外面打印的为undefined
+	console.log(foo(10,20,30));
+	</script>
+	</body>
+</html>

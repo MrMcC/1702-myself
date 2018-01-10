@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    function Person(){
+    
+    }
+    Person.prototype = {
+        name : "lis",
+        age : 20,
+        constructor : Person  //强行更改原型对象
+    }
+    //如果手动更改了prototype的指向，则理论上应该重新修改一下constructor指向
+//    Person.prototype.constructor = Person;
+//    console.log(Person.prototype.constructor)
+    var p1 = new Person();
+    console.log(p1.age);
+    console.log(p1 instanceof Person);
+    console.log(typeof p1);
+    
+</script>
+
+</body>
+</html>

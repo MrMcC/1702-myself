@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        canvas{
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+<canvas id="canvas" width="600" height="600"></canvas>
+<script>
+    function draw() {
+        var canvas = document.querySelector("#canvas");
+        if(!canvas.getContext) return;
+        var ctx = canvas.getContext("2d");
+
+        ctx.beginPath();
+        ctx.setLineDash([10,5]);
+//        ctx.lineDashOffset = -5; //负的是顺时针
+//        ctx.strokeRect(100,100,100,100);
+        var offset = 0;
+        setInterval(function () {
+            ctx.clearRect(0,0,600,600);
+            ctx.lineDashOffset = offset--;
+            ctx.strokeRect(100,100,100,100);
+        },100)
+
+    }
+    draw()
+</script>
+</body>
+</html>

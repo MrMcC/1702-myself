@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function foo(a,b=10,...other) {
+        //other就是一个数组 (剩余参数)
+//        console.log(other instanceof Array)
+        other.forEach(function (ele,index) {
+            console.log(ele,index)
+        })
+    }
+
+    foo(10,20,30,40)
+</script>
+</body>
+</html>
+<!--把没有形参接受的参数全部给剩余参数
+    剩余参数可以当做数组一样使用
+    剩余参数一定是形参中的最后一个参数
+    剩余参数一定出现在形参中-->

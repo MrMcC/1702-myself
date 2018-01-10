@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="box">
+    <input type="text" id="input">
+</div>
+
+<script>
+    //获得焦点的事件. 冒泡版本
+    /*input.onfocusin = function (){
+        input.style.backgroundColor = "pink";
+    }*/
+    input.addEventListener("focusin", function (){
+        input.style.backgroundColor = "pink";
+    })
+    
+    //失去焦点的事件
+    input.onfocusout = function (){
+        input.style.backgroundColor = "blue";
+    }
+    
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第5题</title>
+</head>
+<body>
+<script type="text/javascript">
+    /*
+     作者：李振超    2017年3月21日 20:26
+        有如下字符串“11$12$3$8$9$10$30$50$60”。
+        要求：把字符串中的数字转存到数组中并对数组降序，然后求最大值，最小值，平均值。
+     */
+    var result = foo("11$12$3$8$9$10$30$50$60");
+    console.log(result)
+    function foo(s) {
+        var nums = s.split("$");
+        nums.sort(function (a,b) {
+            return b - a;
+        })
+        var result = [];
+        result.push(nums[0]);
+        result.push(nums[nums.length - 1]);
+        var sum = 0;
+        for(var num of nums){
+            sum += +num;
+        }
+        result.push(sum / nums.length);
+        return result;
+    }
+</script>
+</body>
+</html>

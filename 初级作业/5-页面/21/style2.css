@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* CSS Document */
+*{ padding:0 ; margin:0;}
+#box{ width:1263px; height:1000px; background:url(images/reg.png) no-repeat; font-size:12px; margin:0 auto; border:1px solid #000;}
+#register{ width:600px; height:800px;margin:107px 0 0 379px; padding:0 20px 0 52px;}
+#register dl.first{ height:140px; border-bottom:1px dashed gray;}
+#register dt{ float:left; width:61px; height:27px; line-height:27px; text-align:right; margin:10px 10px 0 0;}
+#register dd{margin:10px 10px 0 0; float:left; height:27px; width:480px; line-height:27px;}
+#register dd span{ color:gray; font:10px; white-space:pre-wrap; float:right;}
+input{ margin-right:8px;}
+img{ margin-right:8px; vertical-align:middle;}
+select{ width:84px; height:25px; border:1px solid #d4d4d4; border-radius:5px; margin-right:10px; line-height:25px; text-align:center;}
+input.common{ width:279px; height:33px; background:#fbfbfb;border:1px solid #d4d4d4; border-radius:5px; }
+dd ul{ list-style:none;}
+dd ul li{ float:left; width:80px; height:28px; line-height:28px; text-align:center;border:1px solid #d4d4d4;border-radius:5px 5px 0 0; margin-right:10px; border-bottom:none;}
+dd ul li.last{ border:none; float:right;}
+dd div{ width:380px; height:180px;border:1px solid #d4d4d4; clear:both; padding:10px 10px;}
+dd div h2{ height:33px; width:370px; background:#f6f5f5 url(images/images/close_03.png) no-repeat right 10px; color:gray; line-height:33px; text-align:center;  font-size:12px;}
+dd div input{ border:none; padding:3px 5px; margin:8px 0;}
+dd div input.type1{ background:#FF99CC;}
+dd div input.type2{ background:#99FFCC;}
+dd div input.type3{ background:#FFFF99;}

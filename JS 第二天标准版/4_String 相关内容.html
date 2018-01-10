@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript" charset="utf-8">
+    /*
+     String 相关内容
+     * 字符串
+     * 
+     * 拓展：
+     * 		指的是一组由 16位值 组成的 不可变的有序序列
+     * 
+     * 		1.不可变：字符串对象一旦被创建出来，则不能被更改
+     * 		2.16位：字符数组每个元素的所占空间为 16 bits
+     * 			  即 2 bytes，因为 JS 中采用的 UNICODE 编码
+     * 			  所以每一个字符需要 2 字节
+     * 
+     * 		注意：
+     * 			1.由上述特性1可以得出一个结论，JS 中所有对字符串进行
+     * 			  操作的举动，都不会影响原始字符串，都是会返回一个新的
+     * 			  字符串
+     * 			2.UNICODE 是将全世界所有符号进行统一编码，
+     * 			  这样计算机只要支持这一个字符集，就不会出现乱码了
+     * 			  从 0  开始，为每一个字符指定一个编号，
+     * 			  这个编码叫做“码点”（code point）
+     * 			  \u597d -> 好
+     * */
+//  console.log("\u597d");
+
+	/*
+	 字符串直接量
+	 * 
+	 * ECMAScript 3 中，字符串是必须放在同一行中的。
+	 * ECMAScript 5 中，字符串直接量可以拆分成多行，
+	 * 每行必须以 \ 结束
+	 * */
+	var str = "奥斯卡来得\
+				及阿卡丽";
+				
+	/*
+	 字符串的长度
+	 * 
+	 * 注意：
+	 * 		空字符串的长度为 0
+	 * 
+	 * 转义字符：
+	 * 		转行符		\n
+	 * 		双引号		\"
+	 * 		单引号		\'
+	 * 		反斜线		\\
+	 * 		退格符		\b
+	 * 		回车符		\r
+	 * */
+	var str1 = "我是李鹏，今天aslkdj真开心，啦啦啦啦啦";
+	console.log(str1.length);
+	
+	var str2 = "";
+	console.log(str2.length);
+	
+	
+	
+
+</script>
+</html>
+
+
+
+

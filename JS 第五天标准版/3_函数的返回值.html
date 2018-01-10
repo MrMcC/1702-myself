@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript" charset="utf-8">
+    /*
+     函数的返回值
+     * 
+     * 	函数在执行的过程中，只要遇到 return
+     * 	就会立即结束函数
+     * 	(return 一般书写在函数的最末尾处)
+     * */
+//  var num1 = parseInt(prompt("请输入第一个数"));
+//  var num2 = parseInt(prompt("请输入第二个数"));
+//  function sum(num1,num2){
+//  		var sum = num1 + num2;
+//  		return sum;
+////  		alert("我会被执行么？");
+//  }
+//  var ret = sum(num1,num2);//调用sum(num1,num2);
+//  alert("您输入数字的和为 ： " + ret);
+    
+    
+    
+    var num1 = parseInt(prompt("请输入第一个数"));
+    var num2 = parseInt(prompt("请输入第二个数"));
+    function asd(num1,num2){     //我的函数名可以和函数内的声明命名不同,是两个东西 asd 和var里的sum
+    		var sum = num1 + num2;
+    		return sum;
+//  		alert("我会被执行么？");
+    }
+//  asd(num1,num2);如果在打印处已经调用了,此处就不用再调用了
+    alert("您输入数字的和为 ： " + asd(num1,num2));//+号后面的要添加asd(num1+num2)而不是asd或sum
+    
+    //让用户输入两个数字，
+    //并通过函数的方法计算两个数的和，
+    //并返回给用户。
+</script>
+</html>

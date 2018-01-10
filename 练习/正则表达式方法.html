@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var s = "1aHaosda123daas55dad!"
+//			console.log(s.search(/[a-z]{4}/gi)); // /hao/
+//			console.log(s.match(/[a-z]+/gi)); //拿到所有单词 加了个➕成块拿,拿了aHaosda和daasdad
+//			//所有小于5的数字去掉
+			var s1 = s.replace(/[0-4]?/gi,"") //用空字符串替换1-4  (did前面有0个[0-4],也应该去掉啊)?
+			
+			console.log(s1);
+//			
+			var s = "我我我我要要要吃吃吃吃吃饭饭饭";  //?
+			var s1 = s.replace(/(.)\1+/gi,"$1");
+			console.log(s1)
+//			
+//			var s = "hadsad.sdasd.asd.asdsa"
+//			var s1 = s.split(/\./gi) //这的点代表任意字符,再转译一下就代表点了
+//			console.log(s1);
+//			
+//			var s = "hadsad\\sdasd\\asd\\asdsa"  //?
+//			var s1 = s.split(/\\/gi)
+//			console.log(s1);
+		</script>
+	</body>
+</html>
+<!--
+	正则表达式的方法
+	test
+	exec
+	字符串中支持正则表达式的4个方法
+	search 查找满足正则表达式的第一个子字符串,如果找到了返回index,否则返回-1. g模式无效
+	match  返回匹配正则表达式的所有字符串 组成的数组
+	replace 把满足正则表达式的字符串用新的字符串替换
+	split
+-->

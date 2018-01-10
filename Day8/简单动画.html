@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 100px;
+				height: 100px;
+				background: pink;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<script type="text/javascript">
+			var i = 0;
+			setInterval(function(){
+				box.style.left = i++  + "px";
+				for(var j = 0 ; j< 10000 ;j++){//interval中代码多了会卡顿,但是不丢帧
+					console.log("a");
+				}
+			},20)//规定时间达不到想要的距离,setTimeout也这样
+			
+		</script>
+	</body>
+</html>

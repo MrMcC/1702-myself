@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var arr = [1, 4, 2, 30, 20, 10];
+    /*
+     作者：李振超    2017年3月20日 15:21
+     获取子字符串：slice（start, end）
+         参数1：开始的位置，包括
+         参数2：结束的位置， 不包括  .如果不传入，则 表示截取到数组的末尾
+         参数2必须大于参数1.
+         如果是负值，表示从 负值+length 的位置开始截取
+
+     截取之后对源数组无影响。
+     */
+    var arr1 = arr.slice(1, 3);
+    console.log(arr1);
+
+    var arr2 = arr.slice(-2, -1);   //  4, 5
+    console.log(arr2);
+
+    console.log(arr);
+
+</script>
+</body>
+</html>

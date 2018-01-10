@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<form action="" method="post">
+		用户<input type="" name="" id="user" value="" />
+		密码<input type="" name="" id="pwd" value="" />
+	</form>
+	<body>
+		<script type="text/javascript">
+			//使用单例封装表单
+			var formObj = {
+				form : document.forms.form1,
+				init : function(){
+					var self = this;
+					this.form.onsubmit = function (e){
+						e.preventDefault();
+						self.ajax();//执行ajax提交数据功能
+					}
+				},
+				ajax : function (){
+					var self = this;
+					var data = this.getParameters()//
+					ajax.get("test.html?"+ data,function(result){
+						self.handleResult(result);
+					})
+				},
+				getParameters : function (){  //获取表单的数据
+					var name = this.form.user.value;
+					var pwd = this.form.pwd.value;
+					return `name=${name}&pwd=`
+				},
+				handleResult : function (result){  //专门处理通过ajax获取到的数据
+					this.showResult();
+					var obj = JSON.parse()
+				},
+				showResult : function (result){
+					document.body
+				}
+			}
+		</script>
+	</body>
+</html>

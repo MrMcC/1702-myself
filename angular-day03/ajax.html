@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+<input type="text" ng-model="wd" ng-change="send()">
+<ul>
+    <li ng-repeat="item in arr">
+        {{item}}
+    </li>
+</ul>
+</body>
+<script src="./js/angular.min.js"></script>
+<script>
+    var app = angular.module("myApp",[]);
+    app.controller('myCtrl',['$scope','$http',function ($scope,$http) {
+
+        //用get请求json数据
+//        $http.get("demo.json").success(function (data) {
+//            console.log(data)
+//        })
+
+
+
+        $scope.wd = "";
+        $scope.arr = [];
+        //用ng-change方法 改变input值同时请求数据
+//        $scope.send = function () {
+////            console.log($scope.wd)
+//            $http.jsonp("https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd="+$scope.wd+"&cb=JSON_CALLBACK").success(function (data) {
+//                console.log(data)
+//            })
+//        }
+
+        //用$watch方法
+        $scope.$watch("wd",function (value) {
+            $http.jsonp("https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd="+value+"&cb=JSON_CALLBACK").success(function (data) {
+                console.log(data)
+                $scope.arr = data.s;
+            })
+        })
+
+
+
+        //百度搜索接口network->js->header->requestUrl
+        //url:https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?
+        //wd:关键字
+        //cd:回调函数
+
+        //https://sp0.baidu.com/5a1Fazu8AA54nxGko9
+        // WTAnF6hhy/su?wd=McC&json=1&p=3&sid=1469_21085_17001_
+        // 20697_20928&csor=3&pwd=Mc&cb=jQuery1102008948593061457
+        // 988_1498635274280&_=1498635274296
+
+//        $http.jsonp("https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=McC&cb=JSON_CALLBACK").success(function (data) {
+//            console.log(data)
+//        })
+    }])
+</script>
+</html>
+<!--
+1.ajax必须在服务器端运行,(subline等无服务器)
+搭建服务器用xmpp,把文件夹放到xmpp里的htdocs中,在那个文件夹中打开文件
+把url改成127.0.0.1:8888或者localhost:8888
+
+2.规避同源JSONP或者服务器端设置请求头
+3.
+
+-->

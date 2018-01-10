@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		全选<input type="checkbox" name="" id="all" value="" />
+		反选<input type="checkbox" name="" id="revers" value="" />
+		<input type="checkbox" name="products" id="" value="" />大保健
+		<input type="checkbox" name="products" id="" value="" />小黄片
+		<input type="checkbox" name="products" id="" value="" />夜生活
+		<input type="checkbox" name="products" id="" value="" />小烟酒
+		<input type="checkbox" name="products" id="" value="" />啪啪啪
+		<script type="text/javascript">
+			var all = document.getElementById("all")
+			var products = document.getElementsByName("products")
+			all.onclick = function(){
+				var checked = all.checked;
+				for (var i = 0; i< products.length; i++) {
+					products[i].checked = checked;
+				}
+			}
+			//监听每个product里的checked是否被选中
+			for (let i = 0; i < products.length; i++) {
+				products[i].onclick= function(){  //每次点击都要做判断
+					if(!products[i].checked){ //代码执行完后我再点击实际获取的是I的最后一个值,改成let变成块级作用域
+						all.checked = false;
+					}else{     //product被选中时候判定
+						for (var j = 0; j < products.length; j++) { //
+							if(products[j].checked){
+								all.checked = true; //所有执行完再输出,存起来?
+							}else{
+								all.checked = false;
+								break;
+							}
+						}	
+					}
+				}
+			}
+			var count = 0;
+			var revers = document.getElementById("revers")
+//			var checked1 = revers.checked;
+			revers.onclick= function(){
+				for (var i =0; i < products.length; i++) {
+//					products[i].checked = !checked1;  //为啥不行
+					products[i].checked = !products[i].checked;
+					if(products[i].checked){
+						count++
+					}else{
+						count--
+					}
+				}
+			}
+			if(count == products.length){ //如果相等，代表所有产品全部选中。
+            		all.checked = true;
+        		}else{
+            		all.checked = false;
+       		}
+			
+			
+	/*for(let i = 0; i < ps.length; i++){
+        ps[i].onclick = function (){
+            if(!ps[i].checked){
+                //单个产品不被选中
+                all.checked = false;
+            }else{
+                var count = 0;
+                //单个产品被选中
+                for(let j = 0; j < ps.length; j++){
+                    if(ps[j].checked){
+                        count++;
+                    }
+                }
+                if(count == ps.length){
+                    all.checked = true;
+                }
+            }
+        }
+    }*/
+		</script>
+	</body>
+</html>

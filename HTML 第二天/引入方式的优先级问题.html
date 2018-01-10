@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+<!-- 内联样式表  >  内部and外部
+                内部和外部？（谁优先）   如果两种引入方式的选择器相同，则谁后引入，谁生效
+                                    如果两种引入方式的选择器不同，则根据选择器的优先级，来判断谁生效 -->
+                                    <!-- 不用管外部样式表 还是 内部样式表 主要就看选择器（内外部里的） -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<style type="text/css">
+		/*内部样式表*/
+		/*.div_1{background-color: red;
+			width: 300px;
+			height: 300px;}*/
+		div{background-color: blue;
+			width: 300px;
+			height: 300px;}
+
+	</style>
+
+</head>
+<body>
+	<!-- 内联样式表 -->
+	<!-- <div style="width: 300px;
+	            height: 300px;
+	            background-color: red;"></div> -->
+	<div class="div_1"></div>
+
+</body>
+</html>

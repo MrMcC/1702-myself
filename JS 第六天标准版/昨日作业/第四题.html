@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var year = prompt("请输入年份");
+    var month = prompt("请输入月份");
+    var day = prompt("请输入日期");
+    alert(caculateDays(+year, +month, +day))
+    /*
+     作者：李振超    2017年3月20日 09:22
+     计算具体的某一日是当年的第几天
+     参数1、2、3  年月日
+     返回值：计算出来的是当年的第几天
+     */
+    function caculateDays(year, month, day) {
+        if(month == 1){
+            return day;
+        }
+        return sum(year, month - 1) + day;
+    }
+    /*
+     作者：李振超    2017年3月20日 09:26
+     计算  year年前month月的总天数
+
+     求前三个月的总天数： 前两个月的天数 + 三月份的天数
+     */
+    function sum(year, month) {
+        if (month == 1) {
+            return currentDays(year, 1);
+        }
+        return sum(year, month - 1) + currentDays(year, month);
+    }
+    function currentDays(year, month) {
+        switch (month) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                return 31;
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                return 30;
+            case 2:
+                return isRunNian(year) ? 29 : 28;
+        }
+    }
+
+    function isRunNian(year) {
+        return year % 4 == 0 && year % 100 != 0 || year % 400 == 0
+    }
+</script>
+</body>
+</html>

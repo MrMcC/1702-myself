@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function Father(name,sex){
+				this.name = name;
+				this.sex = sex;
+			}
+			Father.prototype.eat = function (){
+				
+			}
+			
+			function Son(age,name,sex){
+				
+				Father.call(this,name,sex)  //Father()
+				this.age = age;
+			}
+			Son.prototype = new Father("李四");
+			Son.prototype.constructor = Son;
+			
+			var son1 = new Son(20,"a","女")
+			var son2 = new Son(20,"b","男")
+			//尽量少在ifelse中写函数
+		</script>
+	</body>
+</html>

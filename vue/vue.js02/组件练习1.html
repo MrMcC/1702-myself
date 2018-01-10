@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <parent></parent>
+        <child></child>
+        <!--孙子组件访问不到-->
+        <innerr></innerr>
+    </div>
+</body>
+<script>
+    Vue.component('parent',{
+        template: `<div>我是parent</div>`
+    })
+
+    var vm = new Vue({
+        el: "#app",
+        components: {
+            child:{
+                //在儿子这里可以访问innerr但是会报错,因此只有儿子辈可以访问
+                template: `<div>我是child
+                            <innerr></innerr>
+                            </div>`,
+                components: {
+
+                    innerr:{
+                        template:`<div>我是inner</div>`
+                    }
+                }
+            }
+        }
+    })
+</script>
+</html>

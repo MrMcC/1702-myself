@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//输入一个4位会员号,求四位数字和,大于20就是幸运
+			var x = parseInt( prompt("输入一个四位会员号"));
+			var s=x.toString();//parseInt是转化成整数,不是字符串,我得转成字符串
+			if(s.length != 4){
+				alert("输入错误");
+			}else{
+				var sum = 0;
+				for (var i = 0 ; i< s.length; i++) {
+					sum =sum + parseInt(s[i]);
+				}
+				if(sum > 20){
+					alert("lucky");
+				}else{
+					alert("wrong");
+				}
+			}
+
+		</script>
+		
+	</body>
+</html>

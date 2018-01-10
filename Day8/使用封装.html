@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				width: 100px;
+				height: 100px;
+				background: pink;
+				border-radius: 50%;
+			}
+		</style>
+		<script src="easing.js" type="text/javascript" charset="utf-8"></script>
+		<script src="my_animator.js" type="text/javascript" charset="utf-8"></script>
+		<button id="start">开始</button>
+		<button id="stop">停止</button>
+	</head>
+	<body>
+		<div id="box">
+			
+		</div>
+		<script type="text/javascript">
+			var animator;
+			start.onclick = function (){
+				animator = new Animator(2000,Easing.bounce,function(ease){
+					box.style.transform = `translateX(${500 * ease}px)`
+				});
+				animator.start(true);	//循环执行			
+			};
+			document.getElementById("stop").onclick = function (){
+//				console.log("aa")
+				animator.stop();
+			}
+
+		</script>
+	</body>
+</html>

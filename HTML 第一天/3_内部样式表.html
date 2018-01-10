@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<!-- head:外部的元素称之为 父元素
+	     title：内部的元素称之为 子元素
+	     head和title ： 这两个元素之间的关系称之为 父级关系
+	     meta和title ： 这两个元素之间的关系称之为 兄弟关系
+	     父子关系 子元素前面需要加上一个 tab 换行
+	     兄弟关系 元素开始位置需要在同一列
+	     ctrl＋［  ：代码左移
+	     ctlr＋ ］ ：代码右移-->
+	<style type="text/css">
+		 div{width:300px;
+		     height: 300px;
+		     background: red;}
+		/*css的选择器 精确度越高，优先级越大 （优先级：可以看出 类选择器 高于 标签名选择器）
+		            标签名选择器 div｛....｝选择范围： 选择所有的当前的这个标签
+
+		*/
+		.woman{background: blue;}
+		/*css的选择器 类选择器 .+class {....} 作用范围：具有某一类特征的标签（有相同的class名称）
+
+		*/
+		#div_id{background: green;}
+		/*css选择器 id选择器 ＃＋｛....｝
+		作用范围：针对具有某一个 id 的标签
+
+		*/
+		/*多用class 少用id 
+
+		*/
+	</style>
+	<!-- 内部样式表 ：直接在 head 标签内部去进行 css 样式的引入
+	           属性：type 内部书写内容的格式 text／css -->
+</head>
+<body>
+	<!-- <div style="width: 300px;
+	        height: 300px;
+	        background: red;">
+
+
+    
+    </div> -->
+    
+    <div></div>
+    <div class="woman" id="div_id" style="background: black;"></div>
+    <div></div>
+    <div class="woman"></div>
+    <div></div>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="language">
+    <li>java</li>
+    <li>c++</li>
+    <li>oc</li>
+    <li>php</li>
+    <li>c#</li>
+</ul>
+<script>
+    //替换节点
+    var ul = document.getElementById("language");
+    var li = document.createElement("li");
+    li.innerHTML = "javascript";
+    //替换子元素：参数1：新的元素  参数2：被替换的元素
+    ul.replaceChild(li, document.querySelector("li:nth-child(4)"))
+</script>
+</body>
+</html>
+<!--
+创建节点、插入或追加、移除
+替换
+
+-->

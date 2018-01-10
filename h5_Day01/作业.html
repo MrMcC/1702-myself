@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin: 0px;padding: 0px;}
+        article{width: 200px;height: 200px;}
+    </style>
+</head>
+<body>
+    <article>
+        <form action="#" method="get">
+            R<input type="range" min="0" max="255" value="0"><br>
+            G<input type="range" min="0" max="255" value="0"><br>
+            B<input type="range" min="0" max="255" value="0"><br>
+            A<input type="range" min="0" max="10" value="10">
+        </form>
+    </article>
+
+    <script>
+        let input = document.querySelectorAll("input");
+        let article = document.querySelector("article");
+//        input[0].onchange = function () {
+//            article.style.backgroundColor = `rgba(${parseInt(input[0].value)},${0},${0},${1})`;
+//            article.style.color = `rgba(${255-parseInt(input[0].value)},${255},${255},${1})`;
+//        }
+//        input[1].onchange = function () {
+//            article.style.backgroundColor = `rgba(${parseInt(input[0].value)},${parseInt(input[1].value)},${0},${1})`;
+//            article.style.color = `rgba(${255-parseInt(input[0].value)},${255-parseInt(input[1].value)},${255},${1})`;
+//        }
+//        input[2].onchange = function () {
+//            article.style.backgroundColor = `rgba(${parseInt(input[0].value)},${parseInt(input[1].value)},${parseInt(input[2].value)},${1})`;
+//            article.style.color = `rgba(${255-parseInt(input[0].value)},${255-parseInt(input[1].value)},${255-parseInt(input[2].value)},${1})`;
+//        }
+//        input[3].onchange = function () {
+//            article.style.backgroundColor = `rgba(${parseInt(input[0].value)},${parseInt(input[1].value)},${parseInt(input[2].value)},${input[3].value/10})`;
+//            article.style.color = `rgba(${255-parseInt(input[0].value)},${255-parseInt(input[1].value)},${255-parseInt(input[2].value)},${1-input[3].value/10})`;
+//        }
+
+
+
+        function create(ele,obj) {
+            ele.style.backgroundColor = `rgba(${obj.R},${obj.G},${obj.B},${obj.A})`;
+            ele.style.color = `rgba(${255-obj.R},${255-obj.G},${255-obj.B},${1-obj.A})`
+        }
+
+
+        for (let i=0; i < input.length; i++){
+            input[i].onchange = function () {
+                create(article,{
+                    R : +(input[0].value),
+                    G : +(input[1].value),
+                    B : +(input[2].value),
+                    A : +(input[3].value/10)
+                })
+            }
+        }
+    </script>
+</form>
+</body>
+</html>

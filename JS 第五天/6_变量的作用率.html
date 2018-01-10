@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		/*
+		 变量的作用域
+		 * 
+		 * 变量的作用域就是 能够访问到变量的有效范围
+		 * JS 中变量依据作用域的范围可以划分为:
+		 * 1.全局变量
+		 *         定义在函数外部的变量都是全局变量
+		 *         全局变量的作用范围是"整个当前文档"
+		 *         只要在当前文档内,都可以访问到这个变量
+		 * 2.局部变量
+		 * */
+//    变量提升  : 所有的全局变量的声明都会被提前到 JS 的最前端声明
+//               所有的全局变量都是提前声明好的,要早于其他所有代码
+//               但是变量的赋值的位置并不会发生改变,任然在原始位置
+		var num;
+		console.log("");
+		num = 1;
+
+
+
+		console.log(num);//undefined
+		var num = 1;//会将 var num 提升,但是值不会动
+		console.log(num);//1
+	</script>
+	<!--<script type="text/javascript">
+		console.log(num);
+	</script>-->
+</html>

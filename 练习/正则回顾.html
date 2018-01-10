@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	<script type="text/javascript">
+//		var regExp = /./gi;
+//		var s = "a"
+//		console.log(regExp.test(s));
+		
+//		var regExp = /[ab]/gi; //一个括号只能判断一个
+//		var s = "ab"   //只能一个一个判断先判断有a 再判断有b
+//		console.log(regExp.test(s));
+//		console.log(regExp.test(s));
+//		console.log(regExp.test(s));
+//		
+//		var regExp = /[a-zA-Z0-9_]/gi;
+//		var s = "a"
+//		console.log(regExp.test(s));
+//		
+//		var regExp = /[a-zA-Z0-9_][A-Z]/gi;
+//		var s = "aA"
+//		console.log(regExp.test(s));
+//		
+//		var regExp = /[^a]/gi; //非a都匹配 在方括号中表示非
+//		var s = "a"
+//		console.log(regExp.test(s));
+//		
+//		var regExp = /[^ab]/gi; //既不是a也不是b
+//		var s = "b"
+//		console.log(regExp.test(s));
+//		
+//		var regExp = /\d/gi; //digital数字 0-10
+//		var s = "10"
+//		console.log(regExp.test(s));
+		
+//		var regExp = /\d\d/gi; //digital数字 0-20
+//		var s = "11"
+//		console.log(regExp.test(s));
+//		
+//		var regExp = /\D/gi; //非数字 0-10 等同于[^0-9]
+//		var s = "10"
+//		console.log(regExp.test(s));
+//		
+//		var regExp = /\w/gi; //word 匹配的单词字符,(数字字母下划线)  \t=tab \n=换行
+//		var s = "o"
+//		console.log(regExp.test(s));
+//		
+//		var regExp = /\W/gi; //非数字字母下划线 等同于[^0-9A-Za-z_]
+//		var s = "10"
+//		console.log(regExp.test(s));
+//		
+//		var regExp = /\b/gi; //退格
+//		var s = " "
+//		console.log(regExp.test(s));
+//		
+//		var regExp = /\s/gi; // 匹配空格 换行,空白字符 tab
+//		var s = " "
+//		var s = "\n"
+//		console.log(regExp.test(s));
+//		
+//		var regExp = /^1/gi; // ^以什么开头
+//		var s = "12"
+//		console.log(regExp.test(s));
+//		
+//		var regExp = /1$/gi; // $写在你想判断什么字符的后面,以什么结尾
+//		var s = "21"
+//		console.log(regExp.test(s));
+//		
+//		//判断一个四位数
+//		var regExp = /^\d\d\d\d$/gi;
+//		var s = "12345"
+//		console.log(regExp.test(s));
+		
+		//量词  ? + *{n}
+		//数量词: ? 0个或1个(有或者没有)
+		
+//		var regExp = /\d?/gi;
+//		var s = "a"
+//		console.log(regExp.test(s));
+//		console.log(regExp.lastIndex);
+//		console.log(regExp.test(s));
+//		console.log(regExp.lastIndex);
+//		console.log(regExp.test(s));
+//		console.log(regExp.lastIndex);
+		//贪婪模式,最大匹配,
+		//懒惰模式加两个??
+		
+//		var regExp = /\d+/gi; // 至少匹配一个
+//		var s = "121232as121232121232"
+//		console.log(regExp.exec(s));
+//		console.log(regExp.lastIndex);
+//		console.log(regExp.exec(s));
+//		console.log(regExp.lastIndex);
+		
+//		var regExp = /\d*/gi; //\d量词 0个或多个
+//		var s = "12423423"
+//		console.log(regExp.exec(s));
+//		console.log(regExp.lastIndex); //8
+//		console.log(regExp.exec(s));
+//		console.log(regExp.lastIndex); //8
+//		console.log(regExp.exec(s));
+//		console.log(regExp.lastIndex);//8 因为0个或多个都满足
+		
+//		var regExp = /\d{3}/gi; //{n}必须n个
+//		var s = "12423423"
+//		console.log(regExp.exec(s));
+//		console.log(regExp.exec(s));
+//		console.log(regExp.exec(s));
+//		console.log(regExp.exec(s));
+		
+		var regExp = /\d{3,}/gi; //{n,}至少n个
+		var s = "12asd423423"
+		console.log(regExp.exec(s));
+		console.log(regExp.exec(s));//null
+		console.log(regExp.exec(s));
+		
+		var regExp = /\d{3,4}/gi; //{n,m}至少n个最多m个
+		var s = "12asd423423"
+		console.log(regExp.exec(s));
+		
+	</script>
+	</body>
+</html>
+<!--
+	正则表达式的创建
+	new RegExp("" , "")
+	
+	/表达式/gi
+	
+	两个方法:
+	test:
+	
+	exec:
+	
+	. 匹配任意字符
+-->

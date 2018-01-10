@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            
+        }
+        #calendar{
+            width: 700px;
+            margin: 100px auto;
+        }
+        #calendar #y_m{
+            width: 100%;
+            text-align: center;
+        }
+        #calendar #content{
+            width: 100%;
+        }
+        ul#days{
+            width: 100%;
+            list-style: none;
+        }
+        #days li{
+            width: 100px;
+            height: 50px;
+            float: left;
+            text-align: center;
+            line-height: 50px;
+        }
+        #days li:hover{
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+<div id="calendar">
+    <div id="y_m">
+        <select id="year">
+            <option value="1900">1900</option>
+        </select>年
+        <select id="month">
+        
+        </select>月
+    </div>
+    <div id="content">
+        <ul id="days">
+            <li>星期日</li>
+            <li>星期一</li>
+            <li>星期二</li>
+            <li>星期三</li>
+            <li>星期四</li>
+            <li>星期五</li>
+            <li>星期六</li>
+        </ul>
+    </div>
+</div>
+<script>
+    var yearEle = document.getElementById("year");
+    var monthEle = document.getElementById("month");
+    //在select中填入年份
+    for(var year = 1900; year < 3000; year++){
+        appendOption(yearEle, year, year);
+    }
+    //在select中填入月份
+    for(var month = 1; month < 13; month++){
+        appendOption(monthEle, month, month);
+    }
+    
+    
+    
+    //创建一个option并把创建的option的插入到传入的select中
+    function appendOption(select, text, value){
+        var opt = document.createElement("option");
+        opt.innerHTML = text;
+        opt.value = value;
+        select.appendChild(opt);
+    }
+</script>
+</body>
+</html>

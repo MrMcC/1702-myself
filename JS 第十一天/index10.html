@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="" name="user" id="user" value="" />
+		<script type="text/javascript">
+			//可以监听到任意键的按下:包括ctrl,shift,alt等等
+			user.onkeydown = function(){
+				console.log("你按下了键盘任意键");
+			}
+			//监听字符键
+//			user.onkeypress = function(){
+//				console.log("你按下了字符键");
+//			}
+			//松开任意键
+			user.onkeyup = function(){
+				console.log("你松开了键盘任意键");
+			}
+		</script>
+	</body>
+</html>

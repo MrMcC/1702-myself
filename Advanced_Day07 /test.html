@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="box">
+    <p v-html="msg"></p>
+    <button v-on:click="reverseMsg">翻转</button>
+</div>
+<ul id="ps">
+    <li v-for="item in items" v-text="item" v-if="item"></li>
+</ul>
+<script type="text/javascript">
+    var app = new Vue({
+        el:"#box",
+        data : {
+            msg : "love",
+            showDate : `现在是：${new Date().getSeconds()}秒`,
+            seen : false
+        },
+        methods : {
+            reverseMsg : function (){
+                this.msg = this.msg.split("").reverse().join("")
+            }
+        }
+        
+    });
+    var app2 = new Vue({
+        el : "#ps",
+        data : {
+            items : [
+                "志玲",
+                "凤姐",
+                "关系",
+                ["a", "b"]
+            ]
+        },
+        methods : {
+        
+        }
+    })
+</script>
+</body>
+</html>

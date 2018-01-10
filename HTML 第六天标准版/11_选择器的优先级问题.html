@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+/*
+	选择器的优先级问题
+
+		内联样式表 		1000
+		ID选择器 			100
+		类选择器 			10
+		标签名选择器 	 	1
+		后代选择器 		优先级相加
+		群组选择器 		不涉及优先级问题
+
+	拓展：
+		通配符选择器 		0.1
+			*{  }
+		继承				0.0001
+
+
+		ICE 原则（id、class、element）
+			即使多个相同的选择器相加
+			也无法超过比这个选择器更高的权重
+
+			13个class相加也不会大于一个 ID
+
+ */
+	div{
+		width: 300px;
+		height: 300px;
+		background: red;
+	}
+	.son{
+		background: blue;
+	}
+	div .son{
+		background: purple;
+	}
+	.father .son{
+		background: pink;
+	}
+
+	div #div_id{
+		background: black;
+	}
+
+	.father #div_id{
+		background: gray;
+	}
+	/*#div_id{
+		background: green;
+	}*/
+	</style>
+</head>
+<body>
+	<div class="father">
+		<div class="son" id="div_id"></div>
+	</div>
+</body>
+</html>

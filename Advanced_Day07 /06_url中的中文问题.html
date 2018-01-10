@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="my_ajax2.js"></script>
+</head>
+<body>
+<script>
+    var name = "李四";
+    /*
+        encodeURI 对整个url进行编码
+        encodeURIComponent  只用来编码 url中的参数的值比较合适
+    */
+    //路径内部有中文的时候，需要对中文进行url编码
+    name = encodeURIComponent(name);
+    var url = "http://127.0.0.1:8888/1701/Advanced_Day07/数据文件.json?user="+name;
+    /*var url1  = encodeURI(url);
+    console.log(url1);
+    var url2 = encodeURIComponent(url);*/
+    console.log(url);
+    ajax.get(url, function (result){
+        console.log(result);
+    })
+
+</script>
+</body>
+</html>

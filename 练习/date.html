@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	// var a = new Date(2016,2,0)
+	// console.log(a.toLocaleString())
+	// var girls = /girl/gi
+	// var g = "asdasd,qweASDasd"
+	// var c = g.match(girls)
+	// console.log(c)
+	// var regExp = /box/gi;
+ //    var s2 = "boxBoxldsfjBOX fasBOxlfjlsajbOX";
+	// var a;   
+ //    while((a = regExp.exec(s2)) != null){
+ //    	console.log(a)
+ //    }
+ 	// var date = new Date()
+ 	// console.log(date.getDay())
+ 	
+ 	// var i = 0;
+ // 	function Foo(){
+ // 		var i = 0;
+ // 		return function(){
+ // 			console.log(i++);
+ // 		}
+ // 	}
+	// var f1 = Foo(),f2 = Foo();//写在函数内部相当于封装了不同名调用会还原初始值
+	// f1();
+	// f1();
+	// f2();
+
+	// function call(){
+	// 	for(var i = 0;i < arguments.length; i++){
+	// 		console.log(arguments[i])
+	// 	}
+	// }
+	// call("a","b","asd",true,123)
+	// function a(){
+	// 	function b(){
+	// 		console.log("4月12")
+	// 	};
+	// 	function c(){
+	// 		console.log("4月13")
+	// 	};
+		
+	// }
+	// a();b();
+	
+
+	// function A(x,y){
+ //  		this.name = x;
+ //  		this.age = y;
+  		
+	// }
+	// A.prototype = {
+ //   		eat : function(z){
+ //    		console.log(z)
+ //  		}
+	// }
+	// var duration = new A("李四",20);
+	// duration.eat("汉堡");
+
+	
+
+	// var arr = [22,3,6,31,2,15];
+	// for(var j = 0; j < arr.length -1; j++){
+	// 	for(var i = 0; i < arr.length -1 - j; i++){
+	// 		if(arr[i] > arr[i+1]){
+	// 			var temp = arr[i];
+	// 			arr[i] = arr[i+1];
+	// 			arr[i+1]= temp;
+	// 		}
+	// 	}	
+	// }
+	// console.log(arr)
+// var y = 1;
+// function f(){}
+// if (f) {
+//     y += typeof f; 
+//       //y=y+f
+      // console.log(typeof f)//typeof 安全的测试方式不会报错
+// }
+// // console.log(typeof function b(){})
+// //console.log(!!function b(){})//布尔值相当于取非 !!相当于转化成boolean
+// console.log(y); //1undefined
+// var a = function b(){return "4月12"}
+// console.log(a())
+
+
+
+// function f(){
+
+// }
+// console.log(typeof f)
+// function myFunction(){
+// 	console.log("Hello world")
+// }
+
+// console.log(eval(function f(){}))
+
+
+// var trees = ["redwood","bay","cedar","oak","maple"];
+// delete trees[3];
+// console.log(trees);
+
+// var foo = {n : 1};
+// var bar = foo;
+// foo.x = foo = {n : 2};//先把foo改成{n:2}  foo.x是在原foo中添加一个x对象{n : 2}即{n :1 ,
+// 																		// x : {n : 2}
+// console.log(foo.x) //{n : 2}里面没有x属性
+// console.log(bar.x) //{n : 1, x : {n : 2}}对象
+
+// var a = {}
+// var b = {}
+// console.log(a < b)//a.tostring转化成字符串再比较
+// console.log(a == b)//比较地址值,两个都不一样
+// console.log(a > b)//false
+// console.log(a >= b)//a不小于b true
+
+// 回调函数的作用是啥啊?是不是就是为了能添加不确定的样式或者属性啊?
+
+// setTimeout(function(){
+
+// },2)
+// var globalVar = "abc";
+// function outerFunction (outerArg) {
+//     var outerFuncVar = 'x';
+//         function innerFunction (innerArg) {
+//         	var innerFuncVar = "y";
+//         	console.log(
+//             	"outerArg = " + outerArg + "\n" +
+//             	"outerFuncVar = " + outerFuncVar + "\n" +
+//             	"innerArg = " + innerArg + "\n" +
+//             	"innerFuncVar = " + innerFuncVar + "\n" +
+//             	"globalVar = " + globalVar);
+//    		}
+// }
+// outerFunction(1);
+
+	</script>
+
+</body>
+</html>

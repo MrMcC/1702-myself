@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript" charset="utf-8">
+    /*
+     选择结构
+     * 
+     * 		1.if..
+     * 		2.if..else..
+     * 		3.if..else if..
+     * 		4.if..else if..else..
+     * 		5.switch
+     * */
+    //============================
+    /*
+     if 判断
+     * 
+     * 		if(condition){
+     * 			条件为真时触发的行为
+     * 		}
+     * 	注意：
+     * 		1.condition（条件）可以是任意的表达式
+     * 		  表达式的值不一定要为 布尔值
+     * 		2.如果 condition 不是 布尔值，则会
+     * 		  尝试使用 Boolean() 去转化为 布尔值
+     * 		3.如果 condition 成立，才会去执行
+     * 		  大括号内部的内容，否则不会执行
+     * 
+     * 小练习：
+     * 		用户输入一个数字，
+     * 		返回给用户该数字是奇数或偶数
+     * 
+     * */
+//  var num = parseInt(prompt("请输入一个数字"));
+//  if(num % 2 == 0){
+//  		alert("您输入的数字：" + num + "是偶数");
+//  }
+//  if(num % 2 == 1){
+//  		alert("您输入的数字：" + num + "是奇数");
+//  }
+//  if(num % 2 == -1){
+//  		alert("您输入的数字：" + num + "是奇数");
+//  }
+//    if(!num % 2){   //表示num % 2 为假,即num % 2不存在
+//        alert("输入错误");
+//    }
+
+	/*
+	 if..else..
+	 * 
+	 * 		if(condition){
+	 * 			条件为真时执行的行为
+	 * 		}
+	 * 		else{
+	 * 			条件为假时执行的行为
+	 * 		}
+	 * */
+//	var num = parseInt(prompt("请输入一个数字"));
+//  if(num % 2 == 0){
+//  		alert("您输入的数字：" + num + "是偶数");
+//  }
+//	else{
+//		alert("您输入的数字：" + num + "是奇数");
+//	}
+
+
+	/*
+	 if..else if..
+	 * 
+	 * 		if(condition1){
+	 * 			满足条件1成立时执行
+	 * 		}
+	 * 		else if(condition2){
+	 * 			满足条件2成立时执行
+	 * 		}
+	 * 		...
+	 * */
+//	var num = parseInt(prompt("请输入一个数字"));
+//	if(num > 0){
+//		alert("您输入的是正数");
+//	}
+//	else if(num == 0){
+//		alert("您输入的是 0 ");
+//	}
+//	else if(num < 0){
+//		alert("您输入的是负数");
+//	}
+
+
+
+	/*
+	 if..else if..else..
+	 * 
+	 * 		if(condition1){
+	 * 			condition1成立执行
+	 * 		}
+	 * 		else if(condition2){
+	 * 			condition2成立执行
+	 * 		}
+	 * 		else{
+	 * 			以上所有条件都不成立执行
+	 * 		}
+	 * */
+//		var num = parseInt(prompt("请输入一个数字"));
+//	if(num > 0){
+//		alert("您输入的是正数");
+//	}
+//	else if(num == 0){
+//		alert("您输入的是 0 ");
+//	}
+//	else if(num < 0){
+//		alert("您输入的是负数");
+//	}
+//	else{
+//		alert("您输入的内容有误");
+//	}
+
+
+/*
+ 小练习
+ * 
+ * 	输入你的期末考试成绩
+ * 	根据成绩判断你明年补考交多少钱
+ * 		>100 			超神
+ * 		90分 ~ 100分		优秀
+ * 		80分 ~ 89分		良好
+ * 		70分 ~ 79分		中等
+ * 		60分 ~ 69分		及格
+ * 		0分  ~ 60分		重修
+ * 		0分<				退学
+ * */
+//	var num = 70;
+//	if(100 > num > 60){		//错误写法
+//		console.log("true");
+//	}
+
+//	var num = parseInt(prompt("请输入你的成绩"));
+//	if(num > 0){
+//		if(num>60){
+//			if(num>70){
+//				if(num>80){
+//					if(num>90){
+//						if(num>100){
+//							alert("超神");
+//						}
+//						alert("优秀");
+//					}
+//					alert("良好");
+//				}
+//				alert("中等");
+//			}
+//			alert("及格");
+//		}
+//		alert("重修");
+//	}
+//	if(num > 100){
+//		alert("退学");
+//	}
+
+//	if(num < 0){
+//		alert("退学");
+//	}
+//	else{
+//		if(num < 60){
+//			alert("重修");
+//		}
+//		else{
+//			if(num < 70){
+//				alert("及格");
+//			}
+//			else{
+//				if(num < 80){
+//					alert("中等");
+//				}
+//				else{
+//					if(num < 90){
+//						alert("良好");
+//					}
+//					else{
+//						if(num < 100){
+//							alert("优秀");
+//						}
+//						else{
+//							alert("超神");
+//						}
+//					}
+//				}
+//			}
+//		}
+//	}
+</script>
+</html>

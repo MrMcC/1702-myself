@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        #banner {
+            width: 800px;
+            height: 500px;
+            margin: 0 auto;
+            position: relative;
+            cursor: pointer;
+        }
+        
+        #main {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        
+        #main div {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        
+        #main div img {
+            width: 100%;
+            height: 100%;
+        }
+        
+        #indicator {
+            background-color: pink;
+            list-style: none;
+            position: absolute;
+            bottom: 0;
+            left: 310px;
+            background-color: gray;
+            border-radius: 20px;
+            z-index: 10;
+        }
+        
+        #indicator li {
+            width: 30px;
+            height: 30px;
+            margin: 5px;
+            border-radius: 50%;
+            background-color: #fff;
+            text-align: center;
+            line-height: 30px;
+            float: left;
+        }
+        
+        #indicator li:nth-child(1) {
+            background-color: red;
+        }
+        
+        .change {
+            width: 50px;
+            height: 100px;
+            background-color: gray;
+            position: absolute;
+            top: 200px;
+            z-index: 2;
+            text-align: center;
+            line-height: 100px;
+            font-size: 40px;
+            font-weight: 700;
+            opacity: 0.5;
+            display: none;
+        }
+        
+        div#right {
+            right: 0;
+        }
+        
+        .change:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+<div id="banner">
+    <div id="main">
+        <div style="z-index: 1;"><img src="1.jpg" alt=""></div>
+        <div><img src="2.jpg" alt=""></div>
+        <div><img src="3.jpg" alt=""></div>
+        <div><img src="4.jpg" alt=""></div>
+        <div><img src="5.jpg" alt=""></div>
+        <div><img src="6.jpg" alt=""></div>
+    </div>
+    <div id="left" class="change">&lt;</div>
+    <div id="right" class="change">&gt;</div>
+    <ul id="indicator">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ul>
+</div>
+<script>
+    var imgDiv = document.querySelectorAll("#main div");
+    var lis = document.querySelectorAll("#indicator li");
+    //记录当前显示的图片的下标
+    var currentShow = 0;
+    //图片轮播函数。
+    var play = function (){
+        //对currentShow的值的合法性判断：小于0的话，从后面开始算
+        if (currentShow < 0){
+            currentShow += imgDiv.length
+        }
+        //等于长度，则从0开始计算
+        if (currentShow == imgDiv.length){
+            currentShow = 0;
+        }
+        //把所有的图片和指示器设置为初始状态
+        for (var i = 0; i < imgDiv.length; i++){
+            imgDiv[i].style.zIndex = 0;
+            lis[i].style.backgroundColor = "white";
+        }
+        //设置要显示的图片的zindex为1，指示器背景红色
+        imgDiv[currentShow].style.zIndex = 1;
+        lis[currentShow].style.backgroundColor = "red";
+        //把要显示的图片的下标++
+        currentShow++;
+        
+    }
+    //开启自动轮播
+    var intervalId = setInterval(play, 1000);
+
+    //遍历每个指示器，鼠标到哪个指示器的上方就让currentShow设置为几
+    for (let i = 0; i < lis.length; i++){
+        lis[i].onmouseover = function (){
+            currentShow = i;
+            play();
+        }
+    }
+    
+    var banner = document.getElementById("banner");
+    var leftAndRight = document.querySelectorAll(".change");
+    
+    //进入广告区域清除定时器
+    banner.onmouseover = function (){
+        clearInterval(intervalId);
+        //左右箭头显示
+        for (var div of leftAndRight){
+            div.style.display = "block"
+        }
+    }
+    //离开广告区域启动定时器
+    banner.onmouseleave = function (){
+        intervalId = setInterval(play, 1000)
+        //左右箭头隐藏
+        for (var div of leftAndRight){
+            div.style.display = "none"
+        }
+    }
+
+    //  当按下左箭头的时候，由于play函数内部已经++一次，所以currentShow-2
+    leftAndRight[0].onclick = function (){
+        currentShow -= 2;
+        play();
+    }
+    //当按下右箭头的时候，直接play即可，因为play内部currentShow已经++了
+    leftAndRight[1].onclick = function (){
+        play();
+    }
+</script>
+</body>
+</html>
+<!--
+1. let声明的变量是块级作用域。 例如，在if中声明的，只在在if中使用
+2. 没有声明提前
+-->

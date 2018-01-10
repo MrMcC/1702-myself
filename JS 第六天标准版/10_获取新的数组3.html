@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取新的数组3</title>
+</head>
+<body>
+<script>
+    /*
+     作者：李振超    2017年3月20日 16:01
+     splice: 可以用这个一个方法对数组进行添加元素、删除元素、替换元素
+         参数1：要操作的数组的开始的下标
+         参数2：要删除的元素的个数。如果不删除就传入0
+         参数3...:表示要添加的元素
+         返回值：删除的元素组成的新的数组
+     他会影响到原始数组
+     */
+    var arr = [1, 2, 4, 6, 3, 7];
+    console.log(arr);
+    var deleted = arr.splice(1, 4, 10, 20 );
+    console.log(deleted);
+    console.log(arr);
+</script>
+</body>
+</html>

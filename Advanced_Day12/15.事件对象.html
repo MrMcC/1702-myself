@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 100px;height: 100px;background-color: pink;
+			}
+		</style>
+		<script src="libs/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+//				$("div").click(function(e){ //事件e
+//					console.log(e)
+//					console.log(e.type)
+//				})
+
+//				var i = 0;
+//				$("div").click(function(){
+//					console.log(i++)
+//				})
+//				setInterval(function(){
+//					$("div").trigger("click") //模拟点击事件
+//				},1000)
+				
+				
+//				$("button").on("my",function(){
+//					alert("自定义事件")
+//				})
+//				$("button").trigger("my") //模拟点击自定义事件
+
+				$("input").focus(function () {
+					console.log("擦，我获得焦点了");
+				})
+				$("input").triggerHandler("focus");
+//				$("input").trigger("focus");
+			})
+		</script>
+	</head>
+	<body>
+		<div></div>
+		<button></button>
+		输入<input type="text" name="" id="" value="" />
+	</body>
+</html>

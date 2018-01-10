@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //构造函数创建  new Date()  对象 == 实例
+    function Person(){
+        //指代将来使用new的时候要创建的那个对象
+        this.name = "李四";
+        this.age = 20
+    }
+    
+    
+    var p1 = new Person();
+    
+    var p2 = new Person();
+    
+    console.log(p1);
+    console.log(p2);
+    console.log(p2 instanceof Person);
+    console.log(p2 instanceof Object);
+</script>
+</body>
+</html>
+<!--
+构造函数的目的就是用来创建对象！！！
+当通过new 函数()的方式使用的时候，这个函数就叫构造函数。
+
+-->

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <div id=box></div>
+    <!--导航栏-->
+    <header>
+        <nav>
+            <a href="/html/">HTML</a> |
+            <a href="/css/">CSS</a> |
+            <a href="/js/">JavaScript</a> |
+            <a href="/jquery/">jQuery</a>
+        </nav>
+    </header>
+
+    <!--相似主题内容-->
+    <section>
+        <p>这是一个美女</p>
+        <img src="img/37eff18edf5d714c441d2b1c3367dbdc.jpeg" alt="">
+    </section>
+
+    <article></article>
+
+    <aside></aside>
+
+    <footer>
+
+    </footer>
+    <progress max="100" value="0"></progress>
+    <script>
+        var pro = document.querySelector("progress");
+        var id = setTimeout(function step() {
+            pro.value++;
+            if(pro.value == 100){
+//                clearTimeout(id);
+                console.log("aaa")
+                return;
+            }
+
+            id = setTimeout(step,100)
+        },100)
+    </script>
+
+</body>
+</html>

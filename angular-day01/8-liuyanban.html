@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+    姓名: <input type="text" ng-model="name"><br>
+    内容: <textarea ng-model="content"></textarea><br>
+    <button ng-click="sub()">提交</button><br>
+    <h2>显示流言</h2>
+    <ul>
+        <li ng-repeat="item in arr">
+            <p>{{item.name}}</p>
+            <p>{{item.content}}<a href="###" ng-click="del($index)">删除</a></p>
+        </li>
+    </ul>
+
+</body>
+<script src="./js/angular.min.js"></script>
+<script>
+    var myApp = angular.module("myApp",[])
+
+    myApp.controller('myCtrl',['$scope',function ($scope) {
+        $scope.arr = []
+        $scope.name =""
+        $scope.content = ""
+        $scope.sub = function () {
+//            console.log($scope.name,$scope.content)
+            if ($scope.name==""||$scope.content==""){
+                return;
+            }
+            var obj = {
+                name : $scope.name,
+                content : $scope.content
+            }
+            $scope.arr.push(obj)
+            $scope.name = ""
+            $scope.content = ""
+
+        }
+
+        $scope.del = function (index) {
+//            console.log(index)
+            $scope.arr.splice(index,1)
+        }
+    }])
+</script>
+</html>

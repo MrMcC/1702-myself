@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var a = "3";
+		var b = 2;
+		console.log(a - b);
+		//任何一个数据都可以当做boolean值来用
+//		Nan 0 "" null undefined false
+//		逻辑与和逻辑或  他们得到的结果不一定总是布尔值
+		console.log(1 || false);
+		console.log(true && 1);//1
+		console.log(false || 0);
+//		如果第一个能够决定最终的值,那么他们的值就是第一个,
+//		如果第一个不能决定最终的值,就是第二个
+		
+		var arr = [1];
+		console.log(typeof arr); //number boolean string undefined object function
+		
+		//instanceof:测试是不是他的对象
+		console.log(arr instanceof Array);  //true;
+		console.log(1 instanceof Array);   //false
+		
+//		isArray
+		var is = Array.isArray(arr);
+		console.log(is);        //true
+		
+		var is = Array.isArray(2);//测试2是不是数组
+		console.log(is);        //false
+		var is = Array.isArray([]);
+		console.log(is);       //true
+		
+		
+	</script>
+</html>

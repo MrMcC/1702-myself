@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var s = "abcBBdefg";
+    //参数1：开始下标  参数2：结束下标(不包括)  如果不传入，则表示到字符串的末尾
+    var s1 = s.substring(1, 2);
+    console.log(s1)
+    //参数1：开始下标  参数2：截取的字符串的长度  如果不传入，到字符串的末尾
+    var s2 = s.substr(1, 4);
+    console.log(s2);
+    // start end 参数可以传入负值。功能和substring一样。
+    var s3 = s.slice(-2, -1);
+    console.log(s3)
+
+    //所有字母变成大写
+//  console.log(s.toUpperCase())
+//  //所有字母变成小写
+//  console.log(s.toLowerCase())
+//  //只去掉首尾的空白字符串
+//  var ss = "\n\t      abc\b   dddk \n \t \r   ";
+//  console.log(ss.trim() + "z")
+</script>
+</body>
+</html>

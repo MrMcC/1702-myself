@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<button id="btn">按钮</button>
+<button id="btn2">取消</button>
+<body>
+<script>
+    var id;
+    btn.onclick = function (){
+        //这个函数每调用一次，在一定的时间间隔之后就会调用一次回调函数，
+        id = requestAnimationFrame(function step(){
+            console.log(new Date().getTime());
+            id = requestAnimationFrame(step);
+        });
+    }
+    btn2.onclick = function (){
+        cancelAnimationFrame(id);
+    }
+</script>
+</body>
+</html>

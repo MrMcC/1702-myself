@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div[id=box]{
+            width: 100px;height: 100px;
+            background-color: pink;
+        }
+        div[class=box1]{
+            width: 200px;height: 200px;
+            background-color: black;
+        }
+        div[class~=b]{
+            width: 400px;height: 400px;
+            background-color: blue;
+        }
+        div[id|=box]{
+            width: 20px;height: 20px;background-color: #01be00;
+        }
+
+        /*div[id^=b]{*/
+            /*width: 50px;height: 50px;background-color: purple;*/
+        /*}*/
+
+        /*div[id$=x]{*/
+            /*width: 50px;height: 50px;background-color: purple;*/
+        /*}*/
+        div[class*=b]{
+            width: 50px;height: 50px;background-color: purple;
+        }
+    </style>
+</head>
+<body>
+    <div id="box" class="box1"></div>
+    <div class="box1 b c"></div>
+    <div id="box-1"></div>
+    <form action="#">
+        <input type="email"><br>  <!--必须带@-->
+        <input type="number"><br>
+        <input type="url"><br>   <!--在页面中输入http://www.baidu.com-->
+        <input type="color"><br>
+        <input type="range" min="0" max="100" value="30"><br>     <!--滑动条-->
+        <input type="submit">
+
+    </form>
+
+
+</body>
+</html>

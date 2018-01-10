@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<ul>
+    <li>这是第1个事件</li>
+    <li id="li1">这是第2个事件</li>
+    <li>这是第3个事件</li>
+    <li id="li2">这是第4个事件</li>
+    <li>这是第5个事件</li>
+    <li>这是第6个事件</li>
+</ul>
+<script>
+    var ul = document.querySelector("ul");
+    ul.onclick = function (event){
+        var li = event.target;
+        var id = li.id;
+        switch (id){
+            case "li1":
+                alert("a")
+                break;
+            case "li2":
+                alert("b")
+                break;
+        }
+    }
+</script>
+</body>
+</html>
+<!--
+事件委托、事件代理
+dom事件流： 捕获阶段、处于目标阶段、冒泡阶段
+
+-->

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			
+		</style>
+		<script src="libs/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+//				$("a").wrap($("<div>"))  //每一个div包裹一个a
+				$("a").wrapAll($("<div>")) //用一个div包裹所有的a
+//				$("a").wrapInner($("<div>")) //用div包裹a里的所有内容
+//				$("i").unwrap()  //去除i的父元素
+			})
+		</script>
+	</head>
+	<body>
+		<a href="#"><i>百度一下</i></a>
+		<a href="#"><i>会计考试的</i></a>
+	</body>
+</html>
+<!--
+	b.wrap(a)	  每一个b分别用一个a包裹
+	b.wrapAll(a)  所有的b用同一个a包裹，如果有其他元素则扔到包裹的后面
+	b.wrapInner(a);	用a去包裹b的内容。不包裹b这个标签本身。
+	b.unwap()去除b的父元素
+-->

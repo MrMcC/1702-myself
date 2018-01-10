@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width : 200px;
+            height : 200px;
+            background-color : pink;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+<div id="box"></div>
+<script>
+    var box = document.getElementById("box");
+//  
+//  console.log(getCssValue(box, "width"));
+//  console.log(getCssValue(box, "height"));
+//  console.log(getCssValue(box, "background-color"));
+    // 给一个元素和一个css属性，返回这个属性的值
+    //跨浏览器来获取内部和外部样式
+    function getCssValue(ele, propertyName){
+        var style;
+        if(window.getComputedStyle){  // 0 "" undefined null NaN false
+            style = window.getComputedStyle(ele, null);
+        }else{// ie 678
+            style = ele.currentStyle;
+        }
+        return style[propertyName];
+    }
+</script>
+</body>
+</html>
+<!--
+1. div.style:只适用于行内样式(内联样式)，不适用内部样式和外部样式
+通过js代码去更改的一定是行内样式。
+2. 获取外部和内部：window.getComputedStyle(ele, null)
+
+-->

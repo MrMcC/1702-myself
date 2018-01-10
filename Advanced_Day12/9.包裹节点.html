@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 100px;height: 100px;background-color: papayawhip;
+				margin-bottom: 10px;
+			}
+		</style>
+		<script src="libs/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("button").click(function(){
+					alert("abc")
+				})
+				//不传参数深度克隆默认false 
+				//参数1 true 表示是否复制事件和data 
+				//参数2 true 表示是否深度复制,(是否把里面的子元素也复制) 如果参数2不给默认也是true,但是传false不同了
+				var cloneDiv = $(".d1").clone(true,true) //返回值就是克隆到的元素
+				cloneDiv.appendTo(document.body)
+			})
+		</script>
+	</head>
+	<body>
+		<div class="d1">
+			<button>按钮</button>
+		</div>
+	</body>
+</html>

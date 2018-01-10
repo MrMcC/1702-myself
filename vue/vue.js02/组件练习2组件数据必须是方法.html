@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        {{total}}
+        <my-btn @changenum="add"></my-btn>
+        <my-btn @changenum="add"></my-btn>
+        <my-btn @changenum="add"></my-btn>
+    </div>
+</body>
+<script>
+    Vue.component('my-btn',{
+        template: `<button @click="countNum()">{{count}}</button>`,
+        data(){
+            return {
+                count: 0,
+                speed: 3
+            }
+        },
+        methods:{
+            countNum(){
+                this.count+=this.speed
+                //子传递父亲
+                this.$emit('changenum',this.speed)
+            }
+        }
+    })
+    new Vue({
+        el: '#app',
+        data:{
+            total: 0
+        },
+        methods:{
+            add(speed){
+                console.log(speed)
+                this.total += speed
+            }
+        }
+
+    })
+</script>
+</html>

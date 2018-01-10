@@ -1,0 +1,50 @@
+r<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Math对象</title>
+</head>
+<body>
+<script>
+
+    console.log(Math.PI);
+    console.log(Math.E);
+    //返回数字的绝对值
+    console.log(Math.abs(20))
+    console.log(Math.max(10, 30, 2, 30, 20))
+    console.log(Math.min(10, 30, 2, 30, 20))
+    var arr = [2, 3, 5, 3, 10, 30];
+//    console.log(Math.max.apply(null, arr));
+    console.log(Math.max(...arr));
+    //返回大于等于参数的最小整数
+    console.log("ceil:" + Math.ceil(-23.4));
+    //返回小于等于参数的最大整数
+    console.log("ceil:" + Math.floor(-22.10));
+    //四舍五入到整数部分
+    console.log(Math.round(-20 + (-0.5)))
+    console.log(Math.pow(2, -3));  //幂运算
+    //ES2016  新增 幂运算符 **
+    console.log(2**30)
+    //平方根
+    console.log(Math.sqrt(8))
+    //正弦
+    console.log(Math.sin(toRadian(30)))  //接受弧度
+    //反正弦
+    console.log(toDegree(Math.asin(0.5)))
+
+    //正切
+    console.log(Math.tan(toRadian(90)))
+    //余切
+    console.log(1 / Math.tan(toRadian(45)))
+
+    //把角度转换成弧度
+    function toRadian(degree) {
+        return Math.PI / 180 * degree;
+    }
+    //弧度转换成角度
+    function toDegree(readian) {
+        return readian / Math.PI * 180;
+    }
+</script>
+</body>
+</html>

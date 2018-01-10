@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 300px;height: 100px;
+				background-color: pink;margin: 10px;
+				padding: 100px;border: 30px solid #000;
+				box-sizing: border-box;
+				/*//内阔*/
+			}
+		</style>
+		<script src="libs/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("div").click(function(){
+					var w = $(this).width()   //没有px 这个宽就是css里设置的宽
+					console.log(w)           //获取
+//					$(this).width(200)       //设置
+//					$(this).width("200px")
+				})
+//                var $d = $("div").css(["width","height","padding"])
+//                $.each($d,function (index,ele) {
+//                    console.log(index,ele)
+//                })
+//                var obj = ["lisi",20,"nan"]
+////
+//                $.each(obj,function(index,ele){
+//                    console.log(index,ele)
+//                })
+			})
+		</script>
+	</head>
+	<body>
+		<div></div>
+		<div></div>
+	</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="language">
+    <li>java</li>
+    <li>c++</li>
+    <li>oc</li>
+    <li>php</li>
+    <li>c#</li>
+</ul>
+<script>
+    var ul = document.getElementById("language");
+    //复制元素。 参数表示是否连着这个元素的后代元素一起复制。true表示都复制。
+    var newUl = ul.cloneNode(true);
+    ul.parentNode.appendChild(newUl);
+</script>
+</body>
+</html>
+<!--
+创建节点、插入或追加、移除、替换、复制
+
+-->

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>location对象</title>
+</head>
+<body>
+<button id="btn1">assign</button>
+<button id="btn2">reload</button>
+<button id="btn3">replace</button>
+<script type="text/javascript">
+    btn1.onclick = function (){
+        //加载一个新的网页。 可以后退当上个网页
+        location.assign("http://www.yztcedu.com");
+    }
+    btn2.onclick = function (){
+        //重新加载当前网页
+        location.reload();
+    }
+     btn3.onclick = function (){
+        //用指定url的网页替换当前网页。 不可以后退当上个网页
+        location.replace("http://www.yztcedu.com");
+    }
+    
+    
+    // http
+    //    http://localhost:8080/1701/Day08/08_location.html
+    document.write("protocol: " + location.protocol + "<br />");	// 协议
+    document.write("hostname: " + location.hostname + "<br />");		//主机名
+    document.write("host: " + location.host +　"<br />");  //主机和端口
+    document.write("port: " + location.port + "<br />");	//端口
+    document.write("pathname: " + location.pathname + "<br />");	// 路径名
+    document.write("search: " + location.search + "<br />");	// 查询参数
+    document.write("href: " + location.href + "<br />");	//完整url
+</script>
+</body>
+</html>

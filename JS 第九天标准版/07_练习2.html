@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            border-radius: 50%;
+            position: absolute;
+        }
+    </style>
+    <script type="text/javascript" src="./util.js"></script>
+</head>
+<body>
+<div id="div"></div>
+<script>
+    /*
+     作者：李振超    2017年3月23日 16:20
+     在页面中随机生成50个，大小随机(直径 30-100)，位置随机的小球
+     */
+    /*先创建第一个小球*/
+    function createCircle(){
+        var div = document.getElementById("div");
+        
+        var wh = randomInt(30, 200);
+        div.style.width = wh + "px";
+        div.style.height = wh + "px";
+        //rgb(22, 22, 22)
+        div.style.backgroundColor
+            = "rgb(" + randomInt(0, 255) + "," + randomInt(0, 255) + "," + randomInt(0, 255) + ")"
+        div.style.left = randomInt(0, 1300) + "px";
+        div.style.top = randomInt(0, 600) + "px";
+        return div;
+    }
+
+    /*for (var i = 0; i < 50; i++){
+        
+        var div = createCircle();
+        document.body.appendChild(div)
+    }
+    */
+    setInterval(function (){
+        createCircle();
+    }, 300)
+
+</script>
+</body>
+
+</html>

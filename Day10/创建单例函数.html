@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//			var king = (function(){
+//				function King(){
+//					
+//				}
+//				King.prototype.eat = function(){
+//					
+//				}
+//				var temp = new King();
+//				return function(name){
+//					temp.name = name;
+//					return temp;
+//				}
+//			}())//先自执行
+//			var k1 = king("李四")//相当于调用返回值
+//			var k2 = king("张三")
+//			console.log(k1.name)//张三
+
+
+			function Person(name){
+				this.name = name;
+				var that = this;
+				Person = function(name){
+					that.name = name;
+//					return that;//不能去掉,去掉默认返回this那么p1和p2不等了
+				}
+			}
+			console.log(Person);
+			var p1 = new Person("a");
+			console.log(Person);
+			var p2 = new Person("b");
+			console.log(p1 == p2);
+			
+		</script>
+	</body>
+</html>
+<!--
+	变量的值的类型是整型 a = 3  变量没有类型
+-->

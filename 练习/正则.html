@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var regExp = /girl/gi;//不加gi默认每次都从头找
+			var s = 'girlsadGirl';
+			console.log(regExp.test(s));//加了g表示全局 表示不区分大小写
+			console.log(regExp.lastIndex);//4 指找完后的下一个下标
+			console.log(regExp.test(s));
+			console.log(regExp.lastIndex);//11
+			console.log(regExp.test(s));
+			console.log(regExp.test(s));
+			
+			var regExp = /girl/gi;
+			var s = 'girlsadGirl';
+		</script>
+	</body>
+</html>

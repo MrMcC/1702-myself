@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="btn">有楼了，赶紧过来买呀</button>
+<script>
+    /*发布者， 被观察者*/
+    var publisher = {
+        observers : [],
+        registerObserver: function (observer){ //js中函数来充当观察者的身份
+            this.observers.push(observer);
+        },
+        publish: function (msg){
+            for(var observer of this.observers){
+                observer(msg);
+            }
+        }
+    }
+    //注册观察者，观察者就是一个函数
+    publisher.registerObserver(function (msg){
+        console.log("观察者1:" + msg);
+    });
+    //注册观察者，观察者就是一个函数
+    publisher.registerObserver(function (msg){
+        console.log("观察者2:" + msg);
+    });
+    btn.onclick = function (){
+        //被观察者发布信息
+        publisher.publish("500w, 10平米");
+    }
+</script>
+</body>
+</html>
+<!--
+观察者模式或发布订阅模式
+顾客：观察者 / 订阅者
+售楼小姐： 被观察者 / 发布者
+
+-->

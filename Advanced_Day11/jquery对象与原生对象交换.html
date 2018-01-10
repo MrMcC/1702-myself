@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="libs/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+//				$("div")[0].innerHTML = "你好世界"   //jq转dom [index]
+				var div = document.getElementById("box")
+				console.log($(div).html("你好中国"))  //dom转jq $(dom对象)
+				console.log($(div).length)  //1
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box"></div>
+	</body>
+</html>

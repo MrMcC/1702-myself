@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            box-shadow: 10px 10px 15px 2px darkgray;
+            width: 400px;
+            height: 500px;
+            /*border: 50px dashed white;*/
+            padding: 50px;
+            /*宽高从border开始*/
+            box-sizing: border-box;
+
+            /*background-color: pink;*/
+
+            background: url("./img/timg.jpeg") no-repeat;
+            /*图片默认从padding开始显示 ,改成从border开始显示*/
+            background-origin: border-box;
+            /*成比例显示最大*/
+            /*background-size: contain;*/
+            /*最大显示*/
+            background-size: cover;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

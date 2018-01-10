@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>作业1</title>
+</head>
+<body>
+</body>
+<script>
+    /*
+     作者：李振超    2017年3月23日 20:25
+     使用js代码动态创建一个form表单，并动态的添加节点。
+     */
+    function createInput(type, value){
+        var input = document.createElement("input");
+        input.setAttribute("type", type);
+        input.setAttribute("value", value);
+        return input;
+    }
+    function createForm(){
+        //创建表单
+        var form = document.createElement("form");
+        form.setAttribute("action", "#");
+        form.setAttribute("method", "get");
+        form.appendChild(document.createTextNode("用户:"));
+        form.appendChild(createInput("text", ""));
+        form.appendChild(document.createTextNode("密码:"));
+        form.appendChild(createInput("password", ""));
+        form.appendChild(createInput("submit", "注册"));
+        return form;
+    }
+    var form = createForm();
+    form.setAttribute("id", "form1");
+    document.body.appendChild(form);
+
+    var form1 = document.getElementById("form1");
+    var form2 = form1.cloneNode(true);
+    form2.appendChild(createInput("reset", "重写"))
+    document.body.appendChild(form2);
+
+</script>
+</html>

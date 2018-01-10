@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    console.log("a");
+    /*setTimeout(function (){
+        console.log("b");
+    }, 20)
+    setTimeout(function (){
+        console.log("d");
+    }, 10)*/
+    setInterval(function (){
+        console.log("b");
+    }, 500)
+    console.log("c");
+    for(var i = 0; i < 30000; i++){
+        console.log("1");
+    }
+   /* while(true){
+    
+    }
+    */
+</script>
+</body>
+</html>
+<!--
+js是单线程！！！
+定时的函数事件到了之后，会放入到一个事件队列中，
+js的事件轮自动轮询机制会自动的从队列中取出事件去执行。
+
+
+-->

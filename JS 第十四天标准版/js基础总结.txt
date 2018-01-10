@@ -1,0 +1,146 @@
+数据类型：
+    简单数据类型
+        undefined null Number Boolean String
+    复杂数据类型(引用数据类型)
+        所有的对象
+        函数、数组、Date、window...
+
+    类型的判断：
+        typeof
+            undefined object number boolean string function
+
+    类型转换：
+        number->boolean    0->false NaN->false  其余都是true
+        boolean ->number   false->0 true->1
+
+        string ->number    "22444"->number  'a222'->NaN   "" - > 0
+        number->string
+
+        boolean->string  true-> "true"  false->"false"
+        string -> boolean  ""->false   其余都是true
+
+        比较的时候：
+        字符与布尔值比较：把布尔值和字符串分别转换成number之后再比较
+
+        如果对象和基本类型进行比较，先调用对象的valueOf()方法，如果返回值
+        是基本类型，则用valueOf的返回值进行比较。如果valueOf返回的不是基本类型，
+        则调用toString()方法获取到字符串之后再比较
+
+        如果两个对象比较，不管是两个==还是三个===都是比较的地址值！！！
+
+运算符：
+    ++ -- %
+
+    || &&   ！
+
+    ? :
+
+语句：
+    顺序
+    选择
+        if()
+        swith()
+    循环
+        for
+        while
+        do...while
+
+函数：
+    具名
+    匿名
+    函数表达式
+
+    函数的三个要素：
+    函数名、参数列表、返回值
+    function foo(a, b){  // a,b 形参列表
+        // arguments
+    }
+    foo(10, 20)  //
+
+    function buy(money){
+
+    }
+    buy(10)
+
+数组：
+   []
+   new Array(10, 20)
+   new Array("10")
+   new Array(10)
+
+    栈方法：
+        push
+        pop
+    队列方法：
+        unshift
+        shift
+    数组的截取：
+        slice：
+
+    数组的添加删除替换
+        splice
+
+       indexOf
+       latIndexOf
+
+       sort
+
+       reverse
+       ...
+
+        数组的内存模型
+字符串和Math：
+
+
+BOM：
+    window：
+    1. 所有的全局变量都会成为window的属性
+    2. 两个定时器： setInterval  setTimeout
+    3. widow.document
+    4. window.open("", "", "")
+    ...
+DOM:
+    DOM树形结构：
+    1.元素的查找
+    2.节点之间的关系
+    3. 几点的操作：创建、追加、删除、替换、克隆
+    css脚本化
+    ...
+事件：
+    常用的事件
+    注册事件的3种:HTML事件  DOM0事件  DOM2
+
+    事件流： DOM事件流
+    事件委托
+    event：
+        target currentTarget  preventDefault stopPropagation
+        offsetX y
+        clientX y
+        pageX y
+        screenX y
+
+     dom对象的属性：
+        offsetWidth
+        offsetLeft
+
+
+Date:
+    new Date()
+
+    get... set...
+正则表达式：
+    test
+    exec
+
+    字符串的四个支持正则的方法：
+    search
+    match
+    replace
+    split
+
+
+
+
+
+
+

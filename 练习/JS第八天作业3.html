@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				width: 220px;height: 250px;background-color: paleturquoise;
+				position: absolute;right: 0;bottom: -250px;
+			}
+			#btn{
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"><button id="btn">关闭</button></div>
+		
+		<script type="text/javascript">
+			var div = document.getElementById("box")
+			var bottom = -250;  //设置初始值
+			var setTimeId;      
+			
+			var step = function(){
+				bottom += 5;
+				div.style.bottom = bottom+ "px";
+				if(bottom == 0){
+					clearInterval(intervalId);
+					setTimeId = setTimeout(function(){
+						div.style.bottom = -250+"px";  //div消失
+						bottom = -250;   //bottom初始化
+						setTimeout(function(){
+							intervalId = setInterval(step,30)
+						},5000)  //5s后继续让其慢慢显示
+					},3000)   //3s后让他消失
+				}
+			}
+			var intervalId = setInterval(step,30)  //调用这个id,每30毫秒移动left值
+			
+			btn.onclick = function(){
+				clearTimeout(setTimeId);
+				clearInterval(intervalId);
+				div.style.bottom = -250+"px";
+				bottom = -250;
+				setTimeout(function(){
+					intervalId = setInterval(step,30)
+				},3000)
+			}
+		</script>
+	</body>
+</html>
+<!--
+	在一个页面中自动显示和自动消失的小广告。
+-->

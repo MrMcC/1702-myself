@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+	<script type="text/javascript">
+//		var s = new String("你好");
+//		var s1 = "你好"
+//		console.log(typeof s); //opject
+//		console.log(typeof s1);
+//		
+//		var s = "abc";
+//		s = "abcd";
+//		//字符个数
+//		console.log(s.length);
+//		
+//		var s = "asd你好";
+//		//由于js没有字符型,所以返回的是字符串
+//		var c  = s.charAt(0);
+//		console.log(typeof c);
+//		for(var i = 0)
+		
+		var s = "asdhffg";
+		var s2 = s.substr(1,4); //从1开始截取4个
+		console.log(s2);
+		var s2 = s.substr(1);//从1开始到最后
+		console.log(s2);
+		var s1 = s.substring(1,4); //不能有负的 从[1到4)
+		console.log(s1);
+		var s1 = s.substring(1);//从1开始到最后
+		console.log(s1);
+		var s3 =s.slice(-2,-1) ;//截取一样
+		console.log(s3);
+		
+		console.log(s.toUpperCase());//大写
+		console.log(s.toLowerCase());//小写
+		var ss = "\n\t   sbc   sad \n\t\r ";//去掉首尾的空格
+		console.log(ss.trim()+"x");
+		
+		//字符串的match方法
+		var s = 'abcdefgab';
+		//如果传入的是普通的字符踹,则会找到第一个匹配的
+		var a1 = s.match("ab");
+		console.log(a1.length);//1
+		console.log(a1.toString());//ab
+		console.log(a1);//数组1
+		var a1 = s.match(/ab/gi);//ignore忽略 全局忽略大小写找到所有的ab
+		
+		var s1 = "javacjavaphp";
+		//第一个值指要替换的内容,第二个值替换成什么
+		s1.replace("java","js");
+		s1.replace(/java/gi,"js");//全局java全干掉
+		console.log(s2);
+		
+		function foo(str,substr){
+			var count = 0;//记录找到的个数
+			var from = 0; //查找的开始位置
+			var index = str.indexOf(substr);
+			while(index != -1){
+				count++;
+				//来确定下一次查找的开始位置
+				from = index + substr.length;
+				//开始下一次查找
+				index = str.indexOf(substr,from);
+			}
+//			while((index = str.indexOf(substr,from)) != -1){
+//				count++;
+//				from = index + substr.length;
+//			}
+			return count;
+		}
+//		不知道循环次数时用while
+
+//查找指定的字符串或者正则表达式第一次出现的下标
+		//相比index0f,这里支持正则表达式
+		var index = s.search(/\D+/gi);
+		console.log(index);
+		console.log(s.startsWith("a"));
+		console.log(s.endsWith("dsa"));
+		//按照字母表的顺序
+		console.log(s1.localeCompare(s2));//s1比s2大输出1,s1小鱼s2-1
+		
+		var s = "10.3.20.188";
+		var ss = s.split(".");
+		console.log(ss);
+		
+		console.log(Math.PI);
+		console.log(Math.E);
+		console.log(Math.abs(20));//绝对值
+		console.log(Math.max(10,20,50,20));
+		console.log(Math.min());
+		var arr = [2,3,5,2,10,30];
+		console.log(Math.max(...arr));//展开
+		console.log(Math.ceil(-23.4));//返回大于等于他的最小的整数
+		console.log(Math.floor(-23.4));//返回小于等于它的最大的整数
+		console.log(Math.round(20.49));//四舍五入到整数部分
+		console.log(Math.pow(2,-3));//幂运算 1/8
+		console.log(2***3);
+		console.log(Math.sqrt(8))
+		console.log(Math.sin())
+	</script>
+	</body>
+</html>
+<!--
+	JS中的字符串是不可变量
+-->

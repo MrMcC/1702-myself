@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+     function Person(name){
+         this.name =  name;
+         var that = this;
+         
+         Person = function (name){
+             that.name = name;
+             return that;
+         }
+     }
+     var p1 = new Person("a");
+     var p2 = new Person("b");
+     console.log(p1 == p2);
+     console.log(p1.name);
+     
+//     var p2 = new Person("a");
+</script>
+</body>
+</html>
+<!--
+替换构造函数实现单例！
+
+任何的都是可以动态改变！！！
+
+变量的的类型是什么 int a  = 3;  在js是不对
+
+var a = 4;
+-->

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;padding: 0;
+			}
+			div{
+				width: 800px;height: 500px;background: plum;margin: 100px auto;position: relative;
+			}
+			p{
+				width: 100px;height: 100px;background:paleturquoise;border-radius:50% ;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<button id="btn">原路返回</button>
+		<div><p></p></div>
+		
+		<script type="text/javascript">
+			var div = document.querySelector("div");
+			var p = document.querySelector("p");
+			
+			//数组记录lefttop
+			var lefts = [];
+			var tops = [];
+			div.onmousemove = function(e){
+				var left = e.clientX - div.offsetLeft - p.offsetWidth /2;
+				var top = e.clientY - div.offsetTop - p.offsetHeight /2;
+				
+				//限制边界
+				left = left >=maxLeft ? maxLeft : left;
+				top = top >=maxTop ? maxTop : top;
+				left = left <=0 ? 0 : left;
+				top = top <=0 ? 0 : top;
+				
+				p.style.left = left+ "px"
+				p.style.top = top+ "px"
+				
+				lefts.push(left);
+				tops.push(top);
+			}
+			var maxLeft = div.offsetWidth - p.offsetWidth;
+			var maxTop = div.offsetHeight - p.offsetHeight;
+			
+			btn.onclick= function(){
+				var id = setInterval(function(){
+					if(lefts.length == 0){
+						clearInterval(id)
+					}
+					var left = lefts.pop();
+					var top = tops.pop();
+					p.style.left = left +"px"
+					p.style.top = top + "px"
+				},20)
+			}
+		</script>
+	</body>
+</html>

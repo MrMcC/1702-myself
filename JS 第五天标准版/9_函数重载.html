@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<div id="div_1"></div>
+</body>
+<script type="text/javascript" charset="utf-8">
+    /*
+     函数的重载
+     * 
+     * 	所谓重载：
+     * 		1.方法名要相同
+     * 		2.参数列表要不同
+     * */
+    function add(){
+    		var sum = 0;
+    		for(var i = 0; i < arguments.length ;i++){
+    			sum += arguments[i];
+    		}
+    		return sum;
+    }
+    console.log(add(1,2,3,4,5,6,7,8));
+    console.log(add(10,20,50,80));
+</script>
+</html>
+

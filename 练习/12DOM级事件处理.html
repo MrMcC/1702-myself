@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">按钮</button>
+		<script type="text/javascript">
+			var btn = document.getElementById("btn");
+//			btn.onclick = function(){
+//				console.log("asd");
+//			}
+//			btn.onclick = function(){ 
+//				console.log("zxc");
+//			}
+//			function foo(){              //为了解决上面问题
+//				console.log("我被点击了");
+//			}
+			btn.addEventListener("click", foo ,false); //false冒泡流默认 true捕获流可以不传
+//			function foo(){              
+//				console.log("我被点击了");//函数声明会提前
+//			}
+			
+//			foo = function (){              
+//				console.log("我被点击了");
+//			}
+//			btn.addEventListener("click", foo ,false); 
+//			foo = function (){              
+//				console.log("我被点击了");
+//			}
+			
+//			var foo = function (){              
+//				console.log("我被点击了");
+//			}
+//			btn.addEventListener("click", foo ,false); 
+//			var foo = function (){              
+//				console.log("我被点击了");  //相当于给foo传了个undefined
+//			}
+			
+			
+			
+//			btn.removeEventListener("click", foo);
+		</script>
+	</body>
+</html>

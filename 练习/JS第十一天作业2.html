@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;padding: 0;
+			}
+			#outer{
+				width: 200px;height: 300px;background-color: mediumpurple;
+				position: relative;margin: 0 auto;
+			}
+			#inner{
+				width: 100%;height: 50px;background-color: black;
+				opacity: .3;position: relative;
+			}
+			#inner div a{
+				font-size: 20px;color: white;line-height: 50px;
+				position: absolute;
+			}
+			#a1{margin-left: 30px;}
+			#a2{margin-left: 100px;}
+			#inner ul{
+				list-style: none;position: absolute;display: none;left: 0;top: 50px;
+			}
+			#ul1{margin-left: 20px;}
+			#ul2{margin-left: 100px;}
+			#inner li{
+				width: 80px;height: 20px;border-bottom: 1px solid white;
+				background-color: gray;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="outer">
+			<div id="inner">
+				<div>
+					<a id="a1" href="">缪策</a>
+					<ul id="ul1">
+						<li>我的vip</li>
+						<li>个人中心</li>
+						<li>账号设置</li>
+						<li>意见反馈</li>
+						<li>退出</li>
+					</ul>
+				</div>
+				<div>
+					<a id="a2" href="">设置</a>
+					<ul id="ul2">
+						<li>搜索设置</li>
+						<li>高级搜索</li>
+						<li>关闭检测</li>
+						<li>搜索历史</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var bros = document.querySelectorAll("#inner div")
+			for (let i =0; i < bros.length; i++) {
+			    bros[i].onmouseenter = function(){
+			    		bros[i].lastElementChild.style.display= "block"
+			    }
+			    bros[i].onmouseleave = function(){
+			    		bros[i].lastElementChild.style.display= "none"
+			    }
+			}
+			var li = document.getElementsByTagName("li")
+			for (let j = 0; j < li.length; j++) {
+				li[j].onmouseenter = function(){
+					li[j].style.backgroundColor = "black"
+					li[j].style.color = "white"
+				}
+				li[j].onmouseleave = function(){
+					li[j].style.backgroundColor = "gray"
+					li[j].style.color = "black"
+				}
+			}
+			
+			
+		</script>
+	</body>
+</html>
+<!--实现百度下拉菜单-->

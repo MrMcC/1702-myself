@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#out{
+				width: 600px;
+				height: 200px;
+				background:aliceblue;
+			}
+			#box{
+				width: 200px;
+				height: 400px;
+				background: pink;
+			}
+		</style>
+	</head>
+	<body>
+		<!--<button id="btn">点</button>-->
+		<div id="out"><div id="box"></div></div>
+		
+		<script type="text/javascript">
+			var box = document.getElementById("box")//冒泡
+			box.onmouseover = function(){
+				box.style.width = '400px';
+				box.style.backgroundColor = "blue";
+				console.log("我进入了儿子");
+			}
+			out.onmouseover = function(){
+				console.log("我进入了父亲");
+			}
+			
+			box.onmouseout = function(){
+				box.style.width = '200px';
+				box.style.backgroundColor = "pink";
+				console.log("我出去了儿子");
+			}
+			out.onmouseout = function(){
+				console.log("我出去了父亲");
+			}
+			//不冒泡改成onmouseenter onmouseleave
+		</script>
+	</body>
+</html>

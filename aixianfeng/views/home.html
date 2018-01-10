@@ -1,0 +1,202 @@
+<style>
+    /*<!--让图片自适应屏幕-->*/
+    .swiper-slide>img{
+        width: 100%;
+    }
+    .acts-icon{
+        background-color: #fff;
+        /*margin是先上下再左右*/
+        margin: 0.2rem 0;
+    }
+    .acts-icon>a{
+        display: inline-block;
+        width: 25%;
+    }
+    .acts-icon>a>img{
+        width: 100%;
+    }
+    .acts-icon>a>span{
+        float: left;
+        width: 100%;
+        text-align: center;
+        color: black;
+    }
+
+    .acts-category{
+        width: 100%;
+        background-color: white;
+        overflow: hidden;
+        margin-top: 0.5rem;
+    }
+    .acts-category>span.acts-category-name{
+        color: #60659F;
+        float: left;
+        margin: 0.9rem 0 0 1rem;
+        border-left: 0.8rem solid #60659F;
+        padding-left: 0.5rem;
+        font-size: 1.2rem;
+    }
+    .acts-category>a{
+        float: right;
+        color: #999;
+        padding-right: 0.9rem;
+        line-height: 3rem;
+    }
+    .acts-category>img{
+        width: 97%;
+        height: 7rem;
+        margin-left: 0.3rem;
+    }
+    .acts-category-item-goodsList{
+        overflow: hidden;
+    }
+    .acts-category-item-goodsList>li{
+        width: 33.33333%;
+        float: left;
+        margin-top: 0.5rem;
+    }
+    .acts-category-item-goodsList>li:nth-child(3n-1){
+        border-left: 1px solid #ccc;
+        border-right: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+    .acts-category-item-goodsList>li>img{
+        width: 90%;
+        height: 8rem;
+        margin-left: 0.5rem;
+    }
+    .acts-category-item-goodsList>li>p{
+        font-size: 1.2rem;
+        text-indent: 1.5rem;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .product-operates{
+        width: 88%;
+        height: 4rem;
+        margin-top: 1.6rem;
+        overflow: hidden;
+    }
+    .product-operates-left{
+        float: left;
+        width: 3rem;
+        margin-left: 1.5rem;
+    }
+    .product-operates-left>div:nth-child(1){
+        color: gray;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .product-operates-left>div:nth-child(2){
+        color: #f40;
+    }
+    .product-operates-right{
+        float: right;
+        width: 2rem;
+        height: 2rem;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 2rem;
+        margin-right: 0.2rem;
+        color: red;
+        font-weight: 900;
+    }
+
+</style>
+<!--轮播图-->
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" ng-repeat="item in slide">
+            <img src="{{item.activity.img}}" alt="">
+        </div>
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
+</div>
+<!--首页的8个图标-->
+<div class="acts-icon">
+    <a href="###" ng-repeat="item in menu">
+        <img src="{{item.activity.img}}" alt="">
+        <span>{{item.activity.name}}</span>
+    </a>
+</div>
+<!--主题内容-->
+<div class="acts-category" >
+    <span class="acts-category-name">牛奶面包</span>
+    <a href="#/market" ng-click="navActiveIndex=1">更多&gt</a>
+    <img src="./images/acts-category-banner.jpg" alt="">
+    <ul class="acts-category-item-goodsList">
+        <li ng-repeat="item in homehot">
+            <img src="{{item.img}}" alt="">
+            <p class="product-name">{{item.name}}</p>
+            <div class="product-operates">
+                <div class="product-operates-left">
+                    <div>{{item.specifics}}</div>
+                    <div>{{item.price}}</div>
+                </div>
+                <div class="product-operates-right">+</div>
+            </div>
+        </li>
+
+    </ul>
+</div>
+
+<div class="acts-category" >
+    <span class="acts-category-name">饮料酒水</span>
+    <a href="#/market">更多&gt</a>
+    <img src="./images/acts-category-banner1.jpg" alt="">
+    <ul class="acts-category-item-goodsList">
+        <li ng-repeat="item in water">
+            <img src="{{item.img}}" alt="">
+            <p class="product-name">{{item.name}}</p>
+            <div class="product-operates">
+                <div class="product-operates-left">
+                    <div>{{item.specifics}}</div>
+                    <div>{{item.price}}</div>
+                </div>
+                <div class="product-operates-right">+</div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<div class="acts-category" >
+    <span class="acts-category-name">方便速食</span>
+    <a href="#/market">更多&gt</a>
+    <img src="./images/acts-category-banner2.jpg" alt="">
+    <ul class="acts-category-item-goodsList">
+        <li ng-repeat="item in easy">
+            <img src="{{item.img}}" alt="">
+            <p class="product-name">{{item.name}}</p>
+            <div class="product-operates">
+                <div class="product-operates-left">
+                    <div>{{item.specifics}}</div>
+                    <div>{{item.price}}</div>
+                </div>
+                <div class="product-operates-right">+</div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<div class="acts-category" >
+    <span class="acts-category-name">生活应急站</span>
+    <a href="#/market">更多&gt</a>
+    <img src="./images/acts-category-banner3.jpg" alt="">
+    <ul class="acts-category-item-goodsList">
+        <li ng-repeat="item in life">
+            <img src="{{item.img}}" alt="">
+            <p class="product-name">{{item.name}}</p>
+            <div class="product-operates">
+                <div class="product-operates-left">
+                    <div>{{item.specifics}}</div>
+                    <div>{{item.price}}</div>
+                </div>
+                <div class="product-operates-right">+</div>
+            </div>
+        </li>
+    </ul>
+</div>

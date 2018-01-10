@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function p(i,stop){
+				if(i == stop){
+					return 1;
+				}
+				return i = i * p(i+1,stop);
+			}
+			var sum = 0;
+			for(var j = 1; j < 12; j++){
+				sum = sum + p(1,j)
+			}
+			console.log(sum)
+			
+			var temp = 1;
+			var sum = 0;
+			for (var i = 1; i < 11; i++) {
+				temp = temp * i;
+				sum = sum + temp;
+			}
+			console.log(sum)
+			
+		</script>
+	</body>
+</html>
+<!--求1!+2!+...+10!的和
+	1
+	1x2
+	1x2x3
+-->

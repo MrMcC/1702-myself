@@ -1,0 +1,963 @@
+{
+    "bannar": {
+        "img": "http://dummyimage.com/640x320/f279be&text=bannar",
+        "classify_id": 1338,
+        "product": [
+            {
+                "product_id": 1,
+                "img": "http://dummyimage.com/355x355/79e2f2&text=报增法)",
+                "title": "具儿性层打周部广放就自",
+                "price": 6.7,
+                "unit": 358,
+                "details": "事面又东米一取等分严列革率非层造角八。保五完收义该热后易几眼得政按带。外它整民属体产则想目林军斗酸支位政县。管说表工积达连般身更出今石然于进在。车使最得文流话计资争七现。数角决党明教写场原西管并派温开们总。速好感等观办队由或部结听大走及。",
+                "brand": "些压与千",
+                "num": 1
+            },
+            {
+                "product_id": 2,
+                "img": "http://dummyimage.com/355x355/f2df79&text=观音米平位)",
+                "title": "美却算类断美清",
+                "price": 9.6,
+                "unit": 369,
+                "details": "住才个拉走去算算经青关老京民。五也说行法声信二响位品细平府。备多完书己边线米厂酸采样分院想大证名。去存复少发深行其必日美展么。总着转入人动置志社界起状联它开把。必入叫京该传张本到半红子后。",
+                "brand": "养究委任",
+                "num": 1
+            },
+            {
+                "product_id": 3,
+                "img": "http://dummyimage.com/355x355/bb79f2&text=今业厂)",
+                "title": "按观周验率交设话达在",
+                "price": 11.5,
+                "unit": 214,
+                "details": "别习半则毛看气价分和志当备解声。运交议流带才就力政然直构多图。为算却放次着行日安它温场口叫技老。",
+                "brand": "术称小",
+                "num": 1
+            },
+            {
+                "product_id": 4,
+                "img": "http://dummyimage.com/355x355/79f298&text=必部近)",
+                "title": "合小线气收此",
+                "price": 17.4,
+                "unit": 300,
+                "details": "战么比包种层识选放理法口清切门。拉面步区新点感条正许风型住。能六管反受关张存制间识行长。研得易常实色养各高平图长条深干张。",
+                "brand": "长争受立",
+                "num": 1
+            },
+            {
+                "product_id": 5,
+                "img": "http://dummyimage.com/355x355/f2797d&text=住型解明则)",
+                "title": "自生心具记区原来入美它习二农",
+                "price": 18.5,
+                "unit": 249,
+                "details": "作平无素动看社快处教温就车。群到派格当直志府品石战只第眼无得。定百较精照花克边并实义把值极或联快。究机三这得局做得题用信习石子前。省全器革提指还阶周况劳到个。",
+                "brand": "实又",
+                "num": 1
+            },
+            {
+                "product_id": 6,
+                "img": "http://dummyimage.com/355x355/79a0f2&text=众经土大群)",
+                "title": "其史每长七意值其常机划按细",
+                "price": 19.7,
+                "unit": 173,
+                "details": "温回单将地位海往感历东值人。数数如活保共队温没本历点改。时因保式入部交近风关心委再声层切。受发转动须工复道划运机展。",
+                "brand": "米起种据",
+                "num": 1
+            },
+            {
+                "product_id": 7,
+                "img": "http://dummyimage.com/355x355/c3f279&text=原容出此往想商)",
+                "title": "东第后较行如化半速反加际",
+                "price": 2.5,
+                "unit": 301,
+                "details": "使拉飞步叫系得深平务素生况。须么称问了党化际水号会要结起。八少金后查存老代使结育节至。管层强业王约合使前信观什华行太作际较。方易红子自识办记工只支期学南除利。",
+                "brand": "论为电问",
+                "num": 1
+            },
+            {
+                "product_id": 8,
+                "img": "http://dummyimage.com/355x355/f279e7&text=特今党我)",
+                "title": "到说收技县目小以规共电品音话需",
+                "price": 15.2,
+                "unit": 258,
+                "details": "压平图及正经厂提规必入即劳。统许属酸需层集路王同先眼共方相里各。与回社安厂大林做对花再决应。只导全她却志论话清解太展区。它律导毛自少许收即她反里观光节业造料。市克育传团西原节式除资走。效工委层把众教严叫采持生术场存。",
+                "brand": "象技上",
+                "num": 1
+            },
+            {
+                "product_id": 9,
+                "img": "http://dummyimage.com/355x355/79f2d9&text=整省无极快第)",
+                "title": "土所即料新书更此引总",
+                "price": 5.8,
+                "unit": 117,
+                "details": "无更共知民消图非属能院和养立劳厂米。红种产活支事情道思公解况置。内再装族及革质这时片属育不是值反公。",
+                "brand": "变来关军",
+                "num": 1
+            },
+            {
+                "product_id": 10,
+                "img": "http://dummyimage.com/355x355/f2b679&text=长工导方)",
+                "title": "山点期式用美",
+                "price": 8.2,
+                "unit": 277,
+                "details": "员习往响工真身种节变什少构或法达。些很原建越场反领还马段由后太料经。必按定人养式己观定利型但阶。用单步及制温月今色里划是动的活目。",
+                "brand": "内而放需",
+                "num": 1
+            },
+            {
+                "product_id": 11,
+                "img": "http://dummyimage.com/355x355/9379f2&text=队内往必能)",
+                "title": "向收制素族市片据",
+                "price": 14.2,
+                "unit": 387,
+                "details": "厂去派重精求太问几律为由毛院资织龙。声条里间个总体有已手里都油近性后而。识没山过组列必把干养除较结。务产各细子容红音果我斗头处我。级金国根共做当就圆多情领按感身论。例色机很己社争根方二从示存社亲如须。",
+                "brand": "属果水",
+                "num": 1
+            },
+            {
+                "product_id": 12,
+                "img": "http://dummyimage.com/355x355/82f279&text=其任党有)",
+                "title": "车名值时劳备可五证红",
+                "price": 18.9,
+                "unit": 482,
+                "details": "织做交王如价治无队原工本该拉专温议。节什目社们全院员年总教领。类好效说所比度段自级市计可全律何解。组又任般已就公产里上想前办。",
+                "brand": "自以说通",
+                "num": 1
+            },
+            {
+                "product_id": 13,
+                "img": "http://dummyimage.com/355x355/f279a5&text=度型内温和)",
+                "title": "较写记回他备六",
+                "price": 7.6,
+                "unit": 397,
+                "details": "斯外斯严长应六化战易劳单。备天对小他知国育历南各查活声人。形院那效位形党作长把时青酸花因话。半一全圆天加这单受参做院美定大厂值。必亲历目情主验直维火系农。次红命包求下革约变照体特手国。",
+                "brand": "习将动",
+                "num": 1
+            },
+            {
+                "product_id": 14,
+                "img": "http://dummyimage.com/355x355/79c9f2&text=金界具确济)",
+                "title": "复问据意变农",
+                "price": 12.4,
+                "unit": 451,
+                "details": "观其半们且管存历必温特而育须次理每。儿看住近来式议代却团门儿总育下委第增。选史农场工会张毛样一真度美织军。",
+                "brand": "近例类代更",
+                "num": 1
+            },
+            {
+                "product_id": 15,
+                "img": "http://dummyimage.com/355x355/ecf279&text=他值作车起来)",
+                "title": "她头口象近增走料象她几而",
+                "price": 7.3,
+                "unit": 425,
+                "details": "走亲展就被看把四候年育对次。科维理转工并酸素四被发长统示情。及场部身置员以能百较料改南争气解张铁。",
+                "brand": "名厂积",
+                "num": 1
+            },
+            {
+                "product_id": 16,
+                "img": "http://dummyimage.com/355x355/d479f2&text=府识中相所角青)",
+                "title": "或带意以酸白花府",
+                "price": 10.4,
+                "unit": 417,
+                "details": "省民八之步断加现理斗格满几列资。且下门组出深气走由精才需学始。以标将近数具连起同工行个五院高那。间圆为华新复些细后压即身东家工。较技进高基越化物三期族去就图情现。米七议老矿带六资关治集命风边候。",
+                "brand": "百而",
+                "num": 1
+            },
+            {
+                "product_id": 17,
+                "img": "http://dummyimage.com/355x355/79f2b1&text=温反关物路且)",
+                "title": "史别战老每究王场听老派展约状",
+                "price": 11.2,
+                "unit": 121,
+                "details": "度铁四整使状这少车争西条众质近白。边拉度连将国意斗经些权光名儿争。采问作马最部条具段近土问。即格什八从更美清新所明主目统发。团主约反参能造但年青管合即身头并。省到条色动入须半主行片增。",
+                "brand": "当图龙该",
+                "num": 1
+            },
+            {
+                "product_id": 18,
+                "img": "http://dummyimage.com/355x355/f28e79&text=心本好市)",
+                "title": "治音种往更那选",
+                "price": 10.3,
+                "unit": 151,
+                "details": "听名空变习问路就关原情多动制般。步保想百个以结达见向特见省派。克引力具传业离带本区转光压。农很统组便矿风效质小际往济。区张同院又白高究也重量打学结准据。",
+                "brand": "清式",
+                "num": 1
+            },
+            {
+                "product_id": 19,
+                "img": "http://dummyimage.com/355x355/7987f2&text=更织由业状或因)",
+                "title": "京选属据实半往青放维全比西步变",
+                "price": 14.7,
+                "unit": 432,
+                "details": "别党长此期阶但快十平到音用。给想节所代千此华度发类或但问知习花极。学解酸为别厂斗听们分去众是定。",
+                "brand": "学常",
+                "num": 1
+            }
+        ]
+    },
+    "classifys": [
+        {
+            "classify_id": 1,
+            "imgs": {
+                "small": "http://dummyimage.com/710x180/aaf279&text=究她一难较)",
+                "big": "http://dummyimage.com/640x530/f279ce&text=文报织马列如)"
+            },
+            "classify_title": "计下为程",
+            "cids": [
+                {
+                    "id": 1,
+                    "name": "都红理"
+                },
+                {
+                    "id": 2,
+                    "name": "国术界规用"
+                },
+                {
+                    "id": 3,
+                    "name": "阶青规被"
+                }
+            ],
+            "products": [
+                {
+                    "product_id": 1,
+                    "cids": 1,
+                    "imgs": {
+                        "small": "http://dummyimage.com/355x355/79f1f2&text=拉内外)",
+                        "big": "http://dummyimage.com/500x500/f2cf79&text=时院还金)"
+                    },
+                    "title": "取统认劳关口派干",
+                    "details": "布革观程区连区日圆本四特经况派干。取满任气思较低会程重保加也风压。图国六门比群按口须广本积约五位观再。其空由分几除列文级大包断四接九角比。",
+                    "price": 11.9,
+                    "unit": 408,
+                    "brand": "原很问织",
+                    "expiration": 2.7,
+                    "num": 1
+                },
+                {
+                    "product_id": 2,
+                    "cids": 2,
+                    "imgs": {
+                        "small": "http://dummyimage.com/355x355/ac79f2&text=整划关们)",
+                        "big": "http://dummyimage.com/500x500/79f288&text=商象影年细史增)"
+                    },
+                    "title": "查全线向五效种转特",
+                    "details": "又表拉规交化整改别六目的今周王面。去老料专派部委自市南素难。易而领条速取取育较身上放认儿始劳术。织越想他音际般即当是里素。只太常精书准织效电教生应四即队年转。",
+                    "price": 1.6,
+                    "unit": 134,
+                    "brand": "没确委发却",
+                    "expiration": 2.7,
+                    "num": 1
+                },
+                {
+                    "product_id": 3,
+                    "cids": 2,
+                    "imgs": {
+                        "small": "http://dummyimage.com/355x355/f2798c&text=半分里比)",
+                        "big": "http://dummyimage.com/500x500/79b0f2&text=要千重越飞行于)"
+                    },
+                    "title": "青高学花保多消时议",
+                    "details": "许县义验接美油些南马是离回和在条。战白果则情心具复引养无她点音厂品信。必段解本义成后风员证单此海。义红如和角日究历铁布自常容光去。积日南治并省命他小多关同说。",
+                    "price": 18.7,
+                    "unit": 134,
+                    "brand": "收至",
+                    "expiration": 2.7,
+                    "num": 1
+                }
+            ]
+        },
+        {
+            "classify_id": 2,
+            "imgs": {
+                "small": "http://dummyimage.com/710x180/d3f279&text=非农内可作只)",
+                "big": "http://dummyimage.com/640x530/ed79f2&text=得建况群该)"
+            },
+            "classify_title": "即回常管",
+            "cids": [
+                {
+                    "id": 4,
+                    "name": "院期中气酸许总"
+                },
+                {
+                    "id": 5,
+                    "name": "深及广土"
+                },
+                {
+                    "id": 6,
+                    "name": "质月深增千张元"
+                }
+            ],
+            "products": [
+                {
+                    "product_id": 4,
+                    "cids": 2,
+                    "imgs": {
+                        "small": "http://dummyimage.com/355x355/79f2ca&text=深体长马历)",
+                        "big": "http://dummyimage.com/500x500/f2a779&text=结红们说数转)"
+                    },
+                    "title": "毛据意向常到进从率",
+                    "details": "更已维内影常何化去难压工好关单。也经队他历酸术广证增质最他美。取眼运市划热听况条儿造道火。",
+                    "price": 10.3,
+                    "unit": 295,
+                    "brand": "增即家影院",
+                    "expiration": 3.4,
+                    "num": 1
+                },
+                {
+                    "product_id": 5,
+                    "cids": 2,
+                    "imgs": {
+                        "small": "http://dummyimage.com/355x355/8379f2&text=程系天级)",
+                        "big": "http://dummyimage.com/500x500/91f279&text=实龙再取看半)"
+                    },
+                    "title": "局容步发热究",
+                    "details": "看回科活回次教它器等称过准起。眼业龙深车运必这会力飞一。调少国效发族元放干信带来火列包色县。",
+                    "price": 6.8,
+                    "unit": 173,
+                    "brand": "志技之",
+                    "expiration": 0.7,
+                    "num": 1
+                },
+                {
+                    "product_id": 6,
+                    "cids": 2,
+                    "imgs": {
+                        "small": "http://dummyimage.com/355x355/f279b5&text=近省该放县)",
+                        "big": "http://dummyimage.com/500x500/79d8f2&text=响身根)"
+                    },
+                    "title": "术内习必日离电",
+                    "details": "除况学矿中当便设角与高条现级。东装率统做速据对两海族毛门目。明火广路放品层学严对两数带样许状题林。出片史先果还合五设识又成非。",
+                    "price": 12.5,
+                    "unit": 494,
+                    "brand": "确见走",
+                    "expiration": 3.2,
+                    "num": 1
+                },
+                {
+                    "product_id": 7,
+                    "cids": 2,
+                    "imgs": {
+                        "small": "http://dummyimage.com/355x355/f2e879&text=何口需由)",
+                        "big": "http://dummyimage.com/500x500/c579f2&text=合单造器界该)"
+                    },
+                    "title": "众真低件商七产",
+                    "details": "据林到需目许号花入车声近国万革地件。叫系技电时此文思采铁元基导于系过。度习时开都完果水产别开太其制参。业手但科政量收法开律导经七。到受就工重书我当放它具便政手九者。",
+                    "price": 13.7,
+                    "unit": 168,
+                    "brand": "我王",
+                    "expiration": 0.3,
+                    "num": 1
+                },
+                {
+                    "product_id": 8,
+                    "cids": 2,
+                    "imgs": {
+                        "small": "http://dummyimage.com/355x355/79f2a1&text=于火计都)",
+                        "big": "http://dummyimage.com/500x500/f27e79&text=至表团)"
+                    },
+                    "title": "党眼克制为极低至采",
+                    "details": "知比那没节强原构气学最变查。界问干认千和意定种门论则知提。常断石音四于西农决数几于习片公写行便。把四然石准设系习建就离市。",
+                    "price": 9.4,
+                    "unit": 464,
+                    "brand": "运于国造",
+                    "expiration": 1.9,
+                    "num": 1
+                }
+            ]
+        },
+        {
+            "classify_id": 3,
+            "imgs": {
+                "small": "http://dummyimage.com/710x180/7996f2&text=如千需往特)",
+                "big": "http://dummyimage.com/640x530/baf279&text=志间题易工)"
+            },
+            "classify_title": "题用机以",
+            "cids": [
+                {
+                    "id": 7,
+                    "name": "眼群利总"
+                },
+                {
+                    "id": 8,
+                    "name": "空它在学口"
+                },
+                {
+                    "id": 9,
+                    "name": "音行角三把起"
+                }
+            ],
+            "products": [
+                {
+                    "product_id": 9,
+                    "cids": 1,
+                    "imgs": {
+                        "small": "http://dummyimage.com/355x355/f279dd&text=好响安年五)",
+                        "big": "http://dummyimage.com/500x500/79f2e3&text=思说青包)"
+                    },
+                    "title": "在办么七八入器快",
+                    "details": "切从等表斯好江如取用参增。节由品百度据行派观前东式五构。天分机示新难造外对是按定按。上效族会管后放最须层产特。",
+                    "price": 19.7,
+                    "unit": 217,
+                    "brand": "美相",
+                    "expiration": 3.2,
+                    "num": 1
+                },
+                {
+                    "product_id": 10,
+                    "cids": 3,
+                    "imgs": {
+                        "small": "http://dummyimage.com/355x355/f2c079&text=每空我派自三)",
+                        "big": "http://dummyimage.com/500x500/9c79f2&text=何方色委干)"
+                    },
+                    "title": "中少复决手",
+                    "details": "论起力将须然铁存省线五基任明验水当。声周置使表百采活文光放型却东。几结位明什组系去件教京志龙信口身员。",
+                    "price": 6.3,
+                    "unit": 275,
+                    "brand": "己什厂",
+                    "expiration": 2.9,
+                    "num": 1
+                }
+            ]
+        },
+        {
+            "classify_id": 4,
+            "imgs": {
+                "small": "http://dummyimage.com/710x180/79f279&text=至组至观地)",
+                "big": "http://dummyimage.com/640x530/f2799c&text=种联感引因)"
+            },
+            "classify_title": "六族在",
+            "cids": [
+                {
+                    "id": 10,
+                    "name": "员满儿知广该间"
+                },
+                {
+                    "id": 11,
+                    "name": "接国料果达没"
+                },
+                {
+                    "id": 12,
+                    "name": "可步准际权入总"
+                }
+            ],
+            "products": [
+                {
+                    "product_id": 11,
+                    "cids": 2,
+                    "imgs": {
+                        "small": "http://dummyimage.com/355x355/79bff2&text=日接名从就信写)",
+                        "big": "http://dummyimage.com/500x500/e2f279&text=部决记极历是质)"
+                    },
+                    "title": "科比算领算有听深你",
+                    "details": "消北和务我此每正影法海治即单。音老等发段由写算阶自北手近山温物接产。心养今规展元龙快数温需么展容。一得长改且向音结须能划法军热我放观备。用性水布去内里江铁料通心开先它。",
+                    "price": 6.8,
+                    "unit": 349,
+                    "brand": "统性边",
+                    "expiration": 1.5,
+                    "num": 1
+                },
+                {
+                    "product_id": 12,
+                    "cids": 2,
+                    "imgs": {
+                        "small": "http://dummyimage.com/355x355/de79f2&text=开本形界连高)",
+                        "big": "http://dummyimage.com/500x500/79f2ba&text=实素动却族状比)"
+                    },
+                    "title": "道天结题民",
+                    "details": "党列力约器世受明话示全路照原。程实结化车品头又说角值何知么。由好保十确易见志证江快照两。况那今文标养形光月过业效约可主劳。民平全型火同力结不成东改制。",
+                    "price": 8.5,
+                    "unit": 472,
+                    "brand": "等亲空走",
+                    "expiration": 1.4,
+                    "num": 1
+                }
+            ]
+        },
+        {
+            "classify_id": 5,
+            "imgs": {
+                "small": "http://dummyimage.com/710x180/f29779&text=热南片上条)",
+                "big": "http://dummyimage.com/640x530/797df2&text=几相被识)"
+            },
+            "classify_title": "型记非达",
+            "cids": [
+                {
+                    "id": 13,
+                    "name": "万毛线对最"
+                },
+                {
+                    "id": 14,
+                    "name": "得维门精省心复"
+                },
+                {
+                    "id": 15,
+                    "name": "果义持府样的"
+                }
+            ],
+            "products": [
+                {
+                    "product_id": 13,
+                    "cids": 2,
+                    "imgs": {
+                        "small": "http://dummyimage.com/355x355/a1f279&text=维细意里自工)",
+                        "big": "http://dummyimage.com/500x500/f279c4&text=门据快门话)"
+                    },
+                    "title": "积外体机才达",
+                    "details": "确格量几理适界给经海两广支。火数消济地单精存算或性入素业目对。米感下声少器得广快图身她度。没志义身五多资率家现大没战江思量马马。例毛根验日利通精治之引五便。",
+                    "price": 12.3,
+                    "unit": 455,
+                    "brand": "认包强细史",
+                    "expiration": 2.8,
+                    "num": 1
+                },
+                {
+                    "product_id": 14,
+                    "cids": 2,
+                    "imgs": {
+                        "small": "http://dummyimage.com/355x355/79e7f2&text=产青自因传)",
+                        "big": "http://dummyimage.com/500x500/f2d979&text=象领但手向精)"
+                    },
+                    "title": "亲其可期代解",
+                    "details": "从种政用完千做种及有多个音。料织位府品空段何相战务场集和边题具机。效素拉资想真程照气所院己青等。九应或表入公很容金合容查形后流。",
+                    "price": 7.5,
+                    "unit": 62,
+                    "brand": "话政面",
+                    "expiration": 2.8,
+                    "num": 1
+                }
+            ]
+        },
+        {
+            "classify_id": 6,
+            "imgs": {
+                "small": "http://dummyimage.com/710x180/b579f2&text=层队后)",
+                "big": "http://dummyimage.com/640x530/79f292&text=才众质历)"
+            },
+            "classify_title": "高南程员",
+            "cids": [
+                {
+                    "id": 16,
+                    "name": "种际被会二意受"
+                },
+                {
+                    "id": 17,
+                    "name": "就际物应"
+                },
+                {
+                    "id": 18,
+                    "name": "并质导再"
+                }
+            ],
+            "products": [
+                {
+                    "product_id": 15,
+                    "cids": 2,
+                    "imgs": {
+                        "small": "http://dummyimage.com/355x355/f27983&text=身系商立记料)",
+                        "big": "http://dummyimage.com/500x500/79a6f2&text=全维上矿先权)"
+                    },
+                    "title": "起他证法接比方花置",
+                    "details": "三大性内至制立革几安商定。带术展员角深维去划特照清术本维。选你应石者备经构期象列全明六却。高该边复要养在存对示众水么么想三。第细表目即处命义造连严参计相龙成红们。",
+                    "price": 10.1,
+                    "unit": 433,
+                    "brand": "米战",
+                    "expiration": 2.5,
+                    "num": 1
+                },
+                {
+                    "product_id": 16,
+                    "cids": 3,
+                    "imgs": {
+                        "small": "http://dummyimage.com/355x355/c9f279&text=号型算周问圆)",
+                        "big": "http://dummyimage.com/500x500/f279ed&text=决具音即进能)"
+                    },
+                    "title": "加资调片当向快化而",
+                    "details": "相音九单通复者行问别题作门平向。多八接值太斯又都认构候劳段共造。包身律亲什品拉会委高界走种。",
+                    "price": 15.6,
+                    "unit": 186,
+                    "brand": "先来员重",
+                    "expiration": 1.2,
+                    "num": 1
+                },
+                {
+                    "product_id": 17,
+                    "cids": 2,
+                    "imgs": {
+                        "small": "http://dummyimage.com/355x355/79f2d4&text=解业点选道)",
+                        "big": "http://dummyimage.com/500x500/f2b079&text=常类格米)"
+                    },
+                    "title": "酸五原题和与位生专满",
+                    "details": "场现记儿先会金产候资离思之且。况法小飞商增反气们传整便机认大石。方习记做三议质市力门音书斯。教花解我路文济发在反义住美区团。学种米政小其叫世林教专值即。",
+                    "price": 19.2,
+                    "unit": 206,
+                    "brand": "带活育",
+                    "expiration": 1.3,
+                    "num": 1
+                }
+            ]
+        },
+        {
+            "classify_id": 7,
+            "imgs": {
+                "small": "http://dummyimage.com/710x180/8d79f2&text=干正工装)",
+                "big": "http://dummyimage.com/640x530/88f279&text=中空团构造东)"
+            },
+            "classify_title": "战照置",
+            "cids": [
+                {
+                    "id": 19,
+                    "name": "解内书等只总县"
+                },
+                {
+                    "id": 20,
+                    "name": "期原称外七"
+                },
+                {
+                    "id": 21,
+                    "name": "性活明最议清"
+                }
+            ],
+            "products": [
+                {
+                    "product_id": 18,
+                    "cids": 2,
+                    "imgs": {
+                        "small": "http://dummyimage.com/355x355/f279ab&text=性线金必路)",
+                        "big": "http://dummyimage.com/500x500/79cef2&text=解位争统国统美)"
+                    },
+                    "title": "各自具其调对的作很",
+                    "details": "空况问比素性事就识号转料化。可但验之决划美按型分法还石。斯方加备任通天需权白效高山把书保。整状管统影过况目农达规强从品动达米代。活三适体十动万发使各原则月内往。共圆军高集人们直节路县元青克。两带命将边划各则理世得该中。",
+                    "price": 16.4,
+                    "unit": 299,
+                    "brand": "的经许入适",
+                    "expiration": 2.2,
+                    "num": 1
+                },
+                {
+                    "product_id": 19,
+                    "cids": 2,
+                    "imgs": {
+                        "small": "http://dummyimage.com/355x355/f2f279&text=条府算)",
+                        "big": "http://dummyimage.com/500x500/ce79f2&text=象料走才采产)"
+                    },
+                    "title": "大级眼完半安",
+                    "details": "教以入保指学真是什导精且器。酸引思地再收运口月状音酸图效组生。火适研志自却把全平论非金展知济就何。这又府己标走家六进命系手做劳年。知织七音习究里农能严而极织则速省历团。度些展片给目共传所形队别律处度打。",
+                    "price": 3.9,
+                    "unit": 246,
+                    "brand": "习单约",
+                    "expiration": 2.8,
+                    "num": 1
+                },
+                {
+                    "product_id": 20,
+                    "cids": 3,
+                    "imgs": {
+                        "small": "http://dummyimage.com/355x355/79f2ab&text=收极又)",
+                        "big": "http://dummyimage.com/500x500/f28879&text=效手行物)"
+                    },
+                    "title": "目现内等如",
+                    "details": "格亲半求置众天十动热路什。白些线用问里江响实节元意根亲。等被很术段书方高总小也约以张西气高天。红布量儿织油同阶现去转更度机经活眼。省即手厂不快何他体所和关员物者信。办题酸第林有出织机西计知验拉斗识安。",
+                    "price": 11.2,
+                    "unit": 421,
+                    "brand": "治身常",
+                    "expiration": 1.5,
+                    "num": 1
+                },
+                {
+                    "product_id": 21,
+                    "cids": 2,
+                    "imgs": {
+                        "small": "http://dummyimage.com/355x355/798df2&text=是石认)",
+                        "big": "http://dummyimage.com/500x500/b0f279&text=长相权目)"
+                    },
+                    "title": "复阶易除机目相与收商",
+                    "details": "信次改节从声铁两土命必引改办天常于。广传全心本以保志证儿儿于度该计展里容。类该之者例指自步议全育感被。容例较她正时越基声向体程后众以。须好规方以使格安万学对相却较个感。什划京经矿万利自外名联领特素如片。利离题代七属果地品很算复。",
+                    "price": 20.7,
+                    "unit": 167,
+                    "brand": "法老经交",
+                    "expiration": 1.4,
+                    "num": 1
+                }
+            ]
+        },
+        {
+            "classify_id": 8,
+            "imgs": {
+                "small": "http://dummyimage.com/710x180/f279d4&text=关这划原)",
+                "big": "http://dummyimage.com/640x530/79f2ed&text=量布任七)"
+            },
+            "classify_title": "天研号求",
+            "cids": [
+                {
+                    "id": 22,
+                    "name": "但号世适外"
+                },
+                {
+                    "id": 23,
+                    "name": "入组也给放"
+                },
+                {
+                    "id": 24,
+                    "name": "斗地般"
+                }
+            ],
+            "products": [
+                {
+                    "product_id": 22,
+                    "cids": 1,
+                    "imgs": {
+                        "small": "http://dummyimage.com/355x355/f2c979&text=算增参写)",
+                        "big": "http://dummyimage.com/500x500/a679f2&text=月主成同容采收)"
+                    },
+                    "title": "带率活给几团",
+                    "details": "别体对决青该什交西局步很不花。能说些实装间易属门革些条这式层。线基近响一克完具再反始派意满选构。力般报出往作有术红京金头。非极革为作所术红记共第直。",
+                    "price": 14.3,
+                    "unit": 309,
+                    "brand": "上过较",
+                    "expiration": 1.6,
+                    "num": 1
+                },
+                {
+                    "product_id": 23,
+                    "cids": 2,
+                    "imgs": {
+                        "small": "http://dummyimage.com/355x355/79f283&text=更更近马如)",
+                        "big": "http://dummyimage.com/500x500/f27992&text=酸须里商)"
+                    },
+                    "title": "必了线必毛情给",
+                    "details": "单程须张及流十响下两温务必约真林。公通决本除将地技比非声造及样其十。白织角做市政务更运展手美划史先力二。叫体存思知极边较更气由个术该将公同。形什严县积照完参集造为然北量学指。标龙战置强划派没华它设种全任。",
+                    "price": 12.9,
+                    "unit": 224,
+                    "brand": "其调形头研",
+                    "expiration": 3.5,
+                    "num": 1
+                },
+                {
+                    "product_id": 24,
+                    "cids": 1,
+                    "imgs": {
+                        "small": "http://dummyimage.com/355x355/79b5f2&text=际直加办周称思)",
+                        "big": "http://dummyimage.com/500x500/d9f279&text=种状使化色)"
+                    },
+                    "title": "提子导原律才边收下",
+                    "details": "放术斗界任知养家件边新分决。音每最最工格清术严铁共现它。的性共联上院却形委例无现点进建参。区们完志时置则回发济保位决。较采展江改住后着做电角写到后此。",
+                    "price": 12.2,
+                    "unit": 294,
+                    "brand": "天现理",
+                    "expiration": 0.3,
+                    "num": 1
+                },
+                {
+                    "product_id": 25,
+                    "cids": 1,
+                    "imgs": {
+                        "small": "http://dummyimage.com/355x355/e779f2&text=进子品民整设共)",
+                        "big": "http://dummyimage.com/500x500/79f2c4&text=头量共器精)"
+                    },
+                    "title": "广风二素须",
+                    "details": "团眼提重算表打能团细就始叫制几上候。却速动得力所京的出火听同具。管话直会期三每设件低列点究克六又。造争史思土为深非合它型体过导研前路张。",
+                    "price": 8.1,
+                    "unit": 360,
+                    "brand": "京长",
+                    "expiration": 2.6,
+                    "num": 1
+                }
+            ]
+        },
+        {
+            "classify_id": 9,
+            "imgs": {
+                "small": "http://dummyimage.com/710x180/f2a179&text=元机达角争小)",
+                "big": "http://dummyimage.com/640x530/7d79f2&text=情着管力政必系)"
+            },
+            "classify_title": "消队第东",
+            "cids": [
+                {
+                    "id": 25,
+                    "name": "表论音组进"
+                },
+                {
+                    "id": 26,
+                    "name": "部也共"
+                },
+                {
+                    "id": 27,
+                    "name": "研如新引知组"
+                }
+            ],
+            "products": [
+                {
+                    "product_id": 26,
+                    "cids": 2,
+                    "imgs": {
+                        "small": "http://dummyimage.com/355x355/97f279&text=农能口之)",
+                        "big": "http://dummyimage.com/500x500/f279bb&text=心题立又九)"
+                    },
+                    "title": "件名白证把变却电员变",
+                    "details": "全保它是意果段易须存市认且响众油他。布了音办转干比只红子月任九系活连率。话面难验强其劳越目几手安眼非程应新知。影级些种以活下增事外再第人必根。决流合分东进回很交小种写为。十要常正往称常温标海矿市参复目运会。",
+                    "price": 14.3,
+                    "unit": 325,
+                    "brand": "装分观积场",
+                    "expiration": 1.3,
+                    "num": 1
+                },
+                {
+                    "product_id": 27,
+                    "cids": 1,
+                    "imgs": {
+                        "small": "http://dummyimage.com/355x355/79def2&text=用看查可政)",
+                        "big": "http://dummyimage.com/500x500/f2e279&text=周不北出)"
+                    },
+                    "title": "样示程究事特几",
+                    "details": "交员定增代结决个问完研政线再热改。复许开已量的近带广才九信列儿。细解展片从质交上称达合南高他决。反准变机教院史周料美气际开持自容活。",
+                    "price": 10.7,
+                    "unit": 373,
+                    "brand": "放增",
+                    "expiration": 0.8,
+                    "num": 1
+                },
+                {
+                    "product_id": 28,
+                    "cids": 2,
+                    "imgs": {
+                        "small": "http://dummyimage.com/355x355/bf79f2&text=而利命参比见)",
+                        "big": "http://dummyimage.com/500x500/79f29c&text=特备制一共石)"
+                    },
+                    "title": "此层候情拉称却",
+                    "details": "没热因战政议任该再水无二种。家经委结都土列没义战果着术光酸。会律根头目织声统采我例放战。本里内连究界三少之着效众系交质。些离今边众争公产写变可特据再。始感家开象具青领空程联边便。",
+                    "price": 3.3,
+                    "unit": 406,
+                    "brand": "声并队车",
+                    "expiration": 3.8,
+                    "num": 1
+                },
+                {
+                    "product_id": 29,
+                    "cids": 2,
+                    "imgs": {
+                        "small": "http://dummyimage.com/355x355/f27979&text=府科究色)",
+                        "big": "http://dummyimage.com/500x500/799cf2&text=酸龙王龙极放)"
+                    },
+                    "title": "国温与展然改",
+                    "details": "片采作细定前片积边拉场深活到。最着科支家声或切号较九好府。片响政才存除价命认本近教通京信。更马眼合术观个参常质本明各。候正段风命群三长论地我解。",
+                    "price": 8.2,
+                    "unit": 244,
+                    "brand": "有由标",
+                    "expiration": 0.7,
+                    "num": 1
+                }
+            ]
+        }
+    ],
+    "user_info": {
+        "errno": 0,
+        "errmsg": "ok",
+        "logid": "59719b9316a6c6818",
+        "data": {
+            "code": "200",
+            "msg": "success",
+            "reqid": "8d8d23835b88cf33b0ddfae0566fca76",
+            "data": {
+                "username": "18600805498",
+                "name": "V0",
+                "usable_point": "0",
+                "current_score": "0",
+                "last_score": "999",
+                "dif_score": "距下一等级还需 30 成长值",
+                "level": [
+                    {
+                        "id": "1",
+                        "name": "V0",
+                        "lower_bound": "0",
+                        "point_weight": "5"
+                    },
+                    {
+                        "id": "2",
+                        "name": "V1",
+                        "lower_bound": "30",
+                        "point_weight": "10"
+                    },
+                    {
+                        "id": "3",
+                        "name": "V2",
+                        "lower_bound": "199",
+                        "point_weight": "15"
+                    },
+                    {
+                        "id": "4",
+                        "name": "V3",
+                        "lower_bound": "499",
+                        "point_weight": "20"
+                    },
+                    {
+                        "id": "5",
+                        "name": "V4",
+                        "lower_bound": "999",
+                        "point_weight": "30"
+                    }
+                ],
+                "usable_balance": "0",
+                "strategy": [
+                    {
+                        "id": "2",
+                        "types": "1",
+                        "contents": "会员等级有效期为1年，1年后扣减相应等级成长值，剩余成长值重新计算会员级别。",
+                        "sort": "0"
+                    },
+                    {
+                        "id": "3",
+                        "types": "2",
+                        "contents": "会员等级越高获得的积分越多。\r\n1、注册会员：0.5倍积分\r\n2、普通会员：1倍积分\r\n3、白银会员：1.5倍积分\r\n4、黄金会员：2倍积分\r\n5、钻石会员：3倍积分",
+                        "sort": "0"
+                    },
+                    {
+                        "id": "4",
+                        "types": "3",
+                        "contents": "1、注册会员：30>成长值>＝0；\r\n2、普通会员：199>成长值>＝30；\r\n3、白银会员：499>成长值>＝199；\r\n4、黄金会员：999>成长值>＝499；\r\n5、钻石会员：成长值>＝999；",
+                        "sort": "0"
+                    },
+                    {
+                        "id": "1",
+                        "types": "4",
+                        "contents": "1、购买精选商品实付金额1：1转化为成长值（不包含优惠券等抵扣部分）；\r\n2、在“天津、西安、成都、南京、佛山”下单，完成订单后可以获得10成长值；\r\n3、商品退换货，需扣除该商品所获得成长值；\r\n4、订单取消，需扣除该订单所获得成长值；\r\n5、因作弊等行为产生的成长值，爱鲜蜂有权扣除相应成长值；",
+                        "sort": "0"
+                    }
+                ],
+                "task_hint": "成长值到账可能有延迟，请稍后查看",
+                "task_list": [
+                    {
+                        "title": "上传头像",
+                        "content": "+10成长值",
+                        "has_button": "1",
+                        "button_text": "立即上传",
+                        "exc_status": "0"
+                    },
+                    {
+                        "title": "填写昵称",
+                        "content": "+10成长值",
+                        "has_button": "1",
+                        "button_text": "立即填写",
+                        "exc_status": "0"
+                    },
+                    {
+                        "title": "选择性别",
+                        "content": "+10成长值",
+                        "has_button": "1",
+                        "button_text": "立即选择",
+                        "exc_status": "0"
+                    },
+                    {
+                        "title": "设置年龄",
+                        "content": "+10成长值",
+                        "has_button": "1",
+                        "button_text": "立即设置",
+                        "exc_status": "0"
+                    }
+                ],
+                "nickname": "18600805498"
+            }
+        }
+    },
+    "cart": [],
+    "collect": [],
+    "site": []
+}

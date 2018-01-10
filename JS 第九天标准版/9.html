@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#ball{
+				border-radius:50%;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+	<!--<div id="ball"></div>-->
+	<script type="text/javascript">
+		
+		function ballmove(){
+			var ball = document.createElement("div");  
+			var size = randomInt(0,200);
+			ball.style.width = size + "px";
+			ball.style.height = size + "px";
+			ball.style.backgroundColor = "rgb(" + randomInt(0,255) + "," + randomInt(0,255) + "," + randomInt(0,255) +")";
+			ball.style.left = randomInt(0, 1000) + "px";
+			ball.style.top = randomInt(0, 600) + "px";
+			ball.setAttribute("id","ball"); //如果我上面是#box的样式则这里需要设定一个id为ball的div
+			return ball;
+		}
+		//添加50个小球
+		var s =function (){
+		for(var i= 0;i<50;i++){
+			var a = ballmove();
+			document.body.appendChild(a);
+		}			
+		}
+		s();
+		
+		//随机
+		function randomInt(from, to) {
+   			 return parseInt(Math.random() * (to - from + 1) + from);
+		}
+
+		setInterval(function (){
+			document.body.innerHTML = ""; //清除body
+//      		clearInterval(s);
+        		s();
+    		}, 500)
+	</script>
+	</body>
+</html>
+    <!--/*
+     作者：李振超    2017年3月23日 16:20
+     在页面中随机生成50个，大小随机(直径 30-100)，位置随机的小球
+     */-->

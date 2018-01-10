@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="ajax4.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<script type="text/javascript">
+			ajax.get("ajax.xml",function(x,xmlDom){
+//				XML.parse(result)
+//				console.log(xmlDom)
+				var names = xmlDom.getElementsByTagName("name")
+				for (var i = 0 ;i < names.length; i++) {
+					console.log(names[i].innerHTML)
+				}
+			},function (){
+				
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>键盘事件</title>
+    <style>
+        div{
+            width : 200px;
+            height : 200px;
+            background-color : pink;
+            
+        }
+    </style>
+</head>
+<body>
+<!--<input type="text" id="user">-->
+<div id="user">我也可以监听事件</div>
+<script>
+    var user = document.getElementById("user");
+    //可以监听到任意键的按下：包括ctrl、shift、alt等等
+    document.body.onkeypress = function (event){
+        var keycode = event.keyCode;//获取到你按下的键的键码
+        console.log("你按下了键盘的任意键  " + keycode)
+    }
+    
+    //只有字符键按下的时候才会监听到
+    /*user.onkeypress = function (){
+        console.log("你按下了字符键");
+    }*/
+    
+    //任意键松开都会触发
+    user.onkeyup = function (){
+        console.log("你松开了任意键");
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="my_ajax.js"></script>
+</head>
+<body>
+<form action="#" name="form1" method="get">
+    用户:<input type="text" name="user"><br>
+    密码:<input type="password" name="pwd"><br>
+    <input type="submit" value="登录">
+</form>
+<script>
+    //使用单例封装表单提交
+    var formObj = {
+        form : document.forms.form1,
+        init : function (){  //初始化的操作：监听表单的提交事件
+            var self = this;
+            this.form.onsubmit = function (e){
+                e.preventDefault();
+                self.ajax();  //执行ajax的提交数据的功能
+            }
+        },
+        ajax : function (){
+            var self = this;
+            var data = this.getParameters();  //获取表单数据
+            ajax.get("user.json?" + data, function (result){
+                //处理结果
+                self.handleResult(result);
+            })
+        },
+        getParameters : function (){  //获取表单的数据
+            var name = this.form.user.value;
+            var pwd = this.form.pwd.value;
+            return `name=${name}&pwd=${pwd}`;
+        },
+        handleResult : function (result){  //专门处理通过ajax获取到的数据
+            var obj = JSON.parse(result);
+            this.showResult(obj);
+        },
+        showResult : function (result){
+            document.body.innerHTML = result.name + "  " + result.age;
+        },
+    }
+    formObj.init();
+</script>
+</body>
+</html>

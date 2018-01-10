@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		/*
+		 局部变量
+		 * 
+		 * 在函数内部声明的变量叫做 局部变量
+		 * 表示形参的变量也是局部变量
+		 * 
+		 * 局部变量作用域为 当前函数内部
+		 * 函数外部不能访问函数内部的变量
+		 * */
+		function aa(){
+			alert(num);
+			num = 10;
+		}
+		
+		function aa(){
+			var mmmmm = 20;
+			console.log(window.mmmmm);
+			console.log(window);
+		}
+		aa();
+		/*
+		 全局变量和局部变量重名
+		 当局部变量和全局变量重名的时候,局部变量会覆盖全局变量
+		 当函数返回 离开了局部变量的作用域后,又会回到全局变量的作用域
+		 * 
+		 * 在函数外 直接声明的变量叫 全局变量
+		 * var num = 10;
+		 * num + 10;
+		 * 在函数内 没有通过 var 声明的变量叫 全局变量
+		 *  function aa(){
+		 * 			num = 10;
+		 * }
+		 * 在函数内,通过 var 声明的变量 叫局部变量
+		 *  function aa(){
+		 * 			var num = 10;
+		 * }
+		 * 
+		 * */
+	</script>
+</html>

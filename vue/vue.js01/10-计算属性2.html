@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.js"></script>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div id="app">
+
+    </div>
+</body>
+<script>
+    var vm = new Vue({
+        el:"#app",
+        data: {
+            message:"Hello Vue"
+        },
+        //时间戳一直改变
+        methods: {
+            getNow: function(){
+                return Date.now()+this.message
+            }
+        },
+        //计算属性只有第一次调用getNow2时才记录时间,再访问时时间固定不变
+        //计算属性是基于它们的依赖进行缓存的
+        // 只有在vm.getNow2所依赖的message发生改变的时候vm.now2才会更新.
+        computed: {
+            getNow2: function () {
+                return Date.now()+this.message
+            }
+        }
+    })
+
+</script>
+</html>

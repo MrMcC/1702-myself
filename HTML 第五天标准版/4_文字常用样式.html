@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		div{
+			width: 600px;
+			/*height: 400px;*/
+			border: 3px solid #000;
+
+			margin-left: auto;
+			margin-right: auto;
+
+			/*修改文字颜色*/
+			color: red;
+
+			/*设置文字大小
+				平时开发我们使用的字号，推荐大家
+				全部使用“偶数”
+
+				属性：
+					medium  设置默认文字大小
+							(16px)
+					xx-large
+						更大的字号
+					xx-small
+						更小的字号
+			*/
+			font-size: 100px;
+
+			/*设置文字的样式
+				属性：
+					normal 	正常的
+							(默认值)
+					italic 	斜体字
+					oblique 倾斜的文字
+
+				某些标签不支持 italic
+				这时候才需要使用到 oblique
+			*/
+			/*font-style: oblique;*/
+
+			/*设置文字粗细程度
+				属性：
+					normal 	正常的
+							(默认值)
+					bold 	加粗的字体
+					lighter 更细的字体
+			*/
+			/*font-weight: bold;*/
+
+			/*设置文字的字体样式
+				设置使用某一个元素的字体族或类族名称的一个“优先表”
+
+				会从前往后依次去识别字体
+				直至找到 第一个 可以使用的字体
+
+				多个内容中间使用 逗号 分隔
+				并且推荐大家最后始终放一个
+				类族名称作为最后的选择
+					Helvetica
+
+				SimHei 		黑体
+				SimSun 		宋体
+				Microsoft YaHei
+							微软雅黑
+				STKaiti 	华文行楷
+			*/
+			font-family:"SimHei","SimSun","Microsoft YaHei","STKaiti",Helvetica;
+
+			/*设置文字的大小写转换
+				uppercase 	全部大写
+				lowercase 	全部小写
+				capitalize 	首字母大写
+			*/
+			/*text-transform: capitalize;*/
+
+			/*设置文字中英文的显示方式
+				normal 		正常的
+							(默认值)
+				small-caps
+							英文全部大写，
+							并用小字号显示
+			*/
+			font-variant: small-caps;
+
+			/*设置文字的修饰线
+				underline 	下划线
+				overline 	上划线
+				line-through
+							删除线
+				none 		无修饰线
+				------------------
+				blink 		闪烁线
+			*/
+			text-decoration: blink;
+		}
+		a{
+			text-decoration: none;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		李鹏 mr_lp
+	</div>
+
+	<a href="###">超链接</a>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Farmer(baseSalary){
+        this.baseSalary = baseSalary;
+    }
+    Farmer.prototype.showMoney = function (){
+        console.log("农民的收入：" + this.baseSalary);
+    }
+    
+    function Teacher(baseSalary, moneyPerDay){
+        Farmer.call(this, baseSalary);
+        this.moneyPerDay = moneyPerDay;
+    }
+    
+    Teacher.prototype = new Farmer();
+    Teacher.prototype.showMoney = function (){
+        console.log("老师的收入：" + (this.baseSalary + this.moneyPerDay));
+    }
+    Teacher.prototype.speak = function (){
+        console.log("讲课")
+    }
+    var t = new Teacher(10000, 2000);
+    t.showMoney();
+    t.speak()
+</script>
+</body>
+</html>

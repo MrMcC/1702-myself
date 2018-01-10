@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="my_ajax.js"></script>
+</head>
+<body>
+
+<script>
+    ajax.get("data2.json", function (result){
+        var arr = JSON.parse(result);
+        for(var i = 0; i < arr.length; i++){
+            var div = document.createElement("div");
+            div.innerHTML = arr[i].name + "  " + arr[i].age;
+            document.body.appendChild(div);
+        }
+    })
+</script>
+</body>
+</html>

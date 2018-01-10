@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?><!--文档声明-->
+<!-- xml没有任何的预定义标签，全部都是自定义标签-->
+<users><!--根标签 一个xml文档，有且仅有一个根标签-->
+    <user id="1">
+        <name>李四1</name>
+        <age>210</age>
+    </user>
+    <user id="2">
+        <name>李四2</name>
+        <age>220</age>
+    </user>
+    <user id="3">
+        <name>李四3</name>
+        <age>230</age>
+    </user>
+</users>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="my_ajax.js"></script>
+</head>
+<body>
+<p id="p1"></p>
+<p id="p2"></p>
+<script>
+    ajax.get("user1.json", function (result){
+        var obj = JSON.parse(result);
+        handlerObj(obj, p1);
+    })
+    
+    ajax.get("user.json", function (result){
+        var obj = JSON.parse(result);
+        handlerObj1(obj, p2);
+    })
+    
+    //适配器
+    function handlerObj1(obj, dom){
+        var oldObj = obj.user;
+        //原来的处理函数继续使用
+        handlerObj(oldObj, dom);
+    }
+    
+    function handlerObj(obj, dom){
+        dom.innerHTML = `姓名:${obj.name}<br>
+                        年龄:${obj.age} `;
+    }
+</script>
+</body>
+</html>

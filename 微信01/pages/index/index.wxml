@@ -1,0 +1,40 @@
+<!-- <view wx:for="{{100}}" wx:key="{{index}}">{{item}}</view>
+切换tabBar页面 -->
+<!-- <navigator open-type="switchTab" url="../logs/logs">走你</navigator> -->
+<!-- <navigator url="../demo/demo">走你</navigator> -->
+<!-- <navigator open-type="reLaunch" url="../demo/demo">走你</navigator> -->
+<!-- <view bindtap="toDemo">走你</view> -->
+<!-- <navigator wx:for="{{userList}}" url="../demo/demo?id={{item.userId}}" key="{{item.userId}}">{{item.userName}}</navigator> -->
+<!-- <view wx:for="{{[zero, 1, 2, 3, 4]}}"> {{item}} </view> -->
+<!-- 定义一个模板 -->
+<template name="msgItem">
+  <view>
+    <text> {{index}}: {{msg}} </text>
+    <text> Time: {{time}} </text>
+  </view>
+</template>
+
+<!-- <template is="msgItem" data="{{index:0,msg:'你好', time: '12323'}}" />
+<template is="msgItem" data="{{index:1,msg:'你好2', time: '2323'}}" /> -->
+<!-- <template is="msgItem" data="{{...item}}" /> -->
+<!-- <view wx:for="{{10}}" wx:for-item="a" wx:for-index="i">{{i}}</view> -->
+<!-- <block wx:for="{{5}}">
+  <view>哈地方</view>
+  <view>fdsf</view>
+</block> -->
+<!-- <view wx:if="{{num==0}}">A</view>
+<view wx:elif="{{num==2}}">B</view>
+<view wx:else>C</view> -->
+<!-- <view hidden="{{false}}">我是东方</view> -->
+<!-- <view id="outter" bindtap="handleTap1">
+  outer view
+  <view id="middle" catchtap="handleTap2">
+    middle view
+    <view data-num="5" id="inner" bindtap="handleTap3">
+      inner view
+    </view>
+  </view>
+</view> -->
+<view class="view1"></view>
+
+

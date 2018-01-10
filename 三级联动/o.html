@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;padding: 0;
+			}
+			#wrap{
+				width: 800px;height: 600px;background-color: lightpink;
+				margin: 30px auto;position: relative;
+			}
+			#contentDiv{
+				width: 50px;height: 80px;background-color: greenyellow;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrap"></div>
+		<script type="text/javascript">
+			var wrap = document.getElementById("wrap")
+			for(var i= 0; i< 10; i++){
+				creatDiv();
+			}
+			function creatDiv(){
+				var div = document.createElement("div")
+				div.setAttribute("id","contentDiv")
+				div.style.transform = "rotateZ(randonInt(0,180deg)"
+				wrap.appendChild(div)
+				
+			}
+			function randomInt(from,to){
+				return parseInt(Math.random()*(to - from + 1) + from)
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" name="" id="inp" value="" />
+		<button id="btn">按钮</button>
+		<script type="text/javascript">
+			btn.onclick = function(){
+				var a = []
+				var b = document.getElementById("inp").value;
+				for (var i = 0 ;i < b.length ; i++) {
+					a.push(+b[i]);
+				}
+				console.log(a);
+			}
+		</script>
+	</body>
+</html>
+<!--
+	定义一个函数：现需要从页面输入10个数字，保存到数组中，返回这个数组。     
+要求：整个页面只有一个input，当点击一次按钮，就把input中的值保存入一个数组，
+当保存最后一个元素后，在页面把保存的所有元素显示到页面
+
+-->

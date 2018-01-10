@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    //初始化
+    var arr = [
+        ['a',122],["b",233]
+    ]
+    let map = new Map(arr)
+//    console.log(map);
+    //map遍历
+    map.forEach(function (value,key,own) {  //出入值,键,map自己
+        console.log(value,key,own)
+    });
+
+    var arr1 = [1,2,"a","b"];
+    arr1.forEach(function (v,k,own) {
+        console.log(v,k,own)
+    })
+
+    for(var v of map){  //遍历出来的是键值对
+        console.log(v)
+        console.log(v[0],v[1])
+    }
+</script>
+</body>
+</html>
+<!--
+    Map储存的也是键值对,  (字典)
+    键可以是任何类型,键不允许重复
+-->

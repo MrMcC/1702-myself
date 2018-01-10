@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第3题</title>
+</head>
+<body>
+<p id="box"></p>
+<script type="text/javascript">
+    /*
+     作者：李振超    2017年3月21日 09:14
+     随机生成400个 [10,50]的整数，
+     然后统计每个数字出现的次数。把结果写入到页面中。
+     */
+    var arr = new Array(400);
+    for(var i = 0; i < arr.length; i++){
+        arr[i] = randomInt(10, 50);
+    }
+    function randomInt(from, to) {
+        return parseInt(Math.random() * (to - from + 1) + from);
+    }
+
+    var nums = new Array(41);
+    for(var i = 0; i < nums.length; i++){
+        nums[i] = 0; //?
+    }
+
+    for(var num = 10, i = 0; num <= 50; num++, i++){
+        for(var ele of arr){
+            if(ele == num){
+                nums[i] = nums[i] + 1;
+            }
+        }
+    }
+    var box = document.getElementById("box");
+    var s = "";
+    for(var i = 0, num = 10; i < nums.length; i++, num++){
+        s += num + " 出现的次数:" + nums[i] + "<br>";
+    }
+    box.innerHTML = s;
+
+</script>
+</body>
+</html>

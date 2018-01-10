@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.father{
+			/*下方添加 padding，
+			上方减去宽度*/
+			width: 400px;
+			height: 400px;
+			background: red;
+
+			/*padding-left: 200px;
+			padding-top: 200px;*/
+
+			/*overflow: hidden;*/
+		}
+		.son{
+			width: 200px;
+			height: 200px;
+			background: blue;
+
+			margin: 10px 0 0 10px
+
+			/*padding-left: 10px;
+			padding-top: 10px;*/
+		}
+/*
+	存在使用场景
+		两个元素是兄弟关系，优先使用 margin
+		两个元素是父子关系，优先使用 padding
+ */
+	</style>
+</head>
+<body>
+	<div class="father">
+		<div class="son"></div>
+	</div>
+</body>
+</html>

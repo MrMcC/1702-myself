@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Person(){
+        this.name = "李四";
+    }
+    Person.prototype.age = 20;
+    
+    var p1 = new Person();
+    var p2 = new Person();
+    //使用 __proto__来访问 [[proto]]
+//    console.log(p1.__proto__ == Person.prototype);
+    console.log(p1.name);
+    p1.__proto__.age = 30;//更改原型对象中的年龄
+    console.log(p1.age);
+    console.log(p2.age);
+    
+</script>
+</body>
+</html>

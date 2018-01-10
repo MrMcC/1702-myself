@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	<!--<p id="demo" class="demo1">id="demo" 的 第一个 p 元素</p>
+    <p id="demo">id="demo" 的 第二个 p 元素</p>
+    <button onclick="myFunction()">点我修改id = demo 的第一个元素内容</button>-->
+        <!--<a id="id1" href="http://www.yztcedu.com" target="_blank">育知同创官网</a>.
+    <br />
+	<p>
+    	<button onclick="myFunction()">点我获取超级链接的 id 属性值，tafget 属性值</button>
+    </p>-->
+		<script type="text/javascript">
+//			var a = new Array(4);  //构造函数创建数组,只写一个数字,代表a.length 元素为undefined
+//			console.log(a);
+//			var a = ["a","b"]
+//			console.log(a);
+//			var a = new Array("3","4")
+//			console.log(a)
+//			
+//			var a = ["s", "4",4 ,"setI"];
+//			a.length = 5;
+//			console.log(a);
+//			
+//			var arr = [1,2,3,7]
+//			arr[50] = "1";
+//			console.log(arr.length);
+			//向数组的末尾添加5个元素
+			
+//			for(i = 0; i < 5 ; i++){
+////				arr.push("i")   //每次添加字符串i
+//				arr.push(i); //每次添加
+////				arr[arr.length]= i
+//			}
+//			console.log(arr);
+
+//			for(i = 0; i < arr.length ; i++){ //更改数组中的偶数项,改成100+偶数项
+//				if(i % 2 == 1){
+//					arr[i]+=100
+//				}
+//			}
+//			console.log(arr);
+			
+//			for(i in arr){
+////				console.log(i);//遍历出我每个元素的下标
+//				console.log(arr[i]);//遍历初我每个元素
+//			}
+
+//			var a = ["1","sd",true,2,4]
+//			for(i=0;i<a.length;i++){
+//				console.log(a[i])
+//			}
+//			a.unshift(10,20)
+//			console.log(a);
+//			a.shift("1");
+//			console.log(a);
+//			a.reverse();
+//			console.log(a);
+//			a.push(...["s",2])  //数组添加数组 加
+//			console.log(a)
+//			a.pop();
+//			console.log(a)
+//			var a1 = a.toString();
+//			console.log(a);//打印a是不会变的,
+//			console.log(a1);
+//			var a2 = a.join("-")
+//			console.log(a2);
+//			console.log(a.indexOf(2));
+//			var a = "sdadasda11w12sad";
+//			console.log(a.indexOf("l"));
+//			var b = ["2","3"]
+//			var a = [4, "s"]
+//			var c =a.concat(b)
+//			console.log(b);
+			//冒泡
+//			var a = [1,30,20,12,3,4,5,19,0,11];
+//			for (j = 0 ; j < a.length-1; j++) {
+//				for (i = 0 ; i < a.length-1-j; i++ ) {
+//					if(a[i]>a[i+1]){
+//						var tmp =a[i];
+//						a[i]=a[i+1];
+//						a[i+1]=tmp;
+//					}
+//				}
+//			}
+//			console.log(a);
+//			var a = [1,30,20,12,3,4,5,19,0,11,"a","b","A","B"];
+//			var a1 = a.sort(function(a,b){
+//				return Math.random()-0.5;
+//				return 1;  
+//				return -1;
+//				return 0;
+//				return a-b;
+//				return b-a;
+//			})
+//			console.log(a1);
+//			
+//			var a = ["a",1]
+//			var a1 = Array.isArray(a);
+//			console.log(a1);
+			
+			 //计算数组中所有元素的和
+//			function chooSe(a){
+//				if(Array.isArray(a)){
+//					var s = 0;
+//					for (var sum of a) {
+//						s+=sum;
+//					}
+//					console.log(s.slice(1));
+//				}else{
+//					console.log("你输入错误");
+//				}
+//			}
+//			chooSe(["i",1,3,5,4]);
+
+//			//求1!+2!+3!+4!+..+10!
+//			var n = 1;var m = 0;
+//				for(var i = 1; i < 11; i++){
+//					n = n*i;
+//					m = m + n;
+//				}
+//				console.log(m);
+//			function chOose(year){
+//				
+//			}
+//			var s = "你好世界";
+//			console.log(s[0]);
+//			for(var i = 0; i < 4; i++){
+//				console.log(s[i])
+//			}
+//			var s1 = s.charCodeAt(0);//相当于你 访问字符编码
+//			console.log(s1)
+//			var a = ["你",12,4,true];
+//			var b = "123N你好世界";
+//			console.log(a.indexOf(12)); //查找12出现的位置
+//			console.log(b.indexOf("你"));//查找出现的位置的下标
+//			var si = b.substring(1,2)
+//			console.log(si)
+//			var si = b.substr(1,2)
+//			console.log(si);
+//			var si = b.slice(1,2)
+//			console.log(si)
+//			var si = b.splice(1,,"miaoce")
+//			console.log(si)
+//z字符串,ele要找的元素
+//			function find(z,ele){
+//				if(z.indexOf(ele) == -1){
+//					console.log("无匹配项");
+//				}else{
+//					 //第一次找到元素下标
+//					var time = 0;
+//					var index = z.indexOf(ele);
+//					while(index != -1){
+//						var froms = index + ele;
+//						var index = z.indexOf(ele,froms);
+//						time++;
+//					}
+//					console.log(time + 1);
+//				}
+//			}
+//			find('asd111asdasd11as','asd');
+// 			var a = "asd111asd111asd333asdas";
+// 			var a1 = a.indexOf("asd");
+// 			console.log(a1)
+//<script type="text/javascript">
+  	//传入函数的时，函数名不要加括号。(因为方法不是我们调用，是引擎帮助我们调用)
+  	// setTimeout方法会返回一个值，表示超时调用的id，可以在任务执行前取消任务。
+//	var timeOutId = window.setTimeout(go, 3000);  // 3秒中之后执行函数go中的代码
+//  function go () {
+//    	window.open("http://www.yztcedu.com")
+//  }	
+//	window.clearTimeout(this.timerId);  //取消这个超时调用，如果超时调用已经执行完毕，就什么也不会发生。
+
+
+//var zhi = window.setTimeout(function go(){
+//	window.open("http://www.baidu.com")
+//},3000)
+////setTimeout(go,2000);
+//window.onload(function(){
+//	
+//})
+//function sum(ele){
+//	if(ele == 1){
+//		return 1;
+//	}
+//	return sum(ele-1)+ele;
+//}
+//console.log(sum(100));
+//var sum = 0;
+//for (var i = 1 ;i< 101 ; i++) {
+//	sum+=i
+//}
+//console.log(sum);
+//1.1  2.2 3.4 4.8 5.16 6. 32
+//function sum(ge,li){
+//while (li > 0 ) {
+//	li = li *2
+//}
+//ge++;
+//if(ge == 63){
+//	return li;
+//}
+//}
+////console.log(sum(1,1));
+//          var obj = new Object()
+//          obj.name = "小明";
+//          obj.age = 20;
+//          obj.height = 180;
+//          obj.eat = function(){
+//            console.log("汉堡")
+//          }
+//          console.log(obj)
+//		function s(){
+//        var xiaoming = {};
+//          xiaoming.name = "小明";
+//          xiaoming.age = 20;
+//          xiaoming.height = 180;
+//          xiaoming.eat = function(){
+//            console.log("汉堡");
+//          }
+//         return xiaoming
+//		}
+//		console.log(s());
+//		function s(name,age,height,eat){ 
+//         return {
+//         		name : name,
+//          	   	age : age,
+//              height : height,
+//              eat : eat
+//         }
+//		};
+//		var xiaoming = s("小明",20,180,function(){
+//            console.log("汉堡");
+//          } )
+//		console.log(xiaoming);
+//			var imgs = document.getElementById("imgs")
+//			var a = setInterval(go,50)
+//			var left = 0;
+//			function go(){
+//				left-=10;
+//				imgs.style.left == left + "px";
+//				if(left <= -5000){
+//					left = 0;
+//				}
+//				if(left % 1000 == 0){
+//					clearInterval(a)
+//					setTimeout(function(){
+//						setInterval(go,50)
+//					},2000)
+//				}
+//			}
+
+    
+    
+    
+//	    function myFunction() {
+//        	//返回第一个id=demo的元素
+//	        document.querySelector("p.demo1").innerHTML = "Hello World!";
+//	    }
+//  
+
+    
+//  function myFunction() {
+//      var a1 = document.getElementById("id1");
+//      alert("id = " + a1.getAttribute("id") + "\ntarget = " + a1.getAttribute("target"));
+//  }
+//	    function Person () {
+//	    		console.log(123)
+//	    }
+//	    var p = new Person()
+//	    console.log(p)
+//		a = 10;
+//		function foo(){
+//			return function (){
+//				a++;
+//				return a;
+//			}
+//		}
+//		a = 20;
+//		var fun = foo();
+//		a = 30;
+//		var r = fun()
+//		a = 40;
+//		console.log(r)
+//var p = "ta" + 1 + 2
+//console.log(p)
+//			function Father(){
+//				this.name = "马晕";
+//			}
+//			Father.prototype.eat = function (){
+//				console.log("屎");
+//			}
+//			function Son(){
+//				this.age = 20;
+//			}
+//			Son.prototype = new Father();
+//			Son.prototype.drink = function (){
+//				console.log("尿");
+//			}
+//			
+//			var p = new Son();
+//			console.log(p.name);
+//function Father(name,age){
+//	this.init(name,age)
+//}
+//Father.prototype = {
+//	init : function(name,age){
+//		this.name = name;
+//		this.age = age;
+//	}
+//}
+//function Son(name,age,sex){
+//	this.sex = sex;
+//	Father.call(this,name,age)
+//}
+//Son.prototype = new Father()
+//var p = new Son("赵四",20,"男");
+//console.log(p.name)
+//function Father(name,age){
+////	this.name = name;
+////	this.age = age;
+////Father.prototype.name = name//传参数进来,属性都写在原型里
+////Father.prototype.age = age
+//}
+//Father.prototype={
+//	name : name,
+//	age : age
+//}
+//function Son(name,age){
+//	Father.call({},name,age);
+//}
+//Son.prototype = new Father();
+//var p = new Son("赵四",20);
+//console.log(p.name);
+//var p1 = new Son();
+//console.log(p1.name)
+
+//function Father(){
+//	this.name = "LISI"
+//}
+//function Son (){
+//	
+//}
+//Son.prototype = new Father()
+//var p = new Son();
+//var p1 = new Son();
+//console.log(p.name)
+//p.name = "王五"
+//console.log(p1.name)
+
+
+//	function Father () {
+//		this.girls = ["志玲", "凤姐"];
+//	}
+//	function Son () {
+//		
+//	}
+//	Son.prototype = new Father();	
+//	var son1 = new Son();
+//	var son2 = new Son();
+//	son1.girls.push("亦非");
+//	alert(son2.girls);  // "志玲", "凤姐", "亦非"
+//var pattern = /\w+\.zip|rar|gz/; //\w 表示所有数字和字母加下划线
+//var str = '1_23.zip'; //\.表示匹配.，后面是一个选择
+//alert(pattern.test(str));
+
+//var pattern = /^\s+/; 
+//var str = ' goo gle ';
+//alert(str+"  "+str.length);
+//var result = str.replace(pattern, '');
+//alert(result+" "+result.length);
+
+//var s = "Abc123aBc";
+//	console.log(s.search(/abc/gi));
+//	console.log(s.match(/abc/gi));
+//	console.log(s.replace(/[ab]+/gi, "x")); 
+//	console.log(s.split(/[0-9]+/gi));
+	
+//	var s1 = "abc,asd,asd,asd" ;
+//	console.log(s1.split(/,+/gi))
+//var s = new Date()
+//console.log(s)
+var s = new Date("2016,12,9")
+console.log(s)
+console.log(s.getFullYear())
+console.log(s.setFullYear("2018"))
+console.log(s.toLocaleString())
+		</script>
+	</body>
+</html>

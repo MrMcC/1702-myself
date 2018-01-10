@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        #content {
+            margin: 100px auto;
+            box-sizing: border-box;
+            width: 700px;
+            height: 400px;
+        }
+        
+        #content > div {
+            box-sizing: border-box;
+            float: left;
+            border: 1px solid #000;
+            height: 100%;
+            width: 300px;
+        }
+        
+        #content > div:nth-child(2) {
+            width: 100px;
+            text-align: center;
+            
+        }
+        
+        #content p {
+            width: 300px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            border-bottom: 1px solid #000;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        
+        button {
+            width: 80px;
+            height: 35px;
+            margin-bottom: 5px;
+            margin-top: 5px;
+            font-size: 25px;
+            line-height: 35px;
+        }
+        .clicked_class{
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+<div id="content">
+    <div id="left">
+        <p>凤姐</p>
+        <p>志玲</p>
+        <p>亦菲</p>
+        <p>冠希</p>
+        <p>德华</p>
+        <p>芙蓉</p>
+    </div>
+    <div id="controls">
+        <button id="first">首位</button>
+        <button id="up">⬆️</button>
+        <button id="toLeft">⬅️</button>
+        <button id="allToLeft">⬅️️⬅️</button>
+        <button id="toRight">➡️</button>
+        <button id="allToRight">➡️➡️</button>
+        <button id="down">⬇️</button>
+        <button id="last">最后</button>
+    </div>
+    <div id="right"><p>哈哈哈6</p></div>
+</div>
+<script type="text/javascript" src="作业2.js"></script>
+<script>
+    //创建左边的对象
+    var leftObj = new LeftContent({
+        div : document.getElementById("left")
+    });
+    //创建右边的对象
+    var rightObj = new RightContent({
+        div : document.getElementById("right")
+    })
+    
+    down.onclick = function (){
+        leftObj.down();
+        rightObj.down();
+    }
+    up.onclick = function (){
+        leftObj.up();
+        rightObj.up();
+    }
+    toRight.onclick = function (){
+        leftObj.selectedToRight(rightObj);
+    }
+    toLeft.onclick = function (){
+        rightObj.selectedToLeft(leftObj);
+    }
+    allToRight.onclick = function (){
+        leftObj.allToRight(rightObj)
+    }
+    allToLeft.onclick = function (){
+        rightObj.allToLeft(leftObj)
+    }
+    first.onclick = function (){
+        leftObj.toFirst();
+        rightObj.toFirst();
+    }
+    last.onclick = function (){
+        leftObj.toLast();
+        rightObj.toLast();
+    }
+    
+</script>
+</body>
+</html>

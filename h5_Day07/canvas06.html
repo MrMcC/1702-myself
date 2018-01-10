@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>贝塞尔曲线</title>
+    <style>
+        html,body,div{
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            display: flex;
+        }
+        canvas{
+            background-color: lightgray;
+            margin: auto;
+            /*父亲是弹性布局,儿子marginauto就是居中*/
+        }
+        p{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /*text-align: center;*/
+            /*line-height: 200px;*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /*用弹性布局居中*/
+        }
+    </style>
+</head>
+<body>
+<p>你好实打实大所大所大所多撒大撒大声地adadasdad安达市大</p>
+<div>
+    <canvas id="canvas" width="500" height="500">
+        你的浏览器不支持canvas,请升级
+    </canvas>
+</div>
+<script>
+    function draw() {
+        var canvas = document.getElementById("canvas");
+        if(!canvas.getContext) return;
+        var ctx = canvas.getContext("2d");
+
+        ctx.beginPath();
+        ctx.moveTo(100,100)//起始点
+        ctx.quadraticCurveTo(150,50,300,200)//两个控制点
+
+        ctx.fillRect(50,)
+        ctx.closePath();
+    }
+    draw()
+</script>
+</body>
+</html>

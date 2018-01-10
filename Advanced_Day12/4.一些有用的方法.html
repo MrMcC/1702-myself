@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;padding: 0;
+			}
+			div{
+				width: 100px;height: 100px;background-color: pink;
+				margin-top: 4000px;
+				position: absolute;left: 200px;
+			}
+		</style>
+		<script src="libs/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				var $div = $("div").offset()  //获取元素距离当前文档的距离,我设置了4000,所以距离上面4000
+				console.log($div)   //Object {top: 4000, left: 200}
+				
+				var pos = $("div").position() //相对于父容器的left,top值,我设置了200pxleft
+				console.log(pos)   //返回对象Object {top: 0, left: 200}
+			})
+		</script>
+	</head>
+	<body>
+		<div></div>
+		
+	</body>
+</html>

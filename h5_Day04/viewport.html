@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--移动端不允许放大,宽度自适应-->
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;padding: 0;
+        }
+        html,body{
+            width: 100%;
+        }
+        div{
+            width: 100%;
+            height: 300px;
+            background-color: plum;
+        }
+    </style>
+</head>
+<body>
+    <div>你好</div>
+    <script>
+        console.log("布局视口"+document.documentElement.clientWidth)
+        console.log("可视视口"+window.innerWidth)
+    </script>
+</body>
+</html>

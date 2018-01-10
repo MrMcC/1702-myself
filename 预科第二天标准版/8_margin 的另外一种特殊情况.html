@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.div_1{
+			width: 500px;
+			height: 500px;
+			background: red;
+
+			border: 1px solid black;
+		}
+		.div_2{
+			width: 300px;
+			height: 300px;
+			background: blue;
+
+/*
+	当两个元素是 父子关系 的时候
+	子级的第一个元素的 margin-top
+	会传递给父级
+
+	解决方案：
+		1.给父级设置边框
+		2.不要去使用 margin，
+		  而是去使用 padding
+
+	原则：
+		父子关系用 padding
+		兄弟关系用 margin
+ */
+			margin-top: 100px;
+		}
+	</style>
+</head>
+<body>
+	<!-- .div_1>.div_2 -->
+	<div class="div_1">
+		<div class="div_2"></div>
+	</div>
+</body>
+</html>

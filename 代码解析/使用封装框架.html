@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script src="my_ajax.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			ajax.get("./date1.json?user=lisi&pwd=abc",function(date){       //使用数据干嘛自己写,这个匿名函数地址值给onSuccess
+				var obj = JSON.parse(date)
+				console.log(obj.name)
+			},1)
+		</script>
+	</body>
+</html>

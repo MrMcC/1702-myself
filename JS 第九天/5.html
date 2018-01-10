@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	<ul id="language">
+		<li>java</li>
+		<li>java1</li>
+		<li>java2</li>
+		<li>java3</li>
+		<li>java4</li>
+	</ul>
+	<script type="text/javascript">
+		//替换节点
+		var ul = document.getElementById("language");
+		var li = document.createElement("li");
+		li.innerHTML = "javascript";
+		//替换子元素:参数1新的元素 参数2,被替换的元素
+		ul.replaceChild(li,document.querySelector("li:nth-child(3)"));
+		
+		var ul = document.getElementById("language");
+		var newUl = ul.cloneNode(true); //复制元素 参数表示是否连着这个元素的后代元素一起复制,true表示都复制
+		ul.parentElement.appendChild(newUl);
+		
+	</script>
+	</body>
+</html>
+<!--
+	创建节点,插入或追加,移除,替换,复制
+-->

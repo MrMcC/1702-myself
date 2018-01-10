@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        canvas{
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="300" height="150">
+        你的浏览器不支持canvas
+    </canvas>
+    <script>
+        function draw() {
+            var canvas = document.getElementById("canvas");
+            if(!canvas.getContext) return;
+            var ctx = canvas.getContext("2d");
+
+            ctx.strokeRect(30,100,50,20)
+
+            ctx.fillStyle = "rgba(200,0,0,0.5)"
+            ctx.fillRect(30,50,100,30)
+
+//            ctx.clearRect(30,60,100,30)
+//            ctx.clearRect(0,0,300,150)
+        }
+        draw()
+    </script>
+</body>
+</html>

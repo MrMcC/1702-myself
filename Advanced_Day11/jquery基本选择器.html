@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 300px;height: 100px;background-color: palegreen;
+			}
+		</style>
+		<script src="libs/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				var $div = $("#div1");  //id选择器
+				$div.css("color","red")
+				
+				var $divs = $("div")   //标签选择器
+				$divs.css("background-color","pink")
+				
+				var $c1 = $(".c1")    //类选择器
+				$c1.css("font-size","60px")
+				$c1.css("font-size",60)
+				
+//				$("#div1,.c1").html("并集选择器")  //群组选择器
+				console.log($("div:first"))
+				console.log($("div:last"))
+				console.log($("div:not(.c1)"))
+				console.log($("div:even"))
+				console.log($("div:odd"))
+				console.log($("div:eq(1)"))
+				console.log($("div:gt(0)"))
+				console.log($("div:lt(2)"))
+				console.log($(":header"))
+				console.log($(":focus").val("acv"))
+				console.log($("div:parent"));
+				console.log($("div:has(.c1)"))
+			});
+		</script>
+	</head>
+	<body>
+		<div id="div1">qwe</div>
+		<div>asd</div>
+		<div><div class="c1">zxc</div></div>
+		<input type="text" name="" id="" value="" autofocus=""/>
+		<h1></h1>
+		
+		
+		<p style="display: none;">这是一个p</p>
+		<div>这是一个div</div>
+		<input type="hidden" name="" id="" value="" />
+		<input type="text" hidden />
+		<div style="visibility: hidden;">最后一个div</div>  //特例:可见的
+	</body>
+</html>

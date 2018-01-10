@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		
+	</body>
+	<script type="text/javascript">
+		/*
+		 判断类型
+		 * 
+		 * typeof
+		 *       用来显示当前内容的基础类型
+		 *        数字      number
+		 *        文字      string
+		 *        真假      boolean
+		 *        null      object
+		 *        undefined  undefined
+		 *        NaN       number
+		 *        函数      function
+		 *        数组      object
+		 *        对象      object*/
+		var num = 10;//如果输出是蓝色,则是数字
+		console.log(typeof num);
+		var str = "帅帅哒";
+		console.log(typeof str);
+		var bool = true;
+		console.log(typeof bool);
+		
+		var null_1 = null;
+		console.log(typeof null_1);//object对象
+		
+		var under = undefined;
+		console.log(typeof under);//undefined
+		
+		var nan = NaN;//NaN是数字
+		console.log(typeof nan);
+		
+		console.log(typeof function(){});
+		
+		console.log(typeof ["1","2",3,4]);//数组是object
+		
+		var obj = {
+			a:1,
+			b:2;
+		}
+		console.log(typeof obj);//object是object
+//		类型转换1.隐式类型转换(自动类型转换)
+//		       2.显示类型转换(强制类型转换)
+	</script>
+</html>

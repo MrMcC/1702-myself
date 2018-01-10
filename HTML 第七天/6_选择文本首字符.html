@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+		/*选择文本的首字符
+		     ::first-letter 作用范围 内容首字符
+		                    块元素好使
+		                    如果只想作用在特定标签p::dirst-letter{}
+		伪元素选择器现在书写是两个冒号，但是浏览器执行的过程中，会将其认为只存在一个冒号，为了向以后的版本兼容*/
+		p::first-letter{
+			font-size: 50px;
+		};
+	</style>
+</head>
+<body>
+	<p>
+		国务院通知2017年2月29，30，31
+		三日放假，3月1日正常上班
+	</p>
+	<div>
+		国务院通知2017年2月29，30，31
+		三日放假，3月1日正常上班
+	</div>
+	<span>
+		国务院通知2017年2月29，30，31
+		三日放假，3月1日正常上班
+	</span>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        {{message}}
+        <!--点击事件都是v-on事件名-->
+        <button v-on:click="changeMessage()">更改message</button>
+    </div>
+</body>
+<script>
+    //  初始化,类似于ng-moudle
+    var vm = new Vue({
+        //选择器,类似于ng-app,指定vue的作用范围
+        el:"#app",
+        //初始化数据
+        data: {
+            //数据默认都会挂在vm实例下,调用的时候直接vm.xx或this.xx就可以
+            message: "bye! angular!"
+        },
+        //方法
+        methods: {
+            changeMessage: function () {
+                this.message = "hello! Vue!"
+            }
+        }
+    })
+</script>
+</html>

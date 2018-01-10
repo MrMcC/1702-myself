@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			ul{
+				width: 200px;
+				list-style: none;
+			}
+		</style>
+	</head>
+	<body>
+		请输入消费金额:<input type="" name="money" id="money" value="" />
+		<ul>
+			是否参加换购
+			<li>1.满50,加2元换购可乐</li>
+			<li>2.满100,加3元换购可乐</li>
+			<li>3.满100,加10元换购面粉</li>
+			<li>4.满200,加10元换购菜锅</li>
+			<li>5.满200,加20元换购大炮</li>
+			<li>0.不换购</li>
+		</ul>
+		请选择: <input type="" name="" id="liChoose" value="" /><br />
+		<button id="btn">按钮</button>
+		<script type="text/javascript">
+			
+			btn.onclick = function(){
+			var money = parseInt(document.getElementById("money").value);
+			var liNum = parseInt(document.getElementById("liChoose").value);
+			var li =	[0,2,3,10,10,20];
+			if (money < 50) {
+			    if (liNum > 0 && liNum < 5) {
+			        alert("你的消费金额与换购项目不匹配");
+			    }else{
+			    		alert("你没有参与换购,需付款:" + money + "元");
+			    }
+			}else if(money < 100){
+				 if (liNum > 1 && liNum < 5) {
+			        alert("你的消费金额与换购项目不匹配");
+			   	}else if(liNum <= 1 && liNum >=0){
+			    		alert("你参与换购的总金额为:" + (money + li[liNum]) + "元");
+			    }
+			}else if(money < 200){
+				if(liNum >= 4){
+					alert("你的消费金额与换购项目不匹配");
+				}else if(liNum <4 && liNum >0){
+					alert("你参与换购的总金额为:" + (money + li[liNum]) + "元");
+				}	
+			}else if(money >= 200){
+				if(liNum >=0 && liNum <= 5){
+					alert("你参与换购的总金额为:" + (money + li[liNum]) + "元");
+				}
+					
+			}
+//			var current = 1;
+//			for (var i = 0; i < li.length ; i++) {
+//				current = li[i].toString();
+//				console.log(li[i]);
+//			}
+//			}
+//			if(current = li.length){
+//				alert("输入错误");
+//			}
+//			current++;
+//			liChose.value = current;
+//			alert("本次消费总金额为:" + parseInt(money.value) + parseInt(liChoose.value));
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.p1{
+				color: darkgoldenrod;
+			}
+		</style>
+		<script src="libs/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				var $li = $("<li>新的li</li>")
+//				$("ul").append($li)
+//				$($li).appendTo($("ul"))
+//				$("ul:eq(0)").prepend($li)
+//				$li.prependTo($("ul"))
+//				$("ul>li:eq(1)").after($li)
+//				$("ul>li:eq(1)").before($li)
+			})
+		</script>
+	</head>
+	<body>
+		<ul>
+			<li>第一个item</li>
+			<li>第二个item</li>
+			<li>第三个item</li>
+			<li>第四个item</li>
+		</ul>
+	</body>
+</html>
+<!--
+	a.append(b)   把b添加到a中,b会成为a的最后一个儿子
+	a.appendTo(b) 把a添加到b中,a会成为b的最后一个儿子
+	a.prepend(b)  把b添加到a中,b会成为a的第一个儿子
+	a.prependTo(b)把a添加到b中,a会成为b的第一个儿子
+	a.after(b)    把b插入a的后面,b会成为a的下一个兄弟
+	a.before(b)   把b插入a的前面,b会成为a的上一个兄弟
+ -->

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //已知年和月，求出这个月的天数  2017, 2
+    function calDays(year, month){
+        /*var date = new Date(year, month, 0);
+        date.setFullYear(year);
+        date.setMonth(month);
+        date.setDate(0);
+        return date.getDate();*/
+        return new Date(year,month, 0).getDate();
+    }
+    console.log(calDays(2016, 2));
+</script>
+</body>
+</html>

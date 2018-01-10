@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>调整窗口大小</title>
+</head>
+<body>
+<button id="btn1">调整窗口到指定的尺寸 ：500px 500px</button>
+<button id="btn2">每调用一次窗口尺寸增加：10px 10px</button>
+<button id="btn3">打开新的窗口</button>
+<button id="btn4">调整新窗口的大小</button>
+<button id="btn5">调整窗口的位置</button>
+<script>
+//  var btn1 = document.getElementById("btn1");
+//  var btn2 = document.getElementById("btn2");//什么用?
+    btn1.onclick = function () {   //ie上使用
+//      console.log("aa")
+        //把浏览器的尺寸修改为 500 * 500
+        window.resizeTo(500, 500);
+    }
+    btn2.onclick = function () {
+        //把宽和高都增加10个像素
+        window.resizeBy(10, -10);
+    }
+    
+    //如果是用open打开，并且打开的窗口没有url，chrome和ff也支持 resizeTo、resizeBy...
+    var win;
+    btn3.onclick = function (){
+        win = window.open("", "", "width=100, height=100");
+    }
+    btn4.onclick = function (){
+//        win.resizeTo(600, 300);
+        win.resizeBy(20, 20)
+    }
+    btn5.onclick=function (){
+        //移动到指定的位置
+//        win.moveTo(400, 400)
+        //每次移动10个像素
+        win.moveBy(10, 10)
+        win.resizeBy(20, 20)
+    }
+</script>
+</body>
+</html>

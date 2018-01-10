@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" name="" id="firstNum" value="" />
+		<select name="" id="selected">
+			<option value="1">+</option>
+			<option value="2">-</option>
+			<option value="3">*</option>
+			<option value="4">/</option>
+		</select>
+		<input type="text" name="" id="secondNum" value="" />
+		=<input type="text" name="" id="sum" value="" /><br />
+		<input type="button" name="" id="btn" value="计算" />
+		<script type="text/javascript">
+			btn.onclick = function(){
+				var firstNum = document.getElementById("firstNum").value;
+				var secondNum = document.getElementById("secondNum").value;
+				var sum = document.getElementById("sum");
+//				var sumValue = sum.value;
+				var value = selected.value;
+				if(value == 1){
+//					sumValue =  +firstNum + +secondNum;	
+					sum.value =  +firstNum + +secondNum;	//这里不能用sumValue,会把上面的赋值覆盖
+				}else if(value == 2){
+					sum.value =  +firstNum - +secondNum;	
+				}else if(value == 3){
+					sum.value =  +firstNum * +secondNum;	
+				}else if(value == 4){
+					sum.value =  +firstNum / +secondNum;	
+				}
+			}
+
+		</script>
+	</body>
+</html>

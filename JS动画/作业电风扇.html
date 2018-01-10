@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;padding: 0;
+			}
+			#imgDiv{
+				width: 200px;height: 200px;margin: 100px 100px;
+				position: relative;
+			}
+			img{
+				width: 100%;height: 100%;
+			}
+			#btnDiv{
+				width: 500px;height: 300px;position: absolute;left: 100px;top: 350px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="imgDiv"><img src="./img/四叶风扇.png" alt="" /></div>
+		<div id="btnDiv">
+			<button>打开风扇</button>
+			<button>一档</button>
+			<button>二挡</button>
+			<button>三挡</button>
+			<button>关闭风扇</button>
+		</div>
+		<script type="text/javascript">
+			function DianFS(div){
+				this.div = div;
+			}
+			DianFS.prototype = {
+				open(isLoop,dang){
+					var startTime = new Date(),
+						p,
+						duration = dang,
+						div = this.div,
+						that = this;
+					this.stepId = requestAnimationFrame(function step(){
+						p = Math.min(1,(new Date()- startTime)/duration);
+						div.style.transform = `rotateZ(${360 * p}deg)`
+						if(p == 1){
+							if(isLoop){
+								startTime = new Date();
+							}else{ return; }
+						}
+						that.stepId = requestAnimationFrame(step)
+					})
+				},
+				close(){
+					cancelAnimationFrame(this.stepId)
+				},
+				speed(level){
+					this.open(true,level);
+				}
+			}
+			var btn1 = document.getElementsByTagName("button")[0];
+			var imgDiv = document.getElementById("imgDiv")
+			var dianfs = new DianFS(imgDiv);
+			btn1.onclick = function(){
+				dianfs.close();
+				dianfs.open(true,1000)
+			}
+			var btn2 =document.getElementsByTagName("button")[1];
+			btn2.onclick = function(){
+				dianfs.close();
+				dianfs.speed(500)
+			}
+			var btn3 = document.getElementsByTagName("button")[2];
+			btn3.onclick = function(){
+				dianfs.close();
+				dianfs.speed(300)
+			}
+			var btn4 = document.getElementsByTagName("button")[3];
+			btn4.onclick = function(){
+				dianfs.close();
+				dianfs.speed(100)
+			}
+			var btn5 = document.getElementsByTagName("button")[4];
+			btn5.onclick = function(){
+				dianfs.close();
+				dianfs.close();
+			}
+		</script>
+	</body>
+</html>
+<!--if(this.running) return  //第一次点击
+	this.running = true;
+-->

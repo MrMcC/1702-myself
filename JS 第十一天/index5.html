@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="box"><input type="" name="inpu" id="inpu" value="" /></div>
+		
+		<script type="text/javascript">
+			//focus事件不冒泡
+			inpu.onfocus = function(){
+				this.style.backgroundColor = "pink";
+			}
+			box.onfocus = function(){
+				console.log("asd");
+			}
+			
+			
+			inpu.onblur = function(){
+				this.style.backgroundColor = "blue";
+			}
+			
+			
+		</script>
+	</body>
+</html>

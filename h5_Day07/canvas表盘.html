@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        canvas{
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+<canvas id="canvas" width="600" height="600">
+
+</canvas>
+<script>
+    function draw(){
+        var canvas = document.getElementById("canvas");
+        if(!canvas.getContext) return;
+        var ctx = canvas.getContext("2d");
+
+        drawBoard(ctx);
+        drawHands(ctx);
+    }
+    draw();
+
+    function drawBoard(ctx) {
+//        ctx.save();
+        ctx.translate(300,300); //平移到中心
+        ctx.beginPath();
+        ctx.arc(0,0,300,0,2*Math.PI); //表盘圆
+        ctx.stroke();
+
+        for (var i = 0; i< 60; i++){
+            ctx.save();
+            if(i % 5 == 0){
+                ctx.strokeStyle = "red";
+                ctx.lineWidth = 5;
+                ctx.lineCap = "round";
+            }
+            ctx.rotate(-Math.PI/2 + i* Math.PI/180*6);
+            ctx.beginPath();
+            ctx.moveTo(260,0);
+            ctx.lineTo(290,0);
+            ctx.stroke();
+            ctx.restore();
+        }
+    }
+//绘制所有的表针
+    function drawHands(ctx) {
+        drawHand(6,"pink",150,0,ctx);
+        drawHand(4,"blue",200,Math.PI/4,ctx);
+        drawHand(2,"green",240,Math.PI,ctx);
+    }
+    //绘制只听样式的表针
+    function drawHand(width,color,length,deg,ctx) {
+        ctx.save();
+        ctx.translate(300,300);
+        ctx.rotate(-Math.PI/2 + deg);
+        ctx.strokeStyle = color;
+        ctx.lineWidth = width;
+        ctx.restore();
+    }
+</script>
+
+</body>
+</html>

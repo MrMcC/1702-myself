@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;padding: 0;list-style: none;
+			}
+		</style>
+		<script src="js/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				var w = screen.width;
+				$("#navigation").css({
+					width : "w",
+					height : 420,
+					position : "relative"
+				})
+				$("#navigation>img").css({
+					width : "100%",
+					height : "100%",
+					position : "absolute",
+					zIndex : 1
+				})
+				$("ul:first").css({
+					position : "absolute",
+					right : 50,
+					bottom : 15,
+					zIndex : 2
+				})
+				$("#ul1>li").css({
+					width : 40,
+					height : 5,
+					backgroundColor : "#000",
+					float : "left",
+					marginLeft : 5
+				})
+				$("#ul2").css({
+					width : 280,
+					position : "absolute",
+					left : 40,
+					zIndex : 3
+				})
+				$("#ul2>li").css({
+					width : 280,
+					height : 55,
+					backgroundColor : "#000",
+					opacity : 0.5,
+					color : "white",
+					borderBottom : "3px solid gray"
+					
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<div id="navigation">
+			<img src="img/download.jpg" alt="" />
+			<img src="img/download-1.jpg" alt="" />
+			<ul id="ul1">
+				<li>	</li>
+				<li></li>
+			</ul>
+			<ul id="ul2">
+				<li>
+					港澳台 国内<br>
+					<a href="">香港</a>
+					<a href="">澳门</a>
+					<a href="">台湾</a>
+					<a href="">三亚</a>
+				</li>
+				<li>
+					日本 韩国<br>
+					<a href="">东京</a>
+					<a href="">大阪</a>
+					<a href="">冲绳</a>
+					<a href="">北海道</a>
+				</li>
+				<li>
+					东南亚 南亚<br>
+					<a href="">普吉</a>
+					<a href="">清迈</a>
+					<a href="">沙巴</a>
+					<a href="">巴厘岛</a>
+					<a href="">马尔代夫</a>
+				</li>
+				<li>
+					欧洲 美洲<br>
+					<a href="">法国</a>
+					<a href="">意大利</a>
+					<a href="">土耳其</a>
+					<a href="">英国</a>
+					<a href="">荷兰</a>
+				</li>
+				<li>
+					澳新 中东非<br>
+					<a href="">悉尼</a>
+					<a href="">新西兰</a>
+					<a href="">迪拜</a>
+					<a href="">帕劳</a>
+				</li>
+				<li>
+					个性推荐<br>
+					<a href="">独立成团</a>
+					<a href="">亲子</a>
+					<a href="">情侣</a>
+					<a href="">海岛游</a>
+					<a href="">购物</a>
+				</li>
+				<li>
+					出行必备<br>
+					<a href="">Wi-Fi</a>
+					<a href="">电话卡</a>
+					<a href="">接送机</a>
+					<a href="">保险</a>
+				</li>
+			</ul>
+		</div>
+		<script type="text/javascript">
+			var lunbotu = {
+				imgs : document.getElementsByTagName("img"),
+				lis : document.querySelectorAll("#ul1>li"),
+				autoPlay(){
+					var imgs = this.imgs;
+					var lis = this.lis;
+//					setTimeout(function(){
+//						for(var i=0; i< imgs.length;i++ ){
+//							var img = imgs[i]
+//							var li = lis[i]
+//							img.style.zIndex =
+//							
+//						}
+//					},1000)
+				}
+				
+			}
+		</script>
+	</body>
+</html>

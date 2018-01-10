@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript" charset="utf-8">
+    /*
+     比较运算符
+			>
+			<
+			>=
+			<=
+			==
+			===
+			!=
+			!==
+     * 
+     * 	== 和 ===
+     * 		== 只进行数值比较，不会考虑比较数值的类型
+     * 		
+     * 		=== 不仅仅进行数值的比较，还进行类型的比较
+     * 		(比较相同类型的两个数值)
+     * */
+    
+    console.log(5 == 5);		//true
+    console.log("5" == 5);	//true
+    console.log("5" === 5);	//false
+    
+    
+    console.log(5 != 5);		//false
+    console.log("5" != 5);	//false
+    console.log("5" !== 5);	//true
+    
+    console.log("=======================");
+    
+    console.log(NaN == false);	//false
+    console.log(NaN == true);	//false
+    
+    console.log(NaN == 1);		//false	
+    
+    console.log(NaN == NaN);		//false
+    console.log(NaN != NaN);		//true
+    
+    console.log(null == null);	//true
+    console.log(null == undefined);	//true
+    console.log(undefined == undefined); //true
+    
+    console.log(1 == true);	//true
+    console.log(0 == false);	//true
+    
+    console.log(0 == null);	//false
+    //null 和 任何 非 null 的数值都不相等
+    
+</script>
+</html>

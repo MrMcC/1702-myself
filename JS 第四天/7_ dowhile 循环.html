@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		/*
+		 do-while 循环
+		 * 
+		 *  do{
+		 * 		循环体
+		 * }while(condition);
+		 * 
+		 * 1.先执行一遍循环体
+		 * 2.循环体执行结束后,再去判断 condition
+		 *   如果 condition 为真, 则再来一遍
+		 *   如果 condition 为假, 则结束循环
+		 * 3. condition 不能省略, 否则死循环
+		 * 4. 由于循环体在前,不论当前内容是否成立
+		 *    do..while 循环至少执行一遍*/
+		var num = 1;
+		do{
+			console.log(num);
+			num++
+		}while(num < 100);
+		
+		/*
+		 三种循环的使用环境
+		     for 一般用于 精确控制循环次数 的场景
+		     while 一般用于 循环次数不明确 的场景
+		     do while 一般用于 至少需要执行一次 的场景
+		 * */
+	</script>
+</html>

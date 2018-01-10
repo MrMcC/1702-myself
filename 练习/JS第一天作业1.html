@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		姓名: <input type="text" name="" id="name" value="" /><br />
+		年龄: <input type="text" name="" id="age" value="" /><br />
+		性别: <input type="text" name="" id="sex" value="" />
+		<button id="btn">按钮</button>
+		<script type="text/javascript">
+			btn.onclick = function(){
+				var name = document.getElementById("name").value;
+				var age = document.getElementById("age").value;
+				var sex = document.getElementById("sex").value;
+					alert("姓名:"+ name);
+					alert("年龄:"+ age);
+					alert("性别:"+ sex);
+			}
+		</script>
+	</body>
+</html>

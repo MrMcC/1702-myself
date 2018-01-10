@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.father{
+			width: 600px;
+			height: 300px;
+			border: 5px solid #000;
+
+			/*
+			文字颜色为 红色
+			整个 div 左右居中
+			字号为 100px
+			div 高度改为 300px
+			文字加粗
+			文字倾斜
+			文字字体为 华文行楷
+			 */
+			margin-left: auto;
+			margin-right: auto;
+			color: red;
+			font-size: 30px;
+			font-weight: bold;
+			font-style: italic;
+			font-family: "STKaiti",Helvetica;
+
+			/*====================*/
+			/*设置水平对齐方式
+				left 	左对齐
+				right 	右对齐
+				center 	居中对齐
+
+				1.水平对齐不是作用在自己本身
+				  而是作用在内部的子级身上
+				2.是针对于 内联相关元素 生效的
+			*/
+			text-align: center;
+
+			/*设置文字的行高*/
+			/*line-height: 300px;*/
+
+			/*设置文字间距*/
+			/*letter-spacing: 50px;*/
+
+			/*设置单词间距*/
+			/*word-spacing: 50px;*/
+
+			/*设置文字缩进
+				px
+					单位名称为像素，是相对单位
+					相对于显示屏屏幕而言
+				em
+					相对长度单位
+					相对于当前对象内的文本尺寸
+				--------------------------
+				rem
+					相对长度单位
+					相对于根元素的文本尺寸
+			*/
+			text-indent: 2em;
+
+		}
+		.son{
+			width: 50px;
+			height: 50px;
+			background: blue;
+
+			display: inline-block;
+		}
+	</style>
+</head>
+<body>
+	<div class="father">
+		李先生李先生李先生李先生李先生李先生李先生李先生李先生李先生李先生李先生李先生李先生李先生李先生李先生李先生李先生李先生李先生李先生李先生李先生李先生李先生李先生李先生李先生李先生李先生李先生李先生李先生李先生李先生李先生李先生李先生李先生李先生李先生
+		<!-- <div class="son">asd</div> -->
+	</div>
+</body>
+</html>

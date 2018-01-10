@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        canvas{
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+<canvas id="canvas" width="600" height="600"></canvas>
+<script>
+    function draw() {
+        var canvas = document.querySelector("#canvas");
+        if(!canvas.getContext) return;
+        var ctx = canvas.getContext("2d");
+
+        ctx.beginPath();
+        for(var i = 0; i < 5;i++){
+            for(var j = 0; j < 5; j++){
+                ctx.fillStyle = `rgb(${255-50*j},${255-50*i},${0})`;
+                ctx.fillRect(j*40,i*40,40,40);
+            }
+        }
+
+        ctx.beginPath();
+        ctx.moveTo(100,300);
+        ctx.lineTo(300,300);
+        ctx.lineTo(200,250);
+        ctx.lineWidth = 10;
+        ctx.lineJoin = "bevel";
+        ctx.stroke();
+
+    }
+    draw()
+</script>
+</body>
+</html>

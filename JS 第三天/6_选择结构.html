@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		/*
+		 选择结构
+		 *
+		 *    1.if
+		 *    2.if..else..
+		 *    3.if..else if..
+		 *    4.if..else if..else..
+		 *    5.switch
+		 *
+		 *  if 判断
+		 *
+		 *  if(condition){
+			   条件为真时触发的行为
+		      }
+		  *注意
+		  *    1.condition(条件)可以是任意的表达式
+		  *      表达式的值不一定要为  布尔值
+		  *    2.如果 condition 不是布尔值,则会尝试使用 Boolean() 去转化为 布尔值
+		  *    3.如果 condition 成立 才回去执行大括号内部的内容
+		  *      否则不会执行 /*/
+		
+		var num = 10;
+		if(num > 5){
+			console.log("执行成功");
+		}
+		//布尔值非0即是真的
+		
+		var num = parseInt(prompt("请输入一个数字"));
+//		if(num % 2 == 0){
+//			alert("您输入的数字" + num + "是偶数");
+//		}
+//		if(num % 2 == 1){
+//			alert("您输入的数字" + num + "是奇数");
+//		}	
+//		if(num % 2 == -1){
+//			alert("您输入的数字" + num + "是奇数");
+//		}
+		
+//		var num = parseInt(prompt("请输入一个数字"));
+//		if(num % 2 == 0){
+//			alert("您输入的数字:" + num + "是偶数");
+//		}
+//		else{
+//			alert("您输入的数字:" + num + "是奇数");
+//	    }
+		/*
+		 if..else..
+		 * 
+		 *     if(condition){
+		 * 	    条件为真时执行的行为
+		 * }
+		 *    else{
+		 * 	    条件为假时执行的行为
+		 * }
+		 * 
+		 * 
+		 * if..else if..
+		 * 	  if(condition1){
+		 * 	    满足条件1时执行
+		 * }
+		 *    else if(condition2){
+		 * 	    满足条件2时执行
+		 * }      
+		 * 
+		 * */
+//		var num = parseInt(prompt("您输入一个数字"));
+//		if(num > 0){
+//			alert("您输入的"+num+"是正数")
+//		}
+//		else if(num == 0){
+//			alert("您输入的是0")
+//		}
+//		else if(num < 0){
+//			alert("您输入的是负数")
+//		}
+//		else{
+//			alert("您输入的有误请重新输入");
+//		}
+
+
+
+//		和用if..if..和 if..else if区别
+//if (条件1)
+//{
+//  //语句1
+//}
+//if (条件2)
+//{
+//  //语句2
+//}
+//这种格式中,程序会依次判断条件1和条件2是否成立,并根据结果决定是否执行语句1 和语句2 ,也就是说
+//第一个 if块和第二个 if块没有影响 (除非在执行第一个 if 块的时候就凶残地 return 了）
+//if (条件1)
+//{
+//  //语句1
+//}
+//else if (条件2)
+//{
+//  //语句2
+//}
+//if 块和 else if 块本质上是互斥的！也就是说，
+//一旦语句1得到了执行，程序会跳过 else if 块，else if 块中的判断语句以及语句2一定会被跳过；
+//同时语句2的执行也暗含了条件1判断失败和语句1没有执行；
+//当然还有第3个情况，就是条件1和条件2都判断失败，语句1和语句2都没有得到执行。再 else if
+
+
+
+
+
+/*
+ if..else if..else..
+ * 
+ * 		 * 	  if(condition1){
+		 * 	    满足条件1时执行
+		 * }
+		 *    else if(condition2){
+		 * 	    满足条件2时执行
+		 * } 
+		 *    else{
+		 * 	     以上所有条件都不成立执行
+		 * }
+		 **/
+		
+//		var num = parseInt(prompt("请输入你的期末考试成绩"));
+//		if(num > 100){
+//			alert("超神")
+//		}
+//		else if(num <=100 && num >=90){
+//			alert("优秀")
+//		}
+//		else if(num <90 && num >=80){
+//			alert("良好")
+//		}
+//		else if(num <80 && num >=70){
+//			alert("中等")
+//		}
+//		else if(num <70 && num >=60){
+//			alert("及格")
+//		}
+//		else if(num <60 && num >=0){
+//			alert("")
+//		}
+//		else if(num <0){
+//			alert("退学")
+//		}
+//		else{
+//			alert("您输入的有问题")
+//		}
+/*
+ 小练习
+ * 
+ * 	输入你的期末考试成绩
+ * 	根据成绩判断你明年补考交多少钱
+ * 		>100 			超神
+ * 		90分 ~ 100分		优秀
+ * 		80分 ~ 89分		良好
+ * 		70分 ~ 79分		中等
+ * 		60分 ~ 69分		及格
+ * 		0分  ~ 60分		重修
+ * 		0分<				退学
+ * */
+//	var num = 70;
+//	if(100 > num > 60){		//错误写法
+//		console.log("true");
+//	}
+
+//	var num = parseInt(prompt("请输入你的成绩"));
+//	if(num > 0){
+//		if(num>60){
+//			if(num>70){
+//				if(num>80){
+//					if(num>90){
+//						if(num>100){
+//							alert("超神");
+//						}
+//						alert("优秀");
+//					}
+//					alert("良好");
+//				}
+//				alert("中等");
+//			}
+//			alert("及格");
+//		}
+//		alert("重修");
+//	}
+//	if(num > 100){
+//		alert("退学");
+//	}
+
+	if(num < 0){
+		alert("退学");
+	}
+	else{
+		if(num < 60){
+			alert("重修");
+		}
+		else{
+			if(num < 70){
+				alert("及格");
+			}
+			else{
+				if(num < 80){
+					alert("中等");
+				}
+				else{
+					if(num < 90){
+						alert("良好");
+					}
+					else{
+						if(num < 100){
+							alert("优秀");
+						}
+						else{
+							alert("超神");
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+
+		
+	</script>
+</html>

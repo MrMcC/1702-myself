@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		请输入消费金额: &nbsp;<input type="" name="" id="cost" value="" /><br />
+		是否参加优惠换购活动;<br />
+		1:满50元,加2元换购百事可乐饮料一瓶<br />
+		2:满100元,加3元换购500ml可乐一瓶<br />
+		3:满100元,加10元换购5公斤面粉<br />
+		4:满200元,加10元换购1个苏泊尔炒菜锅<br />
+		5:满200元,加20元可换购欧莱雅爽肤水一瓶<br />
+		0:不换购<br />
+		请选择: &nbsp;<input type="" name="" id="choose" value="" /><br />
+		<button id="btn">结算</button>
+		<script type="text/javascript">
+			btn.onclick= function(){
+				var cost = +document.getElementById("cost").value;
+				var choose = +document.getElementById("choose").value;
+				if(cost >= 0 && cost < 50){
+					alert("您的金额为:"+ cost+ "\n当前无法换购此商品")
+				}else{
+					if(cost >= 50 && cost < 100){
+						if(choose == 0){
+							alert("您的金额为:"+ cost+ "\n当前没有换购商品")
+						}else if(choose == 1){
+							alert("本次消费总金额:"+ (cost+2) + "\n成功换购百事可乐饮料一瓶")
+						}else{
+							alert("本次消费总金额:"+ cost+ "\n当前无法换购此商品")
+						}
+					}else if(cost >= 100 && cost < 200){
+						if(choose == 0){
+							alert("您的金额为:"+ cost+ "\n当前没有换购商品")
+						}else if(choose == 1){
+							alert("本次消费总金额:"+ (cost+2) + "\n成功换购百事可乐饮料一瓶")
+						}else if(choose == 2){
+							alert("本次消费总金额:"+ (cost+3) + "\n成功换购500ml可乐一瓶")
+						}else if(choose == 3){
+							alert("本次消费总金额:"+ (cost+10) + "\n成功换购5公斤面粉")
+						}else{
+							alert("本次消费总金额:"+ cost+ "\n当前无法换购此商品")
+						}
+					}else if(cost >= 200){
+						if(choose == 0){
+							alert("您的金额为:"+ cost+ "\n当前没有换购商品")
+						}else if(choose == 1){
+							alert("本次消费总金额:"+ (cost+2) + "\n成功换购百事可乐饮料一瓶")
+						}else if(choose == 2){
+							alert("本次消费总金额:"+ (cost+3) + "\n成功换购500ml可乐一瓶")
+						}else if(choose == 3){
+							alert("本次消费总金额:"+ (cost+10) + "\n成功换购5公斤面粉")
+						}else if(choose == 4){
+							alert("本次消费总金额:"+ (cost+10) + "\n成功换购一个苏泊尔炒菜锅")
+						}else if(choose == 5){
+							alert("本次消费总金额:"+ (cost+20) + "\n成功换购欧莱雅爽肤水一瓶")
+						}
+					}
+				}
+			}
+
+		</script>
+	</body>
+</html>

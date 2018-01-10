@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function createPerson(name, age, sex){
+        /*var p = new Object();
+         p.name = name;
+         p.age = age;
+         p.sex = sex;*/
+        /*var p = {
+            name: name,
+            age: age,
+            sex: sex
+        }*/
+        return {
+            name : name,
+            age : age,
+            sex : sex,
+            eat : function (){
+                console.log("abc")
+            }
+        };
+    }
+    var p1 = createPerson("lis", 20, "男");
+    var p2 = createPerson("lis1", 210, "男");
+    var p3 = createPerson("lis2", 220, "男");
+    console.log(p1);
+    console.log(p2);
+    console.log(p3);
+</script>
+</body>
+</html>
+<!--
+ 工厂方法创建：
+ 
+-->

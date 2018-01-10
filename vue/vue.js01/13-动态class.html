@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.js"></script>
+    <style>
+        div{
+            width:100px;
+            height: 100px;
+            background-color: #00c0a5;
+        }
+        .active{
+            background-color: #dcb357;
+        }
+        .f30{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <!--动态绑定class-->
+        <div :class="{active:isActive,f30:isFont}">我是个div</div>
+    </div>
+</body>
+<script>
+    var vm = new Vue({
+        el:"#app",
+        data: {
+            isActive:true,
+            isFont:true
+        },
+        methods: {
+
+        },
+        computed: {
+
+        },
+
+        watch: {
+
+        }
+
+    })
+
+</script>
+</html>

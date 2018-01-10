@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.d1{
+				width: 200px;height: 200px;border: 1px solid #000;
+			}
+			.d2{
+				background-color: pink;
+			}
+			.f32{
+				font-size: 32px;
+			}
+			.hide{
+				background-color: blanchedalmond;
+			}
+		</style>
+		<script src="libs/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("button:eq(0)").click(function(){
+					$("div").addClass("d1")
+				})
+				$("button:eq(1)").click(function(){
+					$("div").addClass("d2")
+				})
+				$("button:eq(2)").click(function(){
+					$("div").addClass("f32")
+				})
+				$("button:eq(3)").click(function(){
+					$("div").removeClass("d2")
+				})
+				$("button:eq(4)").click(function(){
+					$("div").toggleClass("hide")
+				})
+				$("button:eq(5)").click(function(){
+					console.log($("div").hasClass("d1"))
+				})
+			})
+		</script>
+	</head>
+	<body>
+		
+		<button>按钮1</button>
+		<button>按钮2</button>
+		<button>按钮3</button>
+		<button>删除</button>
+		<button>切换</button>
+		<button>是否存在</button>
+		<div>这是一个div</div>
+	</body>
+</html>

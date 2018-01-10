@@ -1,0 +1,41 @@
+这个插件 叫做 emmet
+
+安装过程：
+
+	1.先去安装 package control
+		插件安装工具
+
+	2.打开 package control 的官网
+	https://packagecontrol.io/installation#st3
+
+	3.查找自己 安装的 sublime 的版本
+		help -> about sublime text
+		查看自己当前版本号
+
+	4.回到官网，找到对应的安装代码
+
+	5.打开控制台，输入安装代码
+
+		1) ctrl + `
+		2) view -> show console
+
+	6.等待响应完成，关闭当前应用，再从新启动
+
+	7.按 ctrl + shift + p 输入 install
+
+	8.输入 emmet 在最上面，点击安装即可
+	  安装 emmet 和 PYV8 环境全部自动安装
+
+	9.新建文件，文件格式换为 html
+		输入 ! + tab
+		能够出现代码提示
+
+
+
+	最开始位置 1337
+
+
+
+
+
+

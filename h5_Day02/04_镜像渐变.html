@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0px;padding: 0px;
+        }
+        div{
+            width: 400px;height: 150px;
+            background-image: linear-gradient(to left bottom,red,green 60%,blue);
+        }
+        /*
+            往上是0deg,顺时针是60deg
+        */
+        div:nth-child(2){
+            margin: 100px 100px;
+
+            background-image: repeating-linear-gradient(to right,black 0, black 5px, white 5px,white 10px);
+            background-position: 10px 20px;
+        }
+        p{margin-left: 100px}
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <p>23132131312312313123123213123</p>
+    <script>
+        var div = document.querySelector("div:nth-child(2)");
+        var count = 0;
+        setInterval(function () {
+            div.style.backgroundPosition = count+"px"+" "+ "0px";
+            count+=5;
+        },10)
+
+    </script>
+</body>
+</html>
+<!--因为渐变其实是通过代码的方式生成一个image
+所以渐变要赋值给background或background-image-->

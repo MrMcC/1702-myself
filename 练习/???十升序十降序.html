@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function paixu(ele){
+				var ele1 = ele.slice(0,10);
+//				console.log(ele1);
+				ele1.sort(function(a,b){
+					return a-b;
+				})
+//				console.log(ele1);
+				var ele2 = ele.slice(10);
+				ele2.sort(function(a,b){
+					return b-a;
+				})
+//				console.log(ele2);
+				var ele3 = ele1.concat(ele2);
+				return ele3;
+			}
+			console.log(paixu([1,3,2,4,5,6,9,8,0,7,1,3,2,4,5,6,9,8,0,7]))
+			
+		</script>
+	</body>
+</html>
+<!--
+	十升序十降序
+-->

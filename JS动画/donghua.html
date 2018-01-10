@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 100px;height: 100px;background-color: paleturquoise;
+			}
+		</style>
+	</head>
+	<body>
+		<script src="suanzi.js" type="text/javascript" charset="utf-8"></script>
+		<script src="my_animator.js" type="text/javascript" charset="utf-8"></script>
+		<div></div>
+		<button>按钮</button>
+		<script type="text/javascript">
+			var div = document.querySelector("div")
+//			var animator = new Animator(3000,Easing.bounce,function(ease){
+//				div.style.transform = `translateX(${1000 * ease}px)`
+//			})
+			var animator = new Animator({
+				duration : 2000,
+				easing :  Easing.bounce,
+				doSomething : function(ease){
+					div.style.transform = `translateX(${1000 * ease}px)`
+				}
+			})
+			animator.start(true);
+			var btn = document.querySelector("button");
+			btn.onclick = function(){
+				animator.stop()
+			}
+		</script>
+	</body>
+</html>

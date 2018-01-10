@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="p"></p>
+<script>
+    var p = document.getElementById("p");
+    setInterval(function (){
+        var d = new Date();
+        p.innerHTML = d.getFullYear() + "年"
+            + (d.getMonth() + 1) + "月"
+            + d.getDate() + "日"
+            + d.getHours() + " : "
+            + d.getMinutes() + " : "
+            + (d.getSeconds() < 10 ? "0" + d.getSeconds() : d.getSeconds())
+            + "  星期" + d.getDay();
+    }, 100);
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    
+    </style>
+</head>
+<body>
+<div><p></p></div>
+<ul id="list1" class="love">
+    <li class="love">打游戏</li>
+    <li class="love">看电影</li>
+    <li>c</li>
+</ul>
+<form action="#" method="get">
+    <input type="text" name="user">
+    <input type="text" name="user">
+    <input type="submit" value="提交">
+</form>
+<script>
+//  var list = document.getElementById("list1")
+//  console.log(list);
+//  //通过标签名查找,会返回所有的这个标签组成的集合
+//  var lis = document.getElementsByTagName("li");
+//  console.log(lis);
+//  //通过className去查找元素。
+//  var loves =document.getElementsByClassName("love");
+//  console.log(loves);
+    
+    //通过name属性的值去查找。 name一般只存在于表单元素中
+    var inputs = document.getElementsByName("user");
+    console.log(inputs)
+    
+</script>
+</body>
+</html>

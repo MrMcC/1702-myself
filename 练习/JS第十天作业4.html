@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" name="" id="" value="" /><i></i>
+		<script type="text/javascript">
+			var inputs = document.querySelector("input")
+			var i = document.querySelector("i")
+			inputs.onblur = function(){
+				if(inputs.value.length < 4 || inputs.value.length > 16){
+					i.innerHTML= "你输入的有误"
+					inputs.focus();  //
+				}else{
+					i.innerHTML= "✔️"
+				}
+			}
+			
+		</script>
+	</body>
+</html>
+<!--表单验证,是否合法,离开表单后如果数字小于4或大于16, 在表单后显示不合法-->

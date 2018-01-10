@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript" charset="utf-8">
+    /*
+     switch..case..
+     * 
+     * 	和 if.. 非常相似的一种选择性语句
+     * 	JS 中，switch 和 C 或者 java 非常类似
+     * 	因为 JS 是弱类型语言，要比其他语言更灵活
+     * 
+     * 		switch(expression){
+     * 			case value1:
+     * 				//语句1
+     * 			break;
+     * 			case value2:
+     * 				//语句2
+     * 			break;
+     * 			case value3:
+     * 				//语句3
+     * 			break;
+     * 			default:
+     * 				所有条件都不满足时执行
+     * 		}
+     * 
+     * 	1.Switch 语句的含义
+     * 		如果某一个 case 的 value 和 expression 相等
+     * 		则会去执行对应的 case 语句
+     * 		直到遇见 break 语句，就结束当前的 switch
+     * 	2.如果没有任何一个 case 相等
+     * 		则去执行 default 语句
+     *	3.如果没有书写 default 语句，并且没有任何一个
+     * 		case 相等，则自动结束 switch
+     * 		(不执行任何内容)
+     * 	4.对于 JS 来说，expression 可以使任何类型
+     * 		可以是 基本类型/引用类型
+     * 	  对于 case 后面的 value，可以是 变量
+     * 	  常量、对象、表达式 (必须是数值比较对错不可以) //case不能做判断
+     * 	  （对于 C 和 java 等其他语言，只支持 常量
+     * 	  其次，对于 expression 也同样有限制）
+     * 	5.如果满足了某一个 case ，则会直接从这个 case 
+     * 		语句开始执行，直到碰到 break 
+     * 		或者 switch 结尾才会结束
+     * */
+    
+//  var day = parseInt(prompt("请输入今天是星期几"));
+//  switch(day){
+//  		case 1 + 1:
+//  			alert("饺子");
+//  		break;
+//  		case 2 + 2:
+//  			alert("狗不理包子");
+//  		break;
+//  		case 3 + 3:
+//  			alert("煲仔饭");
+//  		break;
+//  		case 4 + 4:
+//  			alert("云吞面");
+//  		break;
+//  		case 5 + 5:
+//  			alert("楼下份饭");
+//  		break;
+//  		case 6:
+//  			alert("红油抄手");
+//  		break;
+//  		case 7:
+//  			alert("酸萝卜");
+//  		break;
+//  		default:
+//  			alert("吃土");
+//  }
+    
+    
+    
+//  var day = prompt("请输入今天是星期几");
+//  switch(day){
+//  		case "星期一":  //case后面的值是字符串就不需要parseInt
+//  			alert("饺子");
+//  		break;
+//  		case "星期二":
+//  			alert("狗不理包子");
+//  		break;
+//  		case "星期三":
+//  			alert("煲仔饭");
+//  		break;
+//  		case "星期四":
+//  			alert("云吞面");
+//  		break;
+//  		case "星期五":
+//  			alert("楼下份饭");
+//  		break;
+//  		case "星期六":
+//  			alert("红油抄手");
+//  		break;
+//  		case "星期日":
+//  			alert("酸萝卜");
+//  		break;
+//  		default:
+//  			alert("吃土");
+//  }
+
+
+/*
+ 		年龄
+ * 
+ * 			10 ~ 29   	A
+ * 			30 ~ 49 	  	B
+ * 			50 ~ 69	  	C
+ * 			70 ~ 100	  	D
+ * 
+ * 		个位变化很大，但是 十位 变化非常小
+ * 		A    1 , 2
+ * 		B	 3 , 4
+ * 		C	 5 , 6
+ * 		D	 7 , 8 , 9
+ * */
+	var age = parseInt(prompt("请输入年龄"));
+	switch(parseInt(age / 10)){   //必须取整否则会得到1.2之类的数
+		case 1:
+		case 2:
+			alert("A");
+			break;
+		case 3:
+		case 4:
+			alert("B");
+			break;
+		case 5:
+		case 6:
+			alert("C");
+			break;
+		case 7:
+		case 8:
+		case 9:
+			alert("D");
+			break;
+		default:
+			alert("输入错误");
+	}
+	
+
+</script>
+</html>

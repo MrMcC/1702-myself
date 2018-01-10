@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		/*解决代码换行被解析问题*/
+		body{
+			/*设置文字字号*/
+			font-size: 0;
+			/*可继承*/
+		}
+		span{
+			background: red;
+			font-size: 16px;
+			/*float: left;*/
+			/*解决代码换行被解析问题
+			  			1.不进行换行
+			  			2.给父级设置 字号 为 0
+			  			  在对应的子集中重新设置字号
+			  			3.推荐大家是有浮动  
+			  	*/
+		}
+		
+	</style>
+</head>
+<body>
+	<span>啦啦啦</span>
+	<span>啦啦啦</span>
+	<span>啦啦啦</span>
+	<span>啦啦啦</span>
+	<span>啦啦啦</span>
+	<span>啦啦啦</span>
+	<span>啦啦啦</span>
+	<span>啦啦啦</span>
+	<span>啦啦啦</span>
+	<span>啦啦啦</span>
+</body>
+</html>

@@ -1,0 +1,292 @@
+
+@media screen and (max-width: 1175px) /*and (min-width: 991px)*/{
+    #wrap{
+        width: 896px;
+    }
+    #content{
+        width: 712px;
+    }
+    #featured{
+        height: 510px;
+    }
+    #featured #slides{
+        width: 712px;
+        height: 446px;
+    }
+    #slides img{
+        position: absolute;left: -92px;
+    }
+    #featured #nav{
+        width: 712px;
+        height: 35px;
+        position: absolute;
+        top: 445px;
+        overflow: hidden;
+    }
+    #nav li{
+        width: 178px;
+        height: 100%;
+    }
+    #nav a{
+        float: left;
+        display: block;
+        width: 177px;height: 25px;
+        padding: 8px 0 2px;
+        line-height: 1.1em;
+        border-right: 1px solid #D3EDE9;
+        text-shadow: 0 1px 0 #FFF;
+    }
+    #nav h3{
+        font-size: 0.875em;
+        text-align: center;
+    }
+    #nav p{
+        display: none;
+    }
+
+    #newsletter {
+        clear: both;
+        width: 100%;
+        min-height: 48px;
+        margin-bottom: 29px;
+        background: white url("../img/newsletter.png") no-repeat 18px 7px ;
+        background-size: 32px auto ;
+    }
+    #newsletter p{
+        width: 53%;
+        padding-bottom: 10px;
+    }
+    #newsletter #email{
+        width: 150px;
+    }
+    #recent{
+        width: 100%;
+        height: 389px;
+        clear: both;
+    }
+    #recent article{
+        width: 160px;
+        /*height: 344px;*/
+        float: left;
+        margin: 0 24px 25px 0;
+        /*background-color: yellowgreen;*/
+    }
+    #recent img{
+        width: 139px;
+    }
+}
+@media screen and (max-width: 991px){
+    body{
+        width: 712px;
+    }
+    #wrap{
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    header{
+        width: 712px;
+    }
+    nav{
+        width: 460px;
+        position: absolute;
+        right: 0;
+        left:auto;
+        top: 20px;
+    }
+
+    header ul{
+        width: 100%;
+    }
+    header li{
+        display: inline-block;
+    }
+    header li:hover a{
+        background-position: 35% 8px;
+        color: indianred;
+    }
+    header a{
+        width: 100%;
+        padding: 30px 15px 0 15px;
+        background-position: 35% 0;
+    }
+    #content {
+        width: 712px;
+    }
+    aside{
+        display: none;
+    }
+}
+@media screen and (max-width: 766px){
+    body{
+        width: 480px;
+    }
+    #wrap{
+        width: 100%;
+    }
+    header{
+        width: 480px;
+    }
+    nav{
+        width: 300px;
+        right: 20px;
+    }
+    header a{
+        width: 100%;
+        padding: 25px 5px 0 5px;
+        background: none no-repeat 0 0 !important;
+        font-size: 12px;
+    }
+    #content{
+        width: 100%;
+    }
+    #featured{
+        height: 310px;
+    }
+    #featured #slides{
+        width: 100%;
+        height: 446px;
+        overflow: hidden;
+        position: relative;
+        font-size: 0.75em;
+    }
+    #featured #slides section{
+        position: absolute;
+        left: 0;top: 0;
+        /*display: none;*/
+        width: 896px;
+    }
+    #slides img{
+        position: absolute;
+        max-width: 500px;
+        left: 0;
+        width: 100%;
+
+    }
+    #featured #nav{
+        display: none;
+    }
+    #newsletter{
+        width: 100%;
+        height: 105px;
+        background-position: 15px 14px;
+        clear: both;
+        min-height: 48px;
+    }
+    #newsletter p{
+        width: 100%;
+        padding: 14px 15px 0 63px;
+        font-style: italic;
+        font-size: .6875em;
+    }
+    #newsletter form{
+        padding-left: 15px;
+        margin-top: 15px;
+    }
+    #newsletter #email{
+        width: 300px;
+    }
+    #recent{
+        width: 456px;
+        height: 712px;
+        margin: 0 auto 20px;
+        clear: both;
+    }
+    #recent article{
+        width: 216px;
+        margin-right: 24px;
+    }
+    #recent article:nth-child(2),#recent article:nth-child(4){
+        margin-right: 0px;
+    }
+    #recent img{
+        width: 195px;
+    }
+
+}
+@media screen and (max-width: 480px){
+    body{
+        width: 320px;
+    }
+    #wrap{
+        width: 100%;
+    }
+    header{
+        width: 320px;
+    }
+    header h1{
+        position: absolute;
+        left: 100px;top: 0;
+    }
+    nav{
+        height: 50px;
+        /*position: absolute;*/
+        left: 0px;
+        top: -60px;
+        border-bottom: 1px solid #E5E5E5;
+    }
+    header a{
+        width: 100%;
+        padding: 16px 6px 6px;
+    }
+    #content{
+        width: 320px;
+        position: relative;
+        top: 150px;
+    }
+    #featured{
+        width: 100%;
+        height: 310px;
+    }
+    #featured #slides{
+        height: 446px;
+    }
+    #slides img{
+        position: absolute;
+        left: -80px;
+        max-width: 500px;
+        width: 100%;
+    }
+    #newsletter{
+        width: 320px;
+        height: 120px;
+        background: url("../img/newsletter.png") no-repeat 18px 25px ;
+        background-size: 32px auto ;
+    }
+    #newsletter p{
+        width: auto;
+        float: left;
+        padding: 14px 15px 0px 63px;
+        font-style: italic;
+        font-size: .6875em;
+    }
+    #newsletter form{
+        margin-top: 15px;
+        padding-left: 15px;
+    }
+    #newsletter #email{
+        width: 160px;
+    }
+    #recent{
+        width: 280px;
+        height: 1600px;
+        padding: 0 auto 20px;
+    }
+    #recent article{
+        width: 280px;
+        margin-right: 0;
+    }
+    #recent img{
+        width: 258px;
+    }
+    footer{
+        clear: both;
+        width: 300px;
+        height: 91px;
+        position: absolute;
+        top:2100px;
+    }
+    footer li{
+        margin-left: 2px;
+    }
+}

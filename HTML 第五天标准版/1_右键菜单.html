@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.wrap{
+			width: 144px;
+			height: 274px;
+			border: 1px solid rgb(166,165,160);
+			/*padding-left: 3px;*/
+		}
+		.content{
+			width: 138px;
+			height: 274px;
+			/*background: yellow;*/
+
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.top{
+			width: 122px;
+			/*height: 59px;*/
+			/*background: blue;*/
+
+			/*设置文字大小*/
+			font-size: 11px;
+			border-bottom: 1px solid rgb(166,165,160);
+		}
+		.tool{
+			width: 125px;
+			height: 18px;
+			padding-left: 16px;
+		}
+	</style>
+</head>
+<body>
+	<!-- 最外层 -->
+	<div class="wrap">
+		<!-- 内容 -->
+		<div class="content">
+			<div class="top">
+				<div class="tool">工具栏(T)</div>
+<!--
+	关于“引号”的嵌套
+		如果外层使用的是双引号
+			内层需要使用 单引号
+		如果外层使用的是单引号
+			内层需要使用 双引号
+
+		内外层引号需要区分开使用
+ -->
+				<div class="tool" style='background: url("img/logo.png") no-repeat;'>
+				工具栏(T)</div>
+				<div class="tool">工具栏(T)</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

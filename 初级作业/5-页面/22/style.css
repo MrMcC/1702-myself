@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+*{ padding:0; margin:0;} 
+#box{ width:927px; margin:0 auto; font-size:12px;}
+#top{ height:88px; width:925px; background:#f9f9f9; border:1px solid #f9f9f9; position:relative;}
+#top p{ margin:27px 18px 11px 740px; white-space:pre-wrap; color:#9a1b22;}
+#top p span{ font-weight:bold;}
+#top p img{ vertical-align:top;}
+#top .nav{ width:927px; height:38px; background:#9a1b22;}
+#top .nav ul{ list-style:none; width:696px; border-bottom:1px solid #fff; margin-bottom:5px; height:30px; padding-left:231px;}
+#top .nav ul li{ float:left; height:24px; width:70px; border-radius:5px 5px 0 0; text-align:center; line-height:24px; margin:5px 37px 0 0;}
+#top .nav ul li:hover{ background:#dcb357;}
+#top .nav ul li a{ text-decoration:none; color:white; font-weight:bold;}
+#top .logo{ position:absolute;  left:10px; top:0;}
+
+/*横幅部分*/
+#banner{ width: 907px;height:306px; border:1px solid #dba038; background:url(img/banner.png) no-repeat center; margin:10px auto;}
+
+
+/*main中的notice部分*/
+#main{ width:907px; height:212px; margin:0 auto;}
+#main .notice{ width:232px; height:210px; border-radius:5px; border:1px solid #dba038; background:#fbf6e2; float:left; }
+#main .notice p{ height:27px; text-indent:8px;
+ color:#8b232a; font:bold 14px/27px "宋体"; border-radius:5px;}
+#main .notice ul{ list-style-position:inside; background:#fff; height:168px; padding:10px 0 0 5px;}
+#main .notice ul li{  height:25px; line-height:25px; border-bottom:1px dashed gray; text-indent:5px;}
+
+/*service部分*/
+#main .service{ width:657px; height:211px; border-radius:5px; border:1px solid #dba038; background:#fbf6e2; float:right;}
+#main .service .tit{height:27px; background:#f9edc7 url(img/bg1.png) no-repeat -60px 0; border-bottom:1px solid #dba038;}
+#main .service .tit p{height:27px; text-indent:8px;
+ color:#8b232a; font:bold 14px/27px "宋体"; border-radius:5px; float:left;}
+#main .service .tit ul{ list-style:none;}
+#main .service .tit ul li{height:22px; width:66px; background:white; border:1px solid #d8c286;border-radius:5px 5px 0 0; float:right; text-align:center; line-height:22px; margin:4px 10px 0 0 ;}
+#main .service .tit ul li a{ text-decoration:none; color:#951516;}
+#main .service .tit ul li:hover{ background:#fb8b0e;}
+#main .service .introduce{ height:178px; width:655px; background:white; margin:0 auto; position:relative;}
+#main .service .introduce img{ float:left; margin:10px 5px 0 5px; border:1px solid #dba038;}
+#main .service .introduce dl{ float:left; width:439px; line-height:25px; margin: 15px 5px 0 5px;}
+#main .service .introduce dt{ font:bold 16px "宋体"; color:#90230c; margin-bottom:10px;}
+#main .service .introduce dd{ border:1px dashed gray; padding:5px;border-radius:5px;}
+#main .service .introduce a{ position:absolute; right:10px; bottom:6px; color:orange; text-decoration:none;}
+
+/*content*/
+#content{ width:907px; height:168px;background:#fbf6e2; border:1px solid #dba038;  margin:10px;border-radius:5px;}
+#content div{ width:835px; height:162px; background:white url(img/images/bg.png) no-repeat 10px 10px; margin:3px; padding-left:66px;}
+#content div dl{ float:left; width:265px; height:66px; margin:10px 10px 0 0; border-bottom:1px dashed gray;}
+#content div dl dt{ float:left; margin-right:5px;}
+#content div dl dd{ line-height:20px; color:gray;}
+#content div dl dd.test1{  font:bold 14px "宋体"; color:#90230c;}

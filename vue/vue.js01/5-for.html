@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.js"></script>
+    <style>
+        ul{
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <button v-on:click="add()">点我</button>
+        <ul>
+            <!--循环-->
+            <li v-for="(item,index) in todos">{{index}}:{{item.text}}</li>
+        </ul>
+
+    </div>
+</body>
+<script>
+    var vm = new Vue({
+        el:"#app",
+        data: {
+            todos:[
+                {text:"学习JavaScript"},
+                {text:"学习Vue"},
+                {text:"学习给小孩换尿片"}
+            ]
+        },
+        methods: {
+            add: function () {
+                this.todos.push({text:"学习个粑粑"})
+            }
+        }
+    })
+//    document.onclick = function () {
+//        vm.todos.push({text:"学习个粑粑"})
+//    }
+</script>
+</html>

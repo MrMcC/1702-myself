@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var sui = new Array(400);
+			for (var i = 0; i< sui.length; i++) {
+				sui[i] =  randomInt(10,50)
+			}
+			function randomInt(from, to) {
+        			return parseInt(Math.random() * (to - from + 1) + from);
+    			}
+//			function randowInt(from,to){
+//				return parseInt(Math.random()*(to - from +1)+from)
+//			}
+		</script>
+	</body>
+</html>
+<!--
+	随机生成400个 [10,50]的整数，然后统计每个数字出现的次数。把结果写入到页面中。
+-->

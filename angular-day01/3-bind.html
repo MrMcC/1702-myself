@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body ng-app="" ng-init="">
+    <!--<div>{{3+2}}</div>-->
+    <!--当angular没加载的时候,也不会渲染这个内容-->
+    <div ng-bind="3+2"></div>
+<!--cdn加速.一般引用别的网站的js文件用cdn,如果网站崩溃了,那就会出现白屏,所以把加载js放在body后面-->
+</body>
+<script src="./js/angular.min.js"></script>
+</html>
+
+<!--<body ng-app="" ng-init="arr=[1,3,5]">-->
+<!--<div ng-bind="arr[0]"></div>-->
+<!--</body>-->
+<!--<script src="./js/angular.min.js"></script>-->

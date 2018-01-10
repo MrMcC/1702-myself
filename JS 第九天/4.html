@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	<ul id="webs">
+		<li>123</li>
+		<li>456</li>
+		<li>789</li>
+	</ul>
+	<script type="text/javascript">
+		var webs = document.getElementById("webs");
+//		webs.removeChild(webs.firstChild);
+		//移除他爹webs的第一个元素儿子(连带孙子)
+		webs.removeChild(webs.firstElementChild);
+		//
+		webs.removeChild(document.querySelector("li:nth-child(2)"))
+		
+	</script>
+	</body>
+	
+</html>

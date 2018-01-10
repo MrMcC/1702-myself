@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			#father {
+				width: 800px;
+				height: 500px;
+				margin: 0 auto;
+				/*				overflow: hidden;*/
+				position: relative;
+			}
+			
+			#imgDiv {
+				width: 800px;
+				height: 500px;
+			}
+			
+			img {
+				width: 800px;
+				height: 500px;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			
+			#imgList {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				background: gray;
+				opacity: 0.5;
+				width: 150px;
+				height: 20px;
+				border-radius: 15px;
+				position: absolute;
+				left: 325px;
+				bottom: 0;
+				margin-bottom: 10px;
+			}
+			
+			#imgList li {
+				float: left;
+				width: 20px;
+				height: 20px;
+				margin: 0 5px;
+				text-align: center;
+				line-height: 20px;
+				border-radius: 50%;
+				background: white;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="father">
+			<div id="imgDiv">
+				<img src="./img/1.jpg" alt="" />
+				<img src="./img/2.jpg" alt="" />
+				<img src="./img/3.jpg" alt="" />
+				<img src="./img/4.jpg" alt="" />
+				<img src="./img/5.jpg" alt="" />
+			</div>
+			<ul id="imgList">
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+			</ul>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var imgList = document.getElementsByTagName("li");
+		var imgDiv = document.getElementsByTagName("img");//遍历有角标的
+		
+		var current = 0;
+		var i;
+		var play = setInterval(function() {
+			for(i = 0; i < imgDiv.length; i++) {
+				imgDiv[i].style.display = "none";
+				imgList[i].style.backgroundColor = "white";
+			}
+			
+			imgDiv[current].style.display = "block";
+			imgList[current].style.backgroundColor = "orangered";
+			current++;
+			if(current == imgDiv.length){current = 0};
+			if(current == imgList.length){current = 0};
+		}, 1000)
+//		imgList[].onmouseover = function(){
+//			for(var i = 0;i < imgList.length;i++){
+//				imgList[i] = imgDiv[i];
+//			}
+//
+//		}
+//		for (let i = 1;i < imgList.length;i++) {
+//			imgList[i].onmouseover = function(){
+//				current = i;
+//				play();
+//			}
+//		}
+	</script>
+
+</html>

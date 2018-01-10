@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="my_ajax.js"></script>
+</head>
+<body>
+<p id="p"></p>
+<script>
+    /*ajax.get("data.txt", function (result){
+     p.innerHTML = result;
+     }, function (result){
+     });*/
+    /*ajax.get("data.txt", function (result){
+     console.log(result);
+     p.innerHTML = result;
+     });*/
+    ajax.get1({
+        onSuccess: function (result){
+            p.innerHTML = result;
+        },
+        onFail: function (result){
+
+        },
+        url: "data1.json"
+    })
+</script>
+</body>
+</html>

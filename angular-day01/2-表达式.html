@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./js/angular.min.js"></script>
+    <style>
+        .show{
+          display: block;
+        }
+        .hide{
+            display: none;
+        }
+        .font12{
+            font-size: 12px;
+            color: red;
+        }
+        .font14{
+            font-size: 14px;
+            color: green;
+        }
+        .font16{
+            font-size: 16px;
+            color: orange;
+        }
+        .b1{
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<!--在body范围内就交给angualr   ng-init可以初始化一些变量,然后在表达式中调用 初始化的变量就是js变量-->
+<!--<body ng-app="" ng-init="arr=['2','5']">-->
+<!--<div>{{arr[1]+arr[0]}}</div>-->
+
+<!--<body ng-app="" ng-init="person={name1:'hello',name2:'McC'}">-->
+<!--<div>{{person.name1+person.name2}}</div>-->
+
+<!--<body ng-app="" ng-init="showBol=false;fontClass='14'">-->
+<!--ng-class可以动态更改class []传一个条件,返回true或false,为true返回show,false返回hide-->
+<!--<div ng-class="{true:'show',false:'hide'}[showBol]">我是一个div</div>-->
+
+
+<!--修改init值 添加多个类-->
+<!--<body ng-app="" ng-init="fontClass='16'">-->
+<div class="b1" ng-class="{'12': 'font12','14': 'font14','16': 'font16'}[fontClass]">我是一个div</div>
+</body>
+</html>

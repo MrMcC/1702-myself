@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		table{
+			/*border: 10px solid #000;*/
+
+			/*合并单元格之间的间距
+				1.需要设置在 table 中
+				2.合并之后会造成
+				  单元格间距设置失效
+			*/
+			/*border-collapse: collapse;*/
+
+			/*border-spacing: 10px;*/
+
+			/*white-space: pre;*/
+			/*table-layout: fixed;*/
+		}
+		table td , table th{
+			border: 1px solid;
+			border-color: red ;
+
+			/*padding: 100px 50px 10px 30px;*/
+		}
+		/*table tr{*/
+			/*border: 100px solid #ccc;*/
+			/*background: red;*/
+		/*}*/
+	</style>
+</head>
+<body>
+	<!--
+		table:	 双标签
+			语义：定义表格
+	 -->
+	<!-- <table> -->
+		<!--
+			tr: 双标签
+				语义：定义表格中的行
+		 -->
+		<!-- <tr> -->
+		<!--
+			td: 双标签
+				语义：定义表格中的一个单元格
+		 -->
+			<!-- <td></td> -->
+		<!-- </tr> -->
+	<!-- </table> -->
+
+	<!-- table>tr*3>td{我是单元格}*5 -->
+	<!-- table>.tr_$*3>.td_${我是单元格}*5 -->
+	<!--
+		table
+			属性
+				border
+					设置表格的边框
+					(有默认样式)
+				cellspacing
+					设置单元格之间的间距
+				cellpadding
+					设置单元格和内容之间的间距
+	 -->
+	<!-- <table border="10px"> -->
+	<!-- <table cellspacing="0"> -->
+	<!-- <table cellpadding="100px"> -->
+	<table >
+		<!--
+			caption: 双标签
+				语义：定义表格的标题
+		 -->
+		<caption>
+			李先生的后宫翻牌表
+		</caption>
+		<tr>
+		<!--
+			th : 双标签
+				语义：表格的表头
+		 -->
+			<th>姓名</th>
+			<th>年龄</th>
+			<th>性别</th>
+			<th>爱好</th>
+			<th>性取向</th>
+		</tr>
+		<tr>
+		<!--
+			转义字符
+				空格 	&nbsp;
+				<		&lt;
+				>		&gt;
+		 -->
+			<td>李&nbsp;&nbsp;&nbsp;鹏</td>
+			<!-- <td>李&lt;鹏</td> -->
+			<td>18</td>
+			<td>男</td>
+			<td>电脑相关</td>
+			<td>女</td>
+		</tr>
+		<tr>
+			<td>李晓鹏</td>
+			<td>18</td>
+			<td>男</td>
+			<td>电脑相关</td>
+			<td>女</td>
+		</tr>
+	</table>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn1">打开窗口</button>
+		<button id="btn2">关闭窗口</button>
+		<button id="btn3">打开一个空窗口</button>
+		<script type="text/javascript">
+			var a;
+			btn1.onclick = function(){
+				a = window.open("http://www.baidu.com",a,'width = 200,height = 200')
+			}
+			btn2.onclick = function(){
+				a.close();
+			}
+			btn3.onclick = function(){
+				var b = open("","","width = 200,height = 200")
+				b.document.body.innerHTML = "<p>sb</p>"
+			}
+		</script>
+	</body>
+</html>

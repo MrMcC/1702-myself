@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>向对象中加元素</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//			var obj = new Object(); //{}
+//			opject.name = "lis"
+//			console.log({}=={}) //对象不相等
+//			console.log({}.toString()=={}) //?
+//			console.log(obj.name)
+			function cP(name,age,sex){
+//第一种
+//				var p = {};
+//				p.name = name;
+//				p.age = age;
+//				p.sex = sex;
+//第二种
+				var p ={
+					name:name,
+					age:age,
+					sex:sex
+				}
+				return p;
+//第三种
+//				return{
+//					name:name,
+//					age:age,
+//					sex:sex
+//				};
+			}
+			var p1 = cP("张三",20,"男");
+			console.log(p1);
+		</script>
+	</body>
+</html>
+<!--
+	工厂方法创建
+-->

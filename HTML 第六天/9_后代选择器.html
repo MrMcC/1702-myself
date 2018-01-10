@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.father{
+			width: 500px;
+			height: 500px;
+			background: red;
+		}
+		.son{
+			width: 200px;
+			height: 200px;
+			background: blue;
+		}
+		/*后代选择器
+		         选择器1+ 空格 ＋选择器2 ｛  ｝
+		         .father .son{css样式} */
+		.father:hover .son{
+			background: green;
+		}
+	</style>
+</head>
+<body>
+	<div class="father">
+		<div class="son"></div>
+	</div>
+</body>
+</html>

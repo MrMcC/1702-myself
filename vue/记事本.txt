@@ -1,0 +1,155 @@
+淘宝镜像在命令行中输入 npm install cnpm -g
+安装vue-cli  cnpm install vue-cli -g 安装到全局
+安装模板文件 vue init webpack vuecli  文件名vuecli
+cd vuecli
+cnpm install 或者cnpm i
+cnpm run dev  dev指开发环境 build指生产环境 —save表示把安装的组件在packgejson中显示
+
+
+
+vuex 状态管理模式(数据管理中心)  开发环境依赖不加-dev
+安装vuex cnpm install vuex —save 
+当我们的应用遇到多个组件共享状态时，单向数据流的简洁性很容易被破坏
+- Actions去执行异步的操作-比如ajax
+- - 然后通过commit方法触发mutations方法
+- Mutations
+- - 同步更改状态的方法
+  - 还可以跟一些devtools的方法进行交互
+- state
+- - 状态更改后影响视图
+- vue组件通过dispath去发actions
+- 数据是单向流动的
+
+
+webpack是一款模块加载器兼打包工具，它能把各种资源，例如JS（含JSX）、ES6、样式（含less/sass）、图片等都作为模块来使用和处理
+安装  cnpm install webpack -g
+
+//单个文件打包
+定义一个模块show.js
+exports.show = function () {
+	alert("show")
+	document.write("<div>这是div</div>")
+}
+
+在main.js模块中引入show
+var obj = require("./show");
+obj.show();
+
+打包使用方法 创建 webpack.config.js 文件
+module.exports = {
+    entry: "./main.js",   //入口文件 引入的模块
+    output:{              //出口文件
+        filename:"./js/bundle.js"
+    },
+    module:{}            //模块
+    plugins:[]           //插件
+    resolve:{}           //设置路径指向
+    watch:{}            //监听文件有改动后执行打包  
+}
+最后在终端输入 webpack
+
+//多文件打包 需要在当前文件夹安装webpack   `cnpm i webpack —save—dev`
+//用于提取多个入口文件的公共脚本部分(默认)
+var CommonsChunkPlugin = require("webpack/lib/optimize/CommonsChunkPlugin");
+var webpack = require('webpack');
+
+module.exports = {
+	entry:{
+		bundle1:"./module/page1",
+		bundle2:"./module/page2"
+	},
+	output:{
+		filename:"./js/[name].js"
+	},
+    plugins: [
+        new CommonsChunkPlugin("commons.js")
+    ]
+}
+文件1 page1.js 文件2 page2.js  文件3 show.js
+
+最后输入webpack进行打包
+
+
+单页面应用
+vue-router 安装cnpm install vue-router --save
+引入vue-router，在main.js中
+import Router from ‘vue-router’
+Vue.use(Router)
+
+
+vue-resourse
+它可以通过XMLHttpRequest或JSONP发起请求并处理响应
+安装npm install vue-resource --save
+
+在main.js页面引入
+import Resource from 'vue-resource'
+//使用vue-resourece
+Vue.use(Resource)
+
+然后就可以在项目中通过this.$http来调用对应的方法 比如调用get和post请求：
+created:function (){
+  this.$http.post("getList",{user:'tangcaiye'})
+    .then(function (data){
+    console.log(data)
+  })
+}
+
+axios.js  Http库开发环境依赖不加-dev
+在vue升级到2.0后，官方就不再更新vue-resourece
+安装 cnpm install axios --save
+在main.js中引入axios
+import axios from 'axios'
+// 使用axios 将axios添加到vue的原型中
+Vue.prototype.axios = axios
+这样我们也可以像调用vue-resourece一样在组件中调用axios的方法.
+
+
+json-server 服务器
+搭建一个REST API服务器，而且支持CURD操作,在前端将数据跑通后，再跟后端去协调.
+安装 cnpm install json-server —save-dev
+首先创建一个db.json，放在根目录下就可以了，它用于存放接口调用时的数据
+然后在dev-server.js中添加代码,将这块代码放在var server = app.listen(port)之前就行
+现在浏览器中访问http://localhost:8081应该就能进到jsonserver页面中
+但因为jsonserver服务器的端口号跟我们的服务器端口不一样，也就是跨域了，所以可以在vue-cli中设置代理
+在config/index.js中的设置proxyTable的值为
+'/api': {
+        target: 'http://m.beequick.cn',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/api': '/'
+        }
+      }
+然后我的页面就可以通过api跨域请求数据
+this.$http.get('/api/data/home?location=114.06542328276245%2C22.548528985427392')
+              .then(function (data) {
+                  console.log(data)
+              })
+
+
+mock.js 
+Mock.js生成随机数据, 让前端攻城师独立于后端进行开发,实现前后端分离
+由于son-server是死的数据,我要动态生成随机数据就用mock
+安装 cnpm i mockjs —save
+在根文件新建 writeFile.js文件 (通过node写入间接生成db.json)
+
+var Mock = require('mockjs')
+var fs = require('fs')
+var data = Mock.mock({
+    'cart|30-80': [{'id|+1': 1, 'name': '@cname'}]
+})
+fs.writeFile('./db.json',JSON.stringify(data,null,4), function (err) {
+    if(err){
+        return console.error(err)
+    }
+    console.log("数据写入成功")
+})
+在终端输入 node writefile.js  就会直接生成db.json文件 (有则更改)
+或者在package.json文件夹里添加 ‘db’
+"scripts": {
+    "dev": "node build/dev-server.js",
+    "start": "node build/dev-server.js",
+    "build": "node build/build.js",
+    "db": "node writeFile.js"
+  },
+
+在终端输入 cnpm run db 同样可以刷新数据

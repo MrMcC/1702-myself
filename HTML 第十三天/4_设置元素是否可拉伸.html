@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		div{
+			width: 200px;
+			height: 200px;
+			border: 50px solid #000;
+			background: pink;
+			
+			resize: both;
+			position: absolute;
+			top: 0;right: 0;bottom: 0;left: 0;
+			margin: auto;
+
+			overflow: hidden;
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+</body>
+</html>
+
+
+<!-- 设置元素是否可拉伸
+	resize
+		属性
+			vertical 	竖直拉伸
+			horizontal 	横向拉伸
+			both 		竖直和水平都可以进行拉伸
+			none 		不允许进行拉伸
+		注意
+			当你的内容需要拉伸的时候，需要配合 overFlow：hidden；
+			当这个内容两边的 margin 为 auto 的时候，它的拉伸会同时向两边一起拉伸
+			firefox 4.0 +  & chrome & safari 中才会生效
+ -->

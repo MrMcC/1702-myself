@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>键盘事件</title>
+    <style>
+        div {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+<div style="left: 0; top: 0;"></div>
+<script>
+    var div = document.querySelector("div");
+    document.body.onkeydown = function (event){
+        var keyCode = event.keyCode;
+        console.log(keyCode)
+        switch (keyCode){
+            case 65:
+            case 37:  //left
+                div.style.left = parseInt(div.style.left) - 10 + "px";
+                break;
+            case 87:
+            case 38: //top
+                div.style.top = parseInt(div.style.top) - 10 + "px";
+                break;
+            case 68:
+            case 39: //right
+                div.style.left = parseInt(div.style.left) + 10 + "px";
+                break;
+            case 83:
+            case 40: //down
+                div.style.top = parseInt(div.style.top) + 10 + "px";
+                break;
+            default:
+                break;
+        }
+    }
+</script>
+</body>
+</html>

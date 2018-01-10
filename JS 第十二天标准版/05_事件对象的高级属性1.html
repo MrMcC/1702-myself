@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        div {
+            margin-left: 100px;
+            margin-top: 300px;
+            width: 200px;
+            height: 20000px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+<script>
+    var div = document.querySelector("div");
+    div.onclick = function (event){
+        //是参照 target 元素的坐标原点
+        console.log(event.offsetX + "  " + event.offsetY)
+        //相对于电脑屏幕的左上角的坐标值。没有什么用处
+        console.log(event.screenX + "  " + event.screenY)
+        //相对于浏览器的可视区域的左上角
+        console.log(event.clientX + "  " + event.clientY)
+        //相对于当前页面的左上角
+        console.log(event.pageX + "  " + event.pageY)
+    }
+</script>
+</body>
+</html>
+<!--
+ele.offsetHeight
+ele.offsetWidth
+ele.offsetLeft
+ele.offsetTop
+
+-->

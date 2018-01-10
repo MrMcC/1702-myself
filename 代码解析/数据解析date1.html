@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<p></p>
+		<script type="text/javascript">
+			var p = document.querySelector("p")
+			var xhr = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP")
+			xhr.open("GET","./date1.json",true)
+			xhr.onreadystatechange = function(){
+				if(xhr.readyState == 4){
+					if(xhr.status == 200){
+						var msg = xhr.responseText;
+//						p.innerHTML = msg
+						var obj = JSON.parse(msg)
+						p.innerHTML = obj.name
+						var girls = obj.girls
+						for (var g of girls) {
+							console.log(g)
+						}
+					}
+				}
+			}
+			xhr.send(null)
+		</script>
+	</body>
+</html>

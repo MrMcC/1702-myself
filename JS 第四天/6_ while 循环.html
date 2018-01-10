@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		/*
+		 while 循环
+		 * 
+		 * while(condition){
+		 * 		//循环体
+		 * }
+		 * 1.先去判断 condition 是否成立
+		 *     成立, 则执行循环体 ,执行完毕后再次判断
+		 *     不成立, 则直接结束循环
+		 * 2. condition 不能省略,否则是死循环
+		 * 3. while 循环也可能一次都不会执行*/
+		var i = 0;
+		while(i < 10){
+			console.log(i);	
+			i++;
+		}
+		//1到100的和
+		var num = 0;
+		var i = 1;
+		while( i < 101){
+			num += i;
+			i++;
+		}
+		console.log(num);
+		
+		//1到100所有偶数的和
+		var num = 0;
+		var i = 0;
+		while( i < 101){
+			if(i % 2 == 0) {
+				num += i;	
+			}
+			i++;	
+		}
+		console.log(num);
+	</script>
+</html>

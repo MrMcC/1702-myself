@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		/*
+		 类型转化
+		 *
+		 * 1.隐式类型转化(自动类型转化)
+	     * 2.显示类型转化(强制类型转化)
+
+         * 隐式类型转化(自动类型转化)
+         * 在程序的解释和执行的过程当中,自动根据需要进行的类型转化
+         * */
+        console.log(10-"5");//最后变成数字5
+        console.log(123+"asd");//123asd 显示为字符串
+        console.log(123+"");//变成字符串 123
+        //字符串转为数字
+        console.log(+"123");//变回数字
+        console.log(+"asd");//NaN
+        /*
+         显式类型转化(强制类型转化)
+         * 
+         * Number()
+         * Boolean()
+         * String()
+         * 
+         * */
+          //当我	强制转化为number后判断我的类型,都是number
+        console.log(typeof Number ("123"));//number  
+        console.log(typeof Number ("asd"));//number
+        console.log(typeof Number ("123asd"));//number
+        console.log(typeof Number (null));//number
+        
+        console.log(Number ("123"));//数字123
+        console.log(Number ("asd"));//NaN
+        console.log(Number ("123asd"));//NaN
+        console.log(Number (null));//数字0
+        console.log(Number (undefined));//NaN
+        console.log(Number (true));//1
+        console.log(Number (false));//数字0
+        /*
+         非零即为真 (仅限于填写的是数字或非空的字符串) 强制转换成布朗值不需要考虑内部的转换*/
+        console.log(	Boolean(1));//true
+        console.log(	Boolean(0));//false
+        console.log(	Boolean(null));//false 相当于0
+        console.log(	Boolean(undefined));//false  特殊 未定义
+        console.log(	Boolean("123"));//true  字符串不是0,所以是真的
+        console.log(	Boolean(""));//false 特殊 空字符串
+        console.log(	Boolean(true));//true 相当于1
+        console.log(	Boolean(false));//false  相当于0
+        console.log(	Boolean(NaN));//false  特殊 不是数字
+        
+        	console.log(String("123"));//填什么显示什么
+		console.log(String("ads"));
+		console.log(String(null));
+		console.log(String(undefined));
+		console.log(String(true));
+		console.log(String(false));
+		console.log(String(NaN));
+		console.log(String(""));
+	</script>
+</html>

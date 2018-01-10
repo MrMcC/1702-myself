@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    
+    /*function foo(){
+        var a = 10;
+        function foo1(){
+            console.log(a);
+        }
+        foo1();
+        a++;
+    }
+    foo();*/
+    
+    function foo(){
+        var a = 10;
+        return function (){
+            
+            a++;
+            return a;
+        }
+    }
+    a = 20;
+    var fun = foo();
+    a = 30;
+    var r = fun();
+    a = 40;
+    console.log(r);
+</script>
+</body>
+</html>
+<!--
+闭包是一个函数，有权访问另外一个函数的变量的函数
+如果一个函数访问了他的外部函数中定义的变量，就是一个闭包。
+
+闭包的特点:闭包中，访问到的外部变量的值，总是这个变量的最新的值！
+
+-->

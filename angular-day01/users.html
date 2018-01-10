@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+<div class="container" id="app">
+	<h1>McC</h1>
+	<hr>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>编辑</th>
+				<th>姓</th>
+				<th>名</th>
+				<th>删除</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="item in model">
+				<td>
+					<button class="btn btn-default" ng-click="set($index)">
+						<span class="glyphicon glyphicon-pencil"></span>
+						编辑
+					</button>
+				</td>
+				<td>{{item.firstName}}</td>
+				<td>{{item.lastName}}</td>
+				<td>
+					<button class="btn btn-default btn-danger" ng-click="del($index) ">
+						<span class=" glyphicon glyphicon-remove-circle">删除</span>
+					</button>
+
+				</td>
+			</tr>
+
+		</tbody>
+	</table>
+	<hr>
+	<button class="btn btn-default btn-success" ng-click="create()" >
+		<span class="glyphicon glyphicon-user"></span>创建新用户
+	</button>
+	<hr>
+	<h2 ng-show="creatBol">创建新用户</h2>
+	<h2 ng-show="!creatBol">编辑用户</h2>
+	<form class="form-horizontal">
+		<div class="form-group">
+		    <label for="firstName" class="col-sm-1 control-label">姓：</label>
+		    <div class="col-sm-11">
+		      <input type="text" class="form-control" id="firstName" placeholder="请输入姓" ng-model="firstName">
+		    </div>
+		</div>
+		<div class="form-group">
+		    <label for="lastName" class="col-sm-1 control-label">名：</label>
+		    <div class="col-sm-11">
+		      <input type="text" class="form-control" id="lastName" placeholder="请输入名" ng-model="lastName">
+		    </div>
+		</div>
+		<div class="form-group" ng-show="creatBol">
+		    <label for="pass1" class="col-sm-1 control-label" >密码：</label>
+		    <div class="col-sm-11">
+		      <input type="text" class="form-control" id="pass1" placeholder="请输入密码" ng-model="pass1" >
+		    </div>
+		</div>
+		<div class="form-group" ng-show="creatBol">
+		    <label for="pass2" class="col-sm-1 control-label">重复密码：</label>
+		    <div class="col-sm-11">
+		      <input type="text" class="form-control" id="pass2" placeholder="请再输入密码" ng-model="pass2" >
+		    </div>
+		</div>	
+	</form>
+	<hr>
+	<button class="btn btn-default btn-success" ng-click="save()" ng-disabled="editSave()">
+		<span class="glyphicon glyphicon-save"></span>保存
+	</button>
+	<br><br><br><br><br><br><br><br><br><br>
+</div>
+</body>
+<script type="text/javascript">
+    var myApp = angular.module("myApp",[])
+    myApp.controller('myCtrl',['$scope',function ($scope) {
+        $scope.model = [
+            {firstName: '唐',lastName: '菜叶',pass1: '110'},
+			{firstName: 'M',lastName: 'cC',pass1: '120'}
+		];
+        $scope.creatBol = true;
+        var activeIndex = 0;
+
+        function init() {
+            $scope.firstName = "";
+            $scope.lastName = "";
+            $scope.pass1 = "";
+            $scope.pass2 = "";
+        }
+        init()
+        $scope.create = function () {
+			init();
+            $scope.creatBol = true;
+        }
+
+        $scope.save = function () {
+            if($scope.creatBol){
+                var obj = {
+                    firstName : $scope.firstName,
+                    lastName : $scope.lastName,
+                    pass1 : $scope.pass1
+                }
+                $scope.model.push(obj)
+                init();
+			}else{
+				$scope.model[activeIndex].firstName = $scope.firstName;
+				$scope.model[activeIndex].lastName = $scope.lastName;
+                init();
+			}
+
+        }
+        $scope.editSave = function () {
+            if($scope.creatBol){
+                return !($scope.firstName != "" && $scope.lastName != ""
+                && $scope.pass1 != "" && $scope.pass1 == $scope.pass2)
+			}else{
+                return !($scope.firstName != "" && $scope.lastName != "")
+			}
+        }
+        $scope.set = function (index) {
+            $scope.creatBol = false;
+            $scope.firstName = $scope.model[index].firstName;
+            $scope.lastName = $scope.model[index].lastName;
+            activeIndex = index;
+        }
+        $scope.del = function (index) {
+			$scope.model.splice(index,1)
+        }
+    }])
+
+</script>
+</html>

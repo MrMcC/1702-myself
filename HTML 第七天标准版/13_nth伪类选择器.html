@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		ul{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		ul li{
+			width: 50px;
+			height: 50px;
+			border: 2px solid rgb(200,201,202);
+
+			display: inline-block;
+			margin-right: 10px;
+			text-align: center;
+			line-height: 50px;
+
+			font-size: 25px;
+			color: rgb(0,0,178);
+		}
+		ul li:hover{
+			border-color: rgb(35,107,255);
+			background: rgb(239,246,255);
+			color: rgb(0,0,197);
+
+			border-radius: 50%;
+			box-shadow: 5px 5px 5px #ccc;
+		}
+/*
+	CSS 3 新增 :nth 伪类选择器
+
+		:nth-child(n)
+			选择属于其父元素的
+			第二个子元素的 li
+ */
+		li:nth-child(2){
+			background: red;
+		}
+/*
+		:nth-last-child(n)
+			选择属于其父元素的 倒数第二个子元素的 li
+ */
+		li:nth-last-child(2){
+			background: blue;
+		}
+
+/*
+	:nth-of-type(2)
+		选择属于其父元素的第二个 li 元素
+*/
+		li:nth-of-type(2){
+			background: purple;
+		}
+/*
+	:nth-last-of-type(2)
+		选择属于其父元素的倒数第二个 li 元素
+*/
+		li:nth-last-of-type(2){
+			background: yellow;
+		}
+	/*
+		:first-child{  }
+			选择器其父元素的第一个子元素
+	 */
+		li:first-child{
+			background: pink;
+		}
+	/*
+		:last-child{  }
+			选择器其父元素的最后一个子元素
+	 */
+		li:last-child{
+			background: black;
+		}
+	</style>
+</head>
+<body>
+	<!-- ul>li{$}*10 -->
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+		<li>7</li>
+		<li>8</li>
+		<li>9</li>
+	</ul>
+</body>
+</html>

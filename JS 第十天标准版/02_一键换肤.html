@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html, body{
+            height: 100%;
+        }
+        .bc1{
+            background-image: url("./6.jpg");
+        }
+        .bc2{
+            background-image: url("./8.jpg");
+        }
+        .bc3{
+            background-image: url("./1.jpg");
+        }
+        .bc4{
+            background-image: url("./2.jpeg");
+        }
+    </style>
+</head>
+<body class="bc1">
+<script>
+    var cs = ["bc1", "bc2", "bc3", "bc4"]
+    var index = 0;
+    document.body.onclick = function (){
+//      document.body.className = cs[++index % cs.length];  1/4余1
+        
+    }
+</script>
+</body>
+</html>

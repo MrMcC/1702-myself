@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				width: 300px;height: 100px;background-color: pink;
+				margin: 0 auto;color: darkgoldenrod;line-height: 100px;text-align: center;font-size: 30px;
+			}
+			#btn{
+				width: 70px;height: 20px;display: block;
+				margin: 0 auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<button id="btn">开始抽奖</button>
+		<script type="text/javascript">
+			var arr = ["张三","李四","王五","志玲","凤姐","赵四"]
+			btn.onclick = function(){
+//				box.innerHTML = ""
+				var box = document.getElementById("box")
+				var arr1 = [];
+				for (var i = 0; i < 3; i++) {
+					while(true) {
+						var temp = arr[randomInt(0,arr.length-1)]
+						if(arr1.indexOf(temp) == -1){
+							arr1.push(temp)
+							break;
+						}
+					}
+				}
+				console.log(arr1)  //三个不同元素
+				box.innerHTML = arr1.join(" ")
+
+				
+//				for(var j =0; j < arr1.length; j++){
+//					if(arr1.indexOf(j) == -1){
+//						box.innerHTML = arr1[j];
+//					}
+//				}
+				
+			}
+			function randomInt(from, to){
+				return parseInt(Math.random()*(to - from) + from)
+			}
+		</script>
+	</body>
+</html>
+<!--
+	点击开始抽奖,可以同时抽中3位中奖同学,在页面展示中奖同学的名字
+	提示:预先把参与抽奖同学名字放入一个数组中,抽取完后在页面展示
+-->

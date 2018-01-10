@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				background: black;
+			}			
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<script type="text/javascript" src="circle.js"></script> 
+		<!--地址不能写中文-->
+		<script type="text/javascript">
+			for (var i = 0; i < 20; i++) {  //构造十个球
+				var qiu = new Circle(box, 700 ,500);//如果是qiu调用,我就在球里传参数 ?可以直接传box
+//				qiu._init(box, 300 ,300); //如果是init自己传参数那么在circle里就不用调用了
+				qiu.show();
+				qiu.run();
+			}
+			
+		</script>
+	</body>
+</html>

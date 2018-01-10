@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>作业2</title>
+</head>
+<body>
+<p id="p"></p>
+<script type="text/javascript">
+    /*
+     作者：李振超    2017年3月22日 20:04
+         输入一个分钟数，开始倒计时。
+         倒计时结束，弹出"计时结束!",中间可以点击按钮停止倒计时。
+     */
+    var p = document.getElementById("p");
+    var min = prompt("请输入计时时间，单位分钟");
+    var sec = +min * 60;
+    var interalId = setInterval(function (){
+        p.innerHTML = --sec;
+        if(sec == 0){
+            clearInterval(interalId);
+            alert("计时结束，炸弹1秒内爆炸")
+        }
+    }, 100)
+</script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript" charset="utf-8">
+    /*
+     函数的参数
+     * 
+     * 	大部分语言当中，函数的参数都是分为两种
+     * 	1.声明时的参数   				--> 形参
+     * 	2.调用方法的时候传递的参数		--> 	实参
+     * 
+     * 注意：
+     * 	1.形参的声明不需要 var       function aa(num1,num2)->这个num1和num2不需要加var
+     * 	  添加上 var 反而会出错
+     * 	2.形参，在函数的内部可以作为一个
+     * 	  普通的“局部变量”来使用，
+     * 	  实参会将数值传递给形参
+     * 	3.在调用函数的过程中，如果出现实参个数和形参
+     * 	  个数不一致的情况时，可能会出现某些参数"无效"
+     * 	4.
+     *  
+     * */
+//  function doSomeThing(num1,num2){
+//  		alert(num1 + ":" + num2);
+//  }
+//  doSomeThing("a",5);
+//  doSomeThing("a","b","c");
+//	doSomeThing("a");
+/*
+ arguments
+ * 		1.多余的实参其实并没有消失，
+ * 		  而是函数帮我们保存在一个变量（对象）当中
+ * 		  而这个变量的名字叫做 arguments
+ * 		2.arguments 不需要开发者手动创建，
+ * 		  在函数的调用时，会自动创建，并且会将所有
+ * 		  传递过来的实参都保存在这个变量当中
+ * 		3.arguments 实际上是一个 对象
+ * 		  每一个参数都是它的属性值
+ * */
+	function doSomething(num1,num2){
+		console.log(num1 === arguments[0]);
+		console.log(num2 === arguments[1]);
+	
+		for(var i = 0;i < arguments.length; i++){
+			console.log(arguments[i]);
+		}
+	}
+	doSomething("a","b","c","d");
+	console.log("=========================");
+	doSomething("c","d","e","f");
+
+/*
+ arguments
+ 
+ * arguments[0]
+ * 		它的属性是当前函数所能接受到的所有参数
+ * 		我们可以通过 方括号 的方式访问内部的每一个元素
+ * arguments.length
+ * 		我们可以通过 length 来确定 arguments 的长度
+ * callee 属性
+ * 		该属性指向拥有这个 arguments 对象的函数
+ * caller 属性
+ * 		该属性保存着调用“当前函数的引用”
+ * 		(也就是调用当前函数的函数)
+ * */
+
+//	function outer(){
+//		inner();
+//	}
+//	function inner(){
+//		console.log(arguments.callee.caller);
+//	}
+//	outer();//从后往前读取,先确定调用outer,回去找函数的outer
+
+    
+    
+//  function aa(num1,num2){
+//  		return num1 +num2;
+//  }
+//  console.log(str);
+    
+    
+//  var num1 = 5;//这不是在函数里了,叫变量而不是形参.
+//  var num2 = 10;
+//  function aa(num1,num2){
+//  		return num1 +num2;
+//  }
+//  console.log(aa(num1,num2));
+</script>
+</html>

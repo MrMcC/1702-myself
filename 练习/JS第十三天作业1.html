@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;margin: 0;
+			}
+			#calendar{
+				width: 700px;
+				margin: 100px auto;text-align: center;
+			}
+			ul{
+				list-style: none;
+			}
+			ul li{
+				float: left;width: 100px;height: 50px;
+				line-height: 50px;border: 1px solid #FFFFFF;
+				box-sizing: border-box;
+			}
+			ul#da li{
+				background-color: gray;
+			}
+			ul#days li{
+				background-color: white;
+			}
+			ul li:nth-child(7n){
+				border-right: none;
+			}
+			ul#days li:hover{
+				background-color: gray;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="calendar">
+			<div id="selectYearMonth">
+				<select id="year">
+					
+				</select>年
+				<select id="month">
+					
+				</select>月
+			</div>
+			<ul id="da">
+				<li>星期日</li>
+				<li>星期一</li>
+				<li>星期二</li>
+				<li>星期三</li>
+				<li>星期四</li>
+				<li>星期五</li>
+				<li>星期六</li>
+			</ul>
+			<ul id="days"></ul>
+		</div>
+		<script type="text/javascript">
+			var yearSelect = document.getElementById("year")
+			var monthSelect = document.getElementById("month")
+			var daysUl = document.getElementById("days")
+			for (var year= 1900; year < 9999; year++) {
+				createOption(year,year,yearSelect)
+			}
+			for (var month = 1; month < 13; month++) {
+				createOption(month,month,monthSelect)
+			}
+			//创建一个option,并把option添加到指定select中
+			function createOption(value,text,selector){
+				var opt = document.createElement("option")
+				opt.value = value;
+				opt.innerHTML = text;
+				selector.appendChild(opt);
+			}
+			
+			//默认显示当前日期
+			var now = new Date();
+			yearSelect.value = now.getFullYear();
+			monthSelect.value = now.getMonth()+1;
+			showDays(yearSelect.value,monthSelect.value)//默认时调用
+
+			yearSelect.onchange = function(){  //更改option时触发的事件
+				showDays(yearSelect.value,monthSelect.value)
+			}
+			monthSelect.onchange = function(){
+				showDays(yearSelect.value,monthSelect.value)
+			}
+		
+			//显示指定年月的所有日期
+			function showDays(year,month){
+				daysUl.innerHTML = ""
+				//计算出这月1号是星期几,插入几个空li
+				var date = new Date(year, month- 1, 1)
+				var emptyLiCounts =  date.getDay();
+				for(var i =0; i< emptyLiCounts; i++){
+					let li = creatLi("", daysUl)
+					li.onmousemove  = function(){
+						li.style.backgroundColor = "white"
+					}
+				}
+				//从1日开始插入,计算这个月有多少天
+				var d = new Date(year,month,0) //设置下月的第一天即这个月的最后一天
+				var days = d.getDate();
+				for (var i = 1; i <= days; i++) {
+					creatLi(i,daysUl)
+				}
+			}		
+			function creatLi(text,parent){
+				var li = document.createElement("li");
+				li.innerHTML = text;
+				parent.appendChild(li)
+				return li;
+			}
+			
+			
+			
+		</script>
+	</body>
+</html>

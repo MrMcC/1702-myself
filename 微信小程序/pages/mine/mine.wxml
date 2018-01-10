@@ -1,0 +1,6 @@
+<view wx:for="{{10}}" wx:key="{{index}}">{{item}}</view>
+<!-- 切换tabBar页面 -->
+<!-- <navigator open-type="switchTab" url="../index/index">去index</navigator> -->
+<!-- 切换普通页面 -->
+<navigator url="../demo/demo">去demo</navigator>
+<view wx:for="{{userList}}">{{item.userName}}</view>

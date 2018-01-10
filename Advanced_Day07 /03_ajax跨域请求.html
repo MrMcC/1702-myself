@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="my_ajax2.js"></script>
+</head>
+<body>
+<p id="p"></p>
+<script>
+    //http://127.0.0.1:8888/1701/Advanced_Day07/data1.json
+    ajax.get("http://127.0.0.1:8888/1701/Advanced_Day07/data1.json", function (result){
+        p.innerHTML = result;
+    })
+</script>
+</body>
+</html>
+<!--
+浏览器的同源策略：
+    如果当前页面和ajax的url不同源，则ajax无法获取到数据！
+    协议、域名、端口号  三个同时相同，就叫同源，否则就是不同源
+    
+    1.
+    http://www.ytztcedu.com/abc.html
+    http://www.yztcedu.com:8989/xxx/abc.html
+        端口号不同，所以不同意
+    2.
+    http://www.ytztcedu.com/abc.html
+    http://www.ytztcedu.com/xx/abc.html
+        同源
+        
+    3.
+    http://www.ytztcedu.com/abc.html
+    https://www.ytztcedu.com/abc.html
+    
+-->

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Point(x, y){
+        this.x = x;
+        this.y = y;
+    }
+    Point.prototype.caculateDistance = function (other){
+        var dis = Math.sqrt(Math.pow(this.x - other.x, 2) + Math.pow(this.y - other.y, 2));
+        return dis;
+    }
+    /*var p1 = new Point(1, 2);
+     var p2 = new Point(100, 3);
+     console.log(p1.caculateDistance(p2));
+     */
+    function Circle(x, y, r){
+        Point.call(this, x, y);
+        this.r = r;
+    }
+    Circle.prototype = new Point();
+    Circle.prototype.area = function (){
+        return Math.PI * this.r * this.r;
+    }
+    Circle.prototype.relativeOther = function (otherCircle){
+        var dis = this.caculateDistance(otherCircle);
+        var sumR = this.r + otherCircle.r;
+        if (dis > sumR){
+            return "相离";
+        }else if (dis == sumR){
+            return "相切"
+        }else{
+            return "橡胶"
+        }
+    }
+    
+    /*var c1 = new Circle(0, 0, 19);
+     var c2 = new Circle(0, 3, 19);
+     console.log(c1.area());
+     console.log(c1.caculateDistance(c2));
+     console.log(c1.relativeOther(c2));*/
+
+    function Cylinder(x, y, r, h){
+        Circle.call(this, x, y, r);
+        this.h = h;
+    }
+    Cylinder.prototype = new Circle();
+    Cylinder.prototype.vol = function (){
+        return this.area() * this.h;
+    }
+    
+    var cy = new Cylinder(0, 0, 10, 20);
+    console.log(cy.vol());
+</script>
+</body>
+</html>

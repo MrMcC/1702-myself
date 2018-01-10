@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<input type="text" id="input" value="20">
+<button id="btn">添加数字到数组</button>
+<p id="content"></p>
+<script>
+    var btn = document.getElementById("btn");
+    var input = document.getElementById("input");
+    var content = document.getElementById("content");
+    var arr = [];
+    btn.onclick = function () {
+        var value = input.value;
+//        arr.push(value)
+        arr[arr.length] = value;
+        if(arr.length == 10){
+            content.innerHTML = "";
+        }
+    }
+    var r = Math.random();      // [0, 1)   [0, 40)  [10, 51)   [10, 50]
+    console.log(parseInt(r * 41) + 10)
+
+    // [from, to]
+    function randomInt(from, to) {
+        return parseInt(Math.random() * (to - from + 1) + from);
+    }
+    console.log(randomInt(10, 200));
+
+
+</script>
+</body>
+</html>

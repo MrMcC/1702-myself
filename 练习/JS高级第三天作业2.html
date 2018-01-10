@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function Point(x,y){
+				this.x = x;
+				this.y = y;
+			}
+			Point.prototype.caculateDistance = function(otherPoint){
+				return Math.sqrt(Math.pow((this.x - otherPoint.x),2) + Math.pow((this.y - otherPoint.y),2))
+			}
+			var p1 = new Point(1,10)
+			var p2 = new Point(1,20)
+			console.log(p1.caculateDistance(p2))
+			function Circle(x,y,r){
+				Point.call(this,x,y)
+				this.r = r
+			}
+			Circle.prototype = new Point(0,0)
+			Circle.prototype.area = function(){
+				return Math.PI * this.r * this.r
+			}
+			var c = new Circle(0,0,10)
+			console.log(c.area())
+			function Cylinder(x,y,r,l){
+				Circle.call(this,x,y,r)
+				this.l = l;
+			}
+			Cylinder.prototype = new Circle(0,0,1)
+			Cylinder.prototype.volume = function(){
+				return this.area() * this.l;
+			}
+			var zhu = new Cylinder(0,0,10,10)
+			console.log(zhu.volume())
+		</script>
+	</body>
+</html>
+<!--
+	   a: 设计构造函数表示二维平面的点Point。  应该有属性 x，y坐标。提供一个可以计算两个点距离的方法。
+        function Point(x, y){
+            this.x = x;
+            this.y = y;
+        }
+        Point.prototype.caculateDistance = function(otherPoint){
+            // this一个点   otherPoint也是一个点
+            
+        
+        }
+        var p1 = new Point(10, 20);
+        var p2 = new Point(20, 30);
+        p1.cacu...(p2)
+        
+        p2.cacu...(p1)
+   b: 设计构造函数表示二维的圆Circle，提供周长和面积
+        
+   c: 设计构造函数表示圆柱体Cylinder，提供体积的功能
+        
+   d: 分别使用原型继承和构造函数借调的方式来完成继承。
+-->

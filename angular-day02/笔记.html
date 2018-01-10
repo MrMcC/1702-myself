@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <style>
+        *{
+            margin: 0;padding: 0;
+            list-style: none;
+        }
+        html,body{
+            height: 100%;
+        }
+        div#toolbar{
+            width: 80px;
+            height: 100%;
+            background-color: #30414D;
+            color: #767676;
+            padding: 35px 25px 25px 25px;
+            float: left;
+            font-size: 30px;
+        }
+        div#toolbar span{
+            display: block;
+            margin-bottom: 20px;
+            cursor: pointer;
+            opacity: 0.8;
+            transition: all 0.5s ease;
+        }
+        div#toolbar span:hover{
+            opacity: 1;
+        }
+        div#notelist{
+            width: 300px;
+            height: 100%;
+            background-color: #F5F5F5;
+            font-family: 'Raleway', sans-serif;
+            float: left;
+        }
+        div#notelist #listHeader{
+            padding: 5px 25px 45px 25px;
+        }
+        #listHeader h2{
+            text-align: center;
+            font-weight: 300;
+            font-size: 22px;
+            text-transform: uppercase;
+            padding-bottom: 8px;
+        }
+        #listHeader ul{
+            width: 100%;
+            margin: 20px 0 0 10px;
+        }
+        #listHeader li{
+            float: left;
+        }
+        #listHeader button{
+            width: 120px;
+        }
+        div#noteContent{
+            margin-left: 380px;
+        }
+
+        div#container li{
+            padding: 5px 0 5px 0;
+            width: 100%;
+            background-color: #337ab7;
+            text-align: center;
+            border: 1px solid white;
+            box-sizing: border-box;
+        }
+        div#container a{
+            color: white;
+            line-height: 30px;
+            text-decoration: none;
+            vertical-align: middle;
+            height: 40px;
+            font-weight: 400;
+            font-size: 20px;
+
+        }
+    </style>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+    <div id="toolbar">
+        <span class="glyphicon glyphicon-plus" ng-click="add()"></span>
+        <span class="glyphicon glyphicon-star"></span>
+        <span class="glyphicon glyphicon-remove" ng-click="del()"></span>
+    </div>
+    <div id="notelist">
+        <div id="listHeader">
+            <h2>Notes | coligo</h2>
+            <ul>
+                <li><button class="btn btn-default"> All Notes </button></li>
+                <li><button class="btn btn-default"> Favorites </button></li>
+            </ul>
+        </div>
+        <div id="container">
+            <ul>
+                <li ng-repeat="item in model" ng-click="add2">
+                    <a href="###">{{item.n}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="noteContent">new Note</div>
+</body>
+<script src="./js/angular.min.js"></script>
+<script>
+    var app = angular.module('myApp',[]);
+    app.controller('myCtrl',['$scope',function ($scope) {
+        $scope.createBol = false;
+        $scope.model = [{n : "New note"},{n : "New note"}];
+        $scope.add = function () {
+            $scope.createBol = true;
+            var obj = {n : "New note"};
+            $scope.model.push(obj)
+        };
+        $scope.add2 = function () {
+
+        }
+        $scope.del = function () {
+
+        }
+    }])
+</script>
+</html>

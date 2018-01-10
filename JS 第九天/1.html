@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<!--<ul>
+			<li class="love">1</li>
+			<li class="love">2</li>
+			<li></li>
+		</ul>
+		<input type="" name="user" id="" value="" />
+		<input type="" name="user" id="" value="" />-->
+		<div id="box1">
+			<p>box1</p>
+			<p>box1</p>
+		</div>
+		<p></p>
+		<div id="box2">
+			<p>box2</p>
+		</div>
+	<script type="text/javascript">
+//		//html节点
+//		var a = document.documentElement.nodeType //节点的类型
+//		console.log(a);
+//		var a = document.documentElement
+//		console.log(a.nodeName);
+//		
+//		//通过标签名
+//		var lis = document.getElementsByTagName("li")
+//		console.log(lis);
+//		//查找class名的属性
+//		var loves = document.getElementsByClassName("love")
+//		console.log(loves);
+//		
+//		//通过name属性的值去查找,name属性一般只存在于表单元素
+//		var inputs = document.getElementsByName("user")
+//		console.log(inputs);
+		//参数就是css选择器  ,只会返回满足选择器的第一个元素
+//		var ele = document.querySelector("#box1 p")
+//		console.log(ele);
+//		var ele = document.querySelector("div:nth-child(3)")//找到div父亲的第三个孩子,不是div返回null
+//		console.log(ele);
+		//找到所有的div
+//		var eles = document.querySelectorAll("div#box1 > p")
+//	    console.log(eles);
+	    
+	    console.log(box1.children);//获取所有元素的节点
+		console.log(box1.childElementCount);//获取子元素的数量
+		console.log(box1.parentElement);  //与box.parentNode完全一样 
+		console.log(box1.parentNode);
+		
+	</script>
+	
+	</body>
+</html>

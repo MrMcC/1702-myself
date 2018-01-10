@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="test.js"></script>
+    <script>
+        //当窗口加载完毕之后回调这个函数
+        window.onload = function (){
+            var a = "abc";
+            var btn = document.getElementById("btn");
+            btn.onclick = function (){
+                alert("abc")
+            }
+            console.log(btn);
+        }
+        //当卸载页面的时候回调。目前只有ie支持
+        window.onunload = function (){
+            alert("要离开当前页面")
+        }
+        //当浏览器窗口尺寸发生改变的时候的回调事件
+        window.onresize = function (){
+//            console.log(window.innerWidth + "  "  + window.innerHeight);
+            p.innerHTML = "宽度：" + window.innerWidth
+                + ", 高度：" + window.innerHeight;
+        }
+    </script>
+</head>
+<body>
+<button id="btn">你好</button>
+<a href="http://www.baidu.com">百度一下</a>
+<p id="p"></p>
+</body>
+
+</html>

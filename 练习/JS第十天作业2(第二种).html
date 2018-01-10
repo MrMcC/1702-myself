@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box div{
+				width: 100px;height: 50px;border: 1px solid #000;font-size: 30px;
+				text-align: center;line-height: 50px;float: left;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<script type="text/javascript">
+			var names = ["张三1","张三2","张三3","张三4","张三5","张三6"]
+			for (var name of names) {
+				creatDiv(box,name)
+			}
+			
+			var indexs = [];
+			for (var i= 0; i < 3;i++) {
+				while(true){
+					var index = randomInt(0,names.length-1)
+					if(indexs.indexOf(index) == -1){
+						indexs.push(index)
+						break;
+					}
+				}
+			}
+			
+			var divs = box.children;  //找到所有div
+			for(var i = 0; i < indexs.length;i++){
+				divs[indexs[i]].style.backgroundColor = "pink"  //把所有div里被选中的div更改颜色
+			}   //???
+			
+			function creatDiv(parent,text){
+				var div = document.createElement("div");
+				div.innerHTML = text;
+				parent.appendChild(div)
+			}
+			
+			function randomInt(from, to){
+				return parseInt(Math.random()*(to - from) + from)
+			}
+		</script>
+		
+	</body>
+</html>

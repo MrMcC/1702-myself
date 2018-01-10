@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /*margin-left:200px;*/
+            /*transform: translate(100px, 200px);*/
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+</div>
+<script>
+    var duration = 5000;
+    var distance = 1200;
+    var startTime = new Date();
+    requestAnimationFrame(function step(){
+        var currentTime = new Date();
+        //时间的完成进度
+        var time = (currentTime - startTime) / duration;
+        if (time >= 1){
+            time = 1;
+        }
+        box.style.transform = "translateX(" + distance * time + "px)";
+        if (time < 1){
+            requestAnimationFrame(step);
+        }
+    })
+</script>
+</body>
+</html>
+<!--
+在规定的时间走完规定的路程！！！
+把位移看成时间的函数
+s = f(t)
+
+transform
+
+
+-->

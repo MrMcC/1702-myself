@@ -1,0 +1,62 @@
+html,body{
+    height: 100%;
+    background-size: 50%;
+}
+#menu{
+    float: left;
+    position: fixed;
+    top: 40px;
+    left: 40px;
+    z-index: 50;
+    background-color: red;
+}
+#menu>a{
+    padding-right: 20px;
+    cursor: pointer;
+    opacity: 0.5;
+}
+#menu>a:hover{
+    opacity: 1;
+    transition: ease 0.5s;
+}
+#share{
+    float: left;
+    position: fixed;
+    left: 40px;
+    bottom: 40px;
+    z-index: 50;
+    background-color: gray;
+}
+#content>li{
+    float: left;
+    width: 100px;
+    height: 40px;
+}
+.cont-span{
+    display: inline-block;
+    width: 60px;
+    height: 20px;
+    text-align: center;
+    color: white;
+    font-size:12px;
+    border-radius: 5px;
+    margin: 10px 0 0 10px;
+    line-height: 20px;
+}
+#cont-spanid1{
+    background-color: #0B67FE;
+    opacity: 0.7;
+}
+#cont-spanid2{
+    background-color: #00B7FF;
+    opacity: 0.7;
+}
+#cont-spanid1:hover{
+    transition: ease 0.5s;
+    opacity: 1;
+}
+#cont-spanid2:hover{
+    transition: ease 0.5s;
+    opacity: 1;
+}
+

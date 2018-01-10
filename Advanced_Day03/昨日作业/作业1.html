@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Rectangle(l, w){
+        this.l = l;
+        this.w = w;
+    }
+    Rectangle.prototype = {
+        constructor: Rectangle,
+        area: function (){
+            return this.l * this.w;
+        },
+        zhouchang: function (){
+            return (this.l + this.w) * 2;
+        }
+    }
+    var rec1 = new Rectangle(10, 20);
+    console.log(rec1.area())
+</script>
+</body>
+</html>

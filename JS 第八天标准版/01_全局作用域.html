@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//  "use strict"
+//    var a = 10;
+//  function foo() {
+//      a = 20;
+//      console.log(a);
+//  }
+//  foo();
+//  console.log(a);
+
+//  var a = 10;
+//  console.log(window.a);
+//  if(true){
+//      var b = 20;
+//  }
+//  console.log(window.b)
+
+    /*console.log(window.c);
+    console.log(c);*/
+    function foo() {
+        c = 30;
+    }
+    foo();
+    console.log(c)
+    console.log(window.c);
+    console.log(window.name)
+</script>
+</body>
+</html>
+<!--
+    作者：李振超  2017年3月22日11:05
+    变量的作用域：
+        全局作用域
+        局部作用域
+            看是不是在函数的内部！
+
+        块级作用域
+
+    1. 每声明一个全局变量，这个全局变量会成为
+    window对象的一个同名属性。
+    2. 访问不存在的属性为返回undefined，不存在的 变量会报错。
+
+-->

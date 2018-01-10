@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				width: 30px;
+				height: 30px;
+				background-color: pink;
+				position: absolute;top: 100px;left: 100px;
+				border-radius: 50%;
+				/*transform: rotateX;//沿x方向旋转
+				transform: rotateY;//沿y方向旋转
+				transform :rotateZ(20deg)*/
+				/*距离左上角的位置转20度*/
+				transform-origin: 100px 100px;
+				/*中心点的位置,*/
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			
+		</div>
+		<script type="text/javascript">
+			var duration = 2000,
+				distance = 300,
+				startTime = new Date(),
+				p,
+				count = 4;
+			var loop = true;
+			requestAnimationFrame(function step(){
+				//计算出来当前的规划一化时间
+				p = Math.min(1,(new Date() - startTime)/ duration);
+//				box.style.transform = "transLateX(" + distance * p * p +"px)";//p*(2-p)
+				//字符串模板 反引号``
+//				box.style.transform = `transLateY(${  distance * p * p   }px)`
+				
+				//平抛
+//				box.style.transform = `transLate(${  distance * p * 2 }px, ${distance * p * p}px)`
+				
+				//正弦曲线运动: 水平匀速 垂直是正弦速度的运动
+				box.style.transform = 
+					`translate(${distance * p + distance * (4 - count)}px, ${distance * Math.sin( Math.PI * p *2)}px)`
+				if(p ==1 && --count > 0){
+//					count --;//在里面--不行,因为p==1已经执行了一次
+					startTime = new Date();
+					requestAnimationFrame(step)
+				}
+
+				//圆周运动
+//				box.style.transform = `rotateZ(${360 * p}deg)`
+//				if(loop){
+//					if(p == 1){
+//						startTime = new Date();
+////						requestAnimationFrame(step);
+//						p = 0;
+//					}
+//				}
+				p<1 && requestAnimationFrame(step);
+				
+				
+			})
+		</script>
+	</body>
+</html>
+<!--
+	三角函数参数是弧度 2pi = 360度
+-->

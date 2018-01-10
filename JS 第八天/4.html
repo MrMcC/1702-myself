@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	<p id="p"></p>
+	<button id="cancel">停止</button>
+	<script type="text/javascript">
+		/*
+		 周期定时器
+		 *setInterval:设置一个每隔一段时间就执行一次的定时器
+		 * 
+		 * 如果用到的对象是当前页面的window,则可以省略不写
+		 *
+		 * 参数1 :需要周期执行的函数
+		 * 参数2 : 执行的周期(毫秒)
+		 * 返回值:就是这个定时器的id*/
+//		window.setInterval();
+		var p = document.getElementById("p");
+		var i = 0;
+		var a = setInterval(function(){
+//			var i = 0;
+			p.innerHTML = i++;
+		},1000);
+		
+		var btnCancel = document.getElementById("cancel");
+		btnCancel.onclick = function(){
+			window.clearInterval(a);
+		}
+	</script>
+	</body>
+</html>

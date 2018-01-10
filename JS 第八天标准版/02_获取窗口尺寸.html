@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="btn">获取宽和高</button>
+<p id="p"></p>
+<script>
+    var btn = document.getElementById("btn");
+    var p = document.getElementById("p");
+    btn.onclick = function () {
+        //对chrome、firefox、safari、ie9+  （ie 5678不起作用）
+        var w = window.innerWidth || document.documentElement.clientWidth;
+//        var w = document.documentElement.clientWidth;
+        var h = window.innerHeight || document.documentElement.clientHeight;
+//        var h = document.documentElement.clientHeight;
+        p.innerHTML = "宽：" + w + ", 高：" + h;
+    }
+
+</script>
+</body>
+</html>

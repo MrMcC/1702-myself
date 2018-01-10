@@ -1,0 +1,51 @@
+//@bg : #111;
+//@bg1 : @bg + #111;
+//div{
+//  width: 200px;
+//  height: 200px;
+//  background-color: @bg1;
+//}
+
+.wh{
+  width: 611px;
+  height: 911px;
+}
+.bg(@b:pink){   //不传默认粉色
+  background-color: @b;
+}
+.color{
+  color: yellowgreen;
+}
+.bg_color{
+  .bg(red);
+  .color;
+}
+*{
+  margin: 0px;padding: 0;
+}
+@imgName : timg;
+@leixing : jpeg;
+@d : div;
+@{d}{
+  .bg(white);
+  border: 1px solid white;
+  background: url("../@{imgName}.@{leixing}");
+  background-size: contain;
+  //padding: 75px 50px;
+  >p{
+    width: 200px;
+    height: 50px;
+    margin: 75px 50px;
+    .bg(yellowgreen);
+
+    &:hover{   //加个&表示紧挨着
+      background-color: darkolivegreen;
+    };
+    >a{
+      text-decoration: none;
+      display: block;
+      text-align: center;
+      line-height: 50px;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        div {
+            margin-top: 400px;
+            width: 50px;
+            height: 50px;
+            background-color: pink;
+            border-radius: 50%;
+            
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+</div>
+<script>
+    var duration = 2000,
+        distance = 300,
+        startTime = new Date(),
+        p,
+        count = 4;
+    requestAnimationFrame(function step(){
+        p = Math.min(1, (new Date() - startTime) / duration);
+        //正弦曲线运动： 水平是匀速  垂直是正弦速度的运动
+        box.style.transform =
+            `translate(${distance * p + distance * (4 - count)}px, ${distance * Math.sin(2 * Math.PI * p)}px)`;
+        if( p == 1 && --count > 0){
+            startTime = new Date();
+            requestAnimationFrame(step);
+        }
+        p < 1 && requestAnimationFrame(step);
+    });
+    
+</script>
+</body>
+</html>
+<!--
+三角参数是弧度
+-->

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<script>
+//    var foo = (a,b,c=30)=>{
+//        console.log("箭头函数",a,b,c)
+//    }
+//    foo(10,20)
+//
+//    var add = (a,b)=> a+b; //相当于return a+b
+//    console.log(add(10,20))
+//
+//    var foo = ()=>console.log("ab")
+//    var r = foo()
+//    console.log(r)  //输出undefined
+//
+//    console.log((()=>console.log("ab"))())  //log返回值是undefined
+//
+//    var arr = a=>a+5;  //一个参数没默认值可以省略小括号 (a)=>a+5
+//    var arr = (a=10)=>a+5; //有默认参数不能省
+//=====================
+//    var arr = ()=>{ name:"李四",age: 20 }  //外面的大括号表示函数体,不是对象的大括号,
+//    var arr = ()=>({ name:"李四",age: 20 })     //+个括号,里面的大括号就表示函数内对象的大括号了
+//console.log(arr())
+////==========================
+//var arr = ()=>[1,2,4]  //不用加小阔号,没歧义,就在函数内写对象时候需要加
+
+//======================
+    //箭头函数的用处,用在直接传递一个参数 (替代匿名函数)
+    //箭头函数中没有this绑定问题,1.箭头函数永远与他外层函数的this保持一致,
+//2.如果没有外层函数,里面的this就表示window(沿作用域链查找)
+
+//    setTimeout(()=>{
+//
+//    },200)
+//======================
+//
+//    var obj = {
+//        age : 10,
+//        foo : function () {
+//            setInterval(function () {
+//                console.log(this.age++)//this丢失
+//            },1000)
+//        }
+//    }
+//    obj.foo()
+//===================
+//
+//    "use strict"
+//    function foo() {
+//        console.log(this)  //严格模式下this是undefined
+//    }
+//    foo()
+    //===============
+//var obj = {
+//    age : 10,
+//    foo : function () {
+//        setInterval(()=>{
+//            console.log(this.age++)//箭头函数this指foo的this,就是obj的this
+//        },1000)
+//    }
+//}
+//obj.foo()
+    //==================
+//var obj = {
+//    age : 10,
+//    foo : ()=>{
+//        console.log(this) //怎么沿作用域链查找的????
+//        console.log(this.age++)//箭头函数外层没有函数,this指window,this当做一个变量,在作用域内查找,所以箭头函数不适合做方法
+//    }
+//}
+//obj.foo()
+//===============
+//    obj.foo.call(obj)//没用
+
+    //=====================
+//   var arr = ()=>{
+//        console.log(arguments)
+//   }
+//    arr() //报错 无arguments属性
+//    //=======================
+function foo(a,b) {
+    return ()=>{
+        console.log(arguments[0])//返回1 找他的外层函数的实参
+    }
+}
+foo(1,2)()
+</script>
+</body>
+</html>
+<!--如果函数体内只有一行代码.则大括号可以省略,不是一行不能省略
+如果形参只有一个参数,小括号可以省略
+如果形参有默认值,小括号也不能省略
+箭头函数的用处,用在直接传递一个参数
+箭头函数无arguments和this
+    -->

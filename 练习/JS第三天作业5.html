@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">用循环计算鸡兔多少只</button>
+		<script type="text/javascript">
+			btn.onclick= function(){
+				for(var i = 0;i < 35;i++){
+					if(i*2+(35-i)*4 == 94){
+						alert("鸡有:"+i+"只,"+"兔子有:"+(35-i)+"只")
+					}
+				}
+			}	
+		</script>
+	</body>
+</html>
+<!--
+	鸡和兔一共35只,笼子里94只脚,计算出鸡和兔子分别多少只
+-->

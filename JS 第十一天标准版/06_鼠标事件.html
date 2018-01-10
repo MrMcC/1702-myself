@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #out{
+            width : 400px;
+            height : 200px;
+            background-color: gray;
+        }
+        #box{
+            width : 200px;
+            height : 400px;
+            background-color : pink;
+            
+        }
+        
+    </style>
+</head>
+<body>
+<button id="btn">按钮</button>
+<div id="out">
+    <div id="box"></div>
+</div>
+
+<script>
+    //双击事件  dbl = double
+    btn.ondblclick = function (){
+        console.log("abc");
+    }
+    
+    var box = document.getElementById("box");
+    //鼠标移动到元素上方的时候出发.事件会冒泡
+    box.onmouseover = function (){
+        box.style.backgroundColor = "blue";
+        box.style.width = "300px";
+    }
+    out.onmouseover = function (){
+        console.log("外层也收到了  over  事件")
+    }
+    //鼠标从元素上方区域移走的时候出发。也会冒泡
+    box.onmouseout = function (){
+        box.style.backgroundColor = "pink";
+        box.style.width = "200px";
+    }
+    out.onmouseout = function (){
+        console.log("外层也收到了  out   事件")
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+		function zai(ge){
+			if(ge ==1){
+				return 1;
+			}
+			return zai(ge-1)*2
+		}
+		function sum(ge){
+			if(ge == 1){
+				return 1;
+			}
+			return sum(ge - 1) + zai(ge);
+		}
+		
+console.log(zai(64));
+console.log(sum(64));	
+		</script>
+
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var b = 20;
+    			function foo(){
+       			var c = 10;
+        			var a = 30;
+			  var b = 50;
+        
+       			 f1();
+        
+        		console.log(b);
+        
+        		function f1(){
+            		var f = 60;
+            		console.log(f)
+            		console.log(b);
+            		b = 100;   //注意,变量不声明的话,如果在后面打印它,它会默认向前找直到找到var b的位置并可能替换
+        		}              //如果不声明的话,如果在前面打印它,赋值不会提前,只会打印前面的var b
+   		 }
+    			foo();
+    			
+    			
+		</script>
+	</body>
+</html>
+<!--
+	原型链 查找对象的属性的时候的查找路径
+	
+	作用域链 查找变量的时候的查找路径
+	
+	每执行到一个函数,则这个函数都会有自己的作用域链
+	内部的函数的作用域,会保存在外部函数的作用域链
+	
+	一个函数的作用域链是什么,只和声明位置有关,和调用位置无关
+-->

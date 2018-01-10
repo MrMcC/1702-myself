@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="js/vue.js"></script>
+    <style type="text/css">
+        .el-button{
+            display: inline-block;
+            padding: 14px;
+            border: 1px solid #ccc;
+            border-radius: 7px;
+        }
+        .el-button:hover{
+            border-color: blue;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <!-- <el-button></el-button> -->
+    <page>
+        <page-header v-if="!login" slot="header"></page-header>
+        <login-header v-if="login" slot="header"></login-header>
+        <page-footer slot="footer"></page-footer>
+    </page>
+    <!-- <el-button></el-button> -->
+</div>
+</body>
+<script type="text/javascript">
+    Vue.component("el-button",{
+        template:`
+		<div class="el-button">
+			<slot>消息提示</slot>
+		</div>
+	`
+    })
+    // 未登录的header
+    Vue.component("page-header",{
+        template:`
+		<header>我是未登录header</header>
+	`
+    })
+    // 已登录的header
+    Vue.component("login-header",{
+        template:`
+		<header>我是已登录header</header>
+	`
+    })
+
+    Vue.component("page-footer",{
+        template:`
+		<footer>
+			我是底部
+		</footer>
+	`
+    })
+
+    Vue.component("page",{
+        template:`
+		<div>
+			<slot name="header">我是默认头部的内容</slot>
+			<main>我是主体内容</main>
+			<slot name="footer">我是默认底部的内容</slot>
+		</div>
+	`
+    })
+
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            login: false
+        },
+        methods:{
+            
+        }
+    })
+</script>
+</html>

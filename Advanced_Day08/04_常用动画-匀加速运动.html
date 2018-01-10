@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+</div>
+<script>
+    var duration = 2000,
+        distance = 1000,
+        startTime = new Date(),
+        p;//归一化的时间
+    requestAnimationFrame(function step(){
+        //计算出来当前的归一化时间
+        p = Math.min(1, (new Date() - startTime) / duration);
+//        box.style.transform = "translateX(" + distance * p * p + "px)";//匀加速
+        box.style.transform = "translateX(" + distance * p * (2 -p) + "px)";//匀减速
+        //当p还没有归一的时候，继续执行动画
+        p < 1 && requestAnimationFrame(step);
+    });
+    
+</script>
+</body>
+</html>
+<!--
+
+-->

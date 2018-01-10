@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #smalls img {
+            float: left;
+        }
+        
+        #smalls::after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+        
+        #big {
+            /*display: none;*/
+            position: absolute;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+<div id="smalls">
+    <img src="shirt_1.jpg" alt="">
+    <img src="shirt_2.jpg" alt="">
+    <img src="shirt_3.jpg" alt="">
+    <img src="shirt_4.jpg" alt="">
+</div>
+
+<div id="big">
+    <img src="shirt_1_big.jpg" alt="">
+</div>
+<script>
+    var smalls = document.getElementById("smalls");
+    var big = document.getElementById("big");
+    smalls.onmousemove = function (event){
+        var bigLeft = event.clientX - smalls.offsetLeft;
+        big.style.left = bigLeft + "px";
+        //http://localhost:8080/1701/Day13/%E6%98%A8%E6%97%A5%E4%BD%9C%E4%B8%9A/shirt_1.jpg
+        var temp = event.target.src;
+        var src = temp.slice(temp.lastIndexOf("/") + 1);
+        var bigSrc;
+        switch (src){
+            case "shirt_1.jpg" :
+                bigSrc = "shirt_1_big.jpg";
+                break;
+            case "shirt_2.jpg" :
+                bigSrc = "shirt_2_big.jpg";
+                break;
+            case "shirt_3.jpg" :
+                bigSrc = "shirt_3_big.jpg";
+                break;
+            case "shirt_4.jpg" :
+                bigSrc = "shirt_4_big.jpg";
+                break;
+        }
+        big.firstElementChild.src = bigSrc;
+    }
+</script>
+</body>
+</html>

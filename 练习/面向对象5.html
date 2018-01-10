@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//			var p = new Object();
+//			var p1 = {
+//				name:"李四",
+//				age:12,
+//				height:180
+//			}
+//			console.log(p1 instanceof Object)//true
+//			var p2 = [];
+//			console.log(p2 instanceof Array)
+//			console.log(p2 instanceof Object)
+			
+
+//			function Person(){  //大写 ,构造函数
+//				//指代将来要使用new的时候要创建的那个对象(例如p)
+//				//this 指代将来创建的(p)
+//				this.name = "李四";
+//				this.age = 20;     
+//				 
+//			}
+//			var p1 = new Person();
+//			var p2 = new Person();
+//			console.log(p1);
+//			console.log(p2);
+//			console.log(p1 instanceof Person);
+//			console.log(p2 instanceof Person);//true
+//			console.log(p1 instanceof Object);//true
+//			console.log(p2 instanceof Object);
+			
+			
+			function Person(name,age){  //传参数
+				this.name = name;
+				this.age = age;
+//				return {} ;//错误     //return 当作为构造函数使用时,this 会自动默认返回,
+//										//如果显式的去返回一个新的对象,则外面就是拿到的那个显式返回的对象.
+//										//如果显式的返回基本类型,则忽略基本类型的数据,依然返回this
+			}
+			var p1 = new Person("sd",30);//穿参数
+			var p2 = new Person("zx",20);
+			console.log(p1)
+			console.log(p2)
+//			
+//			function Person(name,age){  //普通函数调用没new
+//				this.name = name;  //普通函数时this指代window
+//				this.age = age;
+//			}
+//			var p1 = Person("sd",30);
+//			console.log(p1); //p1是undefined没返回值
+		</script>
+	</body>
+</html>
+<!--
+	1.typeof 2.instanceof关键字 判断类型属于那种
+	构造函数的目的就是用来创建对象!!!
+	当通过new函数()的方式使用的时候(调用),这个函数就叫构造函数
+-->

@@ -1,0 +1,7 @@
+<navigator wx:for="{{movie}}" url="../demo/demo?id={{item.id}}">
+  <view>{{item.title}}</view>
+  <image src="{{item.images.small}}" style="width:100px"></image>
+</navigator>
+
+
+

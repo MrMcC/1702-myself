@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//			function dui(name,age){
+//				var p = {};
+//				p.name = name;
+//				p.age = age;
+//				return p;
+//			}
+//			console.log(dui('Mime' ,12));
+// 			function dui(name,age){
+// 				return {name : name,
+// 						age : age};
+// 			}
+// 			console.log(dui('Mime' ,12));
+//			function dui(name,age){
+//				var p = {
+//					name:name,
+//					age:age
+//				}
+//				return p;
+//			}
+//			console.log(dui('Mime' ,12));
+//			var a = {
+//				name:"asd",
+//				age:20
+//			}
+//			console.log(a instanceof Object)
+//			var a = [];
+//			console.log(a instanceof Array)
+//			function Pis(){
+//				this.name = "asd";
+//				this.age =20;
+//			}
+//			var a = new Pis();
+//			console.log(a);//创建对象
+			
+//			function Pis(name,age){
+//				this.name = name;
+//				this.age = age;
+//			}
+//			var a = new Pis("ass",20)
+//			console.log(a)
+
+			var a = {
+				name : "赵四",
+				age : 20,
+				sex : "男",
+				eat : function(){
+					console.log("真能吃");
+				}
+			}
+			for(var i in a){
+				if(typeof a[i] == "function"){  
+					console.log(a[i]());
+				}
+			}
+		</script>
+	</body>
+</html>

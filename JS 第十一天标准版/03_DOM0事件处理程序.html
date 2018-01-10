@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="btn1">点我</button>
+<button id="btn2">点我</button>
+<button id="btn3">点我3</button>
+<script type="text/javascript">
+    var btn1 = document.getElementById("btn1");
+    var btn2 = document.getElementById("btn2");
+    var btn3 = document.getElementById("btn3");
+    
+    /*btn.onclick = function (){
+        console.log("aaa")
+    }*/
+    // 具名函数
+    function show(){
+        alert("abc");
+    }
+    btn1.onclick = show;
+    btn2.onclick = show;
+    btn3.onclick = function (){
+        //去除dom0事件处理从程序
+        btn2.onclick = null;
+    }
+</script>
+</body>
+</html>

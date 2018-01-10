@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function (){
+            //插入一个新的ul，这个ul是我们 lan 的上一个兄弟
+            var ul = document.getElementById("lan");
+            var parent = ul.parentNode;
+
+            var newUl = document.createElement("ul");
+            newUl.innerHTML = "<li>你好</li>";
+
+            //    parent.insertBefore(newUl, ul);
+            parent.insertBefore(newUl, null)
+        }
+    </script>
+</head>
+<body>
+<ul id="lan">
+    <li>c++</li>
+    <li>java</li>
+</ul>
+<p>aaa</p>
+</body>
+
+</html>

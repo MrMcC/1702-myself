@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 100px;height: 100px;background-color: pink;
+				border-radius: 50%;position: absolute;
+			}
+		</style>
+		<script src="js/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.easing.1.3.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+//				$("button:eq(0)").click(function step(){
+//					$("div").animate({left : 1000},1000)
+//							.animate({top : 200},1000)
+//							.animate({left : 0},500)
+//							.animate({top : 50},500,function(){
+//						step()
+//					})
+//				})
+//				$("button:eq(1)").click(function(){
+//					$("div").stop(true,false) //参数1是否清除后面的队列 参数2是否让当前动画去到这个动画末尾
+//					$("div").stop(false,true)//意思是后面也执行,但是在中间点停止迅速到末尾
+//				})
+
+ 				$("button:eq(0)").click(function(){
+ 					$("div").animate({
+ //						width : "hide", //可以设置宽为隐藏
+ 						left : 1000,
+ 						top :500
+ 					},{
+ 						duration :5000,
+ 						easing : "linear",
+ 						specialEasing : {
+ 							top : "easeInOutBounce"
+ 						}
+ 					})
+ 				})
+			})
+		</script>
+	</head>
+	<body>
+		<button>按钮</button>
+		<button>停止</button>
+		<div></div>
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var obj = {
+        name : "lisi",
+        _age : 0
+    }
+    Object.defineProperty(obj,"age",{
+        get : function () {  //获取
+            return this._age;
+        },
+        set : function (age) {  //修改
+           if(age > 100 || age < 0){
+               this._age = 18;
+           }else{
+               this._age = age;
+           }
+        }
+    })
+    obj.age = 200;
+    console.log(obj)
+</script>
+</body>
+</html>

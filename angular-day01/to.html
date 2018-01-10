@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <style>
+        .table-self{
+            margin-top: 60px;
+        }
+    </style>
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+    <div class="container">
+        <h1>{{model.name}}待办事项
+            <span class="label label-default" ng-class="{true: 'label-warning',false: 'label-success'}[count()>2]">{{count()}}</span>
+        </h1>
+        <hr>
+        <div class="input-group">
+            <!--为啥我绑定的ng-model变量就可以获取到input输入的值呢-->
+            <input type="text" placeholder="请添加任务" class="form-control" ng-model="cont">
+            <span class="input-group-btn">
+                <button class="btn btn-default btn-success" ng-click="add()">添加</button>
+            </span>
+        </div>
+        <table class="table table-striped table-self">
+            <tr>
+                <th>详细内容</th>
+                <th>是否完成</th>
+                <th></th>
+                <th>删除</th>
+            </tr>
+            <tr ng-repeat="item in model.arr | filter: myFilter">
+                <td>{{item.content}}</td>
+                <!--为啥checkbox一选中,变量ng-model就变true啊 是不是只有input时候用ng-model?-->
+                <td><input type="checkbox" ng-model="item.done"></td>
+                <td>{{item.done}}</td>
+                <td><button class="btn btn-default" ng-click="del(item)">删除</button></td>
+            </tr>
+        </table>
+    </div>
+</body>
+<script src="./js/angular.min.js"></script>
+<script>
+    var app = angular.module('myApp',[]);
+    app.controller('myCtrl',['$scope',function ($scope) {
+        $scope.cont = "";
+        $scope.model = {
+            name: 'McC',
+            arr : [
+                {content: '买菜',done: false},
+                {content: '做饭',done: false},
+                {content: '给李四打电话',done: false}
+            ]
+        }
+        $scope.add = function () {
+           var obj = {content: $scope.cont,done: false}
+           $scope.model.arr.push(obj);
+           $scope.cont = "";
+        }
+        $scope.del = function (obj) {
+           $scope.model.arr.splice($scope.model.arr.indexOf(obj),1);
+        }
+        $scope.count = function () {
+//            var a = $scope.model.arr;
+//            var num = 0;
+//            for(var i=0; i< a.length;i++){
+//                if(!a[i].done){
+//                    num++;
+//                }
+////                console.log(num);
+////                return num;   //?????
+//            }
+//            return num;
+            return $scope.model.arr.filter(item=>!item.done).length
+        }
+        $scope.myFilter = function (obj) {
+//            if(obj.done){
+                return !obj.done;
+//            }
+        }
+
+    }])
+</script>
+</html>

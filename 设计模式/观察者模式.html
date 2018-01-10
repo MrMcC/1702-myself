@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn1">发布信息</button>
+		<button id="btn2">发布信息2</button>
+		<script type="text/javascript">
+			var publisher = {//发布者
+				registerObserver(event,observer){  //注册观察者的功能,传入订阅者信息
+					if(!this[event]){
+						this[event] = [];
+					}
+					this[event].push(observer);
+//					this.observer = observer; //把订阅者信息存成对象
+				},
+				
+				publish(event,msg){ //发布信息的功能
+					if(!this[event]) return;
+					this[event].forEach(function(observer){
+						observer(msg)
+					})
+//					if(this[event]){
+//						this[event](msg)
+//					}
+//					this.observer(msg);//在这里调用给msg
+				}
+			},
+			removeObserver(event,observer){
+				if(!this[event]) return;
+				var index = this[event].indexOf(observer)
+				if(index != -1){
+					this[event].splice(index,1)
+				}
+			}
+			
+			
+			//先看这行 注册观察者1
+			publisher.registerObserver("wubaiwan",function(msg){ //在这里调用给observer传个函数
+				console.log("观察者1得到的信息" + msg)
+			})
+			//注册观察者2
+			publisher.registerObserver("yiqianwan",function(msg){ //在这里调用给observer传个函数
+				console.log("观察者2得到的信息" + msg)
+			})
+			
+			
+			btn1.onclick = function(){
+//				publisher.publish("100平 500万")
+				publisher.publish("wubaiwan","100平 500万")
+			}
+			btn2.onclick = function(){
+//				publisher.publish("200平 500万")
+				publisher.publish("yiqianwan","100平 1000万")
+			}
+			
+			
+//			var publisher = {
+//				registerObserver(observer){
+//					
+//				},
+//				publish(){
+//					
+//				}
+//			}
+//			publisher.registerObserver(function(){
+//				
+//			})
+		</script>
+	</body>
+</html>
+<!--
+	售楼小姐 : 被观察者  发布者  publisher
+	我      : 观察者    订阅者  subscriber
+-->

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            font-size: 200px;color: blue;
+            text-shadow: -20px 10px 20px green,5px -10px 10px red;
+        }
+        p{
+            width: 100px;height: 300px;border: 1px solid #000000;
+            /*word-break: normal;*/
+            /*word-break: break-all;*/
+            word-break: keep-all;
+            overflow: hidden;
+            /*禁止自动换行*/
+            white-space: nowrap;
+        }
+        p:nth-child(2){
+            text-overflow: clip;
+        }
+        p:nth-child(3){
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+<body>
+<div>你好</div>
+<p>多撒奥所大所多撒 多萨达所大所大所大所大所大所</p>
+<p>asdadasdasdasdsadsadasdsaad asdasdasdsadas</p>
+</body>
+</html>

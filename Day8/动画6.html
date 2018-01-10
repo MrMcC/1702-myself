@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 100px;
+				height: 100px;
+				background: pink;
+				position: absolute;
+				border-radius: 50%;
+			}
+		</style>
+	</head>
+	<body>
+		<script src="easing.js" type="text/javascript" charset="utf-8"></script>
+		<div id="box"></div>
+		<script type="text/javascript">
+			var duration = 4000;//动画周期 时间
+			var distance = 400; //距离
+			var startTime = new Date();
+			var p;
+			requestAnimationFrame(function step(){
+				p = Math.min(1,(new Date() - startTime) / duration);
+				var ease = Easing.bounce(p);
+				box.style.transform = 
+				`translate(${distance * ease}px,${distance * p}px)`
+//				if(p == 1){
+//					startTime = new Date();
+//					p = 0;
+//				}
+				p < 1 && requestAnimationFrame(step);
+			})			
+		</script>
+	</body>
+</html>

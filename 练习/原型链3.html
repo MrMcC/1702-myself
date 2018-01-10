@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			  	//定义父类型的构造函数
+	function Father (name,age) {
+		// 属性放在构造函数内部
+		this.name = name;
+		this.age = age;
+		// 方法定义在原型中
+		if((typeof Father.prototype.eat) != "function"){
+			Father.prototype.eat = function () {
+				alert(this.name + " 在吃东西");
+			}
+		}  
+	}
+  // 定义子类类型的构造函数
+	function Son(name, age, sex){
+      	//借调父类型的构造函数，相当于把父类型中的属性添加到了未来的子类型的对象中
+		Father.call(this, name, age);   //如果不借调的话只能通过new Father设定值获取
+		this.sex = sex;
+	}
+  	//修改子类型的原型为父类型的对象。这样就可以继承父类型中的方法了。
+//	Son.prototype = new Father(	"王五",100,"公");//借调的话此处参数就没用了
+	var son1 = new Son("志玲", 30, "女");
+	var son2 = new Son("赵四",20,"男");
+	console.log(son1.name);
+	console.log(son1.sex);
+	console.log(son1.age);
+	console.log(son2.name);
+	console.log(son2.sex);
+	console.log(son2.age);	
+//	son1.eat();
+	console.log(son1 instanceof Father)                         //???
+	console.log(son2 instanceof Father)                       //???true
+		</script>
+	</body>
+</html>

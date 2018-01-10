@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>冒泡排序</title>
+</head>
+<body>
+<script>
+    var arr = ["3", 2, 1, 9, 0, 8, 21, 11];
+    //自动对数组中的元素进行"升序"排列.
+    // 会自动的把元素转换成字符串，然后按照字母表中的顺序进行排列。
+    //传入一个函数参数，比较函数。
+    /*
+    如果返回值 > 0就认为 a > b  把a放在b的后面
+              ==0       a == b  不交换
+              < 0       a < b   a在b的前面
+     */
+    arr.sort(function (a, b) { //a和b仍是数组中的类型
+        console.log(typeof a);
+        return b - a;//从大到小
+		return a - b;//从小到大
+		return 1;//倒叙
+		return -1;//不动
+		return  0 ;//不动
+        return Math.random() - 0.5;  //生成随机数
+        /*if(a > b){
+            return -1;  //不动
+        }else if(a == b){
+            return 0;
+        }else{
+            return 1; //倒叙
+        }*/
+    });
+
+    console.log(arr);
+    
+</script>
+</body>
+</html>

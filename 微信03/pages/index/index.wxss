@@ -1,0 +1,81 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: red;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+#outter{
+  border: 1px solid red;
+}
+#middle{
+  border: 1px solid green;
+}
+#inner{
+  border: 1px solid yellow;
+}
+.view1{
+  width: 375rpx;
+  height: 375rpx;
+  background-color: #ccc;
+}
+.active{
+  background-color: red;
+}
+.scroll1{
+  height: 600rpx;
+  border: 2rpx solid red;
+}
+.bc_green{
+  background-color: green;
+}
+.bc_red{
+  background-color: red;
+}
+.bc_yellow{
+  background-color: yellow;
+}
+.bc_blue{
+  background-color: blue;
+}
+.controls {
+  position: relative;
+  top: 50%;
+  height: 50px;
+  margin-top: -25px;
+  display: flex;
+}
+.play,.pause,.time {
+  flex: 1;
+  height: 100%;
+}
+.time {
+  text-align: center;
+  background-color: rgba(0, 0, 0, .5);
+  color: white;
+  line-height: 50px;
+}
+.img {
+  width: 40px;
+  height: 40px;
+  margin: 5px auto;
+}
+
+
+
+
+

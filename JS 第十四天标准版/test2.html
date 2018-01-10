@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            
+            position: absolute;
+            right: 0;
+            bottom: -200px;
+        }
+    </style>
+</head>
+<body>
+<div id="div">
+    <button id="btn">关闭</button>
+</div>
+<form action="#">
+    <input type="text">
+    <input type="submit" id="sub">
+</form>
+<script>
+    
+    var div = document.getElementById("div");
+    var btn = document.getElementById("btn");
+    var initBottom = -200;
+    function show(){
+        var intervalId = setInterval(function (){
+            div.style.bottom = initBottom++ + "px";
+            if (initBottom == 0){
+                clearInterval(intervalId)
+            }
+        }, 10)
+    }
+    show();
+    btn.onclick = function (){
+        div.style.bottom = "-200px";
+        initBottom = -200;
+        setTimeout(show, 5000)
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>元素的属性操作</title>
+    <style>
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+<button id="btn1">给元素添加id属性</button>
+<button id="btn2">删除属性</button>
+<button id="btn3">获取属性值</button>
+<div id="abc"></div>
+<script type="text/javascript">
+    var div = document.getElementsByTagName("div")[0];
+    document.querySelector("#btn1").onclick = function (){
+        //给div设置一个id=box的属性. 参数1：属性名  参数2：属性值
+        // 如果存在则修改，如果不存在则添加
+        div.setAttribute("id", "box");
+    }
+    document.querySelector("#btn2").onclick = function (){
+        //移除属性，参数：要移除的那个属性的属性名
+        div.removeAttribute("id");
+    }
+    document.querySelector("#btn3").onclick = function (){
+        //获取指定属性的值，如果属性不存在则返回null
+        var value = div.getAttribute("id");
+        alert(value)
+    }
+    // splice
+    
+</script>
+</body>
+</html>

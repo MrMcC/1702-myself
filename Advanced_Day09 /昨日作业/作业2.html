@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #outer {
+            width: 400px;
+            height: 400px;
+            border: 1px solid #000;
+            box-sizing: border-box;
+        }
+        
+        #inner {
+            width: 50px;
+            height: 50px;
+            background-color: pink;
+            border-radius: 50%;
+        }
+    </style>
+    <script type="text/javascript" src="easing.js"></script>
+    <script type="text/javascript" src="my_animator_mor.js"></script>
+</head>
+<body>
+<div id="outer">
+    <div id="inner"></div>
+</div>
+<script>
+    var inner = document.getElementById("inner");
+    var animator = new Animator(
+        [2000, 3000, 4000, 1000],
+        [Easing.linear, Easing.bounce, Easing.easeBoth, Easing.easeOutExpo],
+        [function (e){
+            inner.style.transform =
+                `translate(${350 * e}px, 0px)`;
+        }, function (e){
+            inner.style.transform =
+                `translate(350px, ${350 * e}px)`;
+        }, function (e){
+            inner.style.transform =
+                `translate(${350 * (1 - e)}px, 350px)`;
+        }, function (e){
+            inner.style.transform =
+                `translate(0px, ${350 *(1 - e)}px)`;
+        }]
+    )
+    animator.start(false)
+</script>
+</body>
+</html>

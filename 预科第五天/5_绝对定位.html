@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.son_1{/*width: 200px;*/
+			height: 200px;
+			background: red;
+			position: absolute;}
+		.son_2{width: 400px;
+			height: 400px;
+			background: green;}
+			/*激活属性： top    距离 顶部 位移
+		             right  距离 右侧 位移
+		             bottom 距离 底部 位移 
+		             left   距离 左部 位移
+		             z-index
+		      特性：1.绝对定位会使元素脱离文档流
+		            2.提升层级 1 级
+		            3.如果元素没有宽度，则设置了绝对定位的元素会由内容去撑开宽度
+		            4.绝对定位会使原本不支持宽高的元素从新支持宽高
+		      位移参考：绝对定位元素的位移是参考于离他最近的，设置了定位的父级
+		                设置了定位 相对定位 绝对定位 固定定位*/
+		.span{width: 300px;
+		            	height: 300px;
+		            	background: pink;
+		            	position: absolute;}
+	</style>
+</head>
+<body>
+<div class="son_1">123我</div>
+<div class="son_2">1234567890猪只会哼哼卡里斯大林的骄傲理解垃圾垃圾的垃圾的实力据了解爱上了加大了打击安利的煎熬了几点啦时间的拉倒就爱了的卡骄傲来得及</div>
+<span>12sda</span>
+</body>
+</html>

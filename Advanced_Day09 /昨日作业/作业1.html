@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        img {
+            /*background-color: pink;*/
+        }
+        
+        div {
+            margin-top: 100px;
+        }
+        
+        div button {
+            width: 100px;
+            height: 50px;
+        }
+    
+    </style>
+    <script type="text/javascript" src="easing.js"></script>
+    <script type="text/javascript" src="my_animator1.js"></script>
+</head>
+<body>
+<img src="四叶风扇.png" alt="" width="300" height="300">
+<div>
+    <button id="startBtn">打开风扇</button>
+    <button id="btn1">1</button>
+    <button id="btn2">2</button>
+    <button id="btn3">3</button>
+    <button id="stopBtn">关闭风扇</button>
+</div>
+<script>
+    function Fengshan(option){
+        this.img = option.img;
+        this.startBtn = option.startBtn;
+        this.stopBtn = option.stopBtn;
+        this.speedBtn1 = option.speedBtn1;
+        this.speedBtn2 = option.speedBtn2;
+        this.speedBtn3 = option.speedBtn3;
+
+        this.speed = option.speed;
+
+        this._init();
+    }
+    Fengshan.prototype = {
+        _init: function (){
+            var self = this;
+            //给开始按钮初始化点击事件
+            this.startBtn.onclick = function (){
+                self.start();
+            }
+            this.stopBtn.onclick = function (){
+                self.stop();
+            }
+            this.speedBtn1.onclick = function (){
+                self.changeSpeed(1);
+            }
+            this.speedBtn2.onclick = function (){
+                self.changeSpeed(2);
+            }
+            this.speedBtn3.onclick = function (){
+                self.changeSpeed(3);
+            }
+        },
+        start: function (){
+            if(this.animator){
+                return;
+            }
+            
+            var self = this;
+            this.animator = new Animator(
+                2000 / this.speed,
+                Easing.linear,
+                function (e){
+                    self.img.style.transform =
+                        `rotateZ(${360 * e}deg)`;
+                }
+            )
+            this.animator.start("infinite");
+        },
+        stop: function (){
+            this.animator.stop();
+//            delete this.animator;
+            this.animator = null;
+        },
+        changeSpeed: function (speed){
+            this.animator.duration = 2000 / speed;
+        }
+    }
+
+    
+    new Fengshan({
+        img: document.querySelector("img"),
+        startBtn: document.getElementById("startBtn"),
+        stopBtn: document.getElementById("stopBtn"),
+        speedBtn1: document.getElementById("btn1"),
+        speedBtn2: document.getElementById("btn2"),
+        speedBtn3: document.getElementById("btn3"),
+        speed: 1
+    });
+
+</script>
+</body>
+</html>

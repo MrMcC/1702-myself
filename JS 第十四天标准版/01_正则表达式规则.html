@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>正则表达式规则</title>
+</head>
+<body>
+<script>
+    //    var regExp = /[a-zA-Z0-9_]/gi;
+    //    var regExp = /[a-zA-Z0-9_][a-zA-Z]/gi;
+    //    var regExp = /[^a]/gi;  //在方括号中的时候^表示的是非
+    //    var regExp = /[^ab]/gi;  //  既不是a也不是b
+    //    var regExp = /\d/gi;  // digital  [0-9]
+    //    var regExp = /\D/gi;  // 非数字  [^0-9]
+    //    var regExp = /\w/gi;  // word 匹配的单词字符  数字字母下划线 [a-zA-Z0-9_]
+    //    var regExp = /\W/gi;  // 非单词字符
+    //    var regExp = /\s/gi;  //匹配空白字符  换行、空格、tab
+    //    var regExp = /^1/gi;  //^以什么开头  不能用在[]中
+    //    var regExp = /3$/gi;  //^以什么开头  不能用在[]中
+    //判断一个这个数是不是一个四位数
+    /*
+     对量词来说：默认都是最大匹配(贪婪模式)
+     在量词的后面添加一个?表示最小匹配(懒惰模式)
+     数量词：
+         ?  0个或1个  ==={0, 1}
+         +  一个或多个 === {1, }
+         *  0个或多个 === {0, }
+         {n} 必须n个
+         {n,} 至少n个
+         {n, m} n=< x <= m
+     */
+    
+    /*var regExp = /\d{3,5}/gi;
+     var s = "49a837a47783444";
+     console.log(regExp.exec(s));
+     console.log(regExp.exec(s));
+     console.log(regExp.exec(s));*/
+
+    var regExp = /^1[35678]\d{8}\d$/gi;
+    console.log(regExp.test("12603071634"))
+
+</script>
+
+</body>
+</html>
+<!--
+正则表达式的创建
+    new RegExp("", "")
+    
+    /表达式/gi
+
+两个方法：
+    test
+    
+    exec
+
+
+. 匹配任意的字符
+-->

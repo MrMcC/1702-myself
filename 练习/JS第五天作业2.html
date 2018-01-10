@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--输入年份:<input type="" name="" id="year" value="" />
+		<button id="btn"></button>-->
+		<script type="text/javascript">
+//			btn.onclick = function(){
+////				var year = document.getElementById("year").value;
+//				function y(year){
+//					if(year % 4 ==0 && year % 100 != 0 || year % 400 == 0){
+//						console.log(year + ":是闰年")
+//					}else{
+//						console.log(year + ":不是闰年")
+//					}
+//				}
+//				for(var i = 1999; i < 2051; i++){
+//					y(i);
+//				}
+//			}
+//			
+			function isRun(year){
+				return year % 4 ==0 && year % 100 != 0 || year % 400 == 0;
+			}
+			function writeIsRun(from,to){
+				for(var year = from,count = 0; year <= to; year++){
+					if(isRun(year)){
+						document.write(year + "&nbsp");
+						count++;
+//						if(++count == 5){ 不行,只有第一行能换行
+						if(count % 5 == 0){
+							document.write("<br>");
+						}
+					}
+				}
+			}
+			writeIsRun(1999,2051);
+		</script>
+	</body>
+</html>
+<!--打印1999-2050年中间所有闰年(借用第一题封装好的函数)-->

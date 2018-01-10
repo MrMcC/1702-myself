@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		输入年<input type="text" name="" id="year" value="" />
+		输入月<input type="text" name="" id="month" value="" />
+		输入日<input type="text" name="" id="day" value="" />
+		<button id="btn">按钮</button>
+		<script type="text/javascript">
+			btn.onclick = function(){
+				var year = +document.getElementById("year").value;
+				var month = +document.getElementById("month").value;
+				var day = +document.getElementById("day").value;
+				
+				console.log(a(year,month,day));
+			}
+			function a(year,month,day){
+				if(month ==1){
+					return day;
+				}
+				return b(year, month-1)+day;
+			}
+			function b(year,month){
+				if(month == 1){
+					return c(1,day);
+				}
+				return b(year,month-1)+c(month,day)
+			}
+			function c(month,day){
+				switch(month){
+					case 1:
+					case 3:
+					case 5:
+					case 7:
+					case 8:
+					case 10:
+					case 12:
+						return 31;//???
+						break;
+					case 4:
+					case 6:
+					case 9:
+					case 11:
+						return 30;
+						break;
+					case 2:
+						return isRunnian(year);
+						break;
+				}
+			}
+			function isRunnian(year){
+				if(year % 4==0&&year %100 !=0 ||year %400 == 0){
+					return 29;
+				}else{
+					return 28;
+				}
+			}
+			//什么时候用递归呢??
+		</script>
+	</body>
+</html>

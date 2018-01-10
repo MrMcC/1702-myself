@@ -1,0 +1,56 @@
+<!-- <view wx:for="{{100}}" wx:key="{{index}}">{{item}}</view>
+切换tabBar页面 -->
+<!-- <navigator open-type="switchTab" url="../logs/logs">走你</navigator> -->
+<!-- <navigator url="../demo/demo">走你</navigator> -->
+<!-- <navigator open-type="reLaunch" url="../demo/demo">走你</navigator> -->
+<!-- <view bindtap="toDemo">走你</view> -->
+<!-- <navigator wx:for="{{userList}}" url="../demo/demo?id={{item.userId}}" key="{{item.userId}}">{{item.userName}}</navigator> -->
+<!-- <view wx:for="{{[zero, 1, 2, 3, 4]}}"> {{item}} </view> -->
+<!-- 定义一个模板 -->
+<template name="msgItem">
+  <view>
+    <text> {{index}}: {{msg}} </text>
+    <text> Time: {{time}} </text>
+  </view>
+</template>
+
+<!-- <template is="msgItem" data="{{index:0,msg:'你好', time: '12323'}}" />
+<template is="msgItem" data="{{index:1,msg:'你好2', time: '2323'}}" /> -->
+<!-- <template is="msgItem" data="{{...item}}" /> -->
+<!-- <view wx:for="{{10}}" wx:for-item="a" wx:for-index="i">{{i}}</view> -->
+<!-- <block wx:for="{{5}}">
+  <view>哈地方</view>
+  <view>fdsf</view>
+</block> -->
+<!-- <view wx:if="{{num==0}}">A</view>
+<view wx:elif="{{num==2}}">B</view>
+<view wx:else>C</view> -->
+<!-- <view hidden="{{false}}">我是东方</view> -->
+<!-- <view id="outter" bindtap="handleTap1">
+  outer view
+  <view id="middle" catchtap="handleTap2">
+    middle view
+    <view data-num="5" id="inner" bindtap="handleTap3">
+      inner view
+    </view>
+  </view>
+</view> -->
+<!-- <view class="view1" hover-class="active"></view> -->
+<view class="section">
+  <view class="section__title">vertical scroll</view>
+  <scroll-view scroll-y style="height: 200px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}">
+    <view id="green" class="scroll-view-item bc_green" style="height:100px">A</view>
+    <view id="red"  class="scroll-view-item bc_red" style="height:200px">B</view>
+    <view id="yellow" class="scroll-view-item bc_yellow" style="height:300px">C</view>
+    <view id="blue" class="scroll-view-item bc_blue" style="height:100px">D</view>
+  </scroll-view>
+
+  <view class="btn-area">
+    <button size="mini" bindtap="tap">click me to scroll into view </button>
+    <button size="mini" bindtap="tapMove">click me to scroll</button>
+  </view>
+</view>
+
+
+
+

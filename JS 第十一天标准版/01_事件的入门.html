@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="box">
+    <button id="btn">按钮</button>
+</div>
+<script>
+    var box = document.getElementById("box");
+    btn.onclick = function (){
+        console.log("btn");
+    }
+    box.onclick = function (){
+        console.log("div")
+    }
+</script>
+</body>
+</html>
+<!--
+    作者：李振超  2017年3月27日10:11
+    button被点击
+    btn.onclick = function(event){}
+    事件的三要素：
+        事件源     button
+        事件监听器(事件处理函数)   function(){}
+        事件对象    对发生的事件的封装：事件源  事件发生的坐标  事件的各种相关信息
+    
+    事件源：事件源指事件发生的地点   马路
+    事件监听器：  处理事件的程序     宿舍的人
+    事件对象：    事件本身           马上上经过美女这件事
+    
+    
+    事件流：
+        捕获流：  网景：认为是从document ->html->  ... 最内层的元素
+        冒泡流：  ie:   和上面相反
+    
+    w3c:  dom事件流
+        先从外层到内层  然后再从内层到外层
+        三个阶段：捕获阶段  处于目标阶段   冒泡阶段
+        
+       现在所有的浏览器都支持dom事件流。 都默认让事件在冒泡阶段.
+       我们完全可以更改事件的触发阶段
+    
+-->

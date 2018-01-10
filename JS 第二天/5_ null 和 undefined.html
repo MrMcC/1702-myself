@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		/*
+		 null 和 undefined
+		 
+		 undefined  未定义  声明一个变量,但是没有对该变量初始化
+		                    这时候这个值就是 undefined
+		 * */
+		var num;
+		console.log(num);
+		
+//		console.log(str);
+		
+		/*
+		 null
+		 * 
+		 * null 指的是空对象指针
+		 * ======================
+		 * null 和 undefined 的关系 
+		 * undefined 是从 null 派生出来的
+		 * 所以在 ECMAScript 中,将两者判断为 相等
+		 * 
+		 * 尽管判断数值是相等的,但是他们表达含义不同
+		 * undefined 是声明了变量,但是没有对其进行初始化 (没有赋予初始值)
+		 * null则是用于 表示 尚未存在的对象
+		 * 如果函数或者方法的返回值是对象,但是却又找不到该对象,这个时候返回值通常就是 null*/
+		console.log(null == undefined);
+		
+		/*
+		 表达式和运算符
+		 表达式   是用于 JS 脚本运算时计算的式子,内部可以包含
+		 常量, 变量, 运算符.表达式的值就是将整个表达式经过一些列的运算得到的结果
+		 
+		 运算符   页脚操作符,他的作用就是去操作数据值,最后经过计算,得到结果
+		 ECMAScript中,操作符有不同之处 JS中的运算符不仅仅可以使用在数字上,除此之外,
+		 还可以用在字符串上,布尔值上,甚至可以用在对象上.
+		 注意: JS 中 在应用于对象的时候,运算符经常会去调用对象的某些方法,如 valueOf(),toString()*/
+		/*
+		 算数运算符
+		 * + - * / % ,
+		 * */
+	</script>
+</html>

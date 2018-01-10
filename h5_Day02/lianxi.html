@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./animate.css">
+    <style>
+        *{
+            margin: 0;padding: 0;
+        }
+        div{
+            width: 120px;height: 200px;
+            /*background-color: pink;*/
+            margin: 100px auto;
+            /*border: 1px solid #000;*/
+        }
+        div::before,div::after{
+            content: "赵四";
+            display: block;
+            width: 120px;height: 200px;
+            background-color: red;
+            transform: rotate3D(0,0,1,-45deg);
+            border-radius: 100px 100px 0 0;
+            text-align: center;
+            line-height: 80px;
+        }
+        div::after{
+            content: "志玲";
+            display: block;
+            transform: translate(56px,-200px) rotate3D(0,0,1,45deg);
+            /*transition: all 1s linear 0.3s;*/
+            /*animation: move 2s infinite linear;*/
+        }
+        /*@keyframes move {*/
+            /**/
+        /*}*/
+
+    </style>
+</head>
+<body>
+    <div class="animated bounceIn infinite"></div>
+</body>
+</html>

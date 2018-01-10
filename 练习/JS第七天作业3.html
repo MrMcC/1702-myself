@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function panduan(z){
+				if(z.match(/^[^\d]\w{4,16}/gi)){
+					return "输入合法";
+				}else{
+					return "输入不合法";
+				}	
+			}
+			console.log(panduan("ds"))
+		</script>
+	</body>
+</html>
+<!--
+	验证字符串：长度4-16; 只能包含数字、英文字符、下划线三种符号; 首字符不能是数字";
+-->

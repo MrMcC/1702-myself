@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+<input type="text" ng-model="name">
+<ul>
+    <!--<li ng-repeat="item in friends | filter: myFilter" >-->
+    <li ng-repeat="item in friends | myFilter" >
+        {{item.name}}
+    </li>
+</ul>
+</body>
+<script src="./js/angular.min.js"></script>
+<script >
+    var app = angular.module("myApp",[]);
+    app.controller('myCtrl',['$scope',function ($scope) {
+        $scope.name ="";
+        $scope.friends = [
+            {name:'John', phone:'555-1212', age:21,fa:true},
+            {name:'Mary', phone:'555-9176', age:19,fa:true},
+            {name:'Mike', phone:'555-4321', age:10,fa:false},
+            {name:'Adam', phone:'555-5678', age:35,fa:false},
+            {name:'Julie', phone:'555-8765', age:29,fa:true}];
+
+        $scope.myFilter = function (obj) {
+            console.log(obj)
+            return obj.fa;
+        }
+
+    }]);
+
+
+    app.filter('myFilter',function () {
+
+        return function (arr) {
+
+            console.log(arguments);
+            return arr.filter(item=>item.fa);//筛选,如果存在就返回(返回一个布尔值)
+
+        }
+
+    })
+</script>
+</html>

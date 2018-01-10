@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//		   "use strict"
+//			var a = 10;
+//			function foo(){
+////			   "use strict"  //?
+//				a=20;
+//				console.log(a); 
+//			}
+//			foo();
+//			console.log(a);
+//			
+//			var a = 10;
+//			console.log(window.a);
+//			if(true){
+//				var b = 20;
+//			}
+//			console.log(window.b);
+//			
+//			console.log(window.c);   //  单独对一个未赋值声明的变量打印 undefined
+//			console.log(c);    //报错
+//			
+//			function foo(){    //如果定义了形参c,就相当于声明了变量,就是函数内部了,c无法上升高度
+//				 c = 30;       //如果()内未定义形参,且c=30也未声明,那么c=3就是全局变量
+//			}
+//			foo();
+//			console.log(c);  //  ???当调用的时候为啥还是报错?
+//			console.log(window.c); 
+//			console.log(window.name);// 未调用函数时 name属性 默认的是空字符串
+////			
+//			var b = 20;
+//   		alert(new Number(5) || b++);  //new Number(5)??
+//   		
+//   		function f(){
+//      			alert(v);  //	弹出：undefined
+//     			var v = "abc";  // 声明局部变量。局部变量也会声明提前到函数的最顶端。
+//      			alert(v);	//	弹出：abc
+//  			}
+//  				f();
+//  				alert(v);
+//  			
+//  			var m = 10;
+//  			function f(){
+//     		var m = 20;
+//      		alert("方法内部：" + m);  //代码1
+//  			}
+//  			f();
+//  			alert("方法外部：" + m);	//代码2
+//  			
+//  			var m = 10;
+//  			function f(){
+//      		var m = 20;
+//     		alert(window.m);  //访问同名的全局变量(函数内的局部变量不能访问)。其实这个时候相当于在访问window这个对象的属性。
+// 		 	}
+//  			f();
+			
+		</script>
+		
+	</body>
+</html>
+<!--
+	变量的作用域:
+	     全局作用域
+	     局部作用域
+	     看是不是在函数内部
+	     
+	     块级作用域
+	    
+	    全局作用域
+	     每声明一个全局变量,这个全局变量会成为Window对象的一个同名属性
+	     访问不存在的属性返回undefined,
+-->
+

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="box">
+    <input type="text" id="input">
+</div>
+
+<script>
+    //获得焦点的事件. 因为focus事件不冒泡
+    input.onfocus = function (){
+        this.style.backgroundColor = "pink";
+    }
+    
+    //失去焦点的事件
+    input.onblur = function (){
+        this.style.backgroundColor = "blue";
+    }
+    
+</script>
+</body>
+</html>

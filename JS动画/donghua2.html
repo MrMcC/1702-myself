@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 100px;height: 100px;background-color: pink;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<script src="suanzi.js" type="text/javascript" charset="utf-8"></script>
+		<script src="my_animator2.js" type="text/javascript" charset="utf-8"></script>
+		<div></div>
+		<script type="text/javascript">
+			var div = document.querySelector("div")
+			var animator = new Animator(
+				[2000,3000,1000,2000],
+				[Easing.easeIn,Easing.easeBoth,Easing.bounce,Easing.easeBothStrong],
+				[function(ease){
+					div.style.transform = `translate(${500 * ease}px,0px)`
+					div.style.backgroundColor = `rgb(${parseInt(255*ease)},${parseInt(255*(1-ease))},${parseInt(255*ease)})`
+				},function(ease){
+					
+					div.style.transform = `translate(${500}px,${500 * ease}px)`
+					div.style.width = `${100 * (1-ease)}px`
+				},function(ease){
+					div.style.transform = `translate(${500 * (1-ease)}px,${500}px)`
+					div.style.width = `${100 * ease}px`
+				},function(ease){
+					div.style.transform = `translate(0px,${500 * (1-ease)}px)`
+				}]
+			)
+			animator.start(true)
+		</script>
+	</body>
+</html>

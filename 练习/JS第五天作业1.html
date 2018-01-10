@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		输入年份:<input type="" name="" id="year" value="" />
+		<button id="btn"></button>
+		<script type="text/javascript">
+			btn.onclick = function(){
+				var year = document.getElementById("year").value;
+				function y(year){
+					if(year % 4 ==0 && year % 100 != 0 || year % 400 == 0){
+						alert(year + ":是闰年")
+					}else{
+						alert(year + ":不是闰年")
+					}
+				}
+				y(year);
+			}
+			
+		</script>
+	</body>
+</html>
+<!--定义函数,输入年份判断是否是闰年-->

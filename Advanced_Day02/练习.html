@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="Circle.js"></script>
+</head>
+<body>
+<button id="move">向右移动</button>
+<button id="changeRect">变成方的</button>
+<button id="changeCircle">变成圆的</button>
+<script>
+
+    var c1 = new Circle({
+        ele: document.createElement("div"),
+        r: 100,
+        bc: "gray",
+        parent: document.body
+    });
+    var c2 = new Circle({
+        ele: document.createElement("div"),
+        r: 100,
+        bc: "gray",
+        parent: document.body
+    });
+    document.getElementById("move").onclick = function (){
+        c1.moveX(500);
+        c2.moveX(1000);
+    }
+    document.getElementById("changeRect").onclick = function (){
+        c1.changeRect();
+        c2.changeCircle();
+    }
+    document.getElementById("changeCircle").onclick = function (){
+        c1.changeCircle();
+        c2.changeRect();
+    }
+
+</script>
+</body>
+</html>

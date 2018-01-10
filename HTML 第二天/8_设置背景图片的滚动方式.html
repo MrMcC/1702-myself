@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		div{
+			width: 500px;
+			height: 2000px;
+			background:red 
+					   url("img/d4907d2be82cc4043376e49788f4e941.jpg")
+					   no-repeat
+					   right top;
+		/*不推荐大家使用的
+		background-attachment: 
+		                  设置背景图片是否随着界面的滚动而滚动
+		                  属性：scroll：滚动的 默认值
+		                       fixed： 固定的 造成的问题：造成内容的偏移
+		                                              偶尔会造成内容的丢失（跟定位冲突）推荐用使用定位来完成
+		
+		*/
+			background-attachment: fixed;
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+</body>
+</html>

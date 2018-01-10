@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//			var forms = document.createElement("form")
+//			var input1 = document.createElement("input")
+//			var input2 = document.createElement("input")
+//			var text1 = document.createTextNode("用户:")
+//			var text2 = document.createTextNode("密码:")
+//			var br = document.createElement("br")
+//			var btn = document.createElement("button")
+//			var text3 = document.createTextNode("提交")
+//			document.body.appendChild(forms)
+//			forms.appendChild(text1)
+//			forms.appendChild(input1)
+//			forms.appendChild(br)
+//			forms.appendChild(text2)
+//			forms.appendChild(input2)
+//			btn.appendChild(text3)
+//			document.body.appendChild(btn)
+			
+			
+			var form = document.createElement("form")
+			form.setAttribute("action" , "#")
+			form.setAttribute("method" , "get")
+			document.body.appendChild(form)
+			
+			var text1 = document.createTextNode("用户:")
+			form.appendChild(text1);
+			
+			var input1 = createInput("text")
+			form.appendChild(input1)
+			
+			form.appendChild(document.createElement("br"))
+			
+			var text2 = document.createTextNode("密码:")
+			form.appendChild(text2);
+			
+			var input2 = createInput("text")
+			form.appendChild(input2)
+			
+			form.appendChild(document.createElement("br"))
+			
+			var input3 = createInput("submit")
+			form.appendChild(input3)
+				
+			
+			function createInput(type){
+				var input = document.createElement("input");
+				input.setAttribute("type",type)
+				return input;
+			}
+			
+			var form2 = form.cloneNode(true);
+			form2.appendChild(createInput("reset"))
+			document.body.appendChild(form2)
+		</script>
+	</body>
+</html>
+<!--用js代码动态的创建一个form表单,并动态添加节点 最后效果如下所示-->

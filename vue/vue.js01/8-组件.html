@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.js"></script>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div id="app">
+        <ol>
+            <!--利用创建的属性todo传参,传的是字符串,用:绑定-->
+            <todo-item v-for="(item,index) in groceryList" :todo="item.text" :todo-index="index"></todo-item>
+        </ol>
+    </div>
+</body>
+<script>
+    //子组件 定义名字也可以todo-item,在html中不允许驼峰,会自动转
+    Vue.component("todoItem",{
+        //模板
+        template: "<li>{{todo}},下标是{{todoIndex}}<a href='###'>删除</a></li>",
+        //子组件不能直接使用父组件的数据,因此自定义个属性,来获取父组件数据
+        props: ["todo","todoIndex"]
+    })
+
+    //父组件
+    var vm = new Vue({
+        el:"#app",
+        data: {
+            groceryList:[
+                {text:'蔬菜'},
+                {text:'起司'},
+                {text:'米饭'}
+            ]
+        },
+        methods: {
+
+        }
+    })
+
+</script>
+</html>

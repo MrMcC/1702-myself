@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<button id="btn">发起ajax请求</button>
+<div id="box"></div>
+<body>
+<script type="text/javascript">
+    var btn = document.getElementById("btn");
+    btn.onclick = function (){
+        /*步骤1：创建XMLHttpRequest对象*/
+        var xhr = window.XMLHttpRequest
+            ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
+        /*步骤2：调用xhr的open方法, 还没有真正的去发送数据到服务器
+         参数1：请求的方式  GET或POST
+         参数2：请求的数据的地址
+         参数3：是否为异步！  true代表异步
+             同步：一段代码执行结束之前，会阻塞另外的一段代码
+             异步：两段或多段代码可以同时执行，就叫异步。
+        */
+        xhr.open("GET", "./01_get请求.html", true);
+        /*步骤3：处理服务器响应的数据  一定放在send方法之外开始监听
+        * readystate:请求状态。
+        * 5种状态：
+        * 0：未初始化 xhr对象已经new出来，但是还没有open
+        * 1 : 启动  已经open但是还没有调用send
+        * 2 :发送   已经调用send，但是还没有收到数据
+        * 3：开始接收  已经开始接收数据，但是还没有接收完整。
+        * 4. 接收完毕   已经完全接收数据
+        * */
+        xhr.onreadystatechange = function (){
+            if(xhr.readyState == 4){ //数据接受完毕
+                  // 200 ok  404 资源没有找到  500 服务器异常
+                if(xhr.status == 200){
+                    box.innerHTML = xhr.responseText;
+                }else{
+                    box.innerHTML = "你访问出现了问题，请重试"
+                }
+            }
+        }
+        /*步骤4:发送请求。真正的发送请求
+        * 如果是get请求一般传入null即可
+        * 如果是post请求，就在参数中传入请求体的数据
+        * */
+        xhr.send(null);  //参数表示请求体
+    }
+    
+</script>
+</body>
+</html>
+<!--
+var xhr = new XMLHttpRequest();  //不支持ie5和IE6
+        var xhr = new ActiveXObject("Microsoft.XMLHTTP")
+
+
+var xhr;
+        if(window.XMLHttpRequest){
+            xhr = new XMLHttpRequest();
+        }else{
+            xhr =  new ActiveXObject("Microsoft.XMLHTTP");
+        }
+-->

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var s = "Abc39423974deAB4084081808fga458203850b09852458";
+    //如果传入的是普通的字符串，则只会找到第一个匹配
+    var a1 = s.match(/ab/gi);//ignore
+    console.log(a1.length)
+    console.log(a1)
+
+    var s1 = "javacjavaphpjava";
+    //返回的是替换后的字符串
+    var s2 = s1.replace(/java/gi, "js");
+    console.log(s2);
+</script>
+</body>
+</html>

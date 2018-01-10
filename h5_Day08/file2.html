@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="file" multiple>
+<button>获取文件信息</button>
+<script>
+    var inputFile = document.querySelector("input");
+    var btn = document.querySelector("button");
+    btn.onclick = function () {
+        var files =  inputFile.files;
+        for (var i =0; i< files.length; i++){
+            console.log(files.item(i));
+        }
+    }
+</script>
+</body>
+</html>

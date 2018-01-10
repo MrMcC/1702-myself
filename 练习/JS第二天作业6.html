@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		输入性别:<input type="text" name="" id="sex" value="" />
+		<input type="button" name="btn" id="btn" value="按钮" />
+		<script type="text/javascript">
+			btn.onclick= function(){
+				if(sex.value == "男" || sex.value == "女"){
+					alert("您输入的正确")
+				}else{
+					alert("您输入错误")
+				}
+			}
+		</script>
+	</body>
+</html>
+<!--输入性别只能男或者女,当点击按钮的时候判断
+	输入的是否为男或者女,若不是则弹出提示框显示不正确
+-->

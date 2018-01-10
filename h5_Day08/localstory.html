@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="color">
+<select name="" id="">
+    <option value="./img/timg.jpeg">图片1</option>
+    <option value="./img/timg2.jpeg">图片2</option>
+</select>
+<br>
+<img src="" alt="">
+<script>
+
+
+    var select = document.querySelector("select");
+    var input = document.querySelector("input");
+    var img = document.querySelector("img");
+
+//    img.src = "./img/timg.jpeg";
+//    document.body.style.backgroundColor = "black";
+
+    if(localStorage){
+        changeStyle();
+    }
+
+    select.onchange = save;
+    input.onchange = save;
+
+    function save() {
+        localStorage.setItem("imgSrc",select.value);
+        localStorage.setItem("bg",input.value);
+        changeStyle();
+    }
+
+    function changeStyle() {
+        document.body.style.backgroundColor = localStorage.getItem("bg");
+        img.src = localStorage.getItem("imgSrc");
+        select.value = imgSrc;
+        input.value = bg;
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		body{
+			margin: 0;
+		}
+		.wrap{
+			width: 500px;
+			height: 100px;
+			border: 5px solid #000;
+
+			position: relative;
+		}
+		.son{
+			width: 500px;
+			height: 300px;
+			background: red;
+
+			position: absolute;
+			left: 5px;
+			top: 100px;
+
+			display: none;
+		}
+		.wrap:hover .son{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="son"></div>
+	</div>
+
+</body>
+</html>

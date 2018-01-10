@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="play">播放</button>
+<button id="pause">暂停</button>
+<input type="range" id="seekBar" value="0">
+<button id="mute">静音</button>
+<button id="full_screen">全屏</button>
+<br>
+<video src="./video/a.mp4" type="video/mp4" width="600" controls></video>
+<script>
+    var video = document.querySelector("video");
+    video.addEventListener("loadeddata",function(){
+//        console.log(video.readyState)
+        if(video.readyState >= 1){
+            seekBar.max = video.duration;
+        }
+    })
+//    console.log(video.duration);
+    var id;
+    play.onclick = function () {
+        video.play();
+        id = setTimeout(function step(){
+            var currentTime = video.currentTime;
+            seekBar.value = currentTime;
+            if(video.paused || video.ended){
+                clearTimeout(id)
+            }
+            setTimeout(step,10)
+        },10)
+    }
+    pause.onclick = function () {
+        video.pause();
+    }
+    seekBar.onchange = function () {
+        clearTimeout(id);
+        video.currentTime = this.value;
+        play.onclick();
+    }
+    mute.onclick = function(){
+        if(video.muted){
+            video.muted = false;
+        }else{
+            video.muted = true;
+        }
+    }
+    full_screen.onclick= function () {
+        if(video.mozRequestFullScreen){
+            video.mozRequestFullScreen();
+        }else if(video.webkitRequestFullScreen){
+            video.webkitRequestFullScreen();
+        }
+        console.log("aaa")
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form id="registerForm">
+			<div>
+				用户: <input type="text" name="user" value="" placeholder="请输入用户名"/><i></i>
+			</div>
+			<div>
+				密码: <input type="password" name="" value=""/><i></i>
+			</div>
+			<div>
+				邮箱: <input type="text" name="email" value=""/><i></i>
+			</div>
+			<div>
+				手机: <input type="text" name="phone" value=""/><i></i>
+			</div>
+		</form>
+		<script type="text/javascript">
+			//用户名:必须是字母单词,不能数字开头,长度在3-12
+			var forms = document.forms; //得到当前页面中所有的form元素
+//			var form = forms[0];
+			var form = document.forms.registerForm// 获取指定name属性值的表单元素
+			form.user.onblur = function(){
+				//获取表单元素的value值
+				var useValue = form.user.value;
+				var isRight = userValue.search(/^[a-z]\w{1,10}\w$/gi)
+			}
+			function(input, regExp, successMsg, failMsg, ele){
+				//获取表单元素的value值
+				var userValue = input.value;
+				var index = userValueValue.search(regExp)
+				if(index > -1){
+					ele.innerHTML = successMsg;
+				}
+			}
+		
+		
+		
+		</script>
+	</body>
+	
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function num(num){
+				var num1 = num.split("$")
+//				console.log(num1);
+				num1.sort(function(a,b){
+					return b-a;
+				})
+				console.log("最大值为:"+num1[0]);
+				console.log("最小值为:"+num[num.length-1])
+				
+				var sum = 0;
+				for (var i = 0; i < num1.length; i++) {
+					sum += +num1[i];
+				}
+				console.log("平均值为:"+(sum / num1.length));
+			}
+			num("11$12$3$8$9$10$30$50$60");
+		</script>
+	</body>
+</html>
+<!--
+有如下字符串“11$12$3$8$9$10$30$50$60”。      
+
+要求：把字符串中的数字转存到数组中并对数组降序，然后求最大值，最小值，平均值。
+
+-->

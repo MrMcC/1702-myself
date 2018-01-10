@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<!--给对象添加属性-->
+		<script type="text/javascript">
+			//给你一个学生的名字,把学生的相关信息输出
+			var a = {
+				schoolName: "林业大学",
+				address: "深圳",
+				classes: [
+					{
+						className: "H51701",
+						teacher: "lis",
+						students: ["李四", "凤姐", "志玲"]
+					},
+					{
+						className: "H51702",
+						teacher: "wa5",
+						students: ["账上", "王五", "李四"]
+					}
+				]
+			}
+//给你一个学生的名字，把学生的相关信息输出
+			var name = "凤姐";
+			var kong ={};
+			a:for(var i of a.classes) {   //看学生在哪个里  遍历出两个班级信息   取我a里的classes
+				var students = i.students; //找到班级里的学生
+				for(var s of students){  //遍历所有学生
+					if(s == name){
+						s.schoolName = kong.schoolName;
+						s.address = kong.address;
+						s.className = kong.className;
+						s.teacher = kong.teacher;
+						s = kong.name;
+						break a;
+					}
+				}
+			}
+		</script>
+	</body>
+
+</html>
+    <!--//给你一个学生的名字，把学生的相关信息输出
+    var name = "王五";
+    var student = {};
+    a:for (var clazz of school.classes){
+        var students = clazz.students;
+        for (var s of students){
+            console.log(s)
+            if (s == name){
+                student.schoolName = school.schoolName;
+                student.address = school.address;
+                student.className = clazz.className;
+                student.teacher = clazz.teacher;
+                student.name = s;
+                break a;  // break + 标号可以退出任意多层的循环
+            }
+        }
+    }
+    console.log(student)-->

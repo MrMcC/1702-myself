@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;padding: 0;
+			}
+			#imgSmall{
+				width: 400px;
+				height: 100px;
+			}
+			#imgSmall img{
+				width: 100px;
+				height: 100px;
+				float: left;
+				border: 1px solid #000000;
+				box-sizing: border-box;
+				float: left;
+			}	
+			#imgBig{
+				width: 400px;
+				height: 400px;
+				position: relative;
+			}
+			#imgBig img{
+				width: 100%;
+				height: 100%;
+				border: 1px solid #000000;
+				position: absolute;left: 0;top: 20px;
+				display: none;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div id="outer">
+			<div id="imgSmall">
+				<img src="img/shirt_1.jpg" alt="" />
+				<img src="img/shirt_2.jpg" alt="" />
+				<img src="img/shirt_3.jpg" alt="" />
+				<img src="img/shirt_4.jpg" alt="" />
+			</div>
+			<div id="imgBig">
+				<img src="img/shirt_1_big.jpg" alt="" />
+				<img src="img/shirt_2_big.jpg" alt="" />
+				<img src="img/shirt_3_big.jpg" alt="" />
+				<img src="img/shirt_4_big.jpg" alt="" />
+			</div>
+		</div>
+		<script type="text/javascript">
+			var imgSmall = document.getElementsByTagName("#imgSmall img");
+			var imgBig = document.getElementsByTagName("#imgBig img");
+			imgSmall.onmouseover = function(){
+				imgBig.style.display = "block";
+			}
+		</script>
+	</body>
+</html>

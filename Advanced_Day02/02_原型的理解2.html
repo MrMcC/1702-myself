@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>原型的理解</title>
+</head>
+<body>
+<script>
+    function Person(){
+    
+    }
+    Person.prototype.name = "李四";
+    var p1 =  new Person();
+    p1.name = "张三"; //当我的对象中含有键值对时,就不会去访问原型中的值
+    var p2 = new Person();
+    console.log(p1.name);  //张三
+    console.log(p2.name);  //李四
+    console.log(p1.constructor);
+</script>
+
+</body>
+</html>

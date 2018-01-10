@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>作业3</title>
+</head>
+<body>
+       &nbsp;&gt;&lt;
+<!--
+
+-->
+<script type="text/javascript">
+    /*
+     作者：李振超    2017年3月22日 20:04
+        在一个页面中自动显示和自动消失的小广告。
+        1. 页面启动1s之后跳出广告
+        2. 再经过5s之后自动关闭广告
+     */
+    setTimeout(function (){
+        var win = window.open("guanggao.html", "_blank", "width=500, height=500, left=400, top=400")
+        setTimeout(function (){
+            win.close();
+        }, 5000)
+    },1000)
+    
+</script>
+</body>
+</html>

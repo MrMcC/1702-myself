@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">按钮</button>
+		<button id="btn2">取消</button>
+		<script type="text/javascript">
+			btn.onclick = function (){
+				//这个函数每调用一次,在一定的时间间隔之后就会调用一次回调函数,同setTimeout
+				id = requestAnimationFrame(function step(){
+//					console.log("我要被执行了")
+					console.log(new Date().getTime())
+					id = requestAnimationFrame(step);
+				})
+			}
+			btn2.onclick = function(){
+				cancelAnimationFrame(id);
+			}
+//			console.log(new Date().getTime())
+//	console.log(a);
+//	setTimeout (function(){
+//		console.log(b);
+//	},20)
+//	setTimeout (function(){
+//		console.log(c);
+//	},10)//时间到了才会放进队列中
+//	console.log(c);
+//	while(true){
+//		
+//	}
+			
+		</script>
+	</body>
+</html>
+<!--
+	js是单线程
+	只能在同一时间执行一个事情,必须排队一个一个接待
+	进程 每启动一个应用程序,就启动了一个进程
+	一个进程可以开多个线程
+	定时的函数事件到了之后,会放入到一个事件队列中,
+	js的事件自动轮询机制会自动的从队列中取出事件去执行
+
+-->

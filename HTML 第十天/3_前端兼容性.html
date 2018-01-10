@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		#box{
+			width: 400px;
+		}
+		.left{
+			width: 200px;
+			height: 300px;
+			background: red;
+			float: left;
+		}
+		.right{
+			width: 200px;
+			float: right;
+		}
+		.div{
+			width: 180px;
+			height: 180px;
+			padding: 15px;
+			background: pink;
+		}
+		/* 问题原因：ie6下子级的宽度会撑开父级设置好的宽度
+		   解决方案：将子级元素的宽度设置为小于等于父级元素的宽度
+		           盒模型的计算一定要准确，否则在ie 下会出现问题*/
+	</style>
+</head>
+<body>
+	<div id="box">
+		<div class="left"></div>
+		<div class="right">
+			<div class="div"></div>
+		</div>
+	</div>
+</body>
+</html>

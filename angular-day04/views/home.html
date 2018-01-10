@@ -1,0 +1,21 @@
+<style>
+    h1{
+        background-color: #00c0a5;
+        color: #dcb357;
+        text-align: center;
+    }
+    li{
+        font-size: 30px;
+        background-color: #ccc;
+    }
+    li:nth-child(odd){
+        background-color: yellow;
+    }
+
+</style>
+<h1>{{title}}</h1>
+<ul>
+    <li ng-repeat="item in userServe">
+        <a href="#/detail/{{item.userId}}">姓名:{{item.userName}}</a>
+    </li>
+</ul>

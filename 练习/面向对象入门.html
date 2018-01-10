@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var p = {
+				name: "小明",
+				age: 20,
+				height: 180,
+				eat: function(){
+					console.log("abc");
+				}
+			}
+			//如何访问对象的属性 对象.属性
+			console.log(p.name);
+			console.log(p.name = "李四");
+			console.log(p.abc);  //未定义
+			p.abc = "hahaha";
+			console.log(p.abc);
+			console.log(p);
+			
+			//调用对象的方法:对象.方法名(实参)
+//			p.eat();
+//			p.speak = function(){
+//				console.log("你好");
+//			}
+//			p.speak();
+////			
+////			delete p.name //删除对象的属性
+////			console.log(p);
+//			delete p.eat //删除对象的方法 不能写成p.eat()
+//			delete p.eat();//后半部分相当于调用这个方法
+//			console.log(p);
+
+//			delete p.speak; //没有这个方法,删除也白删除
+//			delete p.speak();//相当于调用p.speak()方法,但是我的对象中没有这个方法,所以返回不是个函数
+//			console.log(p);
+//			
+//			getPropertyValue(p,name);
+//			function getPropertyValue(obj,propertyName){
+//				return obj[propertyName];  //obj.propertyName相当于对象的属性不是代表一个实参变量
+//			}
+//			
+//p.访问的是属性,p.[访问的是变量],p["属性"]
+
+//          var method = "eat";
+//			p.method; //访问p里的method属性,返回undefined
+//			p[method](); //method是变量
+//			p["eat"]();//如果方括号的字符没有加引号就是变量,有引号就是属性
+//			
+			var arr =["q","a"];
+//			//数组也是对象,数组元素是对象的值,数组的键是它的index
+//			console.log(arr["0"]);
+//			console.log(arr.0); //不行 
+//			console.log(arr[0]);
+//			console.log(arr.length);
+//			console.log(arr["length"]); //方括号访问属性时候要加""
+
+			arr["forEach"](function(ele){//数组遍历 打印的是字符串
+				console.log(ele);
+			})
+			
+			
+			
+		</script>
+	</body>
+</html>
+<!--
+	机器语言  0011
+	汇编语言  助记符 mov 编译器
+	高级语言  basic  fortran  b...c
+	面向过程
+	c  更加着眼于局部和过程
+	面向对象
+	   更加着眼于整体和功能
+	c++
+	java
+	c#
+	Javascript
+	typescript
+	go
+	php
+	oc
+	..
+	在JS中对象是无序键值对的集合!
+	小明:eat  function
+	     性别  男
+	     爱好  女
+	     
+	      键必须是字符串 ,值可以使任意类型
+	      多个键值对之间用,分开
+	      这种键表示一种状态
+	      属性值是函数的属性,我们一般称为对象的方法
+-->

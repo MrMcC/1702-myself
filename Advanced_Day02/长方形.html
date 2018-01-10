@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function Chuang(option){ //我的形参代表一个对象
+				this._init(option)  //调用这个方法,并把我的值传进去
+			}
+			Chuang.prototype = {
+				constructor : Chuang,
+				_init : function(option){     //我的option方法,在上面被调用了
+					this.length = option.length;
+					this.width = option.width;
+				},
+				mian : function(){
+					return this.length * this.width;
+				},
+				zhou : function(){
+					return (this.length + this.width) * 2;
+				}
+			}
+			var rec = new Chuang({width : 10,length : 20})//必须要用对象方式 (对象值)
+			console.log(rec.mian())
+		</script>
+	</body>
+</html>
+<!--1. 定义一个创建“长方形”的构造函数（有参数，通过参数给属性赋值）
+
+    属性：长（length）；（实例属性）
+    	 宽（width）；（实例属性）
+    方法：求面积；（原型方法）
+    	  求周长；（原型方法）
+通过这个构造函数创建出3个不同的对象，并调用对象方法计算对象的面积和周长；-->

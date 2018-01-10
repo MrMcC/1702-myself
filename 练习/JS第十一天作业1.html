@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;padding: 0;
+			}
+			ul{
+				list-style: none;position: relative;margin-left: 100px;
+			}
+			ul li {
+				width: 200px;
+			}
+			ul li p {
+				width: 100px;height: 50px;border-bottom: 1px solid white;
+				background-color: pink;font-size: 30px;color: lightskyblue;
+				text-align: center;line-height: 50px;
+			}
+			ul li div{
+				width: 600px;height: 600px;background-color: paleturquoise;
+				position: absolute;left: 120px;top: 0;display: none;
+				font-size: 80px;color: darkgray;
+				text-align: center;line-height: 600px;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>
+				<p>你猜</p>
+				<div>你猜</div>
+			</li>
+			<li>
+				<p>你猜</p>
+				<div>你猜我猜不猜</div>
+			</li>
+			<li>
+				<p>你猜</p>
+				<div>你猜我猜你猜不猜</div>
+			</li>
+			<li>
+				<p>你猜</p>
+				<div>你猜我猜你猜我猜不猜</div>
+			</li>
+		</ul>
+		<script type="text/javascript">
+			var li = document.getElementsByTagName("li");
+			for(let i = 0; i < li.length; i++){
+				li[i].onmouseenter= function(){
+					console.log("aaa");
+					li[i].firstElementChild.style.backgroundColor = "purple";
+					li[i].lastElementChild.style.display = "block";
+				}
+				li[i].onmouseleave= function(){
+					li[i].firstElementChild.style.backgroundColor = "pink";
+					li[i].lastElementChild.style.display = "none";
+				}
+			}
+			
+			
+		</script>
+	</body>
+</html>

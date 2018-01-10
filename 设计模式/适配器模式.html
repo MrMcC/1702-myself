@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/my_ajax.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="box1"></div>
+		<div id="box2"></div>
+		<script type="text/javascript">
+			ajax.get("./date1.json",function(div,result){
+				showResult(box1,JSON.parse(result))
+			})
+			function showResult(div,obj){
+				div.innerHTML = obj.name;
+			}
+			
+			ajax.get("./date2.json",function(div,result){
+				showResultAdapter(box2,JSON.parse(result))
+			})
+			function showResultAdapter(div,obj){ //适配器
+				showResult(box2,obj.data)  //还用原来的展示结果,传入我想要的数据值
+			}
+		</script>
+	</body>
+</html>

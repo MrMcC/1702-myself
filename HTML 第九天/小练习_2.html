@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.wrap{
+			width: 300px;
+			height: 300px;
+			padding: 10px;
+			border: 3px solid #000;
+			background: white;
+
+		}
+		div{
+			width: 100px;
+			height: 100px;
+			background: pink;
+			color: white;
+			text-align: center;
+			line-height: 100px;
+		}
+		.div_2,.div_4{
+			position: relative;
+			left: 200px;
+			bottom: 100px;
+		}
+		.div_5{
+			position: relative;
+			left: 100px;
+			bottom: 300px;
+			background: purple;
+/* 设置定位的层级   数值越大的层级越高
+                  数值越小的层级越低
+                  两个对比的元素都要设置z－index
+                  两个对比的元素要是兄弟关系
+                  z－index可以设置负数
+                  z－index不要设置为负数*/
+			z-index: ;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="div_1">链接</div>
+		<div class="div_2">链接</div>
+		<div class="div_3">链接</div>
+		<div class="div_4">链接</div>
+		<div class="div_5">链接</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//z字符串,ele要找的元素
+			function find(z,ele){
+				if(z.indexOf(ele) == -1){
+					console.log("无匹配项");
+				}else{
+					var time = 0;
+					var index = z.indexOf(ele);//第一次找到元素下标
+					while(index != -1){
+						var froms = index + ele.length;//第二次从哪开始找
+						var index1 = z.indexOf(ele,froms);//第二次找到元素下标 (index1?)
+						time++;   //记录找的次数
+					}
+					return time +1;
+				}
+			}
+			find('asd111asdasd11as','asd');
+		</script>
+	</body>
+</html>

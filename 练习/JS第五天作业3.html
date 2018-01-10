@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="" name="" id="year" value="" />年
+		<input type="" name="" id="month" value="" />月
+		<input type="" name="" id="day" value="" />日
+		<button id="btn">按钮</button>
+		<script type="text/javascript">
+			//第一种写法:
+			btn.onclick = function (){
+				var year = +document.getElementById("year").value;
+				var month = +document.getElementById("month").value;
+				var day = +document.getElementById("day").value;
+				function panduan(year,month,day){
+					if(year % 4 ==0 && year % 100 != 0 || year % 400 == 0){
+						if(month == 2 && day >= 1 && day <= 29){
+							alert("你输入的:"+ year+"年"+month+"月"+day+"日合法")
+						}else if((month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) && day >=1 && day <= 31){
+							alert("你输入的:"+ year+"年"+month+"月"+day+"日合法")
+						}else if ((month == 4 || month == 6 || month == 9 || month == 11) && day >=1 && day <= 30){
+							alert("你输入的:"+ year+"年"+month+"月"+day+"日合法")
+						}else{
+							alert("你输入的:"+ year+"年"+month+"月"+day+"日不合法")
+						}
+					}else{
+						if(month == 2 && day >= 1 && day <= 28){
+							alert("你输入的:"+ year+"年"+month+"月"+day+"日合法")
+						}else if((month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) && day >=1 && day <= 31){
+							alert("你输入的:"+ year+"年"+month+"月"+day+"日合法")
+						}else if ((month == 4 || month == 6 || month == 9 || month == 11) && day >=1 && day <= 30){
+							alert("你输入的:"+ year+"年"+month+"月"+day+"日合法")
+						}else{
+							alert("你输入的:"+ year+"年"+month+"月"+day+"日不合法")
+						}
+					}
+				}
+				panduan(year,month,day);
+			}
+			
+			//第二种写法
+			btn.onclick = function (){
+				var year = +document.getElementById("year").value;
+				var month = +document.getElementById("month").value;
+				var day = +document.getElementById("day").value;
+				function panduan(year,month,day){
+					return yue(month)
+				}
+				function yue(month){
+					switch(month){
+						case 1:
+						case 3:
+						case 5:
+						case 7:
+						case 8:
+						case 10:
+						case 12:
+							return 31;
+							break;
+						case 4:
+						case 6:
+						case 9:
+						case 11:
+							return 30;
+							break;
+						case 2:
+							return isRun(year) ? 29 : 28;
+					}
+				}
+				function isRun(year){
+					return year % 4 ==0 && year % 100 != 0 || year % 400 == 0
+				}
+				if(panduan(year,month,day) >= day){
+					alert("合法")
+				}else{
+					alert("不合法")
+				}
+			}
+			
+			//第三种写法
+			function isLegal(year,month,day){
+				if(month > 12 || month < 1) return "不合法";
+				switch(month){
+					case 1:
+					case 3:
+					case 5:
+					case 7:
+					case 8:
+					case 10:
+					case 12:
+						if(day > 31 || day < 1) return "不合法";
+						break;
+					case 4:
+					case 6:
+					case 9:
+					case 11:
+						if(day > 30 || day < 1) return "不合法";
+						break;
+					case 2:
+						if(isLeapYear(year)){
+							if(day > 29 || day < 1) return "不合法";
+						}else{
+							if(day > 28 || day < 1) return "不合法";
+						}
+					break;
+				}
+				return "合法";
+			}
+			function isLeapYear(year){
+					return year % 4 ==0 && year % 100 != 0 || year % 400 == 0;
+			}
+			btn.onclick = function(){
+				var year = +document.getElementById("year").value;
+				var month = +document.getElementById("month").value;
+				var day = +document.getElementById("day").value;
+				alert(isLegal(year,month,day));
+			}
+		</script>
+	</body>
+</html>
+<!--定义函数,输入一个日期.判断日期是否合法,例如2015年2月29日不合法-->

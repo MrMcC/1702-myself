@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 100px;height: 100px;
+				background-color: pink;margin: 10px;
+			}
+		</style>
+		<script src="libs/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("div").click(function(){
+//					$(this).css("width","+=10")  //在当前的基础上每次点击增加10个像素
+//					$(this).css("width","+=10").css("height","+=20")
+					$(this).css({
+						width: function(index,value){  //index指点击那个元素,value指width的值,某某px
+							console.log(index,value)
+							return parseFloat(value) * 2;
+						},
+						background: function(index,value){
+							return `rgba(${randomInt(0,255)},${randomInt(0,255)},${randomInt(0,255)},${Math.random()*0.6+0.4})`
+						}
+					})
+				})
+				function randomInt(from,to){
+					return parseInt(Math.random()*(to-from)+from);
+				}
+			})
+		</script>
+	</head>
+	<body>
+		<div></div>
+		<div></div>
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function foo(str, substr) {
+        var count = 0; //记录找到的个数
+        var from = 0;  //查找的开始位置
+        var index = str.indexOf(substr);
+        while(index != -1){
+            count++;
+            //来确定下一次查找的开始位置
+            from = index + substr.length;
+            //开始下一次查找
+            index = str.indexOf(substr, from);
+        }
+        /*while((index = str.indexOf(substr, from)) != -1){
+            count++;
+            from = index + substr.length;
+        }*/
+        return count;
+    }
+    var count = foo("abcdefgdeacdedede","de")
+    console.log(count)
+
+</script>
+</body>
+</html>

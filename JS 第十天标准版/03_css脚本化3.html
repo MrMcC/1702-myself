@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width : 200px;
+            height : 200px;
+            background-color : pink;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+<div id="box"></div>
+<script>
+    var box = document.getElementById("box");
+    /*
+     作者：李振超    2017年3月24日 14:32
+     用来获取内部样式和外部样式
+     参数1：要获取的dom对象
+     参数2：对正常的dom对象永远传入null
+    返回值：是所有的样式属性
+        getComputedStyle:只能用在非ie上。(ie9以上也可以使用)
+     */
+    /*var style = window.getComputedStyle(box, null);
+    
+    
+    console.log(style.width)   //style["width"]
+    console.log(style.height)   //style["height"]
+    console.log(style.backgroundColor)   //style["background-color"]
+    console.log(style["border-radius"])   //style["background-color"]*/
+   
+    //在ie上可以使用ele.currentStyle来获取内部和外部样式
+    var style1 = box.currentStyle;
+   
+   
+    console.log(style1.width);
+</script>
+</body>
+</html>
+<!--
+1. div.style:只适用于行内样式(内联样式)，不适用内部样式和外部样式
+通过js代码去更改的一定是行内样式。
+2.
+
+-->

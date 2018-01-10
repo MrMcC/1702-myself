@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function Person(option){  //解决参过过多问题
+				this.name = option.name;
+				this.sex = option.sex;
+				this.age = option.age;
+			}
+			Person.prototype = {
+				constructor :Person,
+				sayName = function(){
+					console.log(this.name)
+				}
+				speak = function(){
+					
+				}
+				eat = function(){
+					
+				}
+			}
+			var p1 = new Person({name:"李四",age:20,sex:"男"});
+		</script>
+	</body>
+</html>

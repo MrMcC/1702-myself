@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+     作者：李振超    2017年3月20日 17:17
+     任何一个数据都可以作为布尔值来用
+        NaN 0 "" null undefined false
+
+       逻辑与和逻辑或  他们得到的结果不一定总是布尔值
+
+       如果第一个能够决定结果，则是第一个，否则就是第二个
+     */
+    var arr = [1];
+    console.log(typeof arr)  // number boolean string undefined object function
+
+    //instanceof :
+    console.log(arr instanceof Array);
+    // isArray:
+    var is = Array.isArray([]);
+    console.log(is);
+
+    console.log(sum([]));
+    //计算数组中所有元素的和
+    function sum(arr) {
+        if(Array.isArray(arr)){
+            var sum = 0;
+            for(var ele of arr){
+                sum += ele;
+            }
+            return sum;
+        }else{
+            return "你有毛病，应该传入一个数组过来"
+        }
+    }
+
+</script>
+</body>
+</html>

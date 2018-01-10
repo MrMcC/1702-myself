@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<script>
+//    var pro = "name";
+//    var obj = {};
+//    obj[pro] = "abc"
+//    console.log(obj)
+//========================
+    var pro = "name";
+    var methodName = "sayHello";//名字可以随便改
+
+    var obj={
+        [pro] : "lisi",   //直接在字面量里添加
+        [methodName](){
+            return this[pro]+" "+"你好";
+        }
+    }
+    console.log(obj)
+    console.log(obj[methodName]())
+//=========================
+    function creatPerson(proName,methodName) {
+        return {
+            [proName + 1] : "李四",   //方括号里可以使任意表达式
+            [methodName](){
+                return this[proName]+" "+"你好"
+            }
+        }
+    }
+    console.log(creatPerson("name","eat"))
+    console.log(creatPerson("sex","say"))
+</script>
+</body>
+</html>
+<!--
+在声明字面量的时候.属性名动态添加
+-->

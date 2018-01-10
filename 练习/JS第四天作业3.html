@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+		for (var i = 1; i < 10; i++) {   //它等于1,下面执行1次,他等于2,下面循环执行2次
+			for(var j = 1; j <= i; j++){
+				document.body.innerHTML += j + "*" + i + "=" + i*j +" ";//展示出1-j的所有值
+			}
+			document.body.innerHTML += "<br>"; //在上一行的基础上再换行
+//			document.write( i +"*"+ (j+=1)  + "="+ i * (j+=1) +"<br>")
+		}			
+		</script>
+	</body>
+</html>
+<!--实现9x9乘法表-->

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;padding: 0;
+			}
+			#outer{
+				width: 1000px;height: 200px;overflow: hidden;margin: 0 auto;
+				position: relative;
+			}
+			#inner{
+				width: 3000px;height: 100%;position: absolute;
+			}
+			img{
+				width: 1000px;height: 100%;float: left;
+			}
+			#ico{
+				width: 100px;height: 50px;background: blanchedalmond;
+				position: absolute;right: 0;bottom: 0;list-style: none;
+			}
+			#ico li{
+				width: 30px;height: 30px;border-radius: 50%;margin-left: 30px;
+			
+			}
+		</style>
+	</head>
+	<body>
+		<div id="outer">
+			<div id="inner">
+				<img src="img/1.jpg"/>
+				<img src="img/2.jpg"/>
+				<img src="img/3.jpg"/>
+			</div>
+			<ul id="ico">
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+		</div>
+		<script type="text/javascript">
+			var inner = document.getElementById("inner")
+			setTimeout(function step(){
+				var left = inner.offsetLeft - 10;
+				inner.style.left = left +"px";
+				if(left <= -2000){
+					left =0;
+				}
+				setTimeout(step,20)
+			},20)
+		</script>
+	</body>
+</html>
+<!--完成轮播图-->

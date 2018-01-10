@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--<script src="https://code.jquery.com/jquery-3.2.0.js"></script>-->
+</head>
+<body>
+<p id="p"></p>
+<script>
+    function foo(obj){
+        p.innerHTML = obj.name
+    }
+</script>
+<script src="http://localhost:8888/1701/Advanced_Day07/data1.json"></script>
+</body>
+</html>
+<!--
+script标签加载js文件的时候，不受同源策略的限制！！
+
+当用script加载任何的一个文件 的时候，浏览器都会把这个文件的内容
+当做js代码去执行
+
+JSONP: 把要加载的数据，伪装成函数调用，需要的正常数据，作为函数的实参。
+foo({
+  "name" : "李四",
+  "age" : 20
+})
+-->

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 100px;height: 100px;border: 1px solid #000;
+			}
+		</style>
+		<script src="libs/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			
+			$(function(){
+				console.log($(":hidden"))
+				console.log($("div:visible"))
+			})
+		</script>
+	</head>
+	<body>
+		<p style="display: none;"></p>
+		<input type="hidden" />
+		<input type="text" hidden/>
+		<div>123</div>
+		<div style="visibility: hidden">567</div>
+	</body>
+</html>

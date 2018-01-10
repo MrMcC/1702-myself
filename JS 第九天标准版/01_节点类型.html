@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>节点类型</title>
+</head>
+<body>
+<p id="p">你好aaa</p>
+<script>
+    //获取到html节点
+    var ele = document.documentElement;
+    console.log(ele.nodeType);  //获取节点的类型  1
+    console.log(ele.nodeName);  //获取节点的节点名  html
+    console.log(ele.nodeValue);  //获取节点的节点的值
+    
+    console.log(document.nodeType);  //
+    console.log(document.nodeValue);  //
+    console.log(document.nodeName);  //
+    
+    //文本节点
+    var text = p.childNodes[0];  //得到p的文本节点：p第一个儿子
+    console.log(text.nodeName)  // #text
+    console.log(text.nodeValue)
+    console.log(text.nodeType)
+</script>
+</body>
+</html>

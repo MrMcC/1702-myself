@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn1">打开新指定的url</button>
+		<button id="btn3">关闭窗口</button>
+		<!--<button id="btn2">打开一个blank窗口</button>-->
+		<script type="text/javascript">
+			var btn1 = document.getElementById("btn1");
+//			var btn2 = document.getElementById("btn2");
+			var btn3 = document.getElementById("btn3");
+			var otherWindow;
+			btn1.onclick = function(){
+				//参数1要打开的窗口的url
+				//参数2 _self _blank 窗口对象(已经打开的)
+				//参数3 窗口的特性
+				//返回值:新窗口的window
+				
+				otherWindow=window.open("http://www.baidu.com",otherWindow,"width=500,height=500,left=100,top=100");
+			} //打开一个指定窗口 第一次打开是undefined?
+			btn3.onclick = function (){
+				//关闭已经打开的窗口,如果已经关闭了,则这个方法调用无效
+				otherwindow.close();
+			}
+//			var win;
+//			btn2.onclick = function (){
+//				win = window.open("","","width=200,height=200");				
+//				vin.document.body.innerHTML = "<p>这是一个页面</p>"
+//			}
+		</script>
+	</body>
+</html>

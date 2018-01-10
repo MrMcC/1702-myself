@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	table{
+		/*设置表格的宽度计算方式*/
+		table-layout: fixed;
+		width: 1000px;	
+	}
+	table th,table td{
+		padding: 10px;
+		border: 1px solid black;
+		/*width: 125px;*/
+	}
+	td{
+		text-align: center;
+	}
+	</style>
+</head>
+<body>
+<!-- border＝1px；是内部属性  border－collapse是他的css样式
+                 如果非要写在里面要加style -->
+	<table border="1px;" style="border-collapse:collapse;" >
+	<!-- 
+		thead
+		     定义表格的标题
+		          内部一般存放的都是 头部
+		tbody
+		     定义表格的主体
+		         内部主要存放表格中的内容
+		         一个表格中可能存在多个 body
+		tfoot
+		     定义表格的底部
+		         内部一般存放是表格的尾部
+		      -->
+	<!-- 注意事项
+	         1.tbody 等标签，自身不会产生任何输出
+	         2.每一个 tbody 中都会产生一个分区
+	         表格中的合并，更新等操作，不会越区
+	         3.存在加载顺序
+	         thead-> tbody-> tfoot 
+	      作用：
+	      工作中经常需要动态的修改表格汇总的某几行内容，
+	      这时候，我们可以设置 tbody 来配合  Ajax 
+	      实现动态更新表格中的内容
+
+	      当设置完成，多页页面内容打印的时候，会自动在
+	      每一个内容之前自动填上 thead 和 tfoot -->
+		<caption>项目增补单</caption>
+		<thead>
+			<tr>
+				<th>序&nbsp;&nbsp;号</th>
+				<th>维修项目及更换配件</th>
+				<th>单价</th>
+				<th>数量</th>
+				<th>小计</th>
+				<th>工时费</th>
+				<th>合计</th>
+				<th>故障原因</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td rowspan="4">7</td>
+				<td></td>
+				<td colspan="2"></td>
+				<!-- <td></td> -->
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<!-- <td>8</td> -->
+				<td></td>
+				<td colspan="2"></td>
+				<!-- <td></td> -->
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<!-- <td>9</td> -->
+				<td></td>
+				<td colspan="2"></td>
+				<!-- <td></td>
+ -->			<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<!-- <td>10</td> -->
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="2">备件费用小计：</td>
+			<!-- <td></td> -->
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</tfoot>
+		
+	</table>
+</body>
+</html>

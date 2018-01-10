@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		/*
+		 冒泡排序
+		 * 
+		 * 比较相邻两个元素的大小*/
+		var arr = [2,4,13,1,8,7,70,20,90,20];
+		for(var j = 0; j < arr.length-1; j++){
+			for (var i = 0;i < arr.length - 1 - j; i++) {
+				if(arr[i] > arr[i + 1]){
+					var temp = arr[i];  //定义一个同桶
+					arr[i] = arr[i + 1];
+					arr[i + 1] = temp;
+				}
+			}
+		}
+//		arr.reverse();
+		console.log(arr);
+		
+		var a =3;
+		var b =4;
+		var temp =a;
+		a = b;
+		b = temp;
+		console.log(a+ "" +b);
+		
+		var arr = [3,2,1,9,0,8,21,11];
+		//自动对数组中的元素进行"升序"排列 
+		//会自动的把元素转化为字符串,然后按照字母表中的属性进行排列
+		//传入一个函数参数,比较函数
+		
+//		如果返回值 > 0 就认为 a > b 把a 放在b的后面
+//		         == 0        a== b 不交换
+//		         < 0         a < b a在b的前面
+		
+		arr.sort(function(a,b){//a和b仍是数组里的元素类型 这个函数默认升序排列 里面的函数单纯的判断a,b>0<0还是=0
+			                   //如果>0作用效果是arr倒叙,<0作用效果是不动,=0不变
+			return Math.random();//打乱代码  指0~1的随机数,(生成的随机数永远默认a-b在[0~1)之间) 
+			                     //然后再减0.5,改成选-0.5~0.5的随机数(既有升序又有倒叙)
+			
+//			return 0;  //不变  a,b两个值相同,顺序就不用变
+//			
+//			return -1; // 不动  a比b小,是升序,也不用动
+//			return 1;  //倒叙   a比b大,a,b要调换顺序
+//			return a-b;  //从小到大
+//			return b-a;  //从大到小
+//			
+//			
+//			if(a > b){       //或者写成if语句
+//				return 1;
+//			}
+//			else if(a == b){
+//				return 0;
+//			}
+//			else{
+//				return -1;
+//			}
+		});
+		console.log(arr);
+		
+		  
+	</script>
+</html>

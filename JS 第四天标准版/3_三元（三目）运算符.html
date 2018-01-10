@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript" charset="utf-8">
+    /*
+     三元（三目）运算符
+     * 
+     * 		ifcondition){
+     * 			条件成立
+     * 		}
+     * 		else{
+     * 			条件不成立
+     * 		}
+     * 
+     * 		表达式1 	  ？表达式2   :  表达式3 ;
+     * 		
+     * 		condition ？条件为真  :  条件为假 ;
+     * */
+//  if5 > 3){
+//  		console.log"真的");
+//  }
+//  else{
+//  		console.log"假的");
+//  }
+    
+//  5 > 3)?console.log"真的"):console.log"假的");
+    
+    //作业：用三目运算符将成绩测试重写一遍
+    var num = parseInt(prompt("请输入你的成绩"));
+//  var str = num < 0  )?"退学"):
+//  			  num < 60 )?("重修"):(
+//  			  (num < 70 )?("及格"):(
+//  			  (num < 80 )?("中等"):(
+//  			  (num < 90 )?("良好"):(
+//  			  (num < 100)?("优秀"):(
+//  			  			  "贿赂老师了")
+//  			  )
+//  			  )
+//  			  )
+//  			  )
+//  			  );
+	var str = num < 0 ?"退学":num < 60 ?"重修":num < 70 ?"及格":num < 80 ?"中等":num < 90 ?"良好":num < 100?"优秀":"贿赂老师了";
+    alert(str);
+</script>
+</html>
+
+
+

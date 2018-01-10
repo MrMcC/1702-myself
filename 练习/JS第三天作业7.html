@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		第一个数:<input type="" name="" id="num1" value="" />
+		第二个数:<input type="" name="" id="num2" value="" />
+		<button id="btn" onclick="go()">按钮</button>
+		<script type="text/javascript">
+			function go(){
+				var num1 = +document.getElementById("num1").value;
+				var num2 = +document.getElementById("num2").value;
+				var arr = [];
+				for(var i = 1; i < num1; i++){
+					if(num1 % i == 0){
+						arr.push(i)
+					}
+				}
+				for(var j = 1; j < num2; j++){
+					if(num2 % j == 0){
+						arr.push(j);
+					}
+				}
+//				console.log(arr);
+				arr.sort(function(a,b){
+					return b-a;
+				})
+//				console.log(arr);
+				var b = "";
+				for (var k in arr) {
+//					console.log(k)
+					if(arr[+k] == arr[+k+1]){
+						var a = arr.slice(+k,+k+1)[0];
+						b += a+",";
+					}
+				}
+				var c = +b.split(",")[0];
+				alert("最大公约数为"+c);
+				alert("最小公倍数为:"+ ((num1/c) * (num2/c)*c));
+			}
+			
+		</script>
+	</body>
+</html>
+<!--计算两个数的最大公约数和最小公倍数
+-->
+	
+	

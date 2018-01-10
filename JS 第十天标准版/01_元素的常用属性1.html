@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="box">
+    <p><a href="http://www.baidu.com">百度一下</a></p>
+    
+</div>
+<script>
+    var box = document.getElementById("box");
+    console.log(box.nodeName, box.nodeType, box.nodeValue)
+    //对元素节点来说，新增了一个tagName，与nodeName一样
+    console.log(box.tagName);
+    //innerHTML  使用最广泛
+//  console.log(box.innerHTML);
+    console.log(box.innerText)
+      box.innerHTML = "<h1>这个是一级标题</h1>"
+    //innerText不会把标签等html元素解析出来，会原样展示
+      box.innerText = "<h1>这个是一级标题</h1>"
+    box.innerHTML = "";
+</script>
+</body>
+</html>

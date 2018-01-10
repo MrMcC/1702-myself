@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		请选择月份 <select name="" id="month">
+			<option value="1">1月</option>
+			<option value="2">2月</option>
+			<option value="3">3月</option>
+			<option value="4">4月</option>
+			<option value="5">5月</option>
+			<option value="6">6月</option>
+			<option value="7">7月</option>
+			<option value="8">8月</option>
+			<option value="9">9月</option>
+			<option value="10">10月</option>
+			<option value="11">11月</option>
+			<option value="12">12月</option>
+		</select><br />
+		请选择机舱类型 <select name="" id="styles">
+			<option value="">经济舱</option>
+			<option value="">头等舱</option>
+		</select><br />
+		<input type="button" name="btn" id="btn" value="计算出行价格" />
+		<script type="text/javascript">
+			
+			btn.onclick = function(){
+			var month = document.querySelector("#month").value;//不能用getElementsByTagName找的是元素
+			console.log(month);
+			var styles = document.querySelector("#styles").value;	
+				if(month >= 4 && month <= 10){
+					if(styles = "经济舱"){
+						alert("您的票价为 :" + 3000 +"元" );
+					}else if(styles = "头等舱"){
+						alert("您的票价为 :" + 3600 +"元" );
+					}
+				}else if(month <4 || month >10){
+					if(styles = "经济舱"){
+						alert("您的票价为 :" + 1200 +"元" );
+					}else if(styles = "头等舱"){
+						alert("您的票价为 :" + 2400 +"元" );
+					}					
+				}
+			}
+		</script>
+	</body>
+</html>

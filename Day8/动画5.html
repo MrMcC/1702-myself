@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 100px;
+				height: 100px;
+				background: pink;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			
+		</div>
+		<script type="text/javascript">
+			var duration = 1000,
+			r=100,
+			startTime = new Date(),
+			p,
+			count = 4;
+			var loop = true;
+			requestAnimationFrame(function step(){
+				p = Math.min(1,(new Date() - startTime) / duration);
+				box.style.transform = 
+					`translate(${r * Math.cos(2 * Math.PI * p)}px,
+					${r * Math.sin(2 * Math.PI * p)px})`
+				
+				if(loop){
+					if(p == 1){
+						startTime = new Date();//替换之前的初始时间,(新的初始时间)
+						p = 0//为了再执行定时器
+					}
+				}
+				p < 1 && requestAnimationFrame(step);
+			})
+		</script>
+	</body>
+</html>

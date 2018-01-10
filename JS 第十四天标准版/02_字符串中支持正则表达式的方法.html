@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>字符串中支持正则表达式的方法</title>
+</head>
+<body>
+<script>
+    /*
+     正则表达式的方法：
+     test
+     exec
+     
+     字符串中支持正则表达式的4个方法：
+     search(正则表达式)：
+     查找满足正则表达式的第一个子字符串，如果找到了返回索引，否则
+     返回-1。  g模式无效
+     match：
+     返回匹配正则表达式的所有子字符串组成的数组
+     replace：
+     替换，把满足正则表达式的字符串，用新的字符串替换
+     split:
+     
+     */
+    //    var s = "1aHao134aare2266you!"
+    //    console.log(s.search(/[a-z]{4}/gi))  //  /Hao/  indexOf
+    //    console.log(s.match(/[a-z]+/gi)); //拿到所有的单词
+    //    console.log(s.match(/\d+/gi)); //拿到所有的单词
+    //所有小于5的数字去掉
+    //    var s1 = s.replace(/[0-4]/gi, "");
+    //    console.log(s1)
+    /*var s = "a我我我我我要请请请请你吃吃饭饭饭饭饭饭";
+    var s1 = s.replace(/(.)\1+/gi, "$1");
+    console.log(s1);*/
+    
+    var s = "\\haoabc\\abce\\fg22\\";
+    var s1 = s.split(/\\/gi);
+    console.log(s1)
+</script>
+</body>
+</html>

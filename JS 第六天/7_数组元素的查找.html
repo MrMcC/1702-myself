@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var arr = [2,4,5,4,4,"你好",false];
+		//返回的是指定的元素第一出现的位置 如果找不到就返回-1
+		var index = arr.indexOf(4);
+		console.log(index);
+		
+		var index = arr.indexOf(3);//-1
+		console.log(index);
+		//从最后一个元素向前查找第一次出现的下标
+		var index2 = arr.lastIndexOf(4);
+		console.log(index2);
+		
+		//参数2:从这个位置开始向后查找(从前数角标第2个再往后数)
+		var index3 = arr.indexOf(4,2);
+		console.log(index3);
+		//参数2:从这个位置开始向前找,如果是负值,表示从 负值+length的位置开始向前查找
+		var index4 = arr.lastIndexOf(4,1);
+		console.log(index4);
+		
+	</script>
+</html>

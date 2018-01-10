@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建数组</title>
+</head>
+<body>
+<script>
+    //字面量方式创建数组
+    var arr = [2, "a", true];
+    //得到数组长度： length 属性
+    console.log(arr.length);
+    console.log(arr);
+    //创建一个数组对象。
+    var arr1 = new Array("a", "b");
+    console.log(arr1);
+
+    var arr2 = new Array("3");
+    console.log(arr2);
+</script>
+</body>
+</html>
+<!--
+    作者：李振超  2017年3月20日10:01
+    array:数组
+    1. 字面量的方式去创建数组   最频繁的使用
+
+
+
+    2. 构造函数的方式
+    当使用构造函数创建对象的时候，如果只传入了一个参数并且这个参数
+    是number，则传入的这个number表示的是数组是数组长度。
+    此处的new可以省略
+
+-->

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.father{ 
+			width: 600px;
+			height: 600px;
+			background: blue;
+			/*margin-top: 100px;*/
+			/*border: 1px solid red;*/
+			overflow: hidden;
+		}
+		.son{
+			width: 200px;
+			height: 200px;
+			background: red;
+			margin-top: 100px;
+		}
+		/*margin 的另一个特殊现象
+				如果两个元素是 父子关系
+				子级的第一个元素的 margin－top
+				会传递给父级
+			解决
+			  1.给父级设置边框
+			  2.给父级设置 超出边界隐藏
+			                 overflow：hidden；
+              3.如果两个元素是父子关系 使用padding
+                如果两个元素是兄弟关系 使用margin
+                温馨提示   
+                		注意盒子的大小*/
+	</style>
+</head>
+<body>
+	<div class="father">
+
+		<div class="son"></div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        div {
+            width: 50px;
+            height: 50px;
+            background-color: pink;
+            
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+</div>
+<script>
+    var duration = 5000,
+        distance = 700,
+        startTime = new Date(),
+        p;
+    requestAnimationFrame(function step(){
+        p = Math.min(1, (new Date() - startTime) / duration);
+        //字符串模板  反引号
+        box.style.transform = `translateY(${distance * p * p}px)`;
+        p < 1 && requestAnimationFrame(step);
+    });
+    
+</script>
+</body>
+</html>
+<!--
+
+-->

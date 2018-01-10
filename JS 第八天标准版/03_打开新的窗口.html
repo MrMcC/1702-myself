@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>打开新的窗口</title>
+</head>
+<body>
+<button id="btn1">打开新指定 url 的窗口</button>
+<button id="btn2">关闭窗口</button>
+<button id="btn3">打开一个 blank 窗口</button>
+<script>
+    var btn1 = document.getElementById("btn1");
+    var btn2 = document.getElementById("btn2");
+    var btn3 = document.getElementById("btn3");
+    var otherWindow;
+    btn1.onclick = function (){
+        /*
+         作者：李振超    2017年3月22日 14:14
+         参数1：要打开的窗口的url
+         参数2：_self  _blank 窗口对象(已经打开的)
+         参数3：窗口的特性
+         返回值：新窗口的window对象
+         */
+        otherWindow = window.open("http://www.yztcedu.com", otherWindow, "width=500, height=500, left=300, top=300,menubar=yes");
+    }
+    btn2.onclick = function (){
+        //关闭已经打开的窗口。 如果已经关闭了，则这个方法调用无效
+        otherWindow.close();
+    }
+    btn3.onclick = function (){
+        var win = window.open("", "", "width=200, height=200");
+        //
+        win.document.body.innerHTML = "<p>这个是一个页面</p>"
+    }
+</script>
+</body>
+</html>

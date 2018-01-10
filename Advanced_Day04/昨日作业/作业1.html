@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+
+<body>
+<script type="text/javascript">
+	function Farmer (baseSalary) {
+		this.baseSalary = baseSalary
+		
+	}
+	function Teacher(baseSalary, classSalary){
+		Farmer.call(this, baseSalary);   //baseSalary指?
+		this.classSalary = classSalary;
+		
+	}
+	Teacher.prototype = new Farmer(3000);  //
+	Teacher.prototype.constructor = Teacher;
+	Teacher.prototype.allSalary = function () {
+		return this.baseSalary + this.classSalary;
+	}
+	var t1 = new Teacher(4000, 5000);
+	console.log(t1.allSalary())
+	var t2 = new Teacher(7000, 10000);
+	console.log(t2.allSalary())
+</script>
+</body>
+
+</html>
+<!--
+	继承：
+		1.原型对象继承。
+			给子类型的构造函数的原型重新指向一个父类型的对象
+			Son.prototype = new Father();
+			Son.prototype.constructor = Son;
+			属性的共享问题。
+		2. 构造函数的借调。
+			Father.call(新的对象,)
+			Father.apply()
+			Father.prototype.eat  没变办法在子类型的对象中调用
+			定义在原型中的方法不能被继承
+		3. 组合继承
+			
+	
+	
+	1、有农民(farmer),教师(teacher),科学家(scientist),服务生(attendant) 
+   a: 其中农民,服务生只有基本工资.  
+   b: 教师除基本工资外,还有课酬(元/天)  
+   c: 科学家除基本工资外,还有年终奖 
+   D: 使用原型继承的方式完成时上面的功能。
+	
+	
+-->

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 100px;height: 100px;
+			}
+		</style>
+		<script src="libs/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("button").on("click",function(){
+					alert("a")
+				});
+				var h;
+				$("div").on("mouseenter",function(){
+					$(this).css("background-color","burlywood")
+				})
+				$("div").on("mouseenter",h = function(){
+					$(this).css("font-size",32)
+				})
+				$("div").on("mouseleave",function(){
+					$(this).css("background-color","aquamarine")
+				})
+				
+				$("div").off("mouseenter")  //只传事件,会干掉所有的这个事件
+				//传参数2表示只解绑某个具体的
+				$("div").off("mouseenter",h)
+
+
+			})
+		</script>
+	</head>
+	<body>
+		<button>按钮</button>
+		<button>按钮</button>
+		<button>按钮</button>
+		<div>a</div>
+		<div>b</div>
+	</body>
+</html>

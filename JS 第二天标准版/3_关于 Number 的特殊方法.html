@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript" charset="utf-8">
+    /*
+     关于 Number 的特殊方法
+     * 
+     * isNaN()
+     * 		判断括号中内容是否是 NaN
+     * 
+     * 		如果当前内容为数字
+     * 			则返回 false
+     * 		如果当前内容为其他值
+     * 			则返回 true
+     * */
+    console.log(0 / 0);		//NaN（not-a-number）
+    
+    var num = 0 / 0;
+    console.log(num == num);		//false
+    console.log(num != num);		//true
+    
+    console.log(isNaN(3));		//false
+    console.log(isNaN("abc"));	//true
+    console.log(isNaN("3"));		//false
+    console.log(3 == "3");		//true
+    console.log(isNaN("3abc3"));	//true
+    console.log(isNaN(true));	//false
+    console.log(isNaN(false));	//false
+    console.log(isNaN(null));	//false
+    console.log(isNaN(undefined));	//true
+//  
+//  
+//  console.log(null == undefined);
+
+	/*
+	 isFinite
+	 * 
+	 * 判断一个数字是否 不是 NaN 或者 Infinity
+	 * 
+	 * 如果是 NaN 或 Infinity 则返回 false
+	 * 如果是 数字 则返回 true
+	 * */
+	console.log(isFinite(Infinity));		//false
+	console.log(isFinite(NaN));			//false
+	console.log(isFinite("asd"));
+	console.log(isFinite(1));
+
+
+
+
+
+
+</script>
+</html>

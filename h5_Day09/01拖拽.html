@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 200px;
+            height: 100px;
+            margin-bottom: 50px;
+            background-color: pink;
+            display: flex;
+        }
+        p{
+            width: 130px;
+            height: 50px;
+            background-color: wheat;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <p draggable="true">可以拖动的文本</p>
+</div>
+<div></div>
+<div></div>
+<script>
+    var p = document.querySelector("p");
+//    var div = document.querySelectorAll("div");
+    p.addEventListener("dragstart",function () {
+        console.log("p","dragstart开始拖动")
+    })
+    p.addEventListener("drag",function () {
+        console.log("p","drag重复调用拖动")
+    })
+
+
+    document.addEventListener("dragenter",function (e) {
+        console.log(e.target,"进入时触发")
+        if(e.target.tagName.toLowerCase() == "div"){
+            e.target.style.backgroundColor = "blue";
+        }
+    })
+//    p.addEventListener("dragenter",function () {
+////        console.log(e.target,"进入时触发")
+////        if(e.target.tagName.toLowerCase() == "div"){
+//            e.target.style.backgroundColor = "blue";
+////        }
+//    })
+
+
+    document.addEventListener("dragleave",function (e) {
+        console.log(e.target,"离开时触发")
+        if(e.target.tagName.toLowerCase() == "div"){
+            e.target.style.backgroundColor = "pink";
+        }
+    })
+    document.addEventListener("dragover",function (e) {
+        console.log(e.target.tagName,"经过时触发");
+        e.preventDefault();  //over事件阻止了drop才能触发
+    })
+    document.addEventListener("drop",function (e) {
+        console.log(e.target,"放下时触发")
+        if(e.target.tagName.toLowerCase() == "div"){
+            p.parentNode.removeChild(p);
+            e.target.appendChild(p);
+            e.target.style.backgroundColor = "pink";
+            p.style.backgroundColor = "wheat";
+        }
+    })
+    p.addEventListener("mousedown",function () {
+        p.style.backgroundColor = "yellow";
+    })
+    p.addEventListener("mouseup",function () {
+        p.style.backgroundColor = "wheat";
+
+    })
+</script>
+</body>
+</html>

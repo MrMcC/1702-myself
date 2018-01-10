@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript" charset="utf-8">
+    /*
+     while 循环
+     * 
+     * 		while(condition){
+     * 			//循环体
+     * 		}
+     * 
+     * 	1.先去判断 condition 是否成立
+     * 		成立，则执行循环体，执行完毕后再次判断
+     * 		不成立，则直接结束循环
+     * 	2. condition 不能省略，否则是死循环
+     * 	3. while 循环可能一次都不会执行
+     * */
+    var i = 0;
+    while(i < 10){
+    		console.log(i);
+    		i++;
+    }
+//=========================================
+//用 while 实现 1 + 2 + 3 + .. + 100
+//=========================================
+	var sum = 0 , i = 0;
+	while(i <= 100){
+		sum += i;
+		i++;
+	}
+	console.log(sum);
+//=========================================
+//用 while 实现 1 ~ 100 之间 偶数的和
+//=========================================
+    var sum = 0 , i = 0;
+    while(i <= 100){
+    		if(i % 2 == 0){
+    			sum += i;
+    		}
+    		i++;
+    }
+    console.log(sum);
+//=========================================
+	var sum = 0 , i = 0;
+	while(i <= 100){
+		sum += i;
+		i += 2;
+	}
+	console.log(sum);
+//=========================================
+</script>
+</html>

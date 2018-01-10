@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//第一种写法
+			//第n格麦子数
+			function gezi(per){
+				if(per == 1){
+					return 1;
+				}
+				return gezi(per - 1) *2
+			}
+//			console.log(gezi(64))
+			//总共的麦子数
+			function sum(per){
+				if(per == 1){
+					return 1;
+				}
+				return sum(per-1)+gezi(per);
+			}
+			console.log(sum(64))
+
+			//第二种方法:
+			function a(lizi,i){
+				if(i == 0){
+					return 0;
+				}
+				return a(lizi*2,i-1) + lizi;
+			}
+			a(1,64);
+			
+			
+//			function gezi(per){
+//				if(per == 64){
+//					return Math.pow(2,64);
+//				}
+//				return gezi(per+1) / 2
+//			}
+//			gezi(1);
+		
+			
+
+
+
+		</script>
+	</body>
+</html>
+<!--定义函数,64个格子,第一个格子1粒,第二个格子两粒,后面的格子都是前面的二倍-->

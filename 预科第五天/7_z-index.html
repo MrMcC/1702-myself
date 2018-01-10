@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		div{width: 300px;height: 300px;position: absolute;}
+		.div_1{background: red;}
+		.div_2{background: yellow;top: 150px;left: 150px;z-index: 999;}
+		.div_3{background: blue;top: 300px;left: 300px;z-index: 998;}
+		/*z-index不要设置负数*/
+		/*固定定位的移动参考设置  固定定位的位移始终参考于整个浏览器
+		绝对定位的与其其他相同*/
+	</style>
+</head>
+<body>
+<div class="div_1"></div>
+<div class="div_2"></div>
+<div class="div_3"></div>
+</body>
+</html>

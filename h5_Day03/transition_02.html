@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 600px;height: 200px;
+            position: relative;
+            margin: 100px auto;
+
+        }
+        div> span{
+            display: block;
+            width: 150px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            font-size: 150px;
+            float: left;
+            background-color: plum;
+            position: relative;
+            /*子元素3d变形*/
+            transform-style: preserve-3d;
+            perspective: 400px;
+
+        }
+        div> span:nth-child(2n+1){
+            background-color: cornflowerblue;
+        }
+
+        div > span::before,div >span::after{
+            /*width: 150px;*/
+            content: attr(text);
+            position: absolute;
+            top: 0;left: 0;
+            transition: all 1s;
+            transform-origin: 0px 0px;
+        }
+        div > span::before{
+            color: gray;
+        }
+        div > span::after{
+            color: white;
+        }
+        div:hover >span::after{
+            transform: rotateY(-20deg) skewY(10deg);
+        }
+        div:hover >span::before{
+            transform: skewY(8deg);
+        }
+    </style>
+</head>
+<body>
+<div>
+    <span text="你">你</span>
+    <span text="好">好</span>
+    <span text="世">世</span>
+    <span text="界">界</span>
+</div>
+
+</body>
+</html>

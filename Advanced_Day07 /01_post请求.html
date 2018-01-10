@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="my_ajax2.js"></script>
+</head>
+<body>
+<form name="my1" action="post.php" method="post"
+      enctype="application/x-www-form-urlencoded">
+    用户：<input type="text" name="user"><br>
+    密码：<input type="password" name="pwd"><br>
+    <input type="submit" value="注册">
+</form>
+<script type="text/javascript">
+    document.forms.my1.onsubmit = function (event){
+        event.preventDefault();
+        var userValue = this.user.value;
+        var pwdValue = this.pwd.value;
+        var url = "post.php";
+        ajax.post(url, "user=" + userValue + "&pwd=" + pwdValue, function (result){
+            console.log(result);
+            document.body.innerHTML = result;
+        }, function (){
+
+        });
+
+    }
+</script>
+</body>
+</html>

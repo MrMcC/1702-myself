@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		table{
+			font-size: 50px;
+		}
+	</style>
+</head>
+<body>
+	<table border="3px;">
+		<tr>
+			<td>我是单元格</td>
+			<td>我是单元格</td>
+			<td>我是单元格</td>
+			<td>我是单元格</td>
+			<td>我是单元格</td>
+		</tr>
+		<tr>
+			<td>我是单元格</td>
+			<td>我是单元格</td>
+			<!-- 合并单元格的步骤
+			       1.确定从哪个单元格开始合并
+			       2.判断是横向合并还是纵向合并
+			       横向合并：colspan
+			       纵向合并：rowspan
+			       3.确定需要合并的几个单元格
+			       4.将多余的单元格进行处理 -->
+			<td rowspan="2">我是单元格</td>
+			<td>我是单元格</td>
+			<td>我是单元格</td>
+		</tr>
+		<tr>
+			<td>我是单元格</td>
+			<td>我是单元格</td>
+			<!-- <td>我是单元格</td> -->
+			<td>我是单元格</td>
+			<td>我是单元格</td>
+		</tr>
+	</table>
+</body>
+</html>

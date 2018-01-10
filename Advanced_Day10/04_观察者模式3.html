@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="btn">有楼了，赶紧过来买呀</button>
+<script>
+    /*发布者， 被观察者*/
+    var publisher = {
+        observers : {
+        },
+        registerObserver: function (event, observer){ //js中函数来充当观察者的身份
+            !this.observers[event] && (this.observers[event] = []);
+            this.observers[event].push(observer);
+        },
+        
+        publish: function (event, msg){
+            //找到所有的订阅当前事件的所有观察者
+            var obs = this.observers[event];
+            for(var ob of obs){
+                ob(msg);
+            }
+        }
+    }
+    //注册观察者，观察者就是一个函数 参数1：事件  参数2：观察者(处理函数)
+    publisher.registerObserver("500w",function (msg){
+        console.log("观察者1:" + msg);
+    });
+    //注册观察者，观察者就是一个函数
+    publisher.registerObserver("1000w", function (msg){
+        console.log("观察者2:" + msg);
+    });
+    //注册观察者，观察者就是一个函数
+    publisher.registerObserver("1000w", function (msg){
+        console.log("观察者3:" + msg);
+    });
+
+    console.log(publisher.observers);
+    btn.onclick = function (){
+        //被观察者发布信息
+        publisher.publish("1000w", " 1000w的房子可以买了，晚了就没了");
+    }
+</script>
+</body>
+</html>
+<!--
+观察者模式或发布订阅模式
+顾客：观察者 / 订阅者
+售楼小姐： 被观察者 / 发布者
+if(!this.observers[event]) {
+                this.observers[event] = [];
+            }
+-->

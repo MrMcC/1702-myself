@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<video src="./video/a.mp4" controls autoplay></video>
+<!--<video>-->
+    <!--<source src="./video/a.mp4" type="video/mp4" autoplay>-->
+    <!--<source src="./video/b.mp4">-->
+<!--</video>-->
+</body>
+<script>
+    var v1 = document.querySelectorAll("video")[0];
+    setTimeout(function () {
+        console.log(v1.src)
+        console.log(v1.currentSrc)
+        console.log(v1.networkState)
+        console.log(v1.duration)
+        console.log(v1.muted)
+        v1.playbackRate = 3
+    },1000)
+
+
+</script>
+</html>

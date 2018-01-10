@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var name = "a"
+    function foo(){
+        console.log(this.name);
+    }
+    //永远绑定this，返回值就是绑定成功的那个函数。  对原来的函数没有任何的影响
+    var foo1 = foo.bind({name : "b"})
+    foo1()  // b
+    foo1.call({name : "c"})  // b
+
+</script>
+</body>
+</html>
+<!--
+1. 直接调用方法    this的默认绑定   this == window
+    function foo(){
+        console.log(this == window)
+    }
+    foo();
+2. new绑定：  this指点将来要创建的那个对象
+    function Person(){
+        this.name = "李四";
+        console.log(this)
+    }
+    var p = new Person();
+3. 隐式绑定： 对象.方法()
+        this就只带调用时使用的那个对象
+       var p = {
+        name : "abc",
+        foo : function (){
+            console.log(this.name);
+        }
+    }
+    p.foo();
+    
+    -----
+    var name = "李四";
+    
+    function foo(){
+        console.log(this.name);
+    }
+    var p = {
+        name : "abc",
+        foo : foo
+    }
+    p.foo();// abc
+    foo(); // "李四"
+    ----
+    var p = {
+        name : "abc",
+        foo : function (){
+            console.log(this.name);
+        }
+    }
+    var f = p.foo;
+    var name = "李四";
+    f();  // 李四
+    -----
+     var p = {
+       name : "李四",
+       inner : {
+           name : "张三",
+           foo : function (){
+               console.log(this.name);
+           }
+       }
+   }
+   var name = "王五";
+   var temp = p.inner;
+   temp.foo()
+
+4. 显示绑定：  call、apply
+    的优先级最高
+    
+    显示绑定时，如果传入的是null， undefined的时候 this的绑定丢失问题！
+    this变成window
+    
+    ES6对显示绑定做了一个新的 扩展。
+    var 绑定后的方法 = 方法名.bind(要绑定的对象)
+ 
+    
+    bind ：优先级最高
+    
+    var name = "a"
+    function foo(){
+        console.log(this.name);
+    }
+    //永远绑定this，返回值就是绑定成功的那个函数。  对原来的函数没有任何的影响
+    var foo1 = foo.bind({name : "b"})
+    foo1()  // b
+    foo1.call({name : "c"})  // b
+
+-->

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">有楼</button>
+		<script type="text/javascript">
+			//发布者
+			var publisher = {
+				observers :[],
+				registerObserver:function(event,observer){//js中函数充当观察者
+//					this.observer = observer;//存入观察者的消息,this指发布者,谁调用方法
+					this.observers.push(observer);
+				},
+				publish:function(msg){//发布者发布消息给观察者
+//					this.observe(msg);
+					for (var observe of this.observers) {
+						observe(msg);
+					}
+				}
+			}
+			
+			publisher.registerObserver("500w",function(msg){
+				console.log("观察者1:"+msg);
+			});
+			publisher.registerObserver("1000w",function(msg){
+				console.log("观察者2:"+msg);
+			});
+			
+			btn.onclick = function (){
+				//发布者发布消息
+				publisher.publish("500w,10平米")
+			}
+		</script>
+	</body>
+</html>

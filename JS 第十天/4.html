@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 200px;height: 200px;background-color: pink;border-radius: 40px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box" <!--style="width: 200px;height: 200px;background-color: pink;"-->></div>
+		<script type="text/javascript">
+//			var box = document.getElementById("box")
+//			console.log(box.style.width);
+//			//css属性中,带连字符的属性都改成了驼峰命名法
+//			console.log(box.style.backgroundColor);
+//			var width = "background-color" //可以不使用驼峰
+//			console.log(box.style['width']);//不加双引号显示的是上面声明的变量width,加双引号表示访问他的行间样式
+//			
+//			box.style.width = "600px";
+			
+			var box = document.getElementById("box")
+			//用来获取内部样式和外部样式
+			//参数1 : 要获取的dom对象
+			//参数2 : 对正常的dom对象永远传入null
+			//返回值: 是所有的样式
+			//window.getComputedStyle只能在非ie上(ie9以上使用)
+			var style = window.getComputedStyle(box,null);
+			console.log(style.width); //style["width"]
+			console.log(style.height); //style["height"]
+			console.log(style.backgroundColor);  //style["backgroundColor"] 计算过的颜色rgb
+			console.log(style.borderRadius);
+			//在ie上 获取元素的属性值
+			var style1 = box.currentStyle;
+			console.log(style1);
+			
+			
+			var box = document.getElementById("box");
+			console.log(getCssValue(box,"width"));
+			//给一个元素和一个css属性,返回这个属性的值
+			//夸浏览器来获取内部和外部样式
+			function getCssValue(ele,propertyName){
+				var style;
+				if(window.getComputedStyle){//0 "" undefined null NaN false布尔值纯假的
+					style = window.getComputedStyle(ele,null);
+				}else{//ie 678
+					style = ele.currentStyle;
+				}
+				return style[propertyName]; //返回所有css样式中你选则的那个propertyName的样式(height啊width啊)
+			}
+		</script>
+	</body>
+</html>
+<!--
+	div.style:只适用于行内样式(内联样式),不适用于内部样式和外部样式
+	通过div.style更改的样式只能使行内样式
+-->

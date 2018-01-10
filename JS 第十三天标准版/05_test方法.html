@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var regExp = /girl/gi;
+    var s = "agirlafGirl";
+//  console.log(regExp.lastIndex)  //下一次test的时候开始的下标
+//  console.log(regExp.test(s));
+//  console.log(regExp.lastIndex)  // 5
+//  console.log(regExp.test(s));
+//  console.log(regExp.lastIndex) 
+//  console.log(regExp.test(s));
+//  console.log(regExp.lastIndex)
+//  console.log(regExp.test(s));
+    
+    var regExp = /box/gi;
+    var s1 = "box";
+    var s2 = "boxBox";
+    console.log(regExp.test(s1))
+    //每次查找总是从正则表达式的lastIndex的位置开始查找
+    console.log(regExp.test(s2))
+    console.log(regExp.test(s1))
+    console.log(regExp.test(s1))
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        canvas{
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+<button id="btn">绘制图片</button>
+<br>
+<img src="./img/timg.jpeg" alt="" width="400">
+<canvas id="canvas" width="600" height="600">
+
+</canvas>
+<script>
+    function draw(){
+        var canvas = document.getElementById("canvas");
+        if(!canvas.getContext) return;
+        var ctx = canvas.getContext("2d");
+//        var img = new Image();
+//        img.onload = function () {
+//            ctx.drawImage(img,0,0)
+//        }
+//        img.src = "./img/timg.jpeg";
+        var img = document.querySelector("img");
+//        ctx.drawImage(img,0,0);
+        ctx.drawImage(img,200,0,350,400,0,0,350,400)
+        //绘制img ,在200,0的位置 ,截取 350x400,把他放到0,0的位置,缩放或不缩放至尺寸350,400
+    }
+    btn.onclick= function(){
+        draw()
+    }
+</script>
+
+</body>
+</html>

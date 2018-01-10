@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    function readCookie(key) {
+//        var d = document.cookie;
+//        console.log(date)
+//        for (var i = 0; i < date.length;i++){
+//            var reg = new RegExp(d,gi)
+//        }
+//    }
+//    readCookie("pwd")
+
+    function readCookie(name) {
+        var cookie = document.cookie;
+//        console.log(cookie);
+        var reg = new RegExp(name + "=(\\w+);","gi");
+        var s = reg.exec(cookie);
+        return s[1]
+    }
+    readCookie("name")
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		div{font-size: 30px;}
+		.div_2{position: relative;left: 300px;right: 300px;}
+		/*设置相对定位 特性：当只设置相对定位 而不设置相对定位的属性的时候 则对当前元素没有任何影响*/
+		/*激活属性： top    距离 顶部 位移
+		             right  距离 右侧 位移
+		             bottom 距离 底部 位移 
+		             left   距离 左部 位移
+		             z-index
+		   设置元素左偏移，元素实际上是向右移动了（逆方向）（距离左边的距离）
+		   当我们设置偏移量    同时设置左右则左生效
+		   如果同时设置上和下  则上生效
+		   移动参考位置  参考于自身原始位置
+		             */
+		.div_3{position: relative;top: 300px;}
+	</style>
+</head>
+<body>
+<div class="div_1">我是相对定位</div>
+<div class="div_2">我是相对定位</div>
+<div class="div_3">我是相对定位</div>
+</body>
+</html>

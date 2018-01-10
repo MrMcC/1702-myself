@@ -1,0 +1,72 @@
+①使用Node.js搭建web服务器,用express框架.为了加快框架的下载速度，建议更改npm的镜像地址
+1. npm == node package //一个意思
+2. npm --version   //查看当前版本号
+3. npm install -g nrm@latest //安装最新的nrm镜像
+4. nrm ls  //查看目前支持的所有镜像
+5. nrm use taobao  //默认是选中npm镜像,国内建议选淘宝镜像
+6. nrm test taobao  //测试下速度
+7. nrm use npm  //默认用npm, 还是用npm吧
+8. nrm ls  //查看目前支持的所有镜像
+9. n包 专门用来管理node的版本  nrm install -g n@latest //安装最新的n包
+
+②安装express框架
+使用node.js自带的包管理器npm安装
+1.创建一个项目目录，Node_Hello。进入该目录，创建一个package.json文件，文件内容如下
+
+{
+  "name": "Node_Hello",
+  "description": "nodejs hello world app",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "4.x"
+  }
+}
+
+2.从终端首先进入这个设置了package.json文件的项目目录(nodejs02)，
+  然后输入npm install，就会开始下载Express。
+
+
+③创建启动文件
+在上面的项目目录下(nodejs02)，新建一个启动文件，名字暂叫 index.js, 书写如下代码
+
+var express = require('express');
+var app = express();
+app.get('/', function (req, res) {
+  res.send('<h1>你好，这是我们的第一个nodejs项目</h1>');
+});
+app.get('/page', function (req, res) {
+  res.send('<h1>你好，这是我们的第一个nodejs项目</h1>');
+});
+app.listen(3000);  //路由,匹配不同的服务器,根据文件名不同,有/ 还有/page
+
+④运行index.js文件
+右键直接点运行
+
+⑤在浏览器输入下面的地址就可以访问我们刚刚搭建的web网站了
+127.0.0.1:3000
+127.0.0.1:3000/page
+
+
+
+
+
+使用 (上面是下载process框架)
+
+方法一新建个空文件nodejs03;在终端选中这个文件夹
+npm install -g express
+express --view=ejs
+npm install
+npm start
+
+方法二使用Webstorm搭建Node.js web应用
+file => new => project => Node.js ExpressApp 修改location文件位置,和ejs类型
+
+
+脚手架
+1.安装脚手架的工具
+npm install -g express
+2.新建项目nodejs03 进入到项目目录
+express --view=ejs
+3.npm install
+4.npm start启动服务器 ,在网页上输入127.0.0.1:3000

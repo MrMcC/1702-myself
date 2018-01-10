@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript" charset="utf-8">
+    /*
+     undefined
+     * 		未定义
+     * 			声明一个变量，但是没有对该变量初始化
+     * 			这时候这个值就是 undefined
+     * */
+    var num;
+    console.log(num);
+    
+//  console.log(str);
+    /*
+     null
+     * 	null 指的是空对象指针
+     * */
+    
+    //==============================================
+    /*
+     null 和 undefined 的关系
+     * 
+     * undefined 是 从 null 派生出来的
+     * 所以在 ECMAScript 中，将两者判断为 相等
+     * 
+     * 尽管判断数值是相等的，但是他们表达含义不同
+     * undefined 是声明了变量但是没有对其
+     * 进行初始化（没有赋予初始值）
+     * null 则是用于表示尚未存在的对象
+     * 如果函数或者方法的返回值是对象，但是却又找不到
+     * 该对象，这个时候返回值通常就是 null
+     * */
+    console.log(null == undefined);
+    
+    
+    var arr = [1,2,3,"a","b"];
+//  alert(arr);
+	console.log(arr);
+</script>
+</html>
+
+
+
+

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="#" name="form1">
+			输入邮箱:<input type="text" name="user"  /><i></i><br />
+			输入密码:<input type="password" name="pwd1"  /><i></i><br />
+			再次输入密码:<input type="password" name="pwd2"  /><i></i><br />
+			<input type="submit" value="提交" />
+		</form>
+		<script type="text/javascript">
+			var form1 = document.forms[0]
+			
+			var userChoose = function(){
+//				var value = form1.user.value;
+//				var reg = /^[a-z]\w{4,14}@\w{2,3}\.((com)|(cn))$/gi
+//				if(value.search(reg) != -1){
+//					form1.user.nextElementSibling.innerHTML = "✔️"
+//				}else{
+//					form1.user.nextElementSibling.innerHTML = "❌️"
+//				}
+				var reg = /^[a-z]\w{4,14}@\w{2,3}\.((com)|(cn))$/gi
+				var result = inSpact(form1.user,reg,function(result){
+					if(result){
+						form1.user.nextElementSibling.innerHTML = "✔️"
+					}else{
+						form1.user.nextElementSibling.innerHTML = "❌️"
+					}
+				})
+				return result;
+			}
+			form1.user.onblur = userChoose;
+			
+			var pwd1Choose = function(){
+				var reg = /\d{8}/gi
+				var result = inSpact(form1.pwd1,reg,function(result){
+					if(result){
+						form1.pwd1.nextElementSibling.innerHTML = "✔️"
+					}else{
+						form1.pwd1.nextElementSibling.innerHTML = "❌️"
+					}
+				})
+				return result;
+			}
+			form1.pwd1.onblur = pwd1Choose;
+			
+			var pwd2Choose = function(){
+				if(form1.pwd2.value == form1.pwd1.value){
+					form1.pwd2.nextElementSibling.innerHTML = "✔️"
+					return true;
+				}else{
+					form1.pwd2.nextElementSibling.innerHTML = "❌️"
+					return false;
+				}
+			}
+			form1.pwd2.onblur = pwd2Choose;
+			
+			function inSpact(input,reg,onChoose){
+				var result = input.value.search(reg) != -1 ? true : false;
+				onChoose(result);
+				return result;
+			}
+			form1.onsubmit = function(event){
+				if(!(userChoose() && pwd1Choose() && pwd2Choose())){
+					event.preventDefault()
+				}
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		/*
+		 关于number 的特殊方法
+		 * 
+		 * isNaN()
+		 *      判断括号中内容是否是 NaN
+		 *      如果当前内容为数字 则返回 false
+		 *      如果当前内容为其他值 则返回 true
+		 *   */
+		console.log(0/0);  //NaN
+		var num = 0/0;
+		console.log(num == num); //false ==判断是否相等
+		console.log(num != num); //true  ！=判断是否不等
+		console.log(isNaN(3));   //false
+		console.log(isNaN("abc"));   //true
+		console.log(isNaN("3"));   //false
+		console.log(3 == ("3"));   //true
+		console.log(isNaN('3aSs3'));   //true
+		console.log(isNaN(true));   //false   true默认为1
+		console.log(isNaN(false));   //false   false默认为0
+		console.log(isNaN(null));   //false   null是空 当运算默认为0
+		console.log(null == undefined);   //true
+		console.log(isNaN(undefined));  //true  不是数字
+//		isFinite是判断这个数字是否是正无穷 Infinity 或者 NaN
+//      如果是 NaN 或 Infinity 则返回 false
+//      如果是 数字 则返回 true
+		console.log(isFinite(Infinity)); //false
+		console.log(isFinite(NaN)); //false
+		console.log(isFinite("abc")); //false
+		console.log(isFinite("1"));  //true
+	</script>
+</html>

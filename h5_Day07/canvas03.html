@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绘制五子棋</title>
+    <style>
+        canvas{
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+<canvas id="canvas" width="660" height="660"></canvas>
+<script>
+    var canvas = document.querySelector("#canvas");
+    function draw() {
+        if(!canvas.getContext) return;
+        var ctx = canvas.getContext("2d");
+        ctx.beginPath();
+        for (var i = 0; i < 15; i++){
+            ctx.moveTo(50,50+ 40*i); //14个格子
+            ctx.lineTo(610,50+ 40*i);
+        }
+        for (var i = 0; i < 15; i++){
+            ctx.moveTo(50+ 40*i,50);
+            ctx.lineTo(50+ 40*i,610);
+        }
+        ctx.stroke();
+        ctx.closePath();
+    }
+    draw()
+</script>
+</body>
+</html>

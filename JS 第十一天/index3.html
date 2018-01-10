@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--<button id="btn">dia</button>-->
+		<button id="btn1">dia</button>
+		<!--<button id="btn2">dia</button>-->
+		<!--<button id="btn3">dia</button>-->
+		<script type="text/javascript">
+//			btn.onclick = function(){
+//				alert("asd")
+//			}
+			function show(){
+				alert('asd')
+			}
+			btn1.onclick = show;//把这个函数来执行事件 不能写成show(); " 只看右半边" show只是这个函数的地址,自己不能执行,点击才能执行
+//			btn1.onclick = show();//一刷新就调用,一刷新就弹窗 相当于调用函数,console会出现undefined
+//			btn2.onclick = show;//有函数名的可以重复点击
+//			btn3.onclick = function(){
+//				btn2.onclick = null; //去除点击事件
+//			}
+
+
+		</script>
+		
+
+	</body>
+</html>

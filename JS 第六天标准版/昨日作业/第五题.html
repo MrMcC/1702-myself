@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+     作者：李振超    2017年3月20日 09:44
+     计算每一个格的麦粒的数量
+     */
+    function countPer(per) {
+        if(per == 1){
+            return 1;
+        }
+        return countPer(per - 1) * 2;
+    }
+    function sum(per) {
+        if(per == 1){
+            return 1;
+        }
+        return sum(per - 1) + countPer(per);
+    }
+    console.log(sum(64))
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" name="" id="y" value="" />输入语文成绩<br />
+		<input type="text" name="" id="s" value="" />输入数学成绩<br />
+		<input type="text" name="" id="yy" value="" />输入英语成绩<br />
+		<input type="button" name="" id="btn" value="点击" />
+		<script type="text/javascript">
+			var btn = document.getElementById("btn")
+			btn.onclick = function(){
+				if(y.value < 0 ||y.value >100 ||s.value <0 ||s.value >100 ||yy.value <0 ||yy.value>100){
+					return alert("您输入的有误");
+					
+				}
+				if(y.value > 90 && s.value >90 && yy.value >90){
+					alert("钢琴一台");
+				}else{
+					alert("打屁股");
+				}				
+			}
+
+		</script>
+	</body>
+</html>

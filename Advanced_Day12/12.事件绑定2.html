@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 100px;height: 100px;background-color: pink;
+			}
+		</style>
+		<script src="libs/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				//从后代里筛选过滤,只有第一个button点击好使
+				//也就是说只有筛选到的好使,div不好使
+				$("div").on("click","button:eq(0)",function(){ 
+					alert("abc")
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<div>
+			<button>按钮</button>
+			<button>按钮</button>
+			<button>按钮</button>
+		</div>
+	</body>
+</html>

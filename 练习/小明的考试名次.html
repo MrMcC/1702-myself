@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		考试名次: <input type="" name="Numb" id="Numb" value="" />
+		<button id="btn">按钮</button>
+		<script type="text/javascript">
+			
+			var Numb = document.getElementById("Numb");
+			btn.onclick = function(){
+				switch(Numb.value){  //Numb.value是字符串,字符串必须和字符串比较,所以底下改成"1"
+				case "1":
+					alert("奖励iphone8");
+					break;
+				case "2":
+					alert("奖励iphone7");
+					break;
+				case "3":
+					alert("奖励iphone6");
+					break;
+				case "4":
+					alert("奖励iphone5");
+				default :
+					alert("努力吧,少年");
+				
+			}
+			}
+			
+			
+		</script>
+	</body>
+</html>

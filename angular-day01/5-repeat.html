@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body ng-app="" ng-init="arr=[3,9,9,15]">
+<ul>
+    <!--ng-repeat 循环标签   解决数组元素重复问题 $index循环的索引变量-->
+    <li ng-repeat="(index,item) in arr track by $index">
+        下标是{{index}},内容是{{item}},
+    </li>
+</ul>
+
+</body>
+<script src="./js/angular.min.js"></script>
+</html>

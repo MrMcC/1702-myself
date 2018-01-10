@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;padding: 0;
+			}
+			#fdj{
+				width: 1200px;
+				margin: 0 auto;
+			}
+			#small{
+				width: 500px;
+				height: 300px;
+				border: 1px solid #000;
+				box-sizing: border-box;
+				float: left;
+				position: relative;
+			}
+			#small img{
+				width: 100%;
+				height: 100%;	
+			}
+			#big{
+				width: 700px;
+				height: 500px;
+				border: 1px solid #000;
+				box-sizing: border-box;
+				float: left;
+				overflow: hidden;
+				display: none;
+				position: relative;
+			}
+			#big img{
+				position: absolute;left: 0;top: 0;
+			}
+			#small #pop{
+				width: 100px;
+				height: 100px;
+				background: rgba(100,100,100,0.4);
+				position: absolute;left: 0;top: 0;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="fdj">
+			<div id="small">
+				<img src="img/1.jpg" alt="" />
+				<div id="pop"></div>
+			</div>
+			<div id="big">
+				<img src="img/1.jpg" alt="" />
+			</div>
+		</div>
+		<script type="text/javascript">
+			var small = document.getElementById("small")
+			var pop = document.getElementById("pop")
+			var img = document.querySelector("#big img")
+			small.onmouseover = function(){
+				pop.style.display = "block"
+				big.style.display = "block"
+			}
+			small.onmouseout = function(){
+				pop.style.display = "none"
+				big.style.display = "block"
+			}
+			small.onmousemove = function(event){
+				
+       		 	var maxLeft = small.offsetWidth - pop.offsetWidth;
+        			var maxTop = small.offsetHeight - pop.offsetHeight;
+				var popLeft = event.clientX - small.offsetLeft - pop.offsetWidth / 2;
+				var popTop = event.clientY - small.offsetTop - pop.offsetHeight / 2;
+				//左边界
+        			popLeft = popLeft < 0 ? 0 : popLeft;
+        			//上边界
+        			popTop = popTop < 0 ? 0 : popTop;
+        			//右边界
+        			popLeft = popLeft > maxLeft ? maxLeft : popLeft;
+        			//下边界
+        			popTop = popTop > maxTop ? maxTop : popTop;
+        			pop.style.left = popLeft + "px";
+       			pop.style.top = popTop + "px";
+       			img.style.left = -popLeft / maxLeft * 1700 + "px"
+       			img.style.top = -popTop / maxTop * 800 + "px"
+			}
+
+		</script>
+	</body>
+</html>

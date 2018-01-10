@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript" charset="utf-8">
+    /*
+     函数的调用
+     * 
+     *	函数只有被调用才会执行
+     * 	需要使用时，则需要按照语法去调用函数
+     * 		方法名 ( 实参1 ， 实参2 )		
+     * 	注意：
+     * 		1.调用方法的时候，函数名是必须要书写的
+     * 		  函数调用时，后面的 () 也不能省略
+     * 		2.实参（实际参数）列表，对应着函数的
+     * 		  形参列表，
+     * 		  传递的实参会一一对应的被形参接收
+     * 		3.调用参数的时候，尽量保证实参个数要
+     * 		  大于或等于当前形参的个数
+     * 		4.实参列表与形参列表必须一一对应
+     * 		  严格匹配
+     * */
+    	function add(num1,num2,num3){
+    		//num1 = 15
+    		//num2 = 20
+    		//num3 = 30
+    		//	?  = 40
+		return num1 + num2 + num3;
+	}
+    	console.log(add(5));				//NaN
+	console.log(add(5,10));			//NaN
+	console.log(add(15,20,30));		//65
+	console.log(add(15,20,30,40));	//65
+
+	/*
+	 函数的命名规范
+	 * 
+	 * 函数的命名是调用函数时非常重要的特征
+	 * 我们定义函数一定要遵循规则
+	 * 
+	 * 		1.函数命名不能使用 系统关键字和保留字
+	 * 		2.函数命名要有意义
+	 * 		  从方法名应该能大致推断出该函数的作用
+	 * 		3.函数的命名同样遵循 驼峰命名和下划线
+	 * 		4.函数的命名是严格区分大小写的
+	 * 		5.声明函数时，函数名重复了
+	 * 		  后声明的函数会覆盖前面声明的函数
+	 * */
+	function aa(num1,num2){
+		return num1 + num2;
+	}
+	function aa(num1,num2){
+		return num1 - num2;
+	}
+	console.log(aa(4,5));
+</script>
+</html>

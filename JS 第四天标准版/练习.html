@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		
+//			10~29选A 30~49选B
+			
+		var age = parseInt(prompt("请输入你的年龄"));
+		switch(age){
+			case ((parseInt(age / 10) == 1) || (parseInt(age / 10) == 2)):
+				alert("A");
+				break;
+			case ((parseInt(age / 10) == 3) || (parseInt(age / 10)== 4)):
+				alert("B");
+				break;
+			default:	
+				alert("您输入的有误");		
+	}
+		
+		var age = parseInt(prompt("请输入你的年龄"));
+		switch(age){
+			case ((parseInt(age / 10) == 1)://不行,因为case后的value必须是值
+			case ((parseInt(age / 10) == 2):
+				alert("A");
+				break;
+			case ((parseInt(age / 10) == 3):
+			case ((parseInt(age / 10) == 4):
+				alert("B");
+				break;
+			default:	
+				alert("您输入的有误");		
+	}
+	</script>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 100px;height: 100px;background-color: pink;margin-bottom: 10px;
+			}
+			p{
+				width: 100px;height: 100px;background-color: green;
+			}
+		</style>
+		<script src="libs/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("div").on("mouseover.my",function(){
+					$(this).width(50)
+				})
+				$("div").on("mouseout.my",function(){
+					$(this).width(200)
+				})
+				$("p").on("mousedown.my1",function(){
+					$(this).width(300)
+				})
+				$("p").on("mouseup",function(){
+					$(this).width(600)
+				})
+				$("button").click(function(){
+					$("div").off(".my")    //删除指定命名空间下的所有事件 namespace
+					$("p").off(".my1")
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<button>an</button>
+		<div></div>
+		<div></div>
+		<p></p>
+		<p></p>
+	</body>
+</html>

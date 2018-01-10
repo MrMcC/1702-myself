@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//			function foo(){
+//				console.log(this == window)
+//			}
+//			foo();
+//			function Person(){
+//				this.name = "李四";
+//				console.log(this)
+//			}
+//			var p = new Person()
+			
+			
+//			function foo(){
+//				this.name = "李四";
+//				console.log(this);
+//			}
+//			function Person(){
+//				foo();
+//			}
+//			var p = new Person()
+
+//			var p = {
+//				name : "abc",
+//				foo : function (){
+//					console.log(this.name);
+//				}
+//			}
+//			p.foo();
+			
+			var name = "a";
+			function foo(){
+				console.log(this.name)
+			}
+			
+			//永远绑定this 返回值就是绑定成功的那个函数 对原来函数没有任何影响
+			var foo1 = foo.bind({name : "b"});  //绑定优先级最高 告诉this绑定了name :b
+			foo1();  //b
+			foo()//a
+			foo.call({name : "c"})  //c
+			foo1.call({name : "c"}) //b
+		</script>
+	</body>
+</html>
+<!--this
+	1.直接调用方法 this的默认绑定 this == window
+	
+	2.new绑定 this指定将来要创建的对象
+	
+	3.隐式绑定: 对象.方法   this指代调用时使用的那个对象  看谁调用的
+	
+	4.显示绑定   call apply  改变函数中this的指向  优先级最高
+	
+	显示绑定时,如果传入的是null或者undefined的时候,this绑定丢失,this变成window
+	
+	ES6对显示绑定做了一个新的扩展
+	var 绑定后的方法 = 方法名
+-->

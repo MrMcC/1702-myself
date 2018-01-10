@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>冒泡排序</title>
+</head>
+<body>
+<script>
+    var arr = [2, 4, 13, 1, 8, 7, 70, 20, 90, 20];
+    for (var j = 0; j < arr.length - 1; j++) {  //判定选最大的这个循环要执行多少次,所以length-1次 
+        for (var i = 0; i < arr.length - 1 - j; i++) {//实质最小那个值就固定不用执行循环了,所以length-1,
+            if (arr[i] > arr[i + 1]) {                //-j是因为我执行一次j后,我已经确定了一个最大值,
+                var temp = arr[i];                    //所以就在其余的数里再选最大就可以了,只需要
+                arr[i] = arr[i + 1];                  //执行length-1-j次就可以再找到最大值
+                arr[i + 1] = temp;
+            }
+        }
+    }
+    console.log(arr);
+</script>
+</body>
+</html>

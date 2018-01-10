@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+		var regExp = /\d{0,1}/gi; // ?{1,2}
+		var s = "a23"    //字母打断,先判断a前面有没有1个再判断a前面有没有0个都没有在后面接着找
+		console.log(regExp.exec(s));
+		console.log(regExp.lastIndex);//每个你找到后面的那个数 0 
+		console.log(regExp.exec(s));
+		console.log(regExp.lastIndex); //2
+		console.log(regExp.exec(s));
+		console.log(regExp.lastIndex);  //0
+		</script>
+	</body>
+</html>

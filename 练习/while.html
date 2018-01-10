@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			for (var i = 0; i < 5; i++) {
+  				if(i == 3){ 
+    //如果i == 3，执行conintue语句，则提前结束本轮循环，不再执行循环体剩下的代码。直接去执行i++，然后判断，开启
+    //下一轮循环。
+    					continue;
+  				}
+  				console.log(i + " "); //数字变字符串 1+""
+  				//所有for循环出来的都是字符串嘛?
+			}
+			//1-100所有偶数的和
+			var i= 0;
+			var sum = 0;
+			while(i < 101){
+				sum+=i
+				i+=2
+			}
+			console.log(sum);
+		</script>
+	</body>
+</html>

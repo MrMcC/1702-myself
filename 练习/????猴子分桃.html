@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function fen(tao){
+				if((tao +10) % 5 ==1){
+					return tao;//怎么让他循环5次
+				}
+				return fen(tao-2) % 5 == 1
+			}
+			console.log(fen(tao));//?
+
+//			(tao-2) % 5 == 1
+//			(tao-4) % 5 == 1
+//			(tao-6) % 5 == 1
+//			(tao-8) % 5 == 1
+//			(tao-10) % 5 == 1
+//splice
+		</script>
+	</body>
+</html>

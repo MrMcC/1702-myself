@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width : 100px;
+            height : 100px;
+            background-color : pink;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+<div id="box"></div>
+<script>
+    var i =  0;
+    setInterval(function (){
+        box.style.left = i++ + "px";
+        /*for(var j= 0; j < 20000; j++){
+            console.log("a");
+        }*/
+    }, 20)
+</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				width: 100px;height: 100px;border: 1px solid #000;
+			}
+			#ball{
+				width: 20px;height: 20px;background-color: pink;border-radius: 50%;
+			}
+		</style>
+		<script src="my_animator_mor.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="box">
+			<div id="ball">
+				
+			</div>
+		</div>
+		<script type="text/javascript">
+//			ball.onmouseover = function(){
+//				var duration = 2000,
+//					distance = 100,
+//					startTime = new Date(),
+//					p,
+//					count=4;
+////					helf = p/4;
+//				requestAnimationFrame(function step(){
+//					p = Math.min(1,(new Date() - startTime)/ duration);
+//					ball.style.transform = `transLateX(${(distance-20) * p +distance*(4-count)}px)`;
+//					if(p ==1 && --count){
+//						startTime = new Date();
+//						p = 0;
+//					}
+//					p < 1 && requestAnimationFrame(step)
+//					
+//				})
+//			}
+			var animator = new Animator(
+				[2000,3000,4000,1000],
+				[Easing.linear,Easing.bounce,Easing.easeBoth],
+				[function(e){
+					inner.style.transform = `translate(${350 * e}px , 0px)`
+				},function(e){
+					inner.style.transform = `translate(350px ,${ e}px)`
+				},function(e){
+					inner.style.transform = `translate(${350 * e}px , 0px)`
+				},function(e){
+					inner.style.transform = `translate(${350 * e}px , 0px)`
+				}]
+			)
+		</script>
+	</body>
+</html>

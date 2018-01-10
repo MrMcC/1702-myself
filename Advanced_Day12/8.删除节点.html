@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+
+		</style>
+		<script src="libs/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("ul>li:nth-child(2)").click(function(){
+					alert("你好")
+				})
+//				var $li = $("ul>li:nth-child(2)").remove()//返回的是删除的那个节点
+//				$li.appendTo($("ul"))      //事件被删除,再点击这个li就不好使了
+//				
+//              var $li = $("ul>li:nth-child(2)").detach()
+//				$li.appendTo($("ul"))    //事件不被删除,还可以用
+				
+//				var $li = $("ul>li:nth-child(1)").empty()//不干掉自己只干掉自己的后代
+				
+//				$("ul").empty()   //类似于.innerHTML="" 清空ul的内容
+
+				$("li").replaceWith($("<p>这是一个p</p>"))
+				
+//				$("<p>这是一个新的p</p>").replaceAll($("li:nth-child(-n+2)")) //干掉前两个
+			})
+		</script>
+	</head>
+	<body>
+		<ul>
+			<li>第一个item</li>
+			<li>第二个item</li>
+			<li>第三个item</li>
+			<li>第四个item</li>
+		</ul>
+	</body>
+</html>
+<!--
+	remove : 删除元素自己,删除后绑定的事件会丢失
+	detach : 删除元素自己,删除后绑定的事件不会丢失
+	empty  : 不干掉自己,只干掉自己的后代
+	a.replaceWith(b)  b干掉a   替换
+	a.replaceAll(b)   a干掉b   替换
+ -->

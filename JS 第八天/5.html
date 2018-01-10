@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	<script type="text/javascript">
+		setTimeout(function(){
+			console.log("timeout...");
+		},5000);
+		
+//		for(i=0,i<1000,i++){
+//			setTimeout(function(){
+//				console.log("timeout...");
+//			},5000);
+//		}
+		
+		
+		var i = 0;
+		setTimeout(function foo(){
+			console.log(i++);
+			if(i < 100){
+				setTimeout(foo,1000);//foo()相当于传函数的返回值,foo表示传函数
+			}
+		},5000);
+	</script>
+	</body>
+</html>

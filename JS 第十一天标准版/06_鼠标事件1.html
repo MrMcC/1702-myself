@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #out{
+            width : 400px;
+            height : 200px;
+            background-color: gray;
+        }
+        #box{
+            width : 200px;
+            height : 400px;
+            background-color : pink;
+            
+        }
+        
+    </style>
+</head>
+<body>
+<button id="btn">按钮</button>
+<div id="out">
+    <div id="box"></div>
+</div>
+
+<script>
+    
+    var box = document.getElementById("box");
+    // //mouseover的非冒泡版本。这个用的更加广一点。
+    box.onmouseenter = function (){
+        box.style.backgroundColor = "blue";
+        box.style.width = "300px";
+    }
+   
+    out.onmouseenter = function (){
+        console.log("外层也收到了  enter  事件")
+    }
+    //mouseout的非冒泡版本
+    box.onmouseleave = function (){
+        box.style.backgroundColor = "pink";
+        box.style.width = "200px";
+    }
+    out.onmouseleave = function (){
+        console.log("外层也收到了  leave   事件")
+    }
+</script>
+</body>
+</html>

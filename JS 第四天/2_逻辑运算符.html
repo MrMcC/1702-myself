@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		
+	</body>
+	<script type="text/javascript">
+		/*
+		 逻辑运算符
+		 * 
+		 * 10 < num < 100
+		 * 10 < num 和 num < 100  
+		 * 作用:
+		 *     将多个判断条件并列判断
+		 * 分类:
+		 *     1.逻辑与 (&&) 运算符两边表达式同时为真 才为真
+		 *           真&&假   假
+		 *           假&&真   假
+		 *           假&&假   假 
+		 *           真&&真   真
+		 *     2.逻辑或 (||) 运算符两边表达式只要有一个为真 就为真
+		 *           真||假   真 
+		 *           假||真   真 
+		 *           真||真   真
+		 *           假||假   假
+		 *     3.逻辑非 (!)  将表达式的结果 ->取反  !true-> false   !false -> true
+		 * 
+		 * 注意:  短路现象  逻辑与中,其中左侧为假,则直接为假
+		 *                 逻辑或中,其中左侧为真,则直接为真
+		 *       逻辑非  不能连用,其他两个可以 不可以  !!(num1<num2) 但是可以 (!(!(num1<num2)))
+		 * */
+		var a = 5;
+		var b = 10;
+		var c = "5";
+		if(a < b && a == c){
+			
+		}
+		if((true) || (false && true && false)){
+	    		alert("成立");
+	}
+		if((true && false && true )|| (true)){
+	    		alert("成立");
+	}
+		
+	</script>
+</html>

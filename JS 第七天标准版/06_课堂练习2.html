@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+     作者：李振超    2017年3月21日 14:33
+     传入一个没有空格的字符串，返回把各个单词用空格隔开的字符串
+     */
+    function foo(s) {
+        var words = [];
+        var temp = "";
+        for(var i = 0; i < s.length; i++){
+            if(i != 0 && s[i] >= "A" && s[i] <= "Z" || i == s.length - 1){
+                if(i == s.length - 1) temp += s[i];
+                words.push(temp);
+                temp = s[i];
+            }else{ //
+                temp += s[i]; // Hello
+            }
+        }
+        for(var i = 1; i < words.length; i++){
+            words[i] = words[i].toLowerCase();
+        }
+        return words.join(" ");
+    }
+    console.log(foo("HelloMyWorldHelloMyWorldHelloMyWorldHelloMyWorldHelloMyWorld"));
+
+</script>
+</body>
+</html>

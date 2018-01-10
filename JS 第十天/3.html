@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="checkbox" name="" id="all" value="" />这是总按钮
+		<input type="checkbox" name="product" id="" value="" />这是按钮1
+		<input type="checkbox" name="product" id="" value="" />这是按钮2
+		<input type="checkbox" name="product" id="" value="" />这是按钮3
+		<input type="checkbox" name="product" id="" value="" />这是按钮4
+		<input type="checkbox" name="" id="revers" value="" />这是反选
+		<script type="text/javascript">
+			var all = document.getElementById("all");
+//			console.log(all);
+			var products = document.getElementsByName("product");//相当于一个类数组
+			all.onclick = function(){
+				//获取到全选的checkbbox的选中状态
+				var checked = all.checked;
+				//遍历每个product 设置他们的选中与全选保持一致
+				for(i = 0;i< products.length;i++){
+					products[i].checked = checked;
+				}
+			}
+			//反选
+			revers.onclick = function(){
+				if(revers.checked){   //checked(true或false)相当于本身就判断了 如果为真代表选中了执行下面循环
+					for(var i = 0; i< products.length;i++){  
+						products[i].checked = !products[i].checked //让类数组的每一个选中状态都相反
+					}
+				}
+//				revers.checked = false;
+			}
+			
+			var b = false;
+			if(b=true){
+				console.log("true");
+			}else{
+				console.log("false");
+			}
+			
+		</script>
+	</body>
+</html>

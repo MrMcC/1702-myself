@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var p = {
+        name: "小明",
+        age: 20,
+        sex: "男",
+        eat: function (){
+            console.log("abc")
+        }
+    }
+    
+    //删除对象的属性
+    delete p.sex;
+    //删除对象的方法
+//    delete p.eat;
+    //如果删除一个并不存在的属性的时候，并不会报错。
+    delete p.speak;
+    console.log(p)
+    
+    
+    console.log(getPropertyValue(p, "name"))
+    console.log(getPropertyValue(p, "age"))
+    
+    function getPropertyValue(obj, propertyName){
+        return obj[propertyName];
+    }
+    
+    var method = "eat";
+    p[method]();  // p.eat()
+    
+    p["eat"]();   // p.eat()
+    
+    var arr = ["q", "a"];
+    
+    console.log(arr.length)
+    console.log(arr["length"])
+    arr["forEach"](function (value, index){
+        console.log(value)
+    })
+</script>
+</body>
+</html>
+<!--
+对象的属性的访问、修改、添加、删除
+
+
+两种语法去访问属性和方法：  .语法      []语法
+. ：属性名不支持变量
+[] : 属性名支持变量
+    如果[]中的字符没有加引号，就是变量
+    如果加引号就是字符串
+-->

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<script>
+//    var s1 = Symbol.for("a"); //先去全局环境找,没有就创建一个symbol(a)
+//    var s2 = Symbol.for("a");
+//    console.log(s1 == s2)
+////===================================
+//
+//    var s1 = Symbol.for("a");
+//    var s2 = Symbol.for("b");
+//    console.log(s1 == s2)   //false
+////====================================
+//    function foo1() {
+//        return Symbol.for("a");
+//    }
+//    function foo2() {
+//        return Symbol.for("a");
+//    }
+//    console.log(foo1()  == foo2())  //true 在全局中找
+//=========================================
+    var s1 = Symbol(1);
+    var s2 = Symbol.for(1);
+    console.log(s1 == s2)
+//    console.log(s1)
+</script>
+</body>
+</html>
+<!--Symbol.for("a")-->

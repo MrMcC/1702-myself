@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//			var arr = new Array(400);
+//			for(var i = 0; i < 400; i++){
+//				arr[i] = randomInt(10,50);
+//			}
+////			console.log(arr)
+//			function randomInt(from,to){
+//				return parseInt(Math.random() * (to - from + 1) + from);
+//			}
+//			
+//			var nums = new Array(41);
+//			for (var j = 0; j < nums.length; j++) {
+//				nums[j] = 0;
+//			}
+//			for (var num = 10,j = 0;num <= 50; num++,j++) {
+//				for (var ele of arr) {
+//					if(ele == num){
+//						nums[j] += 1;
+//					}
+//				}
+//			}
+//			for (var k = 0,nu = 10;k < nums.length; k++,nu++) {
+//				if(k % 5 ==0){
+//						document.write("<br>")
+//					}
+//				document.write(nu+"出现的次数" +nums[k]+"个"+" ")
+//					
+//			}
+
+
+
+			
+			var arr = [];
+			var arr1 = [];
+			for (var i =0; i < 400; i++) {
+				var num = randomInt(10,50);
+				if(arr1.indexOf(num) == -1){
+					arr.push(1);
+					arr1.push(num);
+				}else{
+					arr[arr1.indexOf(num)]++;
+				}
+			}
+			document.write(arr1.join(" ")+ "<br>" + arr.join(" "))	
+
+			function randomInt(from,to){
+				return parseInt(Math.random() * (to - from) + from)
+			}
+
+	
+	//方法3
+	var arr = new Array(400);  //数组的长度就是400
+    for (var i = 0; i < arr.length; i++){
+        arr[i] = randomInt(10, 50);
+    }
+    //counts[0]记录10出现的次数 counts[40] 50出现的次数
+    var counts = new Array(41);
+    //个counts的每个元素默认赋值为0
+    counts.fill(0); //把每个元素赋值为0  es6新增
+
+    for (var num = 10; num <= 50; num++){
+        arr.forEach(function (ele, index){
+            if (ele == num){
+                counts[num - 10]++;
+            }
+        })
+    }
+
+    counts.forEach(function (ele, index){
+        console.log(index + 10 + " >>>  " + ele);
+    })
+    /**
+     返回随机的 [from, to] 之间的整数(包括from，也包括to)
+     */
+    function randomInt(from, to){
+        return parseInt(Math.random() * (to - from + 1) + from);
+    }
+		</script>
+	</body>
+</html>
+<!--
+	随机生成400个 [10,50]的整数，然后统计每个数字出现的次数。把结果写入到页面中。
+-->

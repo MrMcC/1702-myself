@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 200px;height: 200px;
+			}
+			p{
+				width: 150px;height: 50px;
+			}
+			a{
+			
+			}
+		</style>
+		<script src="libs/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#box,.box1,p").css("background-color","pink")  //群组选择器
+				$("div a").css("font-size",30)   //px可以省略或者写成 "30px" 后代选择器
+				$("div > p").css("background-color","green")  //子代选择器
+				console.log($("*"))
+				$("div *").css("background-color","blue")   //通配符选择器
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box">123</div>
+		<div class="box1">456</div>
+		<p></p>
+		<a href=""></a>
+		<div><p><a href="#">报读</a></p></div>
+	</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>参考父容器</title>
+    <style>
+        button{
+            width : 200px;
+            height : 200px;
+            background-color : pink;
+        }
+        div{
+            width : 500px;
+            height : 200px;
+            background-color : gray;
+            
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <button id="btn">按钮1</button>
+</div>
+<form action="#" id="form">
+    <input type="text" name="user">
+    <input type="submit" value="提交">
+</form>
+<script>
+    /*
+    当事件发生的时候，事件处理程序执行，那么调用者(js引擎)就会传入
+    一个参数过来，这个参数就是 事件对象1
+    
+    * */
+    /*btn.onclick = function (event){
+        //这个事件是否允许冒泡
+        console.log(event.bubbles);
+        //是否允许取消事件的默认行为
+        console.log(event.cancelable);
+        //点击的是哪个dom元素，target就是指的哪个dom元素.点击区域的最内侧的那个区域。
+        console.log(event.target);
+        //事件处理程序注册在谁身上，谁就是currentTarget
+        console.log(event.currentTarget);
+        console.log(event.eventPhase)
+    }*/
+    document.body.addEventListener("click", function (event){
+        //事件所处的阶段
+        console.log(event.eventPhase)
+        
+    }, false);
+    form.onsubmit = function (event){
+        
+        //阻止表单的默认行为
+        event.preventDefault();
+        //判断默认行为是否已经被阻止
+        alert(event.defaultPrevented);
+    }
+    
+</script>
+</body>
+</html>

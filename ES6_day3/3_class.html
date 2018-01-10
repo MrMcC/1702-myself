@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<script>
+//    function  Father(name) {
+//        this.name = name
+//    }
+//    Father.prototype.say = function () {
+//        console.log("Father")
+//    }
+//    function Son(name,age) {
+//        Father.call(this,name);
+//        this.age = age;
+//    }
+//    Son.prototype = new Father();
+//    Son.prototype.run = function () {
+//        console.log("son")
+//    }
+//
+//    var s = new Son("李四",20)
+
+
+    class Father{
+        constructor(name){
+            this.name = name;
+        }
+        say(){
+            console.log("父类型中的方法"+this.name)
+        }
+        static run(){   //静态方法也可以被继承
+            console.log("aaaa")
+        }
+    }
+    class Son extends  Father{  //继承
+        constructor(name,age){
+            super(name);   //相当于以前的函数借调.借调父亲的构造函数.必须放在首行
+            this.age = age;
+        }
+        say(){    //复写
+            super.say();  //可以在子类的方法中去调用父类的方法,
+            console.log("子类的方法"+this.name)
+        }
+    }
+    var s = new Son("abc",20)
+    s.say()
+    Son.run() //
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var p1 = (function (){
+        var p = {
+            name: "李四",
+            age: 20
+        }
+        return {
+            getName : function (){
+                return p.name;
+            },
+            getAge : function (){
+                return p.age;
+            },
+            setName : function (name){
+                p.name = name;
+            },
+            setAge : function (age){
+                if(age > 0 && age < 150){
+                    p.age = age;
+                }
+            }
+        }
+    })()
+    console.log(p1.getName());
+    p1.setAge(40)
+    console.log(p1.getAge());
+</script>
+</body>
+</html>
+<!--
+封装私有数据：
+1. 把要私有的数据封装到一个函数中
+
+-->

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*var s1 = "abc";
+    var s2 = new String("abc");
+    var s3 = new String("abc");
+    var s4 = s3;
+    console.log(s1 == s2);
+    console.log(s3 == s4);
+    */
+    var s1 = "好";
+    var s2 = "你";
+    //按照字母表的顺序比的。前面的比后面的小。
+    /*console.log(s1.charCodeAt(0))
+    console.log(s2.charCodeAt(0))*/
+    console.log(s1.localeCompare(s2));
+</script>
+</body>
+</html>
+<!--
+== : 如果有一方是基本类型(number string boolean) ,会进行类型的转换之后
+    再比较
+
+=== ：不会进行类型的转换。
+
+特殊：如果两边都是 对象 （new出来的），则不管是==还是===都不会进行类型的
+转换，只比较地址值是否相等。(比较他们是不是同一个对象)
+
+
+
+-->

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.js"></script>
+    <style>
+        div{
+            width:100px;
+            height: 100px;
+            background-color: #00c0a5;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="app">
+        <!--动态绑定class-->
+        <div :style="{backgroundColor: activeColor,fontSize: fontSize + 'px'}">我是个div</div>
+    </div>
+</body>
+<script>
+    var vm = new Vue({
+        el:"#app",
+        data: {
+            activeColor: "red",
+            fontSize: 30
+        },
+        methods: {
+
+        },
+        computed: {
+
+        }
+
+    })
+
+</script>
+</html>

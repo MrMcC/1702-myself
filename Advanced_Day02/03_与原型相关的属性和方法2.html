@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //in操作符是判断一个属性是否存在于一个对象中.会沿着原型链查找。
+    function Person(){
+        this.age = 20;
+    }
+    Person.prototype.name = "李四";
+    var p1 = new Person();
+//  console.log("age" in p1);
+//  console.log("sex" in p1);
+    //提供了一个专门的方法来判断一个属性是否存在于当前对象中，而不是原型中
+//  console.log(p1.hasOwnProperty("age"));
+//  console.log(p1.hasOwnProperty("name"));
+//  console.log(p1.hasOwnProperty("sex"));
+    console.log(getLocation(p1, "age"));
+    console.log(getLocation(p1, "name"));
+    console.log(getLocation(p1, "sex"));
+    //如何判断一个属性的位置.  不存在   在当前对象上  在原型上
+    function getLocation(obj, propertyName){
+        if(!(propertyName in obj)){
+            return "不存在";
+        }else if(obj.hasOwnProperty(propertyName)){
+            return "在当前对象上";
+        }else{
+            return "在原型上";
+        }
+    }
+</script>
+
+</body>
+</html>

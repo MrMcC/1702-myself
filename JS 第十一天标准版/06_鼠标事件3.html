@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #out{
+            width : 400px;
+            height : 200px;
+            background-color: gray;
+        }
+        #box{
+            width : 200px;
+            height : 400px;
+            background-color : pink;
+            
+        }
+        
+    </style>
+</head>
+<body>
+<button id="btn">按钮</button>
+<div id="out">
+    <div id="box"></div>
+</div>
+
+<script>
+    //按下鼠标
+    box.onmousedown = function (){
+        console.log("你按下了鼠标")
+    }
+    //松开鼠标
+    box.onmouseup = function (){
+        console.log("你松开了鼠标")
+    }
+    //移动鼠标
+    box.onmousemove = function (){
+        console.log("你在疯狂的移动鼠标")
+    }
+    
+    box.onclick = function (){
+        console.log("你点击了鼠标")
+    }
+</script>
+</body>
+</html>

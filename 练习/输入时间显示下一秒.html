@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		输入: <input type="" name="" id="hour" value="" />:
+		<input type="" name="" id="minute" value="" /> :
+		<input type="" name="" id="second" value="" />
+		<button id="btn">下一秒</button>
+		<p id="p"></p>
+		<!--<script type="text/javascript">
+			var p = document.getElementById("p");
+			function NextTime(hour,min,seco){//首先我写的这个函数必须调用赋值了才能输出 我先确定这个函数赋值了在p中能不能输出
+				if(seco == 59 && min != 59){
+					p.innerHTML ="时间为:"+hour+"小时"+(min+1)+"分钟"+0+"秒"
+				}else if(seco == 59 && min == 59 && hour<23){
+					p.innerHTML ="时间为:"+(hour+1)+"小时"+0+"分钟"+0+"秒"
+				}else if(seco == 59 && min == 59 && hour==23){
+					p.innerHTML ="时间为:"+0+"小时"+0+"分钟"+0+"秒"
+				}else{
+					p.innerHTML ="时间为:"+hour+"小时"+min+"分钟"+(seco+1)+"秒"
+				}
+			}
+			btn.onclick = function () {
+				NextTime(+hour.value,+minute.value,+second.value);//我想调用的三个值从input中取
+			}
+		</script>-->
+		
+	</body>
+	<script type="text/javascript">
+		var p = document.getElementById("p");
+		function NextTime(){
+			var hour = + document.getElementById("hour").value;//相当于他的三个实参
+			var minute = + document.getElementById("minute").value;
+			var second = + document.getElementById("second").value;
+			if(second == 59 && minute != 59){
+				p.innerHTML ="时间为:"+hour+"小时"+(minute+1)+"分钟"+0+"秒"
+			}else if(second == 59 && minute == 59 && hour<23){
+				p.innerHTML ="时间为:"+(hour+1)+"小时"+0+"分钟"+0+"秒"
+			}else if(second == 59 && minute == 59 && hour==23){
+				p.innerHTML ="时间为:"+0+"小时"+0+"分钟"+0+"秒"
+			}else{
+				p.innerHTML ="时间为:"+hour+"小时"+minute+"分钟"+(second+1)+"秒"
+			}
+		}
+		
+		btn.onclick = function () {
+			NextTime();
+		}
+	</script>
+</html>

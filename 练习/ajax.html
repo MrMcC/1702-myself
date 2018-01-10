@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<input type="button" name="" id="" value="发送ajax请求" />
+		<div id="box"></div>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var xhr = new XMLHttpRequest();
+			xhr.open("GET","./打开窗口.html",true);
+			xhr.onreadystatechange = function(){
+				if(xhr.readyState == 4){
+					if(xhr.status == 200){
+						box.innerHTML = xhr.responseText;
+					}else{
+						box.innerHTML = "访问出现问题,请重试";
+					}	
+				}
+			}
+			xhr.send(null);
+		</script>
+	</body>
+</html>

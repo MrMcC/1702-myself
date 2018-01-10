@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<ul id="webs">
+    <li>百度</li>
+    <li>育知同创1</li>
+    <li>育知同创2</li>
+    <li>育知同创3</li>
+</ul>
+<script>
+    var webs = document.getElementById("webs");
+//    webs.removeChild(webs.firstChild);
+//    webs.removeChild(webs.firstChild);
+    //要移除的那个子元素。
+//    webs.removeChild(webs.firstElementChild)
+    
+    //一定是通过父元素来删除这个父元素的子元素
+    webs.removeChild(document.querySelector("li:nth-child(3)"))
+</script>
+</body>
+</html>
+<!--
+创建节点：
+    创建文本节点、创建属性节点、创建元素节点
+
+-->

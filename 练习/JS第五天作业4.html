@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+		var year = prompt("请输入年");
+		var month = prompt("请输入月");
+		var day = prompt("请输入日");
+		alert("是当前的第"+panduan(+year,+month,+day)+"天")
+				
+				function panduan(year,month,day){
+					if(month == 1){
+						return day;
+					}else{
+						return olddays(year,month - 1) + day;
+					}
+				}
+				function olddays(year,month){
+					if(month == 1){
+						return sum(1);
+					}else{
+						return olddays(year,month-1) + sum(month);
+					}
+				}
+				function sum(month){
+					switch(month){
+						case 1:
+						case 3:
+						case 5:
+						case 7:
+						case 8:
+						case 10:
+						case 12:
+							return 31;
+							break;
+						case 4:
+						case 6:
+						case 9:
+						case 11:
+							return 30;
+							break;
+						case 2:
+							return isRun(year) ? 29 : 28	
+					}
+				}
+				function isRun(year){
+					return year % 4 ==0 && year % 100 != 0 || year % 400 == 0
+				}
+
+		</script>
+	</body>
+</html>
+<!--定义一个函数输入日期,判断是今年的第几天,例如:输入2016年1月1日打印第一天-->

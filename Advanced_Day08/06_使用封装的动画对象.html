@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink; 
+        }
+    </style>
+    <script type="text/javascript" src="easing.js"></script>
+    <script type="text/javascript" src="my_animator1.js"></script>
+</head>
+<body>
+<button id="start">开始动画</button>
+<button id="stop">停止动画</button>
+<div id="box"></div>
+<script>
+    var animator;
+    start.onclick = function (){
+        var opc = box.style.opacity == "" ? 1 : box.style.opacity;
+        animator = new Animator(3000, Easing.easeBoth, function (e){
+            if(opc == 1){
+                box.style.opacity = 1 - e;
+            }else{
+                box.style.opacity = e;
+            }
+        });
+        animator.start(3);
+        
+    }
+    document.getElementById("stop").onclick = function (){
+        animator.stop();
+    }
+
+</script>
+</body>
+</html>

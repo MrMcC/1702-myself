@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript" charset="utf-8">
+    /*
+     转化为数字
+     * 
+     *	1. Number()
+     * 			将当前内容转化为数字
+     * 	2. parseInt()
+     * 			将当前内容转化为整数
+     * 	3. parseFloat()
+     * 			将当前内容转化为浮点数(小数)
+     * */
+//  console.log(parseInt("123"));
+//  console.log(parseInt("+123"));
+//  console.log(parseInt("-123"));  //?
+//  console.log(parseInt("       123"));
+////
+//  console.log(parseInt("12.3"));
+//  console.log(parseInt("12+3"));
+//  console.log(parseInt("12-3"));
+//  console.log(parseInt("12asd3"));
+//  console.log(Number("12asd3"));
+//  console.log(parseInt("asd12asd3"));
+//  
+//  console.log(parseInt("+"));
+//  console.log(parseInt("-"));
+//=====================================
+//	console.log(parseFloat("12.3"));
+//	console.log(parseFloat("        12.3"));
+//	console.log(parseFloat("12.3+12.4"));
+//	console.log(parseFloat("12..3"));
+//	console.log(parseFloat(".12"));
+//=====================================
+
+/*
+ parseInt()
+ * 
+ * 	1.在转化数字的时候，会前面的空格忽略
+ *  2.在转化的过程中，如果内容中间部分存在无法转化的内容
+ * 		会从前向后，尽可能的去转化
+ * 		如果第一个字符就是无法转化的内容，则返回 NaN
+ * 	3.parseInt() 在使用的过程中其实可以放置两个参数
+ * 		* 需要转化的内容
+ * 		* 需要转化的内容的进制
+ * 		如果未填写第二个参数，则默认以十进制转化
+ * */
+//	document.write(parseInt("10") + "<br>");		//10
+//	document.write(parseInt("19",10) + "<br>");	//19
+//	document.write(parseInt("11",2) + "<br>");	//3
+//	document.write(parseInt("17",8) + "<br>");	//15
+//	document.write(parseInt("1f",16) + "<br>");	//31
+//	document.write(parseInt("010") + "<br>");	//10
+//	document.write(parseInt("i'm lp 123") + "<br>");//NaN
+//	
+	document.write(parseInt("1119",8) + "<br>");	//1
+//	document.write(parseInt("191",8) + "<br>");	//1
+
+//===============================================
+/*
+ Number 和 parseInt 的区别
+ * 
+ * 1.parseInt 是对数字进行取整
+ *   Number 只是对数字进行转化
+ * 2.parseInt 从前向后进行转化，直至不能识别的内容为止
+ *   Number 只要后面存在无法转化的，直接返回 NaN
+ * */
+//	console.log(Number(10.001));		//10.001
+//	console.log(parseInt(10.001));	//10
+//	
+//	console.log(Number(10 + 3.8));	//13.8
+//	console.log(parseInt(10 + 3.8));	//13
+//	
+//	console.log(Number("123"));		//123
+//	console.log(parseInt("123"));	//123
+//	
+//	console.log(Number("123asd"));	//NaN
+//	console.log(parseInt("123asd"));	//123
+//	
+//	console.log(Number("asd123"));	//NaN
+//	console.log(parseInt("asd123"));	//NaN
+//	
+//	console.log(Number("123 + 123"));	//NaN
+//	console.log(parseInt("123 + 123"));	//123
+//	
+	console.log(parseInt("123     567"));
+//	
+	console.log(parseInt("123" - "456"));
+
+
+	//10  -> 10.00
+//	console.log(parseFloat(10.00));
+	/*
+	 toFixed
+	 * 
+	 * 可以按照指定的小数去返回数值
+	 * 返回的内容为 字符串
+	 * */
+	var num = 10;
+	console.log(num.toFixed(2));
+
+    
+</script>
+</html>

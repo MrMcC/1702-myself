@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn1">打开新制定的url</button>
+		<button id="btn3">关闭窗口</button>
+		<button id="btn2">打开一个blank窗口</button>
+		<script type="text/javascript">
+			var btn1 = document.getElementById("btn1");
+			var btn2 = document.getElementById("btn2");
+			btn1.onclick = function(){
+				//参数1要打开的窗口的url
+				//参数2 _self _blank 窗口对象(已经打开的)
+				//参数3 窗口的特性
+				//返回值:新窗口的window
+				
+			otherWindow = window.open("http://www.baidu.com","otherWindow","width=1000,height=1000,left=500,top=500")
+			}
+			btn3.onclick = function (){
+				//关闭已经打开的窗口,如果已经关闭了,则这个方法调用无效
+				otherwindow.close();
+			}
+			var win;
+			btn2.onclick = function (){
+				win = window.open("","","width=200,height=200");				
+				vin.document.body.innerHTML = "<p>这是一个页面</p>"
+			}
+			
+			//如果是用open打开,并且打开的窗口没有url,chrome,ff也可以支持
+			//resizeTo 重新修改到尺寸多少
+//			  moveTo 移动到什么位置
+//			  resizeBy 每次修改多少
+//			  moveBy 每次移动多少
+		</script>
+	</body>
+</html>

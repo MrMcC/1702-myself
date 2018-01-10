@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		body{
+			background: #000;
+		}
+		.box{
+			height: 700px;
+			background: url("1.png");
+		}
+	</style>
+	<!-- 引入 JS 文件 -->
+	<script type="text/javascript" src="LP_PNG.js">
+	</script>
+	<!-- 调用 JS 文件中的方法 -->
+	<script type="text/javascript">
+		DD_belatedPNG.fix('.box');
+	</script>
+</head>
+<body>
+	<div class="box"></div>
+</body>
+</html>

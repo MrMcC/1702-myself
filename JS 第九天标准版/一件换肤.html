@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.day{
+				background-color: #fff;
+			}
+			.night{
+				background-color: lightgray;
+				color: white;
+				font-size: 50px;
+			}
+		</style>
+	</head>
+	<body class="night">
+		<button id="">换成日间模式</button>
+		<button id="">换成夜间模式</button>
+		<div id="">我是谁</div>
+			
+		<script type="text/javascript">
+			var btns = document.getElementsByTagName("button")
+			btns[0].onclick = function(){
+				document.body.setAttribute("class", "day")
+			}
+			btns[1].onclick = function(){
+				document.body.setAttribute("class", "night")
+			}
+		</script>
+	</body>
+</html>

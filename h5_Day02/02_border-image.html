@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 200px;height: 200px;
+            background-color: pink;
+            margin: 20px;
+            /*这一行必须写*/
+            border: 40px solid purple;
+        }
+        div:nth-child(1){
+            /*
+                参数1图片 参数2 切割九宫格竖直方向,因为我的图片是78x78,减26刚好分成9个方框
+                参数3切割九宫格水平方向 参数四 重复样式
+            */
+            border-image: url(./border.png) 26 26 stretch;
+        }
+        div:nth-child(2){
+            border-image: url(./border.png) 26 26 repeat;
+        }
+        div:nth-child(3){
+            border-image: url(./border.png) 26 26 round;
+        }
+        div:nth-child(4){
+            border-image: url(./border.png) 26 26 space;
+        }
+        div:nth-child(5){
+            border-image: url(./border.png) 26 26 stretch space;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+content
+padding内边距
+border
+width
+height
+background
+margin外边距
+yellow
+orange
+cyan(宝绿)
+blue
+purple
+gray
+silver
+black
+white
+solid（实线）
+double（双实线）
+dashed（虚线）
+dotted（点状线）
+border:1px solid double dashed dotted purple cyan;
+margin_top margin_bottom margin_left margin_right margin_bottom margin_bottom margin_bottom
+margin_bottom width width width 
+当块是兄弟关系的时候用margin（取他俩最大的距离） 当块是父子关系时候 父级用padding
+写在标签内部<div style>
+标签名选择器 标签名+｛｝
+类选择器 。+class｛｝

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定时器-setInterval</title>
+</head>
+<body>
+<p id="p"></p>
+<button id="cancel">取消定时器</button>
+<script>
+    /*
+     作者：李振超    2017年3月22日 15:18
+     setInterval: 设置一个每隔一段时间就执行一次的定时器
+     
+     如果用到的对象是当前页面的window，则window可以省略不写
+     window.setInterval() ===  setInterval()
+     
+     参数1：需要周期执行的函数
+     参数2：执行的周期
+     返回值：就是这个定时器的id
+     */
+    var p = document.getElementById("p");
+    var i = 0;
+    var intervalId = setInterval(function (){ //
+        p.innerHTML = i++;
+    }, 1000);
+    
+    var btnCancel = document.getElementById("cancel");
+    btnCancel.onclick = function (){
+        //清除指定id的定时器
+        clearInterval(intervalId);//?为啥填itervalId //清理这个定时器 这个定时器叫itervalId 
+    }
+</script>
+</body>
+</html>

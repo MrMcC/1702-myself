@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="my_ajax.js"></script>
+</head>
+<body>
+<script>
+    ajax.get("data3.xml", function (x, xmlDom){
+        var names = xmlDom.getElementsByTagName("user");
+        for(var i = 0; i < names.length;i++){
+            console.log(names[i].innerHTML);
+        }
+    }, function (){
+    
+    })
+</script>
+</body>
+</html>

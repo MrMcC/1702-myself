@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{margin: 0;padding: 0;}
+			ul{
+				margin: 0 auto;
+				padding: 0;
+				list-style: none;
+				width: 400px;
+				height: 400px;
+				/*background: yellow;*/
+				position: relative;
+			}
+			li{
+				width: 100px;
+				height: 400px;
+				float: left;
+				
+			}
+			p{
+				width: 100px;
+				height: 50px;
+				margin: 0;padding: 0;
+				text-align: center;
+				line-height: 50px;
+				background: gray;
+			}
+			div{
+				width: 400px;
+				height: 350px;
+				position: absolute;
+				left: 0;top: 50px;
+				display: none;
+				text-align: center;line-height: 350px;
+				border: 1px solid #000;
+				box-sizing: border-box;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<!--ul>li*4>p+div-->
+		<ul>
+			<li>
+				<p>酒店</p>
+				<div>酒店内容</div>
+			</li>
+			<li>
+				<p>游戏</p>
+				<div>游戏内容</div>
+			</li>
+			<li>
+				<p>机票</p>
+				<div>机票内容</div>
+			</li>
+			<li>
+				<p>话费</p>
+				<div>话费内容</div>
+			</li>
+		</ul>
+		<script type="text/javascript">
+			var ps = document.querySelectorAll("li")
+			for(var i = 0;i < ps.length; i++){
+				//li的mouseover事件
+				ps[i].onmouseover = function(){
+//					this.nextElementSibling.style.display = "block";
+					this.lastElementChild.style.display = "block";
+					this.firstElementChild.style.backgroundColor = "pink";
+				}
+				ps[i].onmouseout = function(){
+//					this.nextElementSibling.style.display = "none"; 
+					this.lastElementChild.style.display = "none"
+					this.firstElementChild.style.backgroundColor = "gray";
+				}
+			}
+		</script>
+	</body>
+</html>

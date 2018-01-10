@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>正则表达式入门</title>
+</head>
+<body>
+<script>
+    //创建一个正则表达式：参数1：匹配的字符  参数2：匹配模式
+    var regExp = new RegExp("girl", "gi")
+    var s = "myGirl";
+    var result = regExp.test(s);
+    console.log(result)
+    console.log(regExp.test(s))
+    console.log(regExp.test(s))
+    
+    console.log(regExp)
+    //创建正则表达式的第二种方法：正则表达式字面量形式
+    var reg1 = /girl/gi;  //new RegExp("girl", "gi")
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var a = "abc";
+    var p = {
+        toString : function (){
+            return "abc";
+        },
+        valueOf : function (){
+            return null;
+        }
+    }
+    console.log(a == p)
+</script>
+</body>
+</html>
+<!--
+如果对象A和一个基本类型的数据B进行比较：
+    先调用对象的valueOf方法，如果这个方法返回的是基本类型，
+    则用这个返回值与B进行比较。  如果返回的不是基本数据类型
+    则调用 toString 方法得到的字符串与B进行比较
+    
+
+
+-->

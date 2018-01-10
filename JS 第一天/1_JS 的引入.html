@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<!--JS 的引入
+			1.内部添加 JS 
+			2.外部链接添加 JS
+			3.标签内部添加 JS
+		-->
+		<!--标签内部添加 JS
+			
+		-->
+		<a href="javascript:alert('此人太污');">
+			李先生
+		</a>
+		
+		<input type="button" onclick="javascript:alert('李先生太污');" name="" id="" value="" />
+	</body>
+	<!--外部链接添加 JS 
+		    script 标签中的 src 属性来引入其他的文件
+		  1. src表示需要链接的文件的地址
+		    地址也是一个具体的文件，
+		    也可以是一个 URL 地址
+		  2.引入外部链接的 script 标签当中，
+		  不能再添加 JS代码，即使添加了也不会生效
+		  3.即使在引入的 script 标签内部无法填写 JS,
+		  你也不能把这个标签当作单标签来使用
+	-->
+	<script src="" type="text/javascript"></script>
+	<script type="text/javascript" >
+		alert("我被出发了");
+	</script>
+	
+	<!--内部添加 JS 
+		JS 脚本理论上可以存在于页面的各个位置
+		但是推荐大家写在 body的下面
+		尤其注意，不要写在 HTML 根元素的外面
+		
+		type-> 声明所添加的内容的类型
+		    text/javascript
+		       传统的写法，而且对各种浏览器支持较好
+		    application/javascript
+		    		标准的写法，但是不是每种浏览器都支持
+			text/x-javascript
+			    x－前缀代表的是当前是试验性质，不是标准的类型
+		    text/vbscirpt
+		        仅仅适用于 IE 的VBscript 学习 
+		        不应该作为客户端的脚本语言
+		        被用在web 的服务器的 ASP 页面时使用
+		    text/jscript
+		    只支持 IE 浏览器，不支持其他浏览器
+	-->
+	<script type="text/javascript">
+		alert("我是一个警告狂");
+	</script>
+</html>

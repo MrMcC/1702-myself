@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    var obj = {
+        [{}] : "对象1", //[object Object] //属性只有两种类型1.字符串2.symbol
+        [Symbol()] : "s1",
+        [Symbol()](){
+            console.log("哈哈哈")
+        }
+    };
+    
+    obj[{age: 20}] = "对象2";
+
+    obj[[{}]] = "对象3"
+
+
+    obj[Symbol()] = "s2";
+
+//    console.log(obj);
+
+    //获取非symbol的属性名
+//    console.log(Object.getOwnPropertyNames(obj));
+    //获取所有属性名
+//    console.log(Reflect.ownKeys(obj))
+    
+    var ps = Reflect.ownKeys(obj);  //获取所有的属性名
+    ps.forEach(function (pro,index) {
+        console.log(pro,index)
+        if(typeof obj[pro] == "function"){
+            obj[pro]()
+        }
+    })
+//   console.log( [{}].toString());  => [object Object]
+//    console.log({}.toString())  => [object Object]
+
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    class Person {
+        constructor(name,age) {
+            //把属性在构造器内添加 constructor(){}如果没属性,最好写上
+            this.name = name;
+            this.age = age;
+
+//          this._init(name,age);
+        }
+
+
+//        _init(name,age){
+//            this.name = name;
+//            this.age = age;
+//        }
+        say() {
+            return "我是原型上的方法";
+        }
+        eat() {
+
+        }
+
+    }
+    var p1 = new Person("李四",20); //class必须先声明再使用,这句话不能放最前面,
+    console.log(p1.name);
+    console.log(p1.say());
+    console.log(p1 instanceof Person)
+    console.log(typeof Person)
+
+    for(var pro in Person.prototype){
+        console.log(pro)
+    }
+
+</script>
+</body>
+</html>

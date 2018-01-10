@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		table{
+			border: 1px solid #000;
+			border-collapse: collapse;
+
+			/*修改表格宽度的计算方式*/
+			table-layout: fixed;
+			width: 1000px;
+		}
+		table td, table th{
+			border: 1px solid #ccc;
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<!-- tr*12>td*8 -->
+<!--
+		thead
+			定义表格的标题
+				内部一般存放都是 头部
+		tbody
+			定义表格的主体
+				内部主要存放表格中的内容
+				一个表格中可能存在多个 body
+		tfoot
+			定义表格的底部
+				内部一般存放是表格的尾部
+
+
+	注意事项：
+		1.tbody 等标签，自身不会产生任何输出
+		2.每一个 tbody 中都会产生一个分区
+		  表格中的合并，更新等操作，不会越区
+		3.存在加载顺序
+			thead -> tbody -> tfoot
+
+	作用：
+		工作中经常需要动态的修改表格汇总的某几行内容，这时候，我们可以设置 tbody 来配合 Ajax 实现动态更新表格中的内容
+
+		当设置完成，多页页面内容打印的时候
+		会自动在每一个内容之前自动填上 thead 和 tfoot
+ -->
+ 		<tfoot>
+			<tr>
+				<td>总计</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</tfoot>
+
+		<tbody>
+			<tr>
+				<td  rowspan="10">1</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</tbody>
+		<tbody>
+			<tr>
+				<td>2</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</tbody>
+		<thead>
+			<tr>
+				<th>序号</th>
+				<th>维修项目及更换配件</th>
+				<th>单价</th>
+				<th>数量</th>
+				<th>小计</th>
+				<th>工时费</th>
+				<th>合计</th>
+				<th>故障原因</th>
+			</tr>
+		</thead>
+	</table>
+</body>
+</html>

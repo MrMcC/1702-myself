@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+			    width: 80px;
+                height: 160px;
+				position: absolute;
+                overflow: hidden;
+			}
+			img{
+				position:absolute;left: 0;top: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div"><img src="img/go.jpg"/></div>
+		<script type="text/javascript">
+			var img = document.querySelector("img");
+			var i =0;
+			var dir = 1;
+			var deg = 0;
+			setInterval(function(){
+				img.style.left = -i % 8 * 80 + "px";
+				i++;
+				if(div.offsetLeft > div.parentNode.offsetWidth || div.offsetLeft < -90){
+				    dir*= -1;
+				    deg +=180;
+				    div.style.transform = `rotateY(${deg}deg)`
+                }
+
+				div.style.left = div.offsetLeft + 30* dir + "px"
+			},500)
+		</script>
+	</body>
+</html>

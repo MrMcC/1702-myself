@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			body,html{
+				width: 100%;
+				height: 100%;
+				background-color: #000;
+				/*overflow: hidden;*/
+			}
+			div{
+				position: absolute;
+				border-radius: 50%;
+			}
+		</style>
+	</head>
+	<body>
+		<script>
+			function Circle(parent){
+				this.parent = parent;
+				this.div = document.createElement("div")
+				this.r = randomInt(20,100);
+				this.backgroundColor = `rgba(${randomInt(0,255)},${randomInt(0,255)},${randomInt(0,255)},${Math.random()*0.6+0.4})`
+				this.speedX = randomInt(-10,10)
+				this.speedX = Math.abs(this.speedX) < 4 ?5 :this.speedX
+				this.speedY = randomInt(-10,10)
+				this.speedY = Math.abs(this.speedY) < 4 ?5 :this.speedY
+				this.left = randomInt(0,1000)
+				this.top = randomInt(0,800)
+			}
+			Circle.prototype.show = function(){
+				var div = this.div;
+				div.style.left = this.left + "px"
+				div.style.top = this.top + "px"
+				div.style.backgroundColor = this.backgroundColor
+				div.style.width = div.style.height = this.r *2 + "px"
+				this.parent.appendChild(div)
+			}
+			Circle.prototype.run = function(){
+				var that = this;
+				var maxLeft = this.parent.offsetWidth - this.div.offsetWidth;
+				var maxTop = this.parent.offsetHeight - this.div.offsetHeight;
+				setInterval(function(){
+					var left = that.div.offsetLeft + that.speedX;
+					var top = that.div.offsetTop + that.speedY;
+					if(left <= 0){
+						left = 0;
+						that.speedX *= -1;
+					}
+					if(top <= 0){
+						top = 0;
+						that.speedY *= -1;
+					}
+					if(left >= maxLeft){
+						left = maxLeft;
+						that.speedX *= -1;
+					}
+					if(top >= maxTop){
+						top = maxTop;
+						that.speedY *= -1;
+					}
+					that.div.style.left = left + "px"
+					that.div.style.top = top + "px"
+				},20)	
+			}
+			
+			
+			function randomInt(from,to){
+				return parseInt(Math.random() * (to - from) + from)
+			}
+			for(var i =0; i < 30; i++){
+				var c = new Circle(document.body)
+				c.show()
+				c.run()
+			}
+		</script>
+	</body>
+</html>

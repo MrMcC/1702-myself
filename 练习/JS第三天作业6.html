@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<p id="p"></p>
+		<script type="text/javascript">
+			var p = document.querySelector("#p")
+			for (var num =1;num < 101; num++) {
+				if(num % 3== 0 && num % 5== 0){
+					p.innerHTML = num	;   //老师这个怎么用p展示???
+//					document.write(num+"\n");//可以插入标签,不能用换行用<br>
+				}
+			}
+			
+		</script>
+	</body>
+</html>
+<!--
+	在页面输出1-100之间即是3的倍数又是5的倍数的数字
+-->

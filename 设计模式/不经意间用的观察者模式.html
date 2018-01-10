@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button>按钮</button>
+		<script type="text/javascript">
+			var btn = document.querySelector("button")
+			var foo;
+			btn.addEventListener("click",foo = function(){
+				console.log()
+			})
+			btn.addEventListener("click",function(){
+				console.log()
+			})
+			btn.removeEventListener("click",foo)
+		</script>
+	</body>
+</html>

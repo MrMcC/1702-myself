@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		语文<input type="" name="" id="chinese" value="" />
+		数学<input type="" name="" id="maths" value="" />
+		英语<input type="" name="" id="english" value="" />
+		<button id="btn">按钮</button>
+		<script type="text/javascript">
+			btn.onclick = function(){
+				if(+chinese.value >= 90 && +maths.value >= 90 && +english.value >= 90){
+					alert("奖励一架钢琴")
+				}else{
+					alert("你要被揍了")
+				}
+			}
+		</script>
+	</body>
+</html>
+<!--输入小明语文,数学,英语成绩,都是90分奖励钢琴,否则打一顿-->

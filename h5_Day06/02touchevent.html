@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 100px;height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+<div id="box"></div>
+<script>
+    var div = document.querySelector("div");
+    div.addEventListener("touchstart",function(e){
+        var ts = e.changedTouches;  //返回的是touchlist
+        console.log(ts.length)
+    },false)
+
+//    var div = document.querySelector("div");
+//    div.addEventListener("touchmove",function(e){  //拿不到都没start
+//        var ts = e.changedTouches;  //返回的是touchlist
+//        console.log(ts.length)
+//    },false)
+
+    var div = document.querySelector("div");
+    div.addEventListener("touchend",function(e){
+        var ts = e.changedTouches;  //返回的是touchlist
+        console.log(ts.length)
+    },false)
+</script>
+</body>
+</html>

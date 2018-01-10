@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="inValue" @keyup.enter="add()">
+        <ul>
+            <btn v-for="(item,index) in arr" :todo = 'item' @del="remove(index)"></btn>
+        </ul>
+    </div>
+</body>
+<script>
+    Vue.component("btn",{
+        template:  `<li>{{todo}}
+
+                <button @click="$emit('del')">删除</button>
+                </li>`,
+        props: ['todo']
+    })
+    new Vue({
+        el: "#app",
+        data:{
+            inValue : "",
+            arr: []
+        },
+        methods:{
+            add(){
+                this.arr.push(this.inValue)
+                this.inValue = ""
+            },
+            remove(index){
+                this.arr.splice(index,1)
+            }
+        }
+
+    })
+</script>
+</html>

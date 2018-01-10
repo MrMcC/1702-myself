@@ -1,0 +1,10 @@
+<!-- <view>我是demo页</view>
+<view>用户名： {{userInfo.userName}}</view>
+<view>年龄: {{userInfo.userAge}}</view>
+<view>用户id: {{userInfo.userId}}</view>
+<navigator open-type="navigateBack">返回</navigator> -->
+<!-- 只加载目标页面中的模板 -->
+<!-- <import src="../index/index.wxml"/>
+<template is="msgItem" data="{{index:0,msg:'你好', time: '12323'}}" /> -->
+<include src="../index/index.wxml" />
+<template is="msgItem" data="{{index:0,msg:'你好', time: '12323'}}" />

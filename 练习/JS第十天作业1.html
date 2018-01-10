@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		上网:<input type="checkbox" name="" id="" value="" />
+		大保健:<input type="checkbox" name="" id="" value="" />
+		看电影:<input type="checkbox" name="" id="" value="" />
+		敲代码:<input type="checkbox" name="" id="" value="" />
+		看黄片:<input type="checkbox" name="" id="" value="" /><br />
+		<button id="btn1">全选</button>
+		<button id="btn2">取消全选</button>
+		<button id="btn3">反选</button>
+		<script type="text/javascript">
+			btn1.onclick = function(){
+				var inputAll = document.getElementsByTagName("input");
+				for (var i= 0; i < inputAll.length; i++) {
+					inputAll[i].checked = true;
+				}
+			}
+			btn2.onclick = function(){
+				var inputAll = document.getElementsByTagName("input");
+				for (var i= 0; i < inputAll.length; i++) {
+						inputAll[i].checked = false;
+				}
+			}
+			btn3.onclick = function(){
+				var inputAll = document.getElementsByTagName("input");
+				for (var i= 0; i < inputAll.length; i++) {
+						inputAll[i].checked = !inputAll[i].checked
+				}
+			}
+		</script>
+	</body>
+</html>
+<!--
+	实现下面的功能：全选、取消、反选
+-->

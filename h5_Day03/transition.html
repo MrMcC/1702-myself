@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 100px;height: 100px;
+            background-color: plum;
+            /*transition-property: transform, width;  !*all 所有属性都过度*!*/
+            /*!*过渡时间*!*/
+            /*transition-duration: 2s;*/
+            /*!*默认easing*!*/
+            /*!*transition-timing-function: linear;*!*/
+            /*!*运动轨迹 贝塞尔曲线*!*/
+            /*transition-timing-function: cubic-bezier(.03,.64,.27,1.56);*/
+            /*!*延迟时间*!*/
+            /*transition-delay: 2s;*/
+
+            transition: all 3s linear 0.2s;
+        }
+        div:active{
+            transform: translateX(1000px);
+            /*width: 400px;*/
+        }
+
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>节点之间的关系</title>
+</head>
+<body>
+<p></p> <div id="box"><p>你好</p>
+    <p>你坏</p>
+<!--aaaa--></div> <a href=""> </a>
+
+<script>
+    var box = document.getElementById("box");
+    
+    //获取这个元素下面的所有的子节点：包括任何的节点
+//  var nodes = box.childNodes;
+//  console.log(nodes.length)
+//  console.log(nodes)
+    //获取元素的父节点
+//  console.log(box.parentNode)
+//  //获取第一个子节点
+    console.log(box.firstChild)
+//  //最后一个子节点
+//  console.log(box.lastChild)
+//  //获取下一个兄弟
+//  console.log(box.nextSibling)
+//  //获取上一个兄弟
+//  console.log(box.previousSibling)
+</script>
+</body>
+</html>
+<!--
+first-child
+last-child
+childNodes
+sibling
+-->

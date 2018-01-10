@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绘制五子棋</title>
+    <style>
+        canvas{
+            border: 1px solid #000;
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+<canvas id="canvas" width="600" height="600"></canvas>
+<script>
+    var canvas = document.querySelector("#canvas");
+    function draw() {
+        var pi = Math.PI;
+        if(!canvas.getContext) return;
+        var ctx = canvas.getContext("2d");
+
+        //左半圆
+        ctx.beginPath();
+        ctx.arc(300,300,200,-pi/2,pi/2,true);
+        ctx.fill();
+        ctx.closePath();
+
+        //右半圆
+        ctx.beginPath();
+        ctx.arc(300,300,200,-pi/2,pi/2);
+        ctx.stroke();
+        ctx.closePath();
+
+        //左上半圆
+        ctx.beginPath();
+        ctx.arc(300,200,100,-pi/2,pi/2,true);
+        ctx.fillStyle = "#ffffff";
+        ctx.fill();
+        ctx.closePath();
+
+        //左小半圆
+        ctx.beginPath();
+        ctx.arc(300,200,30,0,pi*2,true);
+        ctx.fillStyle = "#000000";
+        ctx.fill();
+        ctx.closePath();
+
+        //右下半圆
+        ctx.beginPath();
+        ctx.arc(300,400,100,-pi/2,pi/2);
+        ctx.fillStyle = "#000000";
+        ctx.fill();
+        ctx.closePath();
+
+        //左小半圆
+        ctx.beginPath();
+        ctx.arc(300,400,30,0,pi*2,true);
+        ctx.fillStyle = "#ffffff";
+        ctx.fill();
+        ctx.closePath();
+
+    }
+    draw()
+</script>
+</body>
+</html>

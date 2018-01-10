@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body ng-app="" ng-init="showBol=false">
+<button ng-mouseover="showBol=!showBol" ng-mouseout="showBol=!showBol">点击切换</button>
+<!--ng-show传一个bool值-->
+<div ng-show="showBol">我是一个div</div>
+
+</body>
+<script src="./js/angular.min.js"></script>
+</html>
+
+<!--<body ng-app="" ng-init="btn=false">-->
+<!--<button ng-click="btn=!btn"></button>-->
+<!--<button ng-mouseover="btn=true" ng-mouseout="btn=false"></button>-->
+<!--<button ng-mouseover="btn=!btn" ng-mouseout="btn=!btn"></button>-->
+<!--<div n-show="btn" class="{{btn?'bd':''}}"></div>-->
+
+<!--</body>-->

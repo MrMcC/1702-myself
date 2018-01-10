@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn"></button>
+		<script type="text/javascript">
+			var publisher = {
+				observers :{
+					
+				},
+				registerObserver: function(event,observer){
+					!this.observers[event] && (this.observers[event] = []);
+					this.observers[event].push(observer);
+				},
+				publish : function (event,observer){
+					var obs = this.observers[event];
+					for(var ob of obs){
+						ob(msg);
+					}
+				}
+			}
+			publisher.registerObserver("500w",function(msg){
+				console.log("观察者1:"+msg);
+			});
+			publisher.registerObserver("1000w",function(msg){
+				console.log("观察者2:"+msg);
+			});
+			publisher.registerObserver("1000w",function(msg){
+				console.log("观察者3:"+msg);
+			});
+			btn.onclick = function (){
+				//发布者发布消息
+				publisher.publish("500w,有房了")
+			}
+		</script>
+	</body>
+</html>

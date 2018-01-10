@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	<ul id="webs">
+		<li>百度</li>
+	</ul>
+	<script type="text/javascript">
+		var webs = document.getElementById("webs");
+		//创建一个元素节点,参数是创建的标签名
+		var li = document.createElement("li");
+		//创建一个文本节点,参数是文本的内容
+		var text = document.createTextNode("新浪");
+		//把text元素追加到li中,那么text会成为li的子元素
+		li.appendChild(text);
+		//把li元素追加到ul中,那么li会成为ul的子元素(最后一个)
+		webs.appendChild(li);
+		
+		
+		var newli = document.createElement("li")  //创建一个元素li
+		newli.appendChild(document.createTextNode("我是"))//
+		//参数1,要插入的li 参数2,插入的位置(在参数2之前插入一个新元素)
+		webs.insertBefore(newli, webs.firstElementChild)
+	</script>
+	</body>
+</html>
+<!--
+	创建节点:创建文本节点.创建属性节点.创建元素节点
+-->

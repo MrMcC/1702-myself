@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+/*
+
+ 问题描述：
+	在 div 内设置一张 img
+	会发现 img 下方出现一块间隙
+
+ 原因解析：
+ 	因为内联块元素默认文字对齐
+ 	为 baseline(基线)
+
+ 解决方案：
+ 	1.更改标签的类型
+ 		display: block;
+	2.设置文字的字号为 0
+		font-size: 0;
+	3.设置垂直对齐方式
+		vertical-align (除了 baseline)
+	4.将 img 的宽度与高度设置成百分比
+		width: 100%;
+		height: 100%;
+
+ */
+		div{
+			width: 900px;
+			/*height: 600px;*/
+			border: 3px solid #000;
+
+			/*font-size: 0;*/
+		}
+		img{
+			/*width: 100%;*/
+			/*height: 100%;*/
+			width: 900px;
+			height: 600px;
+
+			/*
+			 设置垂直对齐方式
+				top 		顶部对齐
+				middle 		居中对齐
+				baseline 	基线对齐
+							(默认值)
+				bottom 		底部对齐
+
+			*/
+			/*vertical-align: bottom;*/
+
+			/*display: block;*/
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<img src="img/1.jpeg">
+	</div>
+	<!-- 李先生 -->
+</body>
+</html>

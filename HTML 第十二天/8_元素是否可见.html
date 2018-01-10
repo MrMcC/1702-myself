@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.div_1{
+			width: 300px;
+			height: 300px;
+			background: red;
+			/*
+				让元素消失
+				1.宽度／高度为 零 
+				2.display：none；彻底消失蓝色移上去
+				3.visibility:hidden;原本位置存在，只是隐藏
+				4.opacity:0;原本位置存在，只是最浅
+				5.移除页面 移走
+				6.定位 脱离文档流
+			*/
+			visibility: hidden;
+			/*margin-left: -99999px;*/
+			/*position: absolute;left: -999px;*/
+		}
+		.div_2{
+			width: 300px;
+			height: 300px;
+			background: blue;
+		}
+	</style>
+</head>
+<body>
+	<div class="div_1"></div>
+	<div class="div_2"></div>
+</body>
+</html>

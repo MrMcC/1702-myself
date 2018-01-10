@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//			var b = 10;
+//			function foo(){
+//				console.log(b)
+//				var a = 10;
+//				function foo1(){    //闭包 foo1访问a
+//					console.log(a);
+//				}
+//				a++;   //访问最新的值
+//				foo1();
+////				function foo2(){
+////					var b = 10;
+////					console.log(b)
+////				}
+//			}
+//			foo();
+//			
+//			function foo(){
+//				var a = 10;
+//				return function(){
+//					a++
+//					return a;
+//				}
+//			}
+//			var fun = foo();
+//			var r = fun();
+//			console.log(r)
+			
+//			var arr = "12,112,-3123,123,123"
+//			var regExp = /[-]?\d+/gi
+//			var s = arr.match(regExp)
+//			console.log(s)
+			
+			
+			
+			
+		//利用闭包封装	
+			var p1 = (function (){
+				var p = {                //把对象封装在函数内外面不能访问了
+					name : "李四",
+					age : 20
+				}
+				return {                     //为了满足外面也可以调用,返回一个方法,外面调用这个方法就可以获取到相应的值,但是不可以更改,无接口,只能访问
+					getName : function (){
+						return p.name;
+					},
+					getAge : function (){
+						return p.age;
+					},
+					setAge : function(age){    //修改设置参数,添加接口(即参数就是接口)不需要返回值
+						if(age > 0 && age < 150){
+							p.age = age;
+						}
+					}
+				}
+			})()
+			console.log(p1.getName())
+			console.log(p1.getAge())
+			
+			p1.setAge(200)
+			console.log(p1.getAge())
+//			console.log(p1.setAge(200))
+		</script>
+	</body>
+</html>
+<!--
+	闭包是个函数 有权访问另外一个函数变量的函数
+	如果一个函数访问了外部函数中定义的变量,就是一个闭包
+	闭包的特点:闭包中,访问到的外部变量的值,总是这个变量的最新的值
+-->

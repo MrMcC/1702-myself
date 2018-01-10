@@ -1,0 +1,447 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="Keywords" content="手机维修,自营手机维修,上门修手机,上门手机维修,自营维修,手机上门修,手机修理,修理手机,手机换屏,修修哥,自营服务,上门服务,手机回收,二手良品,二手手机,二手机"/>
+		<meta name="Description" content="360同城帮—为用户提供手机维修、平板维修、手机回收、二手良品、手机以旧换新等服务，专业的修修哥团队。支持上门维修、邮寄维修、到店维修。"/>
+		<link rel="shortcut icon" type="text/css" href="img/bitbug_favicon.ico">
+		<title>360同城帮 - 手机维修、手机回收、二手良品</title>
+		<script src="js/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript">
+			$(function(){
+			    var id;
+			    var t;
+			    function play() {
+			        //??????
+//                    $("#point>li:nth-child(1)").css("backgroundColor","black");
+                    id =setTimeout(function step() {
+                        $("#lunDiv>ul").animate({left: "-=1200"},800,"linear",function () {
+                            $("#point>li").css("backgroundColor","white");
+                            $(this).stop(true);
+                            t = parseInt($(this).css("left")) / -1200+1;
+//                          console.log(  parseInt($(this).css("left"))    );
+//                          console.log(t);
+                            $("#point>li:nth-child("+t+")").css("backgroundColor","black");
+                            let that = this;
+                            if($(that).css("left") == "-4800px"){
+                                $(that).css("left",0)
+                            }
+                            if(t == 5){
+                                $("#point>li:nth-child(1)").css("backgroundColor","black");
+                            }
+                            id = setTimeout(step,2000);
+                        });
+                    },800);
+                }
+                play();
+                //鼠标悬停事件
+                $("#banner").on("mouseenter",function () {
+                    clearTimeout(id)
+                });
+                $("#banner").on("mouseleave",function () {
+                    play()
+                });
+                for(let i = 0 ; i < 4; i++){
+                    $($("#point>li")[i]).on("click",function () {
+                        $("#point>li").css("backgroundColor", "white")
+                        $("#lunDiv>ul").css({left : i * (-1200)})
+                        $(this).css("backgroundColor", "black")
+                    })
+                }
+
+                //克隆相同内容
+                $("#cont").after($("#cont").clone(true).attr("id","cont2"));
+                $("#cont").after($("#titleLine").clone(true).attr("id","titleLine2"));
+                //修改克隆后的图片
+                $("#titleLine2>h1").html("二手良品精选");
+                $("#cont2>div:eq(0)>img").attr("src","./img/shou2.png");
+                $("#cont2>div:eq(1)>div>img").attr("src","./img/2shou1.jpg");
+                $("#cont2>div:eq(2)>div>img").attr("src","./img/2shou2.jpg");
+                $("#cont2>div:eq(3)>div>img").attr("src","./img/2shou3.jpg");
+                $("#cont2>div:eq(4)>div>img").attr("src","./img/2shou4.jpg");
+                $("#cont2>div:eq(5)>div>img").attr("src","./img/2shou5.jpg");
+                //修改克隆后的文字
+                $("#cont2>div:eq(1)>div:eq(1)").html("苹果 iPhone 6");
+                $("#cont2>div:eq(2)>div:eq(1)").html("苹果 iPhone 6S Plus");
+                $("#cont2>div:eq(3)>div:eq(1)").html("苹果 iPhone 6S");
+                $("#cont2>div:eq(4)>div:eq(1)").html("苹果 iPhone 6S");
+                $("#cont2>div:eq(5)>div:eq(1)").html("苹果 iPhone 6S Plus");
+                //新添加的div
+                $("#cont2>div:nth-child(n+2)").append($("<div>"))
+                $("#cont2>div:nth-child(n+2)>div:nth-child(3)").css({
+                    width : 199,height : 22,
+                    color : "red",textAlign : "center",fontSize : 14,
+                    position : "absolute",top: 262
+                });
+                //添加文字
+                $("#cont2>div:eq(1)>div:eq(2)").html("$1699");
+                $("#cont2>div:eq(2)>div:eq(2)").html("$2888");
+                $("#cont2>div:eq(3)>div:eq(2)").html("$2699");
+                $("#cont2>div:eq(4)>div:eq(2)").html("$2850");
+                $("#cont2>div:eq(5)>div:eq(2)").html("$3250");
+                //到店维修
+                $("#cont2").after($("#titleLine").clone(true).attr("id","titleLine3"));
+                $("#titleLine3>h1").html("到店维修");
+			})
+        </script>
+        <style type="text/css">
+			*{margin: 0;padding: 0;list-style: none;}
+
+            #docTop{width: 1240px;height: 33px;background-color: #f7f7f7;border-bottom: 1px solid #c7c7c7;position: relative}
+
+            #docTop>ul:nth-child(1){position: absolute;left: 0;top: 0;}
+            #docTop>ul:nth-child(1)>li{float: left;}
+            #docTop>ul:nth-child(1)>li>a{font-size: 12px;color: #666;text-decoration: none;line-height: 33px;}
+
+            #docTop>ul:nth-child(1)>li:nth-child(1){width: 110px;height: 100%;margin-left: 20px;}
+            #docTop>ul:nth-child(1)>li:nth-child(1)>span{font-size: 14px;color: #185;}
+            #docTop>ul:nth-child(1)>li:nth-child(1)>a{border-right: 1px solid lightgray;padding-right: 10px}
+
+            #docTop>ul:nth-child(1)>li:nth-child(2){width: 87px;height: 100%;}
+
+            #docTop>ul:nth-child(2){position: absolute;left: 730px;}
+            #docTop>ul:nth-child(2)>li{float: left;font-size: 12px;line-height: 33px;}
+            #docTop>ul:nth-child(2)>li>a{color: #666;text-decoration: none;margin-left: 12px;border-right: 1px solid lightgray;padding-right: 10px;}
+
+            #docTop>ul:nth-child(2)>#xl {position: relative;z-index: 999;}
+
+            #docTop>ul:nth-child(2)>#xl>span{
+                color: #666;border-right: 1px solid lightgray;margin-left: 15px;padding-right: 15px;}
+
+            #docTop>ul:nth-child(2)>#xl>ul{display: none;margin-left: 12px;}
+            #docTop>ul:nth-child(2)>#xl>ul>li{width: 100%;height: 30px;}
+            #docTop>ul:nth-child(2)>#xl>ul>li>a{text-decoration: none;color: #666;}
+
+            #docTop>ul:nth-child(2)>li:nth-child(7)>a{color: red; border-right: 0 solid white;padding-left: 0;}
+            #docTop>ul:nth-child(2)>#xl:hover #ul1{display: block;}
+            #docTop>ul:nth-child(2)>#xl:hover {border: 1px solid gray;background-color: white;box-sizing: border-box;}
+
+            /*同城帮logo行*/
+            #docMid{width: 1240px;height: 80px;}
+            #docMid>div{width: 235px;height: 80px;position: absolute;left: 20px;}
+            #docMid>div>img{width: 100%;height: 100%}
+            #docMid>ul{position: absolute;left: 628px;}
+            #docMid>ul>li{float: left;width: 102px;height: 100%;z-index: 1;position: relative}
+            #docMid>ul>li>a{width: 102px;height: 42px;text-align: center;text-decoration: none;color: #666;font-size: 16px;line-height: 42px;display: block;margin-top: 16px}
+            #docMid>ul>li>span{width: 24px;height: 15px;position: absolute;right: 0px;top: 15px;}
+            #docMid>ul>li>span>img{width: 100%;height: 100%}
+            #docMid>ul>li>a:hover {background-color: whitesmoke}
+
+            /*轮播图片*/
+            #banner{width: 1200px;height: 340px;position: absolute;top: 113px;left: 20px;}
+            #banner>#lunDiv{width: 100%;height: 100%;position: absolute;overflow: hidden;}
+            #banner>#lunDiv>ul{width: 6000px;height: 100%;position: absolute;}
+            #banner>#lunDiv>ul>li{width: 1200px;height: 100%;float: left;}
+            #banner>#lunDiv>ul>li>img{width: 100%;height: 100%}
+
+            /*轮播小圆圈*/
+            #banner>#point{position: absolute;right: 25px;bottom: 15px;z-index: 3;}
+            #banner>#point>li{width: 12px;height: 12px;border-radius: 50%;background-color: white;float: left;margin-left: 5px}
+
+            /*轮播上面的选择栏*/
+            #banner>#font{position: absolute;z-index: 4;}
+            #banner>#font>li{width: 235px;height: 84px;border-bottom: 1px solid white;}
+            #banner>#font>li:nth-child(1){background:black url("./img/fontImg.png") no-repeat 0 -9px;opacity: 0.5}
+            #banner>#font>li:nth-child(2){background:black url("./img/fontImg.png") no-repeat 0 -104px;opacity: 0.5}
+            #banner>#font>li:nth-child(3){background:black url("./img/fontImg.png") no-repeat 0 -207px;opacity: 0.5}
+            #banner>#font>li:nth-child(4){background:black url("./img/fontImg.png") no-repeat 0 -308px;opacity: 0.5}
+
+            #banner>#font>li>p{width: 100%;height: 100%;color: white;font-size: 16px;text-align: center;line-height: 84px;}
+            #banner>#font>li>div{width: 665px;height: 100%;background-color: gray;position: absolute;left: 235px;top: 0px;display: none;font-size: 100px;}
+            #banner>#font>li:hover .fontDiv{display: block;}
+            #banner>#font>li:hover {background-color: green;}
+
+            /*轮播下面的四个图片*/
+            #imgLine{width: 1200px;height: 166px;position: absolute;top: 453px;left: 20px;}
+            #imgLine>div{width: 299px;height: 100%;float: left}
+            #imgLine>div>img{width: 100%;height: 100%}
+            /*热门手机回收标题*/
+            #titleLine{width: 1242px;height: 68px;position: absolute;top: 619px;background-color: #f7f7f7;}
+            #titleLine>h1{width: 1200px;height: 48px;position: absolute;top: 20px;left: 20px;font: 25px "Microsoft YaHei","Helvetica Neue";line-height: 48px;color: #666}
+            #titleLine>a{display: block;width: 76px;height: 21px;background: url(https://p.ssl.qhimg.com/t0142af699131aff09e.png) no-repeat right 0;
+                text-decoration: none;color: #666;position: absolute;right: 42px;top: 30px;font-size: 14px;}
+            /*回收下面的内容*/
+            #cont{width: 1242px;height: 301px;position: absolute;top: 687px;left: 20px;}
+            #cont>div{width: 200px;height: 100%;float: left;position: relative;}
+            #cont>div>div:nth-child(1){width: 199px;height: 231px;position: absolute;top: 20px;}
+            #cont>div>div:nth-child(2){width: 199px;height: 32px;position: absolute;top: 230px;color: #666;font-size: 16px;line-height: 32px;text-align: center}
+            #cont>div>div>img{display: block;margin: auto;height: 85%;}
+
+            /*二手*/
+            #titleLine2 {width: 1242px;height: 68px;position: absolute;top: 988px;background-color: #f7f7f7;}
+            #titleLine2>h1{width: 1200px;height: 48px;position: absolute;top: 20px;left: 20px;font: 25px "Microsoft YaHei","Helvetica Neue";line-height: 48px;color: #666}
+            #titleLine2>a{display: block;width: 76px;height: 21px;background: url(https://p.ssl.qhimg.com/t0142af699131aff09e.png) no-repeat right 0;
+                text-decoration: none;color: #666;position: absolute;right: 42px;top: 30px;font-size: 14px;}
+            /*二手下面的内容*/
+            #cont2{width: 1242px;height: 301px;position: absolute;top: 1056px;left: 20px;}
+            #cont2>div{width: 200px;height: 100%;float: left;position: relative;}
+            #cont2>div>div:nth-child(1){width: 199px;height: 231px;position: absolute;top: 20px;}
+            #cont2>div>div:nth-child(2){width: 199px;height: 32px;position: absolute;top: 230px;color: #666;font-size: 16px;line-height: 32px;text-align: center}
+            #cont2>div>div>img{display: block;margin: auto;height: 85%;}
+            /*到店维修*/
+            #titleLine3{width: 1242px;height: 68px;position: absolute;top: 1357px;background-color: #f7f7f7;}
+            #titleLine3>h1{width: 1200px;height: 48px;position: absolute;top: 20px;left: 20px;font: 25px "Microsoft YaHei","Helvetica Neue";line-height: 48px;color: #666}
+            #titleLine3>a{display: none;}
+            /*商店*/
+            #shopDiv{width: 1242px;height: 924px;position: absolute;top: 1425px;
+                background-color: pink}
+            #shopDiv>div{width: 1200px;height: 844px;margin-left: 21px;position: relative;
+                /*background-color: green;*/}
+            /*选择输入条*/
+            #shopDiv>div>#contLeft{width: 890px;height: 844px;position: absolute;
+                /*background-color: #0B67FE;*/}
+            /*右边栏*/
+            #shopDiv>div>#contRight{width: 270px;height: 695px;margin-left: 930px;padding-top: 82px;border: 1px solid gray;box-sizing: border-box;
+                /*background-color: #0B67FE;*/}
+
+            #shopDiv>div>#contLeft>#shopListSelect{width: 100%; height: 82px;position: absolute;
+                /*background-color: hotpink*/}
+            /*输入条下边的主体内容*/
+            #shopDiv>div>#contLeft>#shopListWrap{width: 100%;height: 762px;position: absolute;top: 82px;
+                /*background-color: gold*/}
+            /*输入条*/
+            #shopDiv>div>#contLeft>#shopListSelect>div{width: 100%;height: 42px;margin-top: 20px;
+                /*background-color: purple*/}
+
+            #shopListSelect>div>#select1,#select2{width: 142px;height: 100%;border: 1px solid #118855;box-sizing: border-box;float: left;margin-right: 8px}
+            #shopListSelect>div>#select3{width: 590px;height: 100%;border: 1px solid #118855;box-sizing: border-box;float: left}
+            #shopListSelect>div>#select1>span:nth-child(1),#select2>span:nth-child(1){color: #333;font-size: 14px;cursor: pointer;line-height: 42px;padding: 4px 7px 4px 13px}
+            #shopListSelect>div>#select1>span:nth-child(2),#select2>span:nth-child(2){display: block;width: 26px;height: 22px;
+                background: url("https://p.ssl.qhimg.com/t010d71e7b045cd4e73.png") no-repeat 10px -30px;position: absolute;left: 48px;top: 31px;}
+            #shopListSelect>div>#select2>span:nth-child(2){left: 228px;}
+            #shopListSelect>div>#select3>form{width: 100%}
+            #shopListSelect>div>#select3>form>#input1{width: 449px;height: 20px;border: 0;padding: 10px 5px 10px 14px;font-size: 14px;color: #999;float: left}
+            #shopListSelect>div>#select3>form>#input2{width: 120px;height: 40px;float: left;font-size: 18px;text-align: center;line-height: 40px;color: #fff;background-color: #185;cursor: pointer}
+            /*默认排序成交量 切换*/
+            #shopDiv>div>#contLeft>#shopListWrap>#sDiv{width: 890px;height: 44px;border: 1px solid #d6d6d6;background: #f7f7f7;
+                /*background-color: darkgray*/}
+            #shopDiv>div>#contLeft>#shopListWrap>#sDiv>ul{width: 360px;height: 100%;}
+            #shopDiv>div>#contLeft>#shopListWrap>#sDiv>ul>li{float: left;width: 120px;height: 42px;line-height: 42px;cursor: pointer;text-align: center;
+            /*border-right: 1px solid #666 */}
+            #shopDiv>div>#contLeft>#shopListWrap>#sDiv>ul>li>a{text-decoration: none;color: #666;
+                /*color: #185*/}
+            #shopDiv>div>#contLeft>#shopListWrap>#sDiv>#check{width: 260px;height: 45px;line-height: 42px;color: #666;position: absolute;top: 0px;left: 380px;
+                /*background-color: purple*/}
+            #shopDiv>div>#contLeft>#shopListWrap>#sDiv>#map{width: 103px;height: 37px;float: right;position: absolute;right: 10px;top: 6px;
+                /*background-color: yellow*/}
+            #shopDiv>div>#contLeft>#shopListWrap>#sDiv>#map>a{background: #fff url(https://p.ssl.qhimg.com/t01c9ef4268ff127a67.png) no-repeat 10px 0;
+            width: auto;height: 28px;display: block;font-size: 14px;line-height: 28px;border: 1px solid #DBDBDB;text-decoration: none;text-align: center;padding-left: 20px;color: #666}
+            #shopDiv>div>#contLeft>#shopListWrap>#cDiv{width: 890px;height: 718px;position: absolute;top: 44px;
+                /*background-color: #1EB453;*/}
+            #shopDiv>div>#contLeft>#shopListWrap>#cDiv>div{width: 890px;height: 133px;background-color: #f7f7f7;border: 1px solid #000}
+
+
+
+            #shopDiv>.pages{width: 890px;height: 44px;background-color: yellow;position: absolute;bottom: 50px;left: 0px;}
+
+            .foot{width: 1242px;height: 290px;background-color: cornflowerblue;position: absolute;top: 2349px;}
+        </style>
+	</head>
+	<body>
+		<div id="docTop">
+			<ul>
+				<li>
+					<span>深圳</span>
+					<a href="#">[切换城市]</a>
+				</li>
+				<li><a href="#">同城帮首页</a></li>
+			</ul>
+			<ul>
+				<li><a href="#">登录</a></li>
+				<li><a href="#">注册</a></li>
+				<li><a href="#">我的订单</a></li>
+				<li><a href="#">在线客服 (9:00-21:00)</a></li>
+				<li id="xl">
+					<span>客户服务</span>
+					<ul id="ul1">
+						<li><a href="#">帮助中心</a></li>
+						<li><a href="#">维修付款</a></li>
+					</ul>
+				</li>
+				<li><a href="#">论坛</a></li>
+				<li><a href="#">投诉建议</a></li>
+			</ul>
+		</div>
+        <div id="docMid">
+            <div><img src="./img/logo.png" alt=""></div>
+            <ul>
+                <li>
+                    <a href="#">二手良品</a>
+                    <span><img src="./img/hot.png" alt=""></span>
+                </li>
+                <li><a href="#">手机回收</a></li>
+                <li><a href="#">手机维修</a></li>
+                <li><a href="#">电脑维修</a></li>
+                <li><a href="#">以旧换新</a></li>
+                <li><a href="#">手机租用</a></li>
+            </ul>
+        </div>
+        <div id="banner">
+            <div id="lunDiv">
+                <ul>
+                    <li><img src="./img/1.jpg" alt=""></li>
+                    <li><img src="./img/2.jpg" alt=""></li>
+                    <li><img src="./img/3.png" alt=""></li>
+                    <li><img src="./img/4.png" alt=""></li>
+                    <li><img src="./img/1.jpg" alt=""></li>
+                </ul>
+            </div>
+            <ul id="point">
+                <li style="background-color: black"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <ul id="font">
+                <li>
+                    <p>修手机/Pad</p>
+                    <div class="fontDiv">1</div>
+                </li>
+                <li>
+                    <p>修电脑</p>
+                    <div class="fontDiv">2</div>
+                </li>
+                <li>
+                    <p>卖手机/电脑</p>
+                    <div class="fontDiv">3</div>
+                </li>
+                <li>
+                    <p>买二手机</p>
+                    <div class="fontDiv">4</div>
+                </li>
+            </ul>
+        </div>
+        <div id="imgLine">
+            <div><img src="./img/img1.jpg" alt=""></div>
+            <div><img src="./img/img2.jpg" alt=""></div>
+            <div><img src="./img/img3.png" alt=""></div>
+            <div><img src="./img/img4.jpg" alt=""></div>
+        </div>
+        <div id="titleLine">
+            <h1>热门手机回收</h1>
+            <a href="">查看更多</a>
+        </div>
+        <div id="cont">
+            <div><img src="./img/gaojia.png" alt=""></div>
+            <div>
+                <div><img src="./img/gaojia1.jpg" alt=""></div>
+                <div>苹果iPhone 6</div>
+            </div>
+            <div>
+                <div><img src="./img/gaojia2.jpg" alt=""></div>
+                <div>苹果iPhone 5s</div>
+            </div>
+            <div>
+                <div><img src="./img/gaojia3.jpg" alt=""></div>
+                <div>小米 M4</div>
+            </div>
+            <div>
+                <div><img src="./img/gaojia4.jpg" alt=""></div>
+                <div>华为 Mate 7</div>
+            </div>
+            <div>
+                <div><img src="./img/gaojia5.png" alt=""></div>
+                <div>魅族 MX5</div>
+            </div>
+        </div>
+        <div id="shopDiv">
+            <div>
+                <div id="contLeft">
+                    <div id="shopListSelect">
+                        <div>
+                            <div id="select1">
+                                <span>深圳</span>
+                                <span></span>
+                            </div>
+                            <div id="select2">
+                                <span>选择区县</span>
+                                <span></span>
+                            </div>
+                            <div id="select3">
+                                <form action="#" method="get">
+                                    <input type="text" id="input1" placeholder="输入您的位置查找附近商家">
+                                    <input type="submit" id="input2" value="搜索">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="shopListWrap">
+                        <div id="sDiv">
+                            <ul>
+                                <li><a href="">默认排序</a></li>
+                                <li><a href="">按成交量</a></li>
+                                <li><a href="">按人气</a></li>
+                            </ul>
+                            <div id="check">
+                                <label>
+                                    <input type="checkbox">"先行赔付"
+                                </label>
+                            </div>
+                            <div id="map">
+                                <a href="#">地图模式</a>
+                            </div>
+                        </div>
+                        <div id="cDiv">
+                            <div class="list-item"></div>
+                            <div class="list-item"></div>
+                            <div class="list-item"></div>
+                            <div class="list-item"></div>
+                            <div class="list-item"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="contRight"></div>
+            </div>
+            <div class="pages"></div>
+        </div>
+        <div class="foot">
+            <div>
+                <ul>
+                    <li>
+                        <span></span>
+                        <div>
+                            <h3>购物指南</h3>
+                            <a href="">购物流程</a>
+                            <a href="">用户帮助</a>
+                            <a href="">帮助文档</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span></span>
+                        <div>
+                            <h3>支付方式</h3>
+                            <a href="">在线支付</a>
+                            <a href="">当面付款</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span></span>
+                        <div>
+                            <h3>售后服务</h3>
+                            <a href="">投诉建议</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span></span>
+                        <div>
+                            <h3>特色保障</h3>
+                            <a href="">360担保支付</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span></span>
+                        <h3>商家合作</h3>
+                        <a href="">加盟同城帮</a>
+                        <a href="">新闻采访/跨界合作</a>
+                    </li>
+                </ul>
+            </div>
+            <div></div>
+        </div>
+        <!--<script src="js/lun.js"></script>-->
+        <script>
+
+        </script>
+	</body>
+</html>

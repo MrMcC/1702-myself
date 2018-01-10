@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .wh {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+        }
+        
+        .bc {
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+<div id="box1" class="wh">
+    <p><a href="http://www.baidu.com">百度一下</a></p>
+
+</div>
+<div id="box2">
+    <p><a href="http://www.google.com">google一下</a></p>
+
+</div>
+<script>
+    var boxs = document.getElementsByTagName("div");
+    /*可以直接获取到元素的id
+    console.log(boxs[0].id)
+    console.log(boxs[1].id)
+    boxs[0].id = "abc";
+    */
+    //className获取元素的class属性的值！！！
+    console.log(boxs[0].className);
+    
+    console.log(addClass(boxs[0], "bc"));
+//    boxs[0].className += " bc";
+    /*boxs[0].className = "wh";
+    
+    boxs[1].className = "wh"*/
+    
+    
+    function addClass(ele, newClass){
+        return ele.className += " " + newClass;
+    }
+
+</script>
+</body>
+</html>

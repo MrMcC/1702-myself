@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function createIterator(arr) {
+        var index = 0;
+        var done = false;
+        var value;
+        return {
+            next(){
+                if(index == arr.length){
+                    done = true;//表示迭代完了
+                }
+                value = arr[index];
+                index++;
+                return{
+                    done,
+                    value
+                }
+            }
+       }
+    }
+    var arr = ["a","b","c"];
+    var it = createIterator(arr); //调用方法返回个对象 ,迭代器
+
+
+    var obj = it.next(); //返回迭代到的对象
+    while(!obj.done){
+        console.log(obj.value);
+        obj = it.next()
+    }
+
+//    console.log(obj.done,obj.value);
+//
+//    var obj = it.next(); //返回迭代到的对象
+//    console.log(obj.done,obj.value);
+//
+//    var obj = it.next(); //返回迭代到的对象
+//    console.log(obj.done,obj.value);
+//
+//    var obj = it.next(); //返回迭代到的对象
+//    console.log(obj.done,obj.value);
+</script>
+</body>
+</html>

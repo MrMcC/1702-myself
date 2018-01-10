@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width : 250px;
+            height : 140px;
+            background: url("bird.png") no-repeat;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<div id="bird"></div>
+<script>
+    var bird = document.getElementById("bird");
+    var i = 0;
+    var j = 0;
+    var distance = 1;
+    var dir = 1;
+    setInterval(function (){
+        bird.style.backgroundPosition = `${-244 * (i++ % 4)}px ${-147 * (j++ % 2)}px`;
+        distance += 30 * dir;
+        bird.style.left = distance + "px";
+        
+        if(distance >= 1400){
+            dir = -1;
+            bird.style.transform = `rotateY(180deg)`;
+        }else if(distance <= -250){
+            dir = 1;
+            bird.style.transform = `rotateY(0deg)`;
+        }
+    }, 100)
+</script>
+</body>
+</html>

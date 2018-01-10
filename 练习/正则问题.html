@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+<script type="text/javascript">
+  	//()内的内容就是第1组(Girl)，其实我们完整真个表达式可以看出第0组 girl(Girl)
+  	// 将来对应着匹配结果数组的下标。  
+	var pa = /girl(Girl)/gi;	
+	var test = "girlGirl abdfjla Girlgirl fal girl";
+	var girls;
+//	console.log(girls)
+	while(girls = pa.exec(test)){
+      //匹配之后，数组的第0个元素对应的这第0组的匹配结果，第1个元素对应着第1组的匹配结果
+		for (var i = 0; i < girls.length; i++) {
+			console.log(girls[i]);
+		}
+		console.log("-------------");
+	}
+</script>
+
+	</body>
+</html>
+<!--
+	1. 数组的第一项目是与整个模式匹配的字符串，其他项是与模式中捕获组匹配的字符串
+	2. 如果没有捕获组，则数组中只有第一项。关于捕获组的概念以后再说
+
+-->

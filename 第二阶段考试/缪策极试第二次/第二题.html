@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 150px;height: 50px;border: 1px solid #000;
+				background-color: darkseagreen;font-size: 30px;line-height: 50px;
+				text-align: center;position: relative;font-weight: bold;
+			}
+			a{
+				position: absolute;left: 170px;top: 40px;color: cornflowerblue;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<a href="javascript:;">看不清，换⼀张</a>
+		<script type="text/javascript">
+			var a = document.querySelector("a")
+			var div = document.querySelector("div")
+			var arr = [0,1,2,3,4,5,6,7,8,9,"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z",
+			"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+			
+			createRandom()
+			a.onclick= function(){
+				arr.sort(function(a,b){
+					return Math.random()-0.5;
+				})
+				createRandom();
+			}
+			//生成一个四位随机数的函数
+			function createRandom(){
+				var temp = "";
+				for(var i= 0; i <6; i++){
+					temp+=arr[randomInt(0,arr.length-1)];
+				}
+				div.innerHTML = temp;
+			}
+			
+			function randomInt(from, to){
+				return parseInt(Math.random()*(to - from) + from)
+			}
+		</script>
+	</body>
+</html>
+<!--实现点击“看不清，换⼀张”随机⽣成六位验证码（可包含数字和⼤⼩写字⺟）（20 分）-->

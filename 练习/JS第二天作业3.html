@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var info = parseInt(prompt("请输入四位会员号"))
+			var infos = info + "";
+			var sum = 0;
+			for(var i = 0;i < infos.length; i++){
+				sum += +infos[i];
+			}
+			if(sum >= 20){
+				alert("你是幸运会员");
+			}else{
+				alert("你不是幸运会员")
+			}
+		</script>
+	</body>
+</html>
+<!--输入4位数会员号,求这四位数之和,如果大于20则是幸运会员-->

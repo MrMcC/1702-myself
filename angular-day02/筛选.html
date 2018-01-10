@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+<input type="text" ng-model="key">
+<ul>
+    <!--跟据上面的输入key值进行筛选,筛选后再根据筛选到的里面的phone升序-->
+    <li ng-repeat="item in friends | filter: key | orderBy:'phone':false">
+        {{item.name}}
+    </li>
+</ul>
+</body>
+<script src="./js/angular.min.js"></script>
+<script >
+    var app = angular.module("myApp",[]);
+    app.controller('myCtrl',['$scope',function ($scope) {
+        $scope.friends = [
+            {name:'John', phone:'555-1212', age:21},
+            {name:'Mary', phone:'555-9176', age:19},
+            {name:'Mike', phone:'555-4321', age:10},
+            {name:'Adam', phone:'555-5678', age:35},
+            {name:'Julie', phone:'555-8765', age:29}];
+    }])
+</script>
+</html>

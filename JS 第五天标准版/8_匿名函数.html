@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript" charset="utf-8">
+    /*
+     匿名函数
+     * 
+     * 1.匿名函数除了没有函数名称之外，
+     * 	 与普通函数没有任何区别
+     * 2.如果想要在其他地方调用匿名函数，
+     * 	 则需要声明一个变量，并将匿名函数赋值给变量
+     * 	 使用时，参数传递或者返回值等内容
+     * 	 都与使用普通函数一样
+     * 	
+     * */
+//  var f = function(num1,num2){
+//  		return num1 + num2;
+//  }
+//  console.log(f(4,6));
+
+
+//将匿名函数作为参数传递给其他函数
+	function fun1(fun){
+		if(typeof fun == "function"){//判断我的实参是否是function,如果是
+			fun();     //如果是,我就输出这个形参fun,这个fun就是我的那一堆实参 [fun();代表调用fun]
+		}
+	}
+	fun1(function(){
+		alert("我是这个匿名函数的代码");
+	});
+
+
+//通过匿名函数来实现一些一次性的任务
+	function m(mysum,q,w){
+		return mysum(q,w);      //函数后面直接加();代表调用例子见最后面
+	};
+	var ret = m(function(a,b){return a + b;},1,2);
+	console.log(ret);
+	
+//	1. 调用 m( mysum(q,w),1,2 )
+//	2. 调用 m( function(a,b){return a + b},1,2 )
+
+
+/*
+ 匿名函数立即被执行
+ * 
+ * 1.需要将匿名函数使用 括号括起来，当成一个整体来对待
+ * 2.在函数的末尾加上一个 () 表示函数的调用
+ * 3.在括号内部的内容实际上是作为 实参 来传递给函数的
+ * */
+	(function(str){
+		console.log(str);
+	})("我是李鹏");
+</script>
+</html>

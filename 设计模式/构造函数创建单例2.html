@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function King(name){
+				this.name = name;
+				var that = this;
+				King = function(name){
+					that.name = name;
+					return that;
+				}
+			}
+			console.log(King)  //第一次走的是所有代码,默认返回的是this
+			var k1 = new King("李四")
+			console.log(King)
+			//第二次走的时候是走新赋值的king=ft,返回张三,因为that = 第一次的this;
+			//所以是同一个对象,所以赋值的张三把李四覆盖,所以都是张三
+			var k2 = new King("张三") 
+//			console.log(King)
+			console.log(k1.name)
+			console.log(k2.name)
+		</script>
+	</body>
+</html>

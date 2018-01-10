@@ -1,0 +1,29 @@
+*{
+	margin: 0;padding: 0;list-style: none;
+}
+#lunbotu{
+	width: 1000px;height: 600px;position:relative;
+	/*background-color: gainsboro;*/
+}
+#lunbotu #imgs{
+	position: absolute;
+	left: 150px;top: 125px;
+}
+#lunbotu #imgs li{
+	width: 700px;height: 350px;
+	position: absolute;
+}
+#lunbotu #imgs li img{
+	width: 100%;height: 100%;
+}
+#lunbotu #points{
+	position: relative;top: 200px;z-index: 10;
+	opacity: 0;
+}
+#lunbotu #points li{
+	float: left;
+	cursor: pointer;
+}
+#lunbotu #points li:nth-child(2){
+	float: right;
+}

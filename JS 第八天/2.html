@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">获取宽高</button>
+		<p id="p"></p>
+		<script type="text/javascript">
+			var btn = document.getElementById("btn");//找按钮
+			var p = document.getElementById("p");
+			btn.onclick = function (){
+				//对chrome,firefox, safari,ie9+
+				
+//				var w = window.innerWidth || document.documentElement.clientWidth;//完美
+				var w = window.innerWidth;		
+//				var w= document.documentElement.clientWidth;
+				var h = window.innerHeight;
+//				var h = document.documentElement.clientHeight;
+				p.innerHTML = "宽: " + w + ",高:" + h;
+			}
+		</script>
+	</body>
+</html>
+<!--
+	ECMAScript
+	BOM 浏览器对象模型
+	DOM 文档对象模型
+	全局作用域 严格模式:"use strict"
+	          
+-->

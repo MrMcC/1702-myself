@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var p = {
+				name : "李四",
+				age : "女",
+				eat : function(){
+					console.log("说");
+				}
+			}
+			
+			//for in遍历出来的是属性名
+			for(var pro in p){   //pro是属性名的集合
+//				console.log(pro + " " +p[pro]);
+//
+//				
+////				pro = "a";//填个属性名并不会改变原有键值对
+//				console.log(pro); //??不能改变名,可以改变值
+				p[pro] ="a"
+//				console.log(p[pro]);
+//				console.log(p); //第一次把name的值改成a,
+			}
+			
+//			for(var pro in p){   //pro是属性名的集合
+//				if(typeof p[pro]== "function"){
+//					p[pro]();
+//				}else{
+//					console.log(p[pro]);
+//				}
+//			}
+//			console.log(p)
+		</script>
+	</body>
+</html>
+<!--for in 遍历对象的属性-->
+	    <!--//for in遍历出来的是属性的名！
+    for(var pro in p){
+        if(typeof p[pro] == "function"){
+            p[pro]();
+        }else{
+            console.log(p[pro])
+        }
+    }
+    console.log(p)-->

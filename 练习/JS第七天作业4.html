@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var email = prompt("输入一个邮箱");
+			function panduan(emails){
+//			console.log(emails)
+				var a = /@+/gi;
+				var b = /\.+/gi
+				if(a.test(emails)&&b.test(emails)){
+					var ele = emails.slice(0,emails.indexOf("@"));
+					console.log(ele);
+				}
+				
+			}
+
+			panduan(email);
+			
+//			var regExp = /^1[35678]\d{8}\d$/gi;
+//  			console.log(regExp.test("12603071634"))
+		</script>
+	</body>
+</html>
+<!--
+	从页面接收一个邮箱，
+	判断是否合法（如果包含@和.则合法），
+	如果合法获得邮箱中的用户名（默认用户名为@前面的内容）
+-->

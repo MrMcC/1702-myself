@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="#" method="get">
+    用户：<input type="text" name="user"><br>
+    
+    
+    密码：<input type="password" name="pwd"><br>
+    <input type="submit" value="注册">
+</form>
+</body>
+</html>
+<!--
+C/S 客户端/服务器模式
+B/S 浏览器/服务器模式
+
+通讯协议
+IP      tcp   udp
+
+http协议  ftp  https  ...
+
+固定的格式：
+
+url：
+协议://域名:端口号/路径/路径/资源文件?查询参数
+http://localhost:8888/abc/a/c/index.html?user=lisi&pwd=aaa
+端口号：0-65535 0-1024已经被瓜分了
+
+http:  80
+https: 443
+ftp: 21
+
+ftp://
+
+请求协议：   浏览器向服务器发送信息的时候使用
+   
+    请求行
+    请求头
+    
+    请求体：
+    
+    get请求没有请求体  post请求有请求体
+
+响应协议：   服务器向浏览器发送信息的时候使用
+    响应行
+    响应头
+    
+    响应体
+
+
+
+
+get请求
+GET /1701/Advanced_Day06/01_get%E8%AF%B7%E6%B1%82.html?user=abc&pwd=aaaa HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Referer: http://localhost:8080/1701/Advanced_Day06/01_get%E8%AF%B7%E6%B1%82.html
+Accept-Encoding: gzip, deflate, sdch, br
+Accept-Language: en-US,en;q=0.8,zh-CN;q=0.6,zh;q=0.4
+-->

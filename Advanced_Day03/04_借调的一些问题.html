@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Father(name){
+        this.name = name;
+    }
+    Father.prototype.eat = function (){
+        console.log("abc");
+    }
+    
+    function Son(name){
+        Father.call(this, name);
+    }
+    Son.prototype = new Father();
+    var son1 = new Son("李四");
+    son1.eat();
+</script>
+</body>
+</html>

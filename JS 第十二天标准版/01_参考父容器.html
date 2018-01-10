@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #outer{
+            width : 800px;
+            height : 800px;
+            background-color : pink;
+            border: 1px solid #000;
+            left: 200px;
+            position: relative;
+        }
+        div#inner{
+            left: 30px;
+            position: absolute;
+            
+            width : 200px;
+            height : 200px;
+            padding: 100px;
+            background-color : pink;
+            
+            border: 100px solid #000;
+        }
+    </style>
+</head>
+<body>
+<div id="outer"><div id="inner"></div></div>
+<script type="text/javascript">
+    var box = document.querySelector("#inner");
+    //元素的offset-开头属性：offset
+   
+    //都是dom元素的属性
+    console.log(box.offsetWidth)  //获取的元素的实际的宽
+    console.log(box.offsetHeight)  //获取的元素的实际的高
+    //相对于他的参考父容器来计算的left
+    console.log(box.offsetLeft)  //定位之后的left值 返回元素的水平偏移位置。  是相对于参照物父容器的偏移量
+    console.log(box.offsetTop)  //定位之后的top值
+    
+    console.log(box.offsetParent);// 获取他参考的父容器
+    //码奴 码农  程序员  架构师
+</script>
+</body>
+</html>

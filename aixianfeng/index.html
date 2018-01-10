@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width,
+    user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/swiper-3.4.2.min.css">
+</head>
+<body ng-app="myApp">
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <span>美国中情局</span>
+            </div>
+            <span class="search">搜索</span>
+        </header>
+
+        <main ng-view>
+
+        </main>
+
+        <nav>
+            <!--<a href="#/" class="home" ng-class="{true: 'active',false: ''}[dian=='home']" ng-click="panduan($event)">-->
+                <!--<span>&nbsp;</span>-->
+                <!--首页-->
+            <!--</a>-->
+            <a href="#/" class="home" ng-class="{true: 'active'}[navActiveIndex==0]" ng-click="navActiveIndex=0">
+                <span>&nbsp;</span>
+                首页
+            </a>
+            <a href="#/market" class="market" ng-class="{true: 'active'}[navActiveIndex==1]" ng-click="navActiveIndex=1">
+                <span>&nbsp;</span>
+                闪送超市
+            </a>
+            <a href="#/shopCar" class="shopCar" ng-class="{true: 'active'}[navActiveIndex==2]" ng-click="navActiveIndex=2">
+                <span>&nbsp;</span>
+                购物车
+            </a>
+            <a href="#/mine" class="mine" ng-class="{true: 'active'}[navActiveIndex==3]" ng-click="navActiveIndex=3">
+                <span>&nbsp;</span>
+                我的
+            </a>
+            <!--购物车动画 numZoomActive=true时执行动画-->
+            <var ng-show="total>0" ng-class="{true:'shop'}[numZoomActive]">{{total}}</var>
+        </nav>
+
+    </div>
+
+
+
+</body>
+<script src="./js/angular.min.js"></script>
+<script src="./js/angular-route.js"></script>
+<script src="./js/swiper-3.4.2.min.js"></script>
+<script src="./js/index.js"></script>
+<script src="./js/app.js"></script>
+<script src="./js/controllers.js"></script>
+</html>

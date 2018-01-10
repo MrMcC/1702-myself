@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<input type="text" name="user">
+<input type="checkbox" name="love">看电影
+<input type="checkbox" name="love">敲代码
+<button id="btn">获取input的value值</button>
+<button id="btn2">获取选中状态</button>
+
+<script>
+    var btn = document.getElementById("btn");
+    btn.onclick = function (){
+        var input = document.getElementsByName("user")[0];
+        alert(input.value)
+    }
+    btn2.onclick = function (){
+        var cbs = document.getElementsByName("love");
+        console.log(cbs[0].checked)  //获取checkbox是否选中
+        console.log(cbs[1].checked)
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="ajax4.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<p id="p"></p>
+		<script type="text/javascript">
+			//参数1:请求的url
+			//参数2:响应成功后的回调函数
+			//参数3:响应失败后的回调函数
+//			ajax.get("./ajax3.json",function(result){
+//				p.innerHTML = result;
+//			},function(result){
+//				
+//			})
+
+			ajax.get1({
+				onSuccess : function (result){
+					p.innerHTML = result;
+				},
+				onFail : function (result){
+					
+				},
+				url : "./ajax3.json"
+			})
+		</script>
+	</body>
+</html>

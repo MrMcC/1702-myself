@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+        构造函数的有点：属性不共享
+        原型的有点：方法共享     //我想让我的属性不共享方法共享
+        
+        组合：
+        1.在构造函数内部添加属性
+        2. 在原型上添加方法。
+    */
+    
+    function Person(name, age){
+        this.name = name;
+        this.age = age;
+    }
+    Person.prototype.speak = function (){
+        console.log(this.name + " 在说");
+    }
+    //
+    Person.prototype.speak1 = function (){
+        console.log(this.name + " 在说");
+    }
+    Person.prototype.speak2 = function (){
+        console.log(this.name + " 在说");
+    }
+    var p1 = new Person("李四", 20)
+    var p2 = new Person("张三", 30)
+    p1.speak();
+    p2.speak();
+</script>
+</body>
+</html>

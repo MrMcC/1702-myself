@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	<script>
+//		function NumRev(){
+//			var s = "34,6,-23,43,34,342,0,3";
+//			var regExp = /[-]?\d+/gi ;
+//			return s.match(regExp);
+//		}
+//		console.log(NumRev());
+		var s = "34,6,-23,43,33,342,0,3"; 
+		function NumRev(){
+//			return s.split(",");
+			return s.replace(/[3]+/gi,"4")//t替换所有的3为4  33?????
+//			return s.charAt(2) 
+		}
+		console.log(NumRev());
+		
+		//转化Boolean为false
+		//undefined null 0 "" NaN
+//		var s = "34,6,-23,43,33,342,0,3";
+//		console.log(s.toString());
+		console.log(typeof(null));;
+	</script>
+	</body>
+</html>

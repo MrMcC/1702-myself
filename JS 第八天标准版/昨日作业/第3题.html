@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    /*
+     作者：李振超    2017年3月21日 20:25
+     验证字符串：长度4-16; 只能包含数字、英文字符、下划线三种符号;
+     首字符不能是数字";
+
+     返回值：true或false
+     */
+    console.log(foo("1asdlfkj5555"))
+    function foo(s) {
+        if (s.length < 4 || s.length > 16) {
+            return false;
+        }
+
+        for (var i = 0; i < s.length; i++) {
+            var c = s[i];
+            if (i == 0 && c >="0" && c <= "9") {
+                return false;
+            }
+
+            if ((c <= "9" && c >= "0") || (c <= "z" && c >= "a") || (c <= "Z" && c >= "A") || c == "_") {
+            } else {
+                return false;
+            }
+        }
+        return true;
+    }
+</script>
+</body>
+</html>

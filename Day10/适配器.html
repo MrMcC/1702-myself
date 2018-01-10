@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			ajax.get("user1.json",function(result){
+				var obj = JSON.parse(result);
+				handlerObj(obj,p1);
+			})
+			ajax.get("user.json",function(result){
+				var obj = JSON.parse(result);
+				handlerObj(obj,p2)
+			})
+			//适配器
+			function handlerObj(obj,dom){
+				dom.innerHTML = `姓名:${obj.name}<br>
+								年龄:${obj.age}`
+			}
+		</script>
+	</body>
+</html>

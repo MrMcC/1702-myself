@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<style type="text/css">
+		/**/
+	</style>
+</head>
+<body>
+	<!---->
+</body>
+<script type="text/javascript" charset="utf-8">
+    /*
+     局部变量
+     * 
+     *  在函数内部声明的变量叫做局部变量
+     * 	表示形参的变量也是局部变量
+     * 
+     * 	局部变量作用域为 当前函数内部
+     * 	函数外部不能访问函数内部的变量
+     * */
+	
+//	function aa(){
+//		var num = 10;	//加了 var 实际是局部变量
+//	}
+//	aa();
+//	console.log(num);
+
+//	function aa(){
+//		num = 10;	//没有加 var 实际是全局变量
+//	}
+//	aa();
+//	console.log(num);
+
+//	var a = 100;
+//	function my(){
+//		a = 10;
+//		console.log(a);
+//		var a = 90;
+//		console.log(a);
+//	}
+//	my();
+//	console.log(a);
+
+//	var a = 100;
+//	function my(){
+//		console.log(a);
+//		var a = 10;
+//		console.log(a);
+//	}
+//	my();
+//	console.log(a);
+    
+//	num =10;
+//	console.log(num);
+
+/*
+ 全局变量和局部变量重名
+ * 
+ * 	当局部变量和全局变量重名的时候，
+ * 	局部变量会覆盖全局变量
+ * 
+ * 	当函数返回 离开了局部变量的作用域后，
+ * 	又会回到全局变量的作用域
+ * */
+//  var m = 10;
+//  function aa(){
+//  		var m = 20;
+//  		console.log(window.m);
+//  		console.log(window);
+//  }
+//  aa();
+    /*
+     关于全局变量和局部变量
+     * 
+     * 在函数外 直接声明的变量叫做 全局变量
+     * 		var num = 10;
+     * 		num = 10;
+     * 在函数内 没有通过 var 声明的变量 全局变量
+     * 		function aa(){
+     * 			num = 10;
+     * 		}
+     * 在函数内，通过 var 声明的变量 局部变量
+     * 		function aa(){
+     * 			var num = 10;
+     * 		}
+     * */
+//  var aaa = 100;      //一个全局变量
+//  function my(){      //函数的读写顺序是先从调用看,往回找函数,在函数最底下就结束了函数,就读取函数外的了
+//  		aaa = 10;       
+//  		console.log(aaa);
+//  		var aaa = 90;    //aaa = 90的aaa提升了因此上面的aaa = 10实际也是var aaa = 10(局部变量)
+//  		console.log(aaa);
+//  }
+//  my();
+//  console.log(aaa);  //它无法打印函数内部的两个局部变量,就只能打印上面的var=100了,如果没有var等于100,则打印出来的是undefined
+//  console.log(window.aaa); 
+//	console.log(window);
+
+	var aaa = 100;
+	function my(){
+		aaa = 10;  //相当于全局变量,两个相同名字的全局变量,打印后面的
+		console.log(aaa);
+		console.log(window.aaa);
+	}
+	my();
+	console.log(aaa);
+	
+//	如何在函数内访问函数外的变量 console.log(window.aaa);则打印出来的就是100而不是10;
+</script>
+</html>

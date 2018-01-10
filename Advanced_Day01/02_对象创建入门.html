@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var p = {
+        name : "小明",
+        age : 20,
+        sex : "男",
+        eat : function (){
+            console.log("吃东西")
+        }
+    }
+    
+    //如果访问对象的属性 对象.属性
+//  console.log(p.name)
+    p.name = "李四";
+//  console.log(p.name)
+    p.abc = "哈哈哈";  // 如果属性存在则是修改属性的值，如果不存在，则添加这样的属性。
+//  console.log(p.abc);
+//  console.log(p)
+    
+    //调用对象的方法： 对象.方法名(实参)
+//  p.eat = function (){
+//  
+//  }
+//  p.eat();
+//  p.speak = function (ele){
+//      console.log(ele)
+//  }
+//  p.speak("好");
+    
+   
+   function Nbb(ele){  //创建对象
+		this.speak(ele);
+		this.name = ele;
+		console.log(this instanceof Nbb)  
+   }
+   Nbb.prototype = {
+   		speak : function(ele){
+   			console.log(ele + "多喝水");
+   		}
+   }
+    var p = new Nbb("差");  //创建实例
+</script>
+</body>
+</html>
+<!--
+property    field
+method
+
+键必须是字符串，值可以是任意类型。   :
+多个键值对之间用,分开
+
+属性值是函数的属性，我们一般称为 对象的方法
+
+这种键表示一种状态、或者描述情况，称之为对象的属性
+
+在js中，对象是无序键值对的集合！
+小明： 身高  180
+       体重  180
+       年龄  20
+       性别  男
+       eat  function
+-->

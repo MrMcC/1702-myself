@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;padding: 0;
+        }
+        /*装轮播图的div*/
+        #outer{
+            width: 1240px;height: 340px;
+            position: relative;overflow: hidden;
+        }
+        /*装图片的div*/
+        #imgs{
+            width: 4960px;height: 340px;position: absolute;z-index: 2;
+        }
+        #imgs img{
+        		width: 1240px;height: 100%;float: left;
+        }
+        /*轮播图片的小圆圈*/
+        #indicator{
+        		margin: 0;padding: 0;list-style: none;
+        		position: fixed;left:1050px;bottom: 360px;
+        }
+        #indicator li{
+        		width: 10px;height: 10px;border-radius: 50%;background: #FFFFFF;
+        		float: left;margin-left: 5px;z-index: 100;
+        }
+        /*提交数据的文本框*/
+        #content{  
+            width: 580px;height: 300px;background-color: #ffffff;
+            position: fixed;left: 30px; top:20px;
+        }
+        /*文本框里的最左边列表的ul*/
+        #contentList{
+            width: 90px;height: 100%;background-color: deepskyblue;
+        }
+        /*文本框里的最左边列表的li*/
+        #chooseList{
+            width: 90px;
+            margin: 0;padding: 0;list-style: none;
+        }
+        #chooseList li{
+            width: 100%;height: 40px;border-bottom: 1px dotted #ffffff;
+            line-height: 40px;text-align: center;color: #ffffff;font-size: 12px;
+        }
+        #chooseList li:hover{
+        		background: #FFFFFF;
+        		color: #000000;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="outer">
+        <div id="imgs">
+            <img src="./img/1.jpg" alt="">
+            <img src="./img/2.jpg" alt="">
+            <img src="./img/3.jpg" alt="">
+            <img src="./img/1.jpg" alt="">
+    			<ul id="indicator">
+        			<li></li>
+        			<li></li>
+        			<li></li>
+    			</ul>
+            <div id="content">
+                <div id="contentList">
+                    <ul id="chooseList">
+                        <li>酒店</li>
+                        <li>机票</li>
+                        <li>自由行</li>
+                        <li>旅游</li>
+                        <li>火车</li>
+                        <li>租车</li>
+                        <li>门票</li>
+                    </ul>
+                </div>
+                <div id=""></div>
+            </div>
+        </div>
+    </div>
+    <script>
+		var imgs = document.getElementById("imgs")
+		var left = 0;
+		var scoll =setInterval(function step(){
+			left -= 8;
+			imgs.style.left = left + "px";
+			if(left <= -3720){
+				left = 0
+			}
+			if(left % 1240 == 0){
+				clearInterval(scoll);
+				setTimeout(function(){
+					scoll = setInterval(step,10);
+				},2000)
+			} 
+		},10)
+
+    </script>
+</body>
+</html>

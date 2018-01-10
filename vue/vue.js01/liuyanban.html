@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.js"></script>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div id="app">
+        姓名: <input type="text" v-model="name"><br>
+        内容: <textarea v-model="content"></textarea><br>
+        <button @click="add()">提交</button><br>
+        <h1>显示流言</h1>
+        <ul>
+            <li v-for="(item,index) in arr">
+                <span>{{item.name}}</span>
+                <p>{{item.content}}<a href="###" @click="del(index)">删除</a></p>
+            </li>
+        </ul>
+    </div>
+</body>
+<script>
+    var vm = new Vue({
+        el: "#app",
+        data:{
+            arr : [],
+            name: "",
+            content: ""
+        },
+        methods:{
+            add(){
+                var obj = {
+                    name : this.name,
+                    content: this.content
+                }
+                this.arr.push(obj)
+                this.name =  ""
+                this.content = ""
+                console.log(this.arr)
+            },
+            del(index){
+                this.arr.splice(index,1)
+            }
+        }
+
+    })
+</script>
+</html>

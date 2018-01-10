@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		请输入参数<input type="" name="" id="canshu" value="" />
+		<button id="btn">按钮</button>
+		<script type="text/javascript">
+			var b = [];
+			var d = [];
+			btn.onclick = function (){
+				var a = +document.getElementById("canshu").value;
+				b.push(a);
+				function can(c){
+					d.push(c);
+					return Math.max(...d)
+				}
+				alert("您输入的最大值为:" + can(b.shift()));
+			}
+			
+		</script>
+	</body>
+</html>
+<!--定义函数,输入任意多个参数,计算这几个参数的最大值-->

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>原型链</title>
+</head>
+<body>
+<script>
+    function Father(name){
+        this.name = name;
+    }
+    Father.prototype.speak = function (){
+        console.log("我是父类型中的方法");
+    }
+    //覆写toString方法
+    Father.prototype.toString = function (){
+        return "a"
+    }
+    
+    function Son(age){
+        this.age = age;
+    }
+    Son.prototype = new Father("李四");
+    Son.prototype.constructor = Son;
+    Son.prototype.speak = function (){
+        console.log("abc");
+    }
+    
+    Son.prototype.toString = function (){
+        return "b";
+    }
+    
+    var son1 = new Son(20);
+    var son2 = new Son(20);
+    console.log(son1.name);
+    console.log(son2.name);
+    son1.speak();
+    console.log(son1 instanceof Son);
+    console.log(son1 instanceof Father);
+    console.log(son1 instanceof Object);
+    console.log(son1.toString());
+    // [[proto]]
+    // 判断 这个对象是否在参数对象的原型链上。
+    console.log(Son.prototype.isPrototypeOf(son1));
+    console.log(Father.prototype.isPrototypeOf(son1));
+    console.log(Object.prototype.isPrototypeOf(son1));
+    console.log(Son.prototype.isPrototypeOf(new Father()));
+</script>
+</body>
+</html>

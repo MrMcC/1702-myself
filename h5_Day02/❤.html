@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            /*border: 1px solid #000000;*/
+            margin: 100px auto;
+        }
+        div::before,div::after{
+            content: "阿娇";
+            /*默认行内*/
+            display: block;
+            width: 200px;height: 300px;
+            background-color: red;
+            border-radius: 100px 100px 20px 20px;
+            transform: rotateZ(-45deg);
+            font-size: 50px;
+            text-align: center;
+            line-height: 100px;
+            background-image: radial-gradient(circle 200px at 70% 60%,black,red);
+
+        }
+        div::after{
+            content: "冠希";
+            transform: translate(70px,-300px) rotateZ(45deg);
+
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

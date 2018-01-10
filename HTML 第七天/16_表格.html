@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		table{
+			border:10px solid #000;
+			/*border-spacing: 50px;*/
+			/*合并单元格之间的间距
+			       需要设置在table当中
+			       合并子后会造成单元格间距设置失效*/
+			border-collapse: collapse;
+		}
+		table td,table th{
+			border: 10px solid;
+			border-color:green blue red purple;
+			/*padding: 50px;*/
+
+		}
+	</style>
+</head>
+<body>
+<!-- table: 
+          语义：定义表格 -->
+	<table>
+	
+	<!-- tr:
+	        语义：定义表格中的行
+	        不能设置border啥的 -->
+		<tr>
+		<!-- td: 
+		       语义：定义表格中的一个单元格 -->
+			<td></td>
+		</tr>
+	</table>
+	<!-- table>tr*3>td{我是单元格}*5 -->
+	<!--table: 属性：border 设置表格的边框（🈶️默认样式）
+					cellspacing设置单元格之间的间距
+					cellpadding设置单元格和内容之间的间距
+	 -->
+	 <!-- table cellspacing＝“0” -->
+	<!-- <table border="10px;"> -->
+	<table cellspacing="0">
+	<!-- 定义表格的标题 -->
+		<caption>李先生的后宫翻牌表</caption>
+		<tr>
+			<!-- th：语义：表格的表头 -->
+			<!-- <th></th> -->
+			<th>姓名</th>
+			<th>年龄</th>
+			<th>性别</th>
+			<th>爱好</th>
+			<th>性取向</th>
+		</tr>
+		<tr>
+		<!-- 转义字符
+		          空格   &nbsp;
+		           >    &gt
+		           <    &lt-->
+		    <td>缪&lt;策</td>
+			<!-- <td>缪&gt;策</td> -->
+			<!-- <td>缪&nbsp;&nbsp;&nbsp;策</td> -->
+			<td>24</td>
+			<td>男</td>
+			<td>无</td>
+			<td>我是单元格</td>
+		</tr>
+		<tr>
+			<td>我是单元格</td>
+			<td>我是单元格</td>
+			<td>我是单元格</td>
+			<td>我是单元格</td>
+			<td>我是单元格</td>
+		</tr>
+	</table>
+</body>
+</html>

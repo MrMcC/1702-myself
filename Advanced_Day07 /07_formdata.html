@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="my_ajax2.js"></script>
+</head>
+<body>
+<form name="my1" action="post.php" method="post"
+      enctype="application/x-www-form-urlencoded">
+    用户：<input type="text" name="user"><br>
+    密码：<input type="password" name="pwd"><br>
+    <input type="submit" value="注册">
+</form>
+<script>
+    document.forms[0].onsubmit = function (event){
+        event.preventDefault();
+        // FormData 的格式去提交数据，则不要添加任何的请求头
+        var data =  new FormData(document.forms[0]);
+        data.append("a", "b"); // 手动去添加键值对
+        /*data.delete("user");
+         data.delete("pwd");
+         data.delete("a");*/
+       //找到表单数据
+        var userValue = data.get("user");
+        //把其中的敏感词进行替换
+        var newValue = userValue.replace(/\d+/gi, "*");
+        //把新的字符串替换掉旧的值
+        data.set("user", newValue)
+        ajax.post("post.php", data, function (result){
+            document.body.innerHTML = result;
+        })
+        //xhr.send("user=aaa&pwd=a")  xhr.send(formdata)
+    }
+    
+</script>
+</body>
+</html>

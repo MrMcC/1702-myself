@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*var temp;
+     function King(name){
+     if(temp){
+     return temp;
+     }
+     this.name = name;
+     temp = this;
+     }*/
+    // 使用匿名函数自执行和闭包来实现单例.  返回的是能得到单例的函数
+    var king = (function (){
+        function King(){
+        }
+        King.prototype.eat = function (){
+        
+        }
+        var temp = new King();
+        return function (name){
+            temp.name = name;
+            return temp;
+        }
+    }())
+
+    var k1 = king("李四")
+    var k2 = king("张三")
+    console.log(k1.name);
+
+</script>
+</body>
+</html>
+<!--
+对象的字面量就是最简单的一种单例！
+缺陷：没有办法在创建对象的同时做一些初始化的代码
+-->

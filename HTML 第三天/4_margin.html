@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.div_1{
+			width: 300px;
+			height: 300px;
+			background: red;
+			margin-top: 100px;
+			margin-right:100px;
+			margin-bottom:-50px;
+			margin-left:100px;
+			/*margin
+					1.只会影响盒子的位置
+			          不会影响盒子的大小
+			        2.margin 可以设置为负数
+			        3.margin 当两个元素是兄弟关系的时候
+			                 第一个元素的margin－bottom和
+			                 第二个元素的margin－top会产生叠压
+			                 两者取*/
+		}
+		.div_2{
+			width: 500px;
+			height: 500px;
+			background: blue;
+			margin-top: 100px;
+
+		}
+	</style>
+</head>
+<body>
+	<div class="div_1"></div>
+	<div class="div_2"></div>
+</body>
+</html>

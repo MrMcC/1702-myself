@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    var a = 10;
+    var b = 20;
+
+    //第三方变量
+    var temp = a;
+    a = b;
+    b = temp;
+
+    //+运算
+    a = a+b;
+    b = a-b;
+    a = a-b;
+
+    //异或
+    a = a ^ b;
+    b = a ^ b;
+    a = a ^ b;
+
+    //解构
+    [a,b] = [b,a]  //左边是解构,右边是个数组
+
+    var arr = [b,a];
+    [a,b] = arr
+</script>
+</body>
+</html>

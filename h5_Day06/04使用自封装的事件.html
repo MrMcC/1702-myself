@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 200px;height: 200px;
+            background-color: pink;
+        }
+
+    </style>
+    <script src="my_touch.js"></script>
+</head>
+<body>
+<div></div>
+<script>
+//    $("div").on()
+$("div").tap(function (ele) {
+    ele.innerHTML = "我是单机事件..."
+})
+$("div").panRight(function (ele) {
+    ele.innerHTML += "你在右划..."
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>时间常用方法</title>
+</head>
+<body>
+<script>
+    var date = new Date();
+    //设置时间表示的毫秒值
+    //    date.setTime(2);
+    //获取时间表示的毫秒值
+    console.log(date.getTime())
+    //废弃掉的方法，不要使用。
+    console.log(date.getYear());
+//    date.setFullYear(2022);
+    console.log(date.getFullYear())
+    //  0-11  0表示1月份
+    console.log(date.getMonth())
+    //设置月份。
+//    date.setMonth(-1);
+    //获取一个月的第几天
+    console.log(date.getDate());
+//    date.setDate(0);
+    //返回星期几  星期日返回0.  星期几不能设置
+    console.log(date.getDay())
+    console.log(date.getHours());
+//    date.setHours(0)
+    console.log(date.getMinutes());
+    console.log(date.getSeconds());
+    console.log(date.getMilliseconds())
+    console.log(date.toLocaleString())
+    //    console.log(date.valueOf())
+</script>
+</body>
+</html>

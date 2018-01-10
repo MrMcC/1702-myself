@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var game = {
+				players : [new Player("凤姐"),new Player("赵四"),new Player("王五")],
+				poke : new Poke(),
+				sendPoke : function(){
+					for(var i= 0; i <this.poke.cards.length - 3; i++){
+						this.players[i % 3].cards.push(this.poke.cards[i])
+					}
+				},
+				showPoke : function(){
+//					console.log(this.poke.cards)
+					for(var i =0; i < this.players.length; i++){
+						var cards = this.players[i].cards;
+						console.log(this.players[i].name + " " + cards.toString())
+					}
+				},
+				startGame : function(){
+					this.poke.shuffle();
+					this.sendPoke();
+					this.showPoke();
+				}
+			}
+				game.startGame() 
+			
+			function Player(name){
+				this.name = name;
+				this.cards = [];
+			}
+			function Poke(){
+				this.counts = 54;
+				this.cards = [];
+				this.shuffle = function(){
+					this.cards.sort(function(a,b){
+						return Math.random() > 0.5 ? 1 : -1;
+					})
+				};
+				var cards = this.cards;  //先存一下,要不然闭包里的下面注释里的cards指代window
+				(function(){    //把5张牌进行初始化,添加54张牌
+					var huases = ["♠️","♥️","♦️","♣️"];
+					var points = ["A","2","3","4","5","6","7","8","9","10","J","Q","K"]
+//					console.log(huases.length)
+//					console.log(points.length)
+					for (var huase of huases) {
+						for(var point of points){
+							cards.push(new Card(huase,point))  //用存里的cards
+						}
+					}
+					cards.push(new Card("","大王"))
+					cards.push(new Card("","小王"))
+//					console.log(cards.length)
+				}())
+			}
+			function Card(huase,point){
+				this.huase = huase;
+				this.point = point;
+				this.toString = function(){
+					return this.huase + this.point;
+				}
+			}
+		</script>
+	</body>
+</html>

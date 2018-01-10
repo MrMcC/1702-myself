@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function foo(a, b, ...rest) {
+    				console.log('a = ' + a);
+    				console.log('b = ' + b);
+    				console.log(rest);
+			}
+//多余的参数以数组的形式给变量rest,不再需要arguments我们就可以获取参数了
+			foo(1, 2, 3, 4, 5);
+			// 结果:
+			// a = 1
+			// b = 2
+			// Array [ 3, 4, 5 ]
+
+			foo(1);
+			// 结果:
+			// a = 1
+			// b = undefined
+			// Array []
+		</script>
+	</body>
+</html>

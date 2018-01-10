@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>练习</title>
+</head>
+<body>
+<script>
+    var school = {
+        schoolName: "育知同创",
+        address: "深圳",
+        classes: [
+            {
+                className: "H5-1701",
+                teacher: "zs",
+                students: ["李四", "志玲", "凤姐"]
+            }, {
+                className: "H5-1702",
+                teacher: "ls",
+                students: ["王五", "亦菲", "马云"]
+            }
+        ]
+    }
+    //给你一个学生的名字，把学生的相关信息输出
+    var name = "王五";
+    var student = {};
+    a:for (var clazz of school.classes){//遍历所有的班级
+        var students = clazz.students; //得到班级中所有的学生  数组
+        for (var s of students){  //遍历所有的学生  数组
+            if (s == name){  // 如果等于要查找的姓名，代表找到
+                //给自定义学生对象添加需要的属性
+                student.schoolName = school.schoolName;
+                student.address = school.address;
+                student.className = clazz.className;
+                student.teacher = clazz.teacher;
+                student.name = s;
+                break a;  // break + 标号可以退出任意多层的循环
+            }
+        }
+    }
+    console.log(student)
+</script>
+</body>
+</html>

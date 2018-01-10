@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="file" multiple>
+<button>获取选择的文件信息</button>
+<script>
+   var input = document.querySelector("input") ;
+   document.querySelector("button").onclick = function () {
+       var list = input.files; //通过表单的files属性获取filelist
+       for(var i =0; i < list.length; i++){
+           var file = list.item(i);
+           console.log(`
+                文件名${file.name},
+                文件类型${file.type},
+                文件修改时间${new Date(file.lastModified).toLocaleString()},
+                文件大小${file.size/1024}kb
+           `)
+       }
+   }
+</script>
+</body>
+</html>

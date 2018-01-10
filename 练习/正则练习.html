@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var text = "http:asdjpg";
+			var regExp = /http:[^:]+((jpg)|(gif))/gi; //+???
+			var imgUrls = text.match(regExp);
+			for(var i = 0 ; i< imgUrls.length; i++){
+				var img = document.creatElement("img");
+				img.src = imgUrls[i];
+				document.body.appendChild(img);
+			}
+			console.log()
+		</script>
+	</body>
+</html>

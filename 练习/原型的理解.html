@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function Person(age,name){
+				this.age = age;
+				this.name = name;
+			}
+			Person.prototype.say = function(){
+				return this.name;
+			}
+			var p1 = new Person(20,"李四")
+			var p2 = new Person(18,"张三")
+			console.log(p1.say());
+			console.log(p2.say());
+		</script>
+	</body>
+</html>

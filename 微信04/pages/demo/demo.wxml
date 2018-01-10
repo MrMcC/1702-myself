@@ -1,0 +1,3 @@
+<view>电影名称：{{movieDetail.title}}</view>
+<image src="{{movieDetail.images.large}}"></image>
+<view>详情：{{movieDetail.summary}}</view>

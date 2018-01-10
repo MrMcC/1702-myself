@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    //如果一个数组中存储的元素是一个数组，那么这个数组就是二维数组。
+    /*var n = 10;
+    function foo1(a) {
+        a = 1000;
+    }
+    foo1(n);
+    console.log(n)
+
+
+    var arr = [10, 20, 30];
+    function foo(a) {
+        a[0] = 1000;
+    }
+    foo(arr);
+    console.log(arr[0])*/
+
+    var twoArr = [
+        [10, 20],
+        [5],
+        [2, 5, 7]
+    ];
+    for(var i = 0; i < twoArr.length; i++){
+        for(var j = 0; j < twoArr[i].length; j++){
+            console.log(twoArr[i][j]);
+        }
+    }
+    /*for(var a of twoArr){
+        for(var e of a){
+            console.log(e);
+        }
+
+    }*/
+    console.log(twoArr)
+</script>
+</body>
+</html>
+<!--
+js中函数调用的时候，永远是值传递！！！
+基本类型具体的值，引用类型（对象类型）是地址值
+-->

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<script>
+//    let node = {
+//        name : "李四",
+//        age : 20
+//    }
+//    let{name,age}= node;
+//    console.log(name);
+//    console.log(age);
+////===========================
+    function foo(name,age) {
+        var obj = {
+            name: "李四",
+            age : 20,
+            sex : "男"
+        };
+        ({name,age}=obj); //让实参里的name等于obj里的name
+        console.log(name,age)
+    }
+    foo("张三",10)
+//============================
+//    var obj = {
+//        name: "李四",
+//        age : 20,
+//        sex : "男"
+//    }
+//    let{name,age,foo=10}=obj;
+//    console.log(name)
+//    console.log(age)
+//    console.log(foo) //对象中没有的变量解构为undefined,如果有默认值就是默认值
+//=============================
+//    var obj = {
+//        name: "李四",
+//        age : 20,
+//        sex : "男"
+//    }
+//    let{name: n,age: a,foo: f=10}=obj;
+//    console.log(n,a,f)
+//==============================
+//    var arr = [1,2,3,4]
+//    let [num0,,num2] = arr; //数组解构第一项和第三项
+//    console.log(num0,num2)
+//==============================
+
+</script>
+</body>
+</html>

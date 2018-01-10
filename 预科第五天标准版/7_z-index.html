@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		div{
+			width: 300px;
+			height: 300px;
+
+			position: absolute;
+		}
+		.div_1{
+			background: red;
+		}
+		.div_2{
+			background: yellow;
+			top: 150px;
+			left: 150px;
+
+			z-index: 999;
+			/*
+			z-index 不要设置负数
+			 */
+		}
+		.div_3{
+			background: blue;
+			top: 300px;
+			left: 300px;
+
+			z-index: 998;
+		}
+	</style>
+</head>
+<body>
+	<div class="div_1"></div>
+	<div class="div_2"></div>
+	<div class="div_3"></div>
+</body>
+</html>

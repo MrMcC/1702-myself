@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				font-family: "微软雅黑";
+				font-size: 18px;
+			}
+			.wrap{
+				width: 800px;
+				height: 400px;
+				background: lightblue;
+				margin: auto;
+			}
+			ul{
+				padding: 0;
+				margin: 0;
+				list-style: none;
+			}
+			li{
+				width: 100px;
+				height: 400px;
+				border: 1px solid white;
+				float: left;
+				box-sizing: border-box;
+			}
+			#home{
+				width: 200px;
+				height: 400px;
+				float: left;
+				box-sizing: border-box;
+			}
+			p{
+				color: white;
+				text-align: center;
+				
+			}
+			#temperature{
+				font-size: 70px;
+			}
+			li>p:nth-child(1){
+				margin-top: 100px;
+			}
+			li>p{
+				font-size: 13px;
+			}
+			
+		</style>
+		<script type="text/javascript" src="my_ajax.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			
+				<div id="home">
+					<p id="date">星期二</p>
+					<p id="temperature">26.c</p>
+					<p id="sectionTemp">20.c~28.c</p>
+					<p id="type">阵雨</p>
+					<p id="wind">威风</p>
+				</div>
+				
+			
+			<ul>
+				
+			</ul>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var date = document.getElementById("date");
+		var temp = document.getElementById("temperature");
+		var sec = document.getElementById("sectionTemp");
+		var type = document.getElementById("type");
+		var wind = document.getElementById("wind");
+		var ul = document.getElementsByTagName("ul")[0];
+		var city = encodeURI("深圳");
+		
+		ajax.get("http://wthrcdn.etouch.cn/weather_mini?city="+city,function(result){
+//			console.log(result);
+			var data = JSON.parse(result).data;
+			init(data);
+			
+		});
+		function init(obj){
+			var arr = obj.forecast;
+			date.innerHTML = arr[0].date;
+			sec.innerHTML = arr[0].low+"~"+arr[0].high;
+			wind.innerHTML = arr[0].fengli;
+			type.innerHTML = arr[0].type;
+			temp.innerHTML = obj.wendu+"℃";
+			creatItem(ul,obj.yesterday,true);
+			for(var i = 0;i<arr.length;i++){
+				creatItem(ul,arr[i],false);
+			}
+		}
+		
+		function creatItem(parent,data,yesterday){
+			if(yesterday){
+				var arr = [data.date,data.type,data.high,data.low,data.fl];
+			}else{
+				var arr = [data.date,data.type,data.high,data.low,data.fengli];
+			}
+			var li =document.createElement("li");
+			for(var i = 0;i<5;i++){
+				var div = document.createElement("p");
+				div.innerHTML = arr[i];
+				li.appendChild(div);
+			}
+			parent.appendChild(li);
+			
+		}
+	</script>
+
+</html>

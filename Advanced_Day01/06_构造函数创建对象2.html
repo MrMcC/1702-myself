@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //构造函数创建  new Date()  对象 == 实例
+    function Person(name, age){
+        //指代将来使用new的时候要创建的那个对象
+        this.name = name;
+        this.age = age;
+//        return 1;   //在new的时候，会自动的默认返回this
+    }
+    var p = new Person("李四", 20);
+    console.log(p)
+    
+    
+    /*var p1 = new Person("李四", 30);
+    
+    var p2 = new Person("张三", 20);
+    
+    console.log(p1);
+    console.log(p2);*/
+   
+</script>
+</body>
+</html>
+<!--
+构造函数的目的就是用来创建对象！！！
+当通过new 函数()的方式使用的时候，这个函数就叫构造函数。
+
+当做构造函数使用的时候，默认返回的this。
+如果显式的去返回一个新的对象，则外面就是拿到的那个显式返回的那个对象。
+入股显式的返回基本类型，则忽略基本类型的数据，仍然返回this
+-->

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		月份: <select name="" id="month">
+				<option value="1">&nbsp;&nbsp;1月</option>
+				<option value="2">&nbsp;&nbsp;2月</option>
+				<option value="3">&nbsp;&nbsp;3月</option>
+				<option value="4">&nbsp;&nbsp;4月</option>
+				<option value="5">&nbsp;&nbsp;5月</option>
+				<option value="6">&nbsp;&nbsp;6月</option>
+				<option value="7">&nbsp;&nbsp;7月</option>
+				<option value="8">&nbsp;&nbsp;8月</option>
+				<option value="9">&nbsp;&nbsp;9月</option>
+				<option value="10">10月</option>
+				<option value="11">11月</option>
+				<option value="12">12月</option>
+			</select>
+		舱型:<select name="" id="flight">
+				<option value="1">经济舱</option>
+				<option value="2">头等舱</option>
+			</select>
+		<br />
+		<button id="btn">计算价格</button>
+		<script type="text/javascript">
+			btn.onclick= function(){
+				var month = document.getElementById("month").value;
+				var flight = document.getElementById("flight").value;
+				if(month >=4 && month <=10){
+					if(flight == 1){
+						alert("您选择的月份的经济舱价格为:" + 3000+"元")
+					}else{
+						alert("您选择的月份的头等舱价格为:" + 3600+"元")
+					}
+				}else{
+					if(flight == 1){
+						alert("您选择的月份的经济舱价格为:" + 1200+"元")
+					}else{
+						alert("您选择的月份的头等舱价格为:" + 2400+"元")
+					}
+				}
+			}
+			
+		</script>
+	</body>
+</html>
+<!--
+	机票原价4000元,4-10月为旺季,其他为淡季,
+	旺季头等打9折,经济舱打75折,
+	淡季头等打6折,经济舱打3折,
+	从页面输入出行的月份和选择的舱型计算出票价
+-->
+	

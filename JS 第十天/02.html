@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.wh{
+				width: 200px;
+				height: 200px;border: 1px solid #000;
+			}
+			.bc{
+				background: pink;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box1" class="abc">
+			<p>
+				<a href="">123</a>
+			</p>
+		</div>
+		<div id="box2">
+			<p>
+				<a href="">456</a>
+			</p>
+		</div>
+		<script type="text/javascript">
+			var boxs = document.getElementsByTagName("div");
+//			获取元素的id
+			console.log(boxs[0].id);
+			console.log(boxs[0].id);
+			boxs[0].id = "abc";
+			//获取元素的class属性的值
+			console.log(boxs[0].className);
+			addClass(boxs[0],"bc");
+			
+//			boxs[0].className += " bc";
+//			boxs[0].className += "wh"
+//			boxs[1].className = "wh"
+			function addClass(ele,newClass){
+				ele.className += " " +newClass;
+			}
+			
+		</script>
+	</body>
+</html>

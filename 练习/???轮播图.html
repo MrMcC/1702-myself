@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+
+			#box{
+				width: 800px;height: 500px;
+				background: pink;
+				position: relative;
+				overflow: hidden;
+			}
+			#imgs{
+				width: 4000px;height: 500px;
+				background: paleturquoise;
+				position: absolute;
+				left: 0;top: 0;
+			}
+			img{
+				width: 800px;height: 500px;
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<div id="imgs">
+				<img src="img/1.jpg"/>
+				<img src="img/2.jpg"/>
+				<img src="img/3.jpg"/>
+				<img src="img/4.jpg"/>
+				<img src="img/5.jpg"/>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var imgs = document.getElementById("imgs");
+			var gun = setInterval(go,10);  //只有第一次快?
+			var left = 0;
+			function go(){
+				left-=10;
+				imgs.style.left = left + "px";
+				if(left <= -4000){
+					left = 0;
+				}
+				if(left % 800 == 0){
+					clearInterval(gun);
+					setTimeout(function(){
+						gun = setInterval(go,20);
+					},2000)
+				}
+			}
+		</script>
+	</body>
+</html>

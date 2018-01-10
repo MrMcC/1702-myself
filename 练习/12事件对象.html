@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="box"><button id="btn">安</button></div>
+		<script type="text/javascript">
+			box.onclick = function(event){
+//				console.log(event.bubbles);
+//				console.log(event.cancelable);
+//				console.log(event.currentTarget);
+//				console.log(event.target);//点击的是哪个dom元素就是指的哪个dom元素
+//				console.log(event.currentTarget);//点击事件注册在谁身上
+ 				console.log(event.eventPhase)
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>幸运抽奖</title>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        ul {
+            list-style: none;
+            width: 800px;
+            height: 800px;
+        }
+        
+        li {
+            width: 100px;
+            height: 50px;
+            border: 1px solid #000;
+            float: left;
+            text-align: center;
+            line-height: 50px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+<ul id="content"></ul>
+
+<script type="text/javascript">
+    var content = document.getElementById("content");
+    var names = ["张三", "李四", "王五", "赵六", "志玲", "凤姐"];
+    //1 填充参与抽奖的人
+    for (var name of names){
+        var li = document.createElement("li");
+        li.innerHTML = name;
+        content.appendChild(li);
+    }
+
+    //2 抽取随机数，表示要中奖的人
+    var selectedIndex = [];
+    //抽取中奖人员
+    for (var i = 0; i < 3; i++){
+        //保证抽到的人不重复
+        while (true){
+            var index = randomInt(0, 5);
+            console.log(index);
+            if (selectedIndex.indexOf(index) == -1){
+                selectedIndex.push(index);
+                break;
+            }
+        }
+    }
+    
+    //2 把中间的人高亮显示
+    var lis = content.children;
+    for(var index of selectedIndex){
+        lis[index].style.backgroundColor = "pink";
+    }
+    
+    function randomInt(from, to){
+        return parseInt(Math.random() * (to - from + 1) + from);
+    }
+
+</script>
+</body>
+</html>

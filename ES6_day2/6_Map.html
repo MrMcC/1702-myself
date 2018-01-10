@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    var map = new Map();
+    map.set("a",1);  //每个元素是个键值对
+    map.set("b",1);  //值可以相同
+    map.set("b",2);  //会把b=1覆盖
+    map.set("say",function () {
+
+    });
+    map.set("aaa",undefined);
+
+
+    console.log(map);
+    console.log(map.get("aaa")); //获取这个键,返回undefined
+    console.log(map.get("bbb")); //undefined 没有这个键
+    console.log(map.has("aaa")); //判断aaa这个键是否存在
+    map.delete("a")   //删除指定键值对
+    console.log(map);
+
+</script>
+</body>
+</html>
+<!--
+    Map储存的也是键值对,  (字典)
+    键可以是任何类型,键不允许重复
+-->

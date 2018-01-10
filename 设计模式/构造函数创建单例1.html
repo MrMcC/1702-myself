@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var createKing = (function(){
+				function King(name){
+					this.name = name
+				}
+				var k;
+				return function (name){
+					if(!k){
+						k = new King(name)
+					}
+					return k;
+				}
+			})()
+			var k1 = createKing("按时")
+			var k2 = createKing("自行车")
+			var k3 = createKing("请问")
+			console.log(k3.name)
+		</script>
+		
+	</body>
+</html>

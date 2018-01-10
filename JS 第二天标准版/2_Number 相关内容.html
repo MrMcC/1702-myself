@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript" charset="utf-8">
+    /*
+     Number 相关内容
+     * 
+     * 	1.JS 中 不区分 整数 和 浮点数，
+     * 	  所有数字直接以浮点数值进行表示
+     * 	2.当一个数字出现在 JS 程序当中，
+     * 	  我们则直接将这个数字称之为 数字直接量
+     * */
+    
+    /*
+     整型直接量
+     * 
+     * 十进制		0123456789
+     * 二进制		0 1
+     * 八进制 		0 1 2 3 4 5 6 7
+     * 十六进制		0 1 2 3 4 5 6 7 8 9 A B C D E F
+     * 								 	101112131415
+     * 
+     * 注意：
+     * 		JS 中 是存在十六进制的，
+     * 		但是 JS 不支持 8 进制，
+     * 		但是能够通过前面加上数字 0 来模拟八进制
+     * 		
+     * 		如果需要模拟八进制，千万不要像十六进制
+     * 		在 0 后面添加特殊字符
+     * 
+     * 		如果后面的数字超过八进制可以显示的最大单位
+     * 		则会自动转化为 十进制 进行显示
+     * 	
+     * */							
+    var num = 25;		//十进制
+    console.log(num);
+    
+    var num1 = 025;		//八进制
+    console.log(num1);
+    
+    var num3 = 089;
+    console.log(num3);
+    
+    var num2 = 0xaf;		//十六进制
+    console.log(num2);
+    
+    /*
+     浮点型直接量
+     * 
+     * 	浮点型直接量可以包含小数点
+     * 
+     * 	可以使用科学计数法来去表示具体的数字
+     * 		e / E
+     * */
+    var f1 = 3.14;
+    console.log(f1);
+    
+    var f2 = 3.141592657e12;	//3.141592657 * 10 ^ 12
+    console.log(f2);
+    
+    var f3 = 3141592657e-9;	//3141592657 * 10 ^ -9
+    console.log(f3);
+    
+    /*
+     JS 运算中出现的特殊情况
+     * 
+     * 溢出（overflow）
+     * 		运算结果超出 JS 所能表示数字的上限
+     * 			超出正数最大数 	Infinity
+     * 			超出负数最大数 	-Infinity
+     * 下溢（underflow）
+     * 		运算结果无限接近于 0 
+     * 		并且还要比 JS 所能表示的最小的数字还要小
+     * 			正数返回 0
+     * 			负数返回 -0
+     * 				（-0 和 0 是一样的）
+     * 被零整除
+     * 		正常状态下 返回 Infinity 或者 -Infinity
+     * 
+     * 		零除以零
+     * 			无意义，会得到 NaN(Not-a-Number)
+     * 		
+     * 		会得到 NaN
+     * 			负数开偶次方
+     * 			无穷大除以无穷大
+     * 			算数运算符和不是算数运算符或者
+     * 			和无法转化为数字的操作一起进行计算
+     * */
+    console.log(1.1 / 0);
+    console.log(-1.1 / 0);
+    
+    console.log(Number.MAX_VALUE+1e292);
+    console.log(Number.MIN_VALUE);
+    
+    console.log(0 / 0);
+    console.log(Infinity/Infinity);
+    
+    /*
+     拓展
+     * 
+     * 	JS 的运算精度
+     * */
+    var x = 0.3 - 0.2;
+    var y = 0.2 - 0.1;
+    var z = 0.4 - 0.3;
+    var m = 0.5 - 0.4;
+    var n = 0.6 - 0.5;
+    console.log(x==y);		//false
+    console.log(x==0.1);		//false
+    console.log(y==0.1);		//true
+    console.log(x);			//0.09999999999999998
+    console.log(y);			//0.1
+    console.log(z);			//0.10000000000000003
+    console.log(m);
+    console.log(n);
+    
+    
+    
+    
+</script>
+</html>
+

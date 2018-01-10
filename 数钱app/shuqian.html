@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/animate.min.css">
+    <!--<script src="./js/jquery-2.2.3.min.js"></script>-->
+    <script src="js/zepto.js"></script>
+
+    <script>
+        $(function () {
+            $(".pulse").on("touchstart",function () {
+                $("#register").css("display","block")
+            });
+            $(".ranking").on("touchstart",function () {
+                $("#rank").css("display","block");
+            });
+            $(".activity").on("touchstart",function () {
+                $("#activ").css("display","block");
+            })
+            $(".prize").on("touchstart",function () {
+                $("#priz").css("display","block");
+            })
+            $(".shiyong").on("touchstart",function () {
+                $("#sy").css("display","block");
+            })
+            $(".close").on("touchstart",function () {
+                $("#register").css("display","none");
+                $("#rank").css("display","none");
+                $("#activ").css("display","none");
+                $("#priz").css("display","none");
+                $("#sy").css("display","none");
+            })
+            //第二个页面
+            $("form").on("submit",function(e){ //监听表单的submit事件
+                e.preventDefault(); //阻止提交 因为我的action是#,表示提交到当前页面
+                $("#wrap").css("display","none");
+                $("#p2").css("display","block");
+            });
+            //上面文字切换
+            setTimeout(function step() {
+                var z = $("#p2>img:eq(1)").attr("src");
+                var sum = +z.slice(12,13);
+                sum++;
+                if(sum == 4) sum =1;
+                $("#p2>img:eq(1)").attr("src","./img/p2_txt"+sum+".png");
+                setTimeout(step,2000)
+            },2000)
+            //滑钱
+
+
+        })
+    </script>
+</head>
+<body>
+    <div id="loading_wrap">
+        <div id="loading" class="animated flip "></div>
+    </div>
+    <div id="wrap">
+        <img class="tiaozhan animated bounceIn" src="./img/tiaozhan.png" alt="">
+        <img class="yinqu animated swing" src="./img/yinqu.png" alt="">
+        <img class="start-game animated pulse" src="./img/start_game.png" alt="">
+        <img class="shou animated fadeOut" src="./img/shou.png" alt="">
+        <img class="p1-btns" src="./img/p1_btns_wrap.png" alt="">
+        <img class="ranking" src="./img/ranking.png" alt="">
+        <img class="activity" src="./img/activity_rule.png" alt="">
+        <img class="prize" src="./img/prize.png" alt="">
+        <img class="shiyong" src="./img/shiyong.png" alt="">
+        <div class="black-wrap" id="register">
+            <img class="close" src="./img/close.png" alt="">
+            <form action="#">
+                <input class="iname" type="text" placeholder="姓名">
+                <input class="iphone" type="text" placeholder="电话">
+                <input class="isubmit" type="submit" value="">
+            </form>
+        </div>
+        <div class="black-wrap" id="rank">
+            <img class="close" src="./img/close.png" alt="">
+            <div>
+                <ul>
+                    <li>
+                        <img src="./img/shizhong.png" alt="">
+                        <span>帅气的McC</span>
+                        <span>800分</span>
+                    </li>
+                    <li>
+                        <img src="./img/shizhong.png" alt="">
+                        <span>帅气的McC</span>
+                        <span>800分</span>
+                    </li>
+                    <li>
+                        <img src="./img/shizhong.png" alt="">
+                        <span>帅气的McC</span>
+                        <span>800分</span>
+                    </li>
+                    <li>
+                        <img src="./img/shizhong.png" alt="">
+                        <span>帅气的McC</span>
+                        <span>800分</span>
+                    </li>
+                    <li>
+                        <img src="./img/shizhong.png" alt="">
+                        <span>帅气的McC</span>
+                        <span>800分</span>
+                    </li>
+                    <li>
+                        <img src="./img/shizhong.png" alt="">
+                        <span>帅气的McC</span>
+                        <span>800分</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="black-wrap" id="activ">
+            <img class="close" src="./img/close.png" alt="">
+            <div>
+                <h2>活动规则</h2>
+                <p>
+                    1、每人有多次游戏机会，但成绩只能提交一次，且提交之后不能更改！
+                    <br><br>
+                    2、提交成绩时要提供姓名及手机号码作为兑奖凭证，因用户本人未在规定时间内提供正确的手机号码造成的奖品损失，由用户个人承担。
+                    <br><br>
+                    3、活动时间为2016年5月11日-5月19日24:00，活动结束后将在“雾灵山庄”微信公布中奖名单。
+                    <br><br>
+                    4、获奖规则：系统将根据大家提交的成绩，按照由多到少的规则进行排行，排名第1的网友将获得一等奖，排名第2-第21位的网友将分获二等奖，以此类推。
+                    <br><br>
+                    5、奖品的发放：活动结束后，将由工作人员与您取得联系，并将相应的卡券编号发送到您提供的手机号码上。
+                </p>
+            </div>
+        </div>
+        <div class="black-wrap" id="priz">
+            <img class="close" src="./img/close.png" alt="">
+            <div>
+                <h2>活动奖品</h2>
+                <p>一等奖1人：价值1488元7号楼1晚豪华标间免费房券1张，并可享康体项目3折优惠；</p>
+                <p>二等奖20人：100元订房代金券每人1张，并可享康体项目4折优惠；</p>
+                <p>三等奖50人：50元订房代金券每人1张，并可享康体项目5折优惠。</p>
+                <p>奖品的有效期：2016年5月20日至6月15日（周五、周六及法定节假日不可用）</p>
+            </div>
+        </div>
+        <div class="black-wrap" id="sy">
+            <img class="close" src="./img/close.png" alt="">
+            <div>
+                <h2>奖券使用说明</h2>
+                <p>1、奖品的使用：请务必至少提前一周致电010-81027788或81027799进行预约，并于入住时向前台服务人员出示您手机上收到的卡券编号即可使用（需同时验证获奖人姓名与手机号码）。
+                <br>
+                2、代金券仅适用于线下门市价入住客房消费使用，不适用于通过携程或微信等其他线上渠道预定使用。
+                <br>
+                3、免费房安排的房间将视当时酒店排房情况而定，如您所预约的时段预订已满，将与您协商调整入住时间。
+                <br>
+                4、免费房券及代金券不得用于除订房外其他产品消费，不得与酒店其他优惠折扣或礼券同时使用，且不予退换、兑换现金或找赎。
+                <br>
+                5、对于恶意刷奖者和作弊者，主办方有权取消其兑奖资格。
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="p2">
+        <img src="./img/p2_kuang.png" alt="">
+        <img src="./img/p2_txt1.png" alt="">
+        <div id="time">
+            <span>0</span>
+            <span>0</span>
+            <span>0</span>
+            <span>60</span>
+        </div>
+        <img class="p2qian" src="./img/p2_qian.jpg" alt="">
+        <img class="p2zhuan" src="./img/p2_zhuan.png" alt="">
+        <img class="p2shou animated fadeOutUp infinite" src="./img/p2_shou.png" alt="">
+    </div>
+    <div id="p3"></div>
+
+    <script>
+
+//        //点击开始弹出输入页面
+//        var start = document.querySelector(".pulse");
+//        var register = document.querySelector("#register");
+//
+//        start.addEventListener("touchstart",function(){
+//            register.style.display = "block"
+//        })
+//
+//        //p1 btns
+//
+//        var ranking = document.querySelector(".ranking");
+//        var activity = document.querySelector(".activity");
+//        var prize = document.querySelector(".prize");
+//        var shiyong = document.querySelector(".shiyong");
+//        var rankDiv = document.querySelector("#rank");
+//        var activDiv = document.querySelector("#activ");
+//        var prizDiv = document.querySelector("#priz");
+//        var syDiv = document.querySelector("#sy");
+//        var close = document.querySelectorAll(".close");  //我得找到所有的close,再遍历给每个close改变样式
+//
+//        ranking.addEventListener("touchstart",function () {
+//            rankDiv.style.display = "block";
+//        })
+//        activity.addEventListener("touchstart",function () {
+//            activDiv.style.display = "block";
+//        })
+//        prize.addEventListener("touchstart",function () {
+//            prizDiv.style.display = "block";
+//        })
+//        shiyong.addEventListener("touchstart",function () {
+//            syDiv.style.display = "block";
+//        })
+//
+//        //点击x关闭输入页面
+////        for (var )
+//        close.addEventListener("touchstart",function(){
+//            register.style.display = "none";
+////            rankDiv.style.display = "none";
+////            activDiv.style.display = "none";
+////            prizDiv.style.display = "none";
+////            syDiv.style.display = "none";
+//        })
+//
+//        //开始提交换页面p2
+//        var isubmit = document.querySelector(".isubmit");
+//        var wrap = document.querySelector("#wrap")
+//        isubmit.addEventListener("touchstart",function(){
+//            wrap.style.display = "none";
+//        })
+
+
+    </script>
+
+</body>
+</html>

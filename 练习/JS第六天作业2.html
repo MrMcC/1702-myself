@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			input{
+				color:red;
+			}
+		</style>
+	</head>
+	<body>
+		输入数字<input type="" name="" id="num" value="" />
+		<button id="btn">按钮</button>
+		<script type="text/javascript">
+			btn.onclick= function(){
+				var num = +document.getElementById("num").value;
+				var p = [99,85,82,63,60];
+				p.push(num);
+				p.sort(function(a,b){
+					return b-a;
+				})
+				document.body.innerHTML = "["+p+"]";
+			}
+			//第二种
+			var arr = [99,85,82,63,60]
+			var nums = 30;
+			for (var num = 0; num <arr.length; num++ ) {
+				if(nums > arr[num]){
+					arr.splice(num,0,nums)
+					break;
+				}
+				if(nums < arr[arr.length -1]){
+					arr.push(nums);
+				}
+			}
+			console.log(arr)
+			
+//			if(i == arr.length - 1){
+//          arr.push(num);
+//          break;
+		</script>
+	</body>
+</html>
+<!--
+	有一个从大到小排好序的数组{99，85，82，63，60}。
+	现从页面输入一个数，要求按原来的规律将它插入数组中。  
+	假设你输入的80，则应该插入到82和63之间。
+-->

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		请输入一个年份<input type="text" name="" id="year" value="" /><br />
+		<button id="btn">按钮</button>
+		<script type="text/javascript">
+			function a(now){
+//				var now = year.value;
+				if((now % 4 == 0 && now % 100 != 0 )||(now % 400 == 0 )){
+					return now +"是闰年";
+				}else{
+					return now + "不是闰年";
+				}
+			}
+			btn.onclick = function(){
+				a(year.value);
+			}
+			
+			for (var i = 1999 ;i< 2051 ;i++) {
+				console.log(a(i));//????
+			}
+		</script>
+	</body>
+</html>

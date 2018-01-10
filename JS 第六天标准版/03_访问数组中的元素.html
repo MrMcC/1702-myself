@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var arr = [2, 4, 5, 7, 9];
+    //访问指定下标的元素. 如果下标超出了数组的长度，则会获取到undefined。并不会报错
+    console.log(arr[arr.length]);
+
+    //修改指定下标的元素。
+    arr[1] = 40;
+    console.log(arr);
+
+    arr[50] = 10;
+    console.log(arr.length);
+    console.log(arr);
+
+    console.log(arr[100]);
+    console.log(arr.length)
+
+    //向数组的末尾添加5个元素
+    var arr1 = [1, 2];
+    for(var i = 0; i < 5; i++){
+        arr1[arr1.length] = i;
+    }
+    console.log(arr1);
+
+</script>
+</body>
+</html>
